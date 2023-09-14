@@ -30,7 +30,7 @@ export const MakeComSettings = ({
           <>Your scenario is correctly configured 🚀</>
         ) : (
           <Stack>
-            <Text>Head up to Make.com to configure this block:</Text>
+            <Text>Head up to Toolzz Connect to configure this block:</Text>
             <Button
               as={Link}
               href="https://www.make.com/en/integrations/typebot"
