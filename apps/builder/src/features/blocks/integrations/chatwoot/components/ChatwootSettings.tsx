@@ -34,7 +34,7 @@ export const ChatwootSettings = ({ options, onOptionsChange }: Props) => {
             <TextInput
               isRequired
               label="Base URL"
-              defaultValue={"http://chatwoot.toolzz.io:3000"}
+              defaultValue={options.baseUrl}
               onChange={(baseUrl: string) => {
                 onOptionsChange({ ...options, baseUrl })
               }}
