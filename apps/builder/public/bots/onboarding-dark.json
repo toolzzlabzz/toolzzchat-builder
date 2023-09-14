@@ -51,7 +51,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Welcome 👋" }] }
+              { "type": "p", "children": [{ "text": "Olá, seja bem vindo(a) 👋" }] }
             ]
           },
           "groupId": "clcueadzi00063b6sch7b1f32"
@@ -61,7 +61,7 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "What's your name?" }] }
+              { "type": "p", "children": [{ "text": "Qual seu nome?" }] }
             ]
           },
           "groupId": "clcueadzi00063b6sch7b1f32"
@@ -73,8 +73,8 @@
           "options": {
             "isLong": false,
             "labels": {
-              "button": "Send",
-              "placeholder": "Type your answer..."
+              "button": "Enviar",
+              "placeholder": "Digite sua pergunta..."
             },
             "variableId": "cl126f4hf000i2e6d8zvzc3t1"
           },
@@ -85,14 +85,14 @@
     },
     {
       "id": "clcueadzi00073b6sqz8n5vxp",
-      "title": "Company",
+      "title": "Empresa",
       "blocks": [
         {
           "id": "cl1266v6f000a2e6db7wj3ux7",
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Welcome {{Name}} 👋" }] }
+              { "type": "p", "children": [{ "text": "Olá {{Name}} 👋" }] }
             ]
           },
           "groupId": "clcueadzi00073b6sqz8n5vxp"
@@ -106,7 +106,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "I'm super pumped that you've decided to try out Typebot 😍"
+                    "text": "Estou super entusiasmado por você ter decidido experimentar o Toolzz Chat 😍"
                   }
                 ]
               }
@@ -123,7 +123,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "You are small steps away from meaningful, hyper-personalized experience for your users"
+                    "text": "Você está a poucos passos de uma experiência significativa e hiperpersonalizada para seus usuários"
                   }
                 ]
               }
@@ -139,7 +139,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Let's get you set up for your Typebot journey." }
+                  { "text": "Vamos preparar você para sua jornada no Toolzz Chat" }
                 ]
               }
             ]
@@ -153,7 +153,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Do you work for a specific company?" }]
+                "children": [{ "text": "Você trabalha para uma empresa específica" }]
               }
             ]
           },
@@ -210,7 +210,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "What type of bots are you planning to build with Typebot?"
+                    "text": "Que tipo de bots você planeja construir com o Typebot?"
                   }
                 ]
               }
@@ -318,7 +318,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Thank you for answering those questions!" }
+                  { "text": "Obrigado por responder a essas perguntas!" }
                 ]
               }
             ]
@@ -342,7 +342,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "You can reach out to me using the contact bubble on the bottom right corner 🤓"
+                    "text": "Você pode entrar em contato comigo usando o balão de contato no canto inferior direito 🤓"
                   }
                 ]
               }
@@ -357,7 +357,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Let's create your first typebot..." }]
+                "children": [{ "text": "Vamos criar o seu primeiro BOT..." }]
               }
             ]
           },
