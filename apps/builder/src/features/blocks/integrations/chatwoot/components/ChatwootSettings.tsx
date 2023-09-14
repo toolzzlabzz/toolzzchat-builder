@@ -34,7 +34,7 @@ export const ChatwootSettings = ({ options, onOptionsChange }: Props) => {
             <TextInput
               isRequired
               label="Base URL"
-              defaultValue={options.baseUrl}
+              defaultValue={"http://chatwoot.toolzz.io:3000"}
               onChange={(baseUrl: string) => {
                 onOptionsChange({ ...options, baseUrl })
               }}
@@ -47,7 +47,7 @@ export const ChatwootSettings = ({ options, onOptionsChange }: Props) => {
               onChange={(websiteToken) =>
                 onOptionsChange({ ...options, websiteToken })
               }
-              moreInfoTooltip="Can be found in Chatwoot under Settings > Inboxes > Settings > Configuration, in the code snippet."
+              moreInfoTooltip="Pode ser encontrado no Toolzz Chat em Configurações > Caixas de entrada > Configurações > Configuração, no trecho de código."
             />
             <Accordion allowMultiple>
               <AccordionItem>
