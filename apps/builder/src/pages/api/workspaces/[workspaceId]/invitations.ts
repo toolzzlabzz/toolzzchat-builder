@@ -1,5 +1,5 @@
 import { WorkspaceInvitation, WorkspaceRole } from '@typebot.io/prisma'
-import prisma from '@/lib/prisma'
+import prisma from '@typebot.io/lib/prisma'
 import { NextApiRequest, NextApiResponse } from 'next'
 import {
   forbidden,
@@ -8,7 +8,7 @@ import {
 } from '@typebot.io/lib/api'
 import { getAuthenticatedUser } from '@/features/auth/helpers/getAuthenticatedUser'
 import { sendWorkspaceMemberInvitationEmail } from '@typebot.io/emails'
-import { isSeatsLimitReached } from '@typebot.io/lib/pricing'
+import { getSeatsLimit } from '@typebot.io/lib/billing/getSeatsLimit'
 import { env } from '@typebot.io/env'
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
@@ -36,12 +36,10 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
           where: { workspaceId: workspace.id },
         }),
       ])
+    const seatsLimit = getSeatsLimit(workspace)
     if (
-      isSeatsLimitReached({
-        existingMembersAndInvitationsCount:
-          existingMembersCount + existingInvitationsCount,
-        ...workspace,
-      })
+      seatsLimit !== 'inf' &&
+      seatsLimit <= existingMembersCount + existingInvitationsCount
     )
       return res.status(400).send('Seats limit reached')
     if (existingUser) {

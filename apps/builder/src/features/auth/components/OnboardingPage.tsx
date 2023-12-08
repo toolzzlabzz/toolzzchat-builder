@@ -13,14 +13,14 @@ import { useRouter } from 'next/router'
 import { useEffect, useRef, useState } from 'react'
 import confetti from 'canvas-confetti'
 import { useUser } from '@/features/account/hooks/useUser'
-import { useI18n } from '@/locales'
+import { useTranslate } from '@tolgee/react'
 import { env } from '@typebot.io/env'
 
 const totalSteps = 5
 
 export const OnboardingPage = () => {
-  const t = useI18n()
-  const { push, replace } = useRouter()
+  const { t } = useTranslate()
+  const { replace, query } = useRouter()
   const confettiCanvaContainer = useRef<HTMLCanvasElement | null>(null)
   const confettiCanon = useRef<confetti.CreateTypes>()
   const { user, updateUser } = useUser()
@@ -38,8 +38,8 @@ export const OnboardingPage = () => {
   useEffect(() => {
     if (!user?.createdAt) return
     if (isNewUser === false || !env.NEXT_PUBLIC_ONBOARDING_TYPEBOT_ID)
-      replace('/typebots')
-  }, [isNewUser, replace, user?.createdAt])
+      replace({ pathname: '/typebots', query })
+  }, [isNewUser, query, replace, user?.createdAt])
 
   const initConfettis = () => {
     if (!confettiCanvaContainer.current || confettiCanon.current) return
@@ -83,7 +83,7 @@ export const OnboardingPage = () => {
         right="5"
         variant="ghost"
         size="sm"
-        onClick={() => push('/typebots')}
+        onClick={() => replace({ pathname: '/typebots', query })}
       >
         {t('skip')}
       </Button>
@@ -95,7 +95,10 @@ export const OnboardingPage = () => {
           prefilledVariables={{ Name: user?.name, Email: user?.email }}
           onEnd={() => {
             setTimeout(() => {
-              push('/typebots/create', { query: { isFirstBot: true } })
+              replace({
+                pathname: '/typebots',
+                query: { ...query, isFirstBot: true },
+              })
             }, 2000)
           }}
           onAnswer={updateUserInfo}

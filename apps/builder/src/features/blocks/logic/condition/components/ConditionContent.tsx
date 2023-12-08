@@ -1,9 +1,10 @@
 import { Stack, Wrap, Tag, Text, useColorModeValue } from '@chakra-ui/react'
 import { byId } from '@typebot.io/lib'
-import { ComparisonOperators, Condition, Variable } from '@typebot.io/schemas'
+import { Condition, Variable } from '@typebot.io/schemas'
+import { ComparisonOperators } from '@typebot.io/schemas/features/blocks/logic/condition/constants'
 
 type Props = {
-  condition: Condition
+  condition: Condition | undefined
   variables: Variable[]
   size?: 'xs' | 'sm'
   displaySemicolon?: boolean
@@ -17,7 +18,7 @@ export const ConditionContent = ({
   const comparisonValueBg = useColorModeValue('gray.200', 'gray.700')
   return (
     <Stack>
-      {condition.comparisons.map((comparison, idx) => {
+      {condition?.comparisons?.map((comparison, idx) => {
         const variable = variables.find(byId(comparison.variableId))
         return (
           <Wrap key={comparison.id} spacing={1} noOfLines={1}>
@@ -35,14 +36,16 @@ export const ConditionContent = ({
                 {parseComparisonOperatorSymbol(comparison.comparisonOperator)}
               </Text>
             )}
-            {comparison?.value && (
-              <Tag bgColor={comparisonValueBg} size="sm">
-                {comparison.value}
-              </Tag>
-            )}
-            {idx === condition.comparisons.length - 1 && displaySemicolon && (
-              <Text fontSize={size}>:</Text>
-            )}
+            {comparison?.value &&
+              comparison.comparisonOperator !== ComparisonOperators.IS_SET &&
+              comparison.comparisonOperator !==
+                ComparisonOperators.IS_EMPTY && (
+                <Tag bgColor={comparisonValueBg} size="sm">
+                  {comparison.value}
+                </Tag>
+              )}
+            {idx === (condition.comparisons?.length ?? 0) - 1 &&
+              displaySemicolon && <Text fontSize={size}>:</Text>}
           </Wrap>
         )
       })}

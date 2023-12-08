@@ -1,37 +1,32 @@
 import { createId } from '@paralleldrive/cuid2'
 import { produce } from 'immer'
-import {
-  Group,
-  DraggableBlock,
-  DraggableBlockType,
-  BlockIndices,
-} from '@typebot.io/schemas'
+import { BlockIndices, BlockV6, GroupV6 } from '@typebot.io/schemas'
 import { SetTypebot } from '../TypebotProvider'
 import {
   deleteGroupDraft,
   createBlockDraft,
   duplicateBlockDraft,
 } from './blocks'
-import { isEmpty, parseGroupTitle } from '@typebot.io/lib'
+import { isEmpty } from '@typebot.io/lib'
 import { Coordinates } from '@/features/graph/types'
 
 export type GroupsActions = {
   createGroup: (
     props: Coordinates & {
       id: string
-      block: DraggableBlock | DraggableBlockType
+      block: BlockV6 | BlockV6['type']
       indices: BlockIndices
     }
   ) => void
-  updateGroup: (groupIndex: number, updates: Partial<Omit<Group, 'id'>>) => void
+  updateGroup: (
+    groupIndex: number,
+    updates: Partial<Omit<GroupV6, 'id'>>
+  ) => void
   duplicateGroup: (groupIndex: number) => void
   deleteGroup: (groupIndex: number) => void
 }
 
-const groupsActions = (
-  setTypebot: SetTypebot,
-  groupCopyLabel: string
-): GroupsActions => ({
+const groupsActions = (setTypebot: SetTypebot): GroupsActions => ({
   createGroup: ({
     id,
     block,
@@ -39,22 +34,22 @@ const groupsActions = (
     ...graphCoordinates
   }: Coordinates & {
     id: string
-    block: DraggableBlock | DraggableBlockType
+    block: BlockV6 | BlockV6['type']
     indices: BlockIndices
   }) =>
     setTypebot((typebot) =>
       produce(typebot, (typebot) => {
-        const newGroup: Group = {
+        const newGroup: GroupV6 = {
           id,
           graphCoordinates,
-          title: `Group #${typebot.groups.length}`,
+          title: `Group #${typebot.groups.length + 1}`,
           blocks: [],
         }
         typebot.groups.push(newGroup)
-        createBlockDraft(typebot, block, newGroup.id, indices)
+        createBlockDraft(typebot, block, indices)
       })
     ),
-  updateGroup: (groupIndex: number, updates: Partial<Omit<Group, 'id'>>) =>
+  updateGroup: (groupIndex: number, updates: Partial<Omit<GroupV6, 'id'>>) =>
     setTypebot((typebot) =>
       produce(typebot, (typebot) => {
         const block = typebot.groups[groupIndex]
@@ -67,13 +62,21 @@ const groupsActions = (
         const group = typebot.groups[groupIndex]
         const id = createId()
 
-        const newGroup: Group = {
+        const totalGroupsWithSameTitle = typebot.groups.filter(
+          (g) => g.title === group.title
+        ).length
+
+        const newGroup: GroupV6 = {
           ...group,
           title: isEmpty(group.title)
             ? ''
-            : `${parseGroupTitle(group.title)} ${groupCopyLabel}`,
+            : `${group.title}${
+                totalGroupsWithSameTitle > 0
+                  ? ` (${totalGroupsWithSameTitle})`
+                  : ''
+              }`,
           id,
-          blocks: group.blocks.map((block) => duplicateBlockDraft(id)(block)),
+          blocks: group.blocks.map((block) => duplicateBlockDraft(block)),
           graphCoordinates: {
             x: group.graphCoordinates.x + 200,
             y: group.graphCoordinates.y + 100,

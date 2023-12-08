@@ -11,7 +11,6 @@ import {
   MenuItem,
   useDisclosure,
   ButtonProps,
-  useColorModeValue,
 } from '@chakra-ui/react'
 import {
   ChevronLeftIcon,
@@ -21,16 +20,18 @@ import {
 } from '@/components/icons'
 import { useTypebot } from '@/features/editor/providers/TypebotProvider'
 import { useWorkspace } from '@/features/workspace/WorkspaceProvider'
-import { InputBlockType } from '@typebot.io/schemas'
 import { useRouter } from 'next/router'
 import { isNotDefined } from '@typebot.io/lib'
 import { ChangePlanModal } from '@/features/billing/components/ChangePlanModal'
 import { isFreePlan } from '@/features/billing/helpers/isFreePlan'
 import { parseTimeSince } from '@/helpers/parseTimeSince'
-import { useI18n } from '@/locales'
+import { useTranslate } from '@tolgee/react'
 import { trpc } from '@/lib/trpc'
 import { useToast } from '@/hooks/useToast'
 import { parseDefaultPublicId } from '../helpers/parseDefaultPublicId'
+import { InputBlockType } from '@typebot.io/schemas/features/blocks/inputs/constants'
+import { ConfirmModal } from '@/components/ConfirmModal'
+import { TextLink } from '@/components/TextLink'
 
 type Props = ButtonProps & {
   isMoreMenuDisabled?: boolean
@@ -39,11 +40,15 @@ export const PublishButton = ({
   isMoreMenuDisabled = false,
   ...props
 }: Props) => {
-  const t = useI18n()
-  const warningTextColor = useColorModeValue('red.300', 'red.600')
+  const { t } = useTranslate()
   const { workspace } = useWorkspace()
   const { push, query, pathname } = useRouter()
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const {
+    isOpen: isNewEngineWarningOpen,
+    onOpen: onNewEngineWarningOpen,
+    onClose: onNewEngineWarningClose,
+  } = useDisclosure()
   const {
     isPublished,
     publishedTypebot,
@@ -52,6 +57,7 @@ export const PublishButton = ({
     isSavingLoading,
     updateTypebot,
     save,
+    publishedTypebotVersion,
   } = useTypebot()
   const { showToast } = useToast()
 
@@ -133,18 +139,42 @@ export const PublishButton = ({
         onClose={onClose}
         type={t('billing.limitMessage.fileInput')}
       />
+      {publishedTypebot && publishedTypebotVersion !== typebot?.version && (
+        <ConfirmModal
+          isOpen={isNewEngineWarningOpen}
+          onConfirm={handlePublishClick}
+          onClose={onNewEngineWarningClose}
+          confirmButtonColor="blue"
+          title="⚠️ New engine version"
+          message={
+            <Stack spacing="3">
+              <Text>
+                You are about to a deploy a version of your bot with an updated
+                engine. (Typebot V6).
+              </Text>
+              <Text fontWeight="bold">
+                Make sure to check out all the{' '}
+                <TextLink
+                  href="https://docs.typebot.io/breaking-changes#typebot-v6"
+                  isExternal
+                >
+                  associated breaking changes
+                </TextLink>
+              </Text>
+              <Text>
+                {' '}
+                Then test, the bot thoroughly in preview mode before publishing.
+              </Text>
+            </Stack>
+          }
+          confirmButtonLabel={'Publish'}
+        />
+      )}
       <Tooltip
         placement="bottom-end"
         label={
           <Stack>
-            {!publishedTypebot?.version ? (
-              <Text color={warningTextColor} fontWeight="semibold">
-                This will deploy your bot with an updated engine. Make sure to
-                test it properly in preview mode before publishing.
-              </Text>
-            ) : (
-              <Text>There are non published changes.</Text>
-            )}
+            <Text>There are non published changes.</Text>
             <Text fontStyle="italic">
               Published version from{' '}
               {publishedTypebot &&
@@ -159,7 +189,11 @@ export const PublishButton = ({
           colorScheme="blue"
           isLoading={isPublishing || isUnpublishing}
           isDisabled={isPublished || isSavingLoading}
-          onClick={handlePublishClick}
+          onClick={() => {
+            publishedTypebot && publishedTypebotVersion !== typebot?.version
+              ? onNewEngineWarningOpen()
+              : handlePublishClick()
+          }}
           borderRightRadius={
             publishedTypebot && !isMoreMenuDisabled ? 0 : undefined
           }

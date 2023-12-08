@@ -1,15 +1,18 @@
-import { ChatReply, SendMessageInput, Theme } from '@typebot.io/schemas'
-import { InputBlockType } from '@typebot.io/schemas/features/blocks/inputs/enums'
+import {
+  ContinueChatResponse,
+  InputBlock,
+  Theme,
+  ChatLog,
+} from '@typebot.io/schemas'
 import {
   createEffect,
   createSignal,
-  createUniqueId,
   For,
   onCleanup,
   onMount,
   Show,
 } from 'solid-js'
-import { sendMessageQuery } from '@/queries/sendMessageQuery'
+import { continueChatQuery } from '@/queries/continueChatQuery'
 import { ChatChunk } from './ChatChunk'
 import {
   BotContext,
@@ -26,35 +29,37 @@ import {
   formattedMessages,
   setFormattedMessages,
 } from '@/utils/formattedMessagesSignal'
+import { InputBlockType } from '@typebot.io/schemas/features/blocks/inputs/constants'
+import { saveClientLogsQuery } from '@/queries/saveClientLogsQuery'
 
 const parseDynamicTheme = (
   initialTheme: Theme,
-  dynamicTheme: ChatReply['dynamicTheme']
+  dynamicTheme: ContinueChatResponse['dynamicTheme']
 ): Theme => ({
   ...initialTheme,
   chat: {
     ...initialTheme.chat,
     hostAvatar:
-      initialTheme.chat.hostAvatar && dynamicTheme?.hostAvatarUrl
+      initialTheme.chat?.hostAvatar && dynamicTheme?.hostAvatarUrl
         ? {
             ...initialTheme.chat.hostAvatar,
             url: dynamicTheme.hostAvatarUrl,
           }
-        : initialTheme.chat.hostAvatar,
+        : initialTheme.chat?.hostAvatar,
     guestAvatar:
-      initialTheme.chat.guestAvatar && dynamicTheme?.guestAvatarUrl
+      initialTheme.chat?.guestAvatar && dynamicTheme?.guestAvatarUrl
         ? {
             ...initialTheme.chat.guestAvatar,
             url: dynamicTheme?.guestAvatarUrl,
           }
-        : initialTheme.chat.guestAvatar,
+        : initialTheme.chat?.guestAvatar,
   },
 })
 
 type Props = {
   initialChatReply: InitialChatReply
   context: BotContext
-  onNewInputBlock?: (ids: { id: string; groupId: string }) => void
+  onNewInputBlock?: (inputBlock: InputBlock) => void
   onAnswer?: (answer: { message: string; blockId: string }) => void
   onEnd?: () => void
   onNewLogs?: (logs: OutgoingLog[]) => void
@@ -70,7 +75,7 @@ export const ConversationContainer = (props: Props) => {
     },
   ])
   const [dynamicTheme, setDynamicTheme] = createSignal<
-    ChatReply['dynamicTheme']
+    ContinueChatResponse['dynamicTheme']
   >(props.initialChatReply.dynamicTheme)
   const [theme, setTheme] = createSignal(props.initialChatReply.typebot.theme)
   const [isSending, setIsSending] = createSignal(false)
@@ -109,12 +114,11 @@ export const ConversationContainer = (props: Props) => {
     })()
   })
 
-  const streamMessage = (content: string) => {
+  const streamMessage = ({ id, message }: { id: string; message: string }) => {
     setIsSending(false)
     const lastChunk = [...chatChunks()].pop()
     if (!lastChunk) return
-    const id = lastChunk.streamingMessageId ?? createUniqueId()
-    if (!lastChunk.streamingMessageId)
+    if (lastChunk.streamingMessageId !== id)
       setChatChunks((displayedChunks) => [
         ...displayedChunks,
         {
@@ -122,7 +126,7 @@ export const ConversationContainer = (props: Props) => {
           streamingMessageId: id,
         },
       ])
-    setStreamingMessage({ id, content })
+    setStreamingMessage({ id, content: message })
   }
 
   createEffect(() => {
@@ -133,9 +137,16 @@ export const ConversationContainer = (props: Props) => {
 
   const sendMessage = async (
     message: string | undefined,
-    clientLogs?: SendMessageInput['clientLogs']
+    clientLogs?: ChatLog[]
   ) => {
-    if (clientLogs) props.onNewLogs?.(clientLogs)
+    if (clientLogs) {
+      props.onNewLogs?.(clientLogs)
+      await saveClientLogsQuery({
+        apiHost: props.context.apiHost,
+        sessionId: props.initialChatReply.sessionId,
+        clientLogs,
+      })
+    }
     setHasError(false)
     const currentInputBlock = [...chatChunks()].pop()?.input
     if (currentInputBlock?.id && props.onAnswer && message)
@@ -150,11 +161,10 @@ export const ConversationContainer = (props: Props) => {
     const longRequest = setTimeout(() => {
       setIsSending(true)
     }, 1000)
-    const { data, error } = await sendMessageQuery({
+    const { data, error } = await continueChatQuery({
       apiHost: props.context.apiHost,
       sessionId: props.initialChatReply.sessionId,
       message,
-      clientLogs,
     })
     clearTimeout(longRequest)
     setIsSending(false)
@@ -173,18 +183,15 @@ export const ConversationContainer = (props: Props) => {
       setFormattedMessages([
         ...formattedMessages(),
         {
-          inputId: [...chatChunks()].pop()?.input?.id ?? '',
+          inputIndex: [...chatChunks()].length - 1,
           formattedMessage: data.lastMessageNewFormat as string,
         },
       ])
     }
     if (data.logs) props.onNewLogs?.(data.logs)
     if (data.dynamicTheme) setDynamicTheme(data.dynamicTheme)
-    if (data.input?.id && props.onNewInputBlock) {
-      props.onNewInputBlock({
-        id: data.input.id,
-        groupId: data.input.groupId,
-      })
+    if (data.input && props.onNewInputBlock) {
+      props.onNewInputBlock(data.input)
     }
     if (data.clientSideActions) {
       const actionsBeforeFirstBubble = data.clientSideActions.filter((action) =>
@@ -216,9 +223,7 @@ export const ConversationContainer = (props: Props) => {
       ...displayedChunks,
       {
         input: data.input,
-        messages: [...chatChunks()].pop()?.streamingMessageId
-          ? data.messages.slice(1)
-          : data.messages,
+        messages: data.messages,
         clientSideActions: data.clientSideActions,
       },
     ])
@@ -297,8 +302,9 @@ export const ConversationContainer = (props: Props) => {
             context={props.context}
             hideAvatar={
               !chatChunk.input &&
-              !chatChunk.streamingMessageId &&
-              index() < chatChunks().length - 1
+              ((chatChunks()[index() + 1]?.messages ?? 0).length > 0 ||
+                chatChunks()[index() + 1]?.streamingMessageId !== undefined ||
+                isSending())
             }
             hasError={hasError() && index() === chatChunks().length - 1}
             onNewBubbleDisplayed={handleNewBubbleDisplayed}

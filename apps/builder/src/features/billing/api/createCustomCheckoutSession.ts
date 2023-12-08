@@ -1,4 +1,4 @@
-import prisma from '@/lib/prisma'
+import prisma from '@typebot.io/lib/prisma'
 import { authenticatedProcedure } from '@/helpers/server/trpc'
 import { TRPCError } from '@trpc/server'
 import { Plan } from '@typebot.io/prisma'
@@ -11,7 +11,7 @@ export const createCustomCheckoutSession = authenticatedProcedure
   .meta({
     openapi: {
       method: 'POST',
-      path: '/billing/subscription/custom-checkout',
+      path: '/v1/billing/subscription/custom-checkout',
       protect: true,
       summary:
         'Create custom checkout session to make a workspace pay for a custom plan',

@@ -1,4 +1,4 @@
-import prisma from '@/lib/prisma'
+import prisma from '@typebot.io/lib/prisma'
 import { authenticatedProcedure } from '@/helpers/server/trpc'
 import { TRPCError } from '@trpc/server'
 import { z } from 'zod'
@@ -10,7 +10,7 @@ export const deleteCustomDomain = authenticatedProcedure
   .meta({
     openapi: {
       method: 'DELETE',
-      path: '/custom-domains',
+      path: '/v1/custom-domains/{name}',
       protect: true,
       summary: 'Delete custom domain',
       tags: ['Custom domains'],

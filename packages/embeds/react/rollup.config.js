@@ -3,7 +3,6 @@ import terser from '@rollup/plugin-terser'
 import { babel } from '@rollup/plugin-babel'
 import typescript from '@rollup/plugin-typescript'
 import { typescriptPaths } from 'rollup-plugin-typescript-paths'
-import alias from '@rollup/plugin-alias'
 
 const extensions = ['.ts', '.tsx']
 
@@ -15,9 +14,6 @@ const indexConfig = {
   },
   external: ['react', 'react/jsx-runtime'],
   plugins: [
-    alias({
-      entries: [{ find: '@typebot.io/js', replacement: '../../js' }],
-    }),
     resolve({ extensions }),
     babel({
       babelHelpers: 'bundled',

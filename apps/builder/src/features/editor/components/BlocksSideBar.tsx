@@ -10,23 +10,21 @@ import {
   Fade,
   useColorModeValue,
 } from '@chakra-ui/react'
-import {
-  BubbleBlockType,
-  DraggableBlockType,
-  InputBlockType,
-  IntegrationBlockType,
-  LogicBlockType,
-} from '@typebot.io/schemas'
 import { useBlockDnd } from '@/features/graph/providers/GraphDndProvider'
 import React, { useState } from 'react'
 import { BlockCard } from './BlockCard'
 import { LockedIcon, UnlockedIcon } from '@/components/icons'
 import { BlockCardOverlay } from './BlockCardOverlay'
 import { headerHeight } from '../constants'
-import { useScopedI18n } from '@/locales'
+import { useTranslate } from '@tolgee/react'
+import { BubbleBlockType } from '@typebot.io/schemas/features/blocks/bubbles/constants'
+import { InputBlockType } from '@typebot.io/schemas/features/blocks/inputs/constants'
+import { IntegrationBlockType } from '@typebot.io/schemas/features/blocks/integrations/constants'
+import { LogicBlockType } from '@typebot.io/schemas/features/blocks/logic/constants'
+import { BlockV6 } from '@typebot.io/schemas'
 
 export const BlocksSideBar = () => {
-  const scopedT = useScopedI18n('editor.sidebarBlocks')
+  const { t } = useTranslate()
   const { setDraggedBlockType, draggedBlockType } = useBlockDnd()
   const [position, setPosition] = useState({
     x: 0,
@@ -47,7 +45,7 @@ export const BlocksSideBar = () => {
   }
   useEventListener('mousemove', handleMouseMove)
 
-  const handleMouseDown = (e: React.MouseEvent, type: DraggableBlockType) => {
+  const handleMouseDown = (e: React.MouseEvent, type: BlockV6['type']) => {
     const element = e.currentTarget as HTMLDivElement
     const rect = element.getBoundingClientRect()
     setPosition({ x: rect.left, y: rect.top })
@@ -107,16 +105,16 @@ export const BlocksSideBar = () => {
           <Tooltip
             label={
               isLocked
-                ? scopedT('sidebar.unlock.label')
-                : scopedT('sidebar.lock.label')
+                ? t('editor.sidebarBlocks.sidebar.unlock.label')
+                : t('editor.sidebarBlocks.sidebar.lock.label')
             }
           >
             <IconButton
               icon={isLocked ? <LockedIcon /> : <UnlockedIcon />}
               aria-label={
                 isLocked
-                  ? scopedT('sidebar.icon.unlock.label')
-                  : scopedT('sidebar.icon.lock.label')
+                  ? t('editor.sidebarBlocks.sidebar.icon.unlock.label')
+                  : t('editor.sidebarBlocks.sidebar.icon.lock.label')
               }
               size="sm"
               onClick={handleLockClick}
@@ -126,7 +124,7 @@ export const BlocksSideBar = () => {
 
         <Stack>
           <Text fontSize="sm" fontWeight="semibold">
-            {scopedT('blockType.bubbles.heading')}
+            {t('editor.sidebarBlocks.blockType.bubbles.heading')}
           </Text>
           <SimpleGrid columns={2} spacing="3">
             {Object.values(BubbleBlockType).map((type) => (
@@ -137,7 +135,7 @@ export const BlocksSideBar = () => {
 
         <Stack>
           <Text fontSize="sm" fontWeight="semibold">
-            {scopedT('blockType.inputs.heading')}
+            {t('editor.sidebarBlocks.blockType.inputs.heading')}
           </Text>
           <SimpleGrid columns={2} spacing="3">
             {Object.values(InputBlockType).map((type) => (
@@ -148,7 +146,7 @@ export const BlocksSideBar = () => {
 
         <Stack>
           <Text fontSize="sm" fontWeight="semibold">
-            {scopedT('blockType.logic.heading')}
+            {t('editor.sidebarBlocks.blockType.logic.heading')}
           </Text>
           <SimpleGrid columns={2} spacing="3">
             {Object.values(LogicBlockType).map((type) => (
@@ -159,7 +157,7 @@ export const BlocksSideBar = () => {
 
         <Stack>
           <Text fontSize="sm" fontWeight="semibold">
-            {scopedT('blockType.integrations.heading')}
+            {t('editor.sidebarBlocks.blockType.integrations.heading')}
           </Text>
           <SimpleGrid columns={2} spacing="3">
             {Object.values(IntegrationBlockType).map((type) => (

@@ -1,4 +1,4 @@
-import prisma from '@/lib/prisma'
+import prisma from '@typebot.io/lib/prisma'
 import { authenticatedProcedure } from '@/helpers/server/trpc'
 import { TRPCError } from '@trpc/server'
 import { z } from 'zod'
@@ -9,7 +9,7 @@ export const listCustomDomains = authenticatedProcedure
   .meta({
     openapi: {
       method: 'GET',
-      path: '/custom-domains',
+      path: '/v1/custom-domains',
       protect: true,
       summary: 'List custom domains',
       tags: ['Custom domains'],

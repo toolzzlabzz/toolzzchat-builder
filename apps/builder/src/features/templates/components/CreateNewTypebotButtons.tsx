@@ -7,19 +7,19 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react'
 import { ToolIcon, TemplateIcon, DownloadIcon } from '@/components/icons'
-import { Typebot } from '@typebot.io/schemas'
 import { useRouter } from 'next/router'
 import React, { useState } from 'react'
 import { ImportTypebotFromFileButton } from './ImportTypebotFromFileButton'
-import { TemplatesModal } from './TemplatesModal'
 import { useWorkspace } from '@/features/workspace/WorkspaceProvider'
 import { useUser } from '@/features/account/hooks/useUser'
 import { useToast } from '@/hooks/useToast'
 import { trpc } from '@/lib/trpc'
-import { useScopedI18n } from '@/locales'
+import { useTranslate } from '@tolgee/react'
+import { Typebot } from '@typebot.io/schemas'
+import { TemplatesModal } from './TemplatesModal'
 
 export const CreateNewTypebotButtons = () => {
-  const scopedT = useScopedI18n('templates.buttons')
+  const { t } = useTranslate()
   const { workspace } = useWorkspace()
   const { user } = useUser()
   const router = useRouter()
@@ -29,12 +29,41 @@ export const CreateNewTypebotButtons = () => {
 
   const { showToast } = useToast()
 
-  const { mutate } = trpc.typebot.createTypebot.useMutation({
+  const { mutate: createTypebot } = trpc.typebot.createTypebot.useMutation({
     onMutate: () => {
       setIsLoading(true)
     },
     onError: (error) => {
-      showToast({ description: error.message })
+      showToast({
+        title: 'Failed to create bot',
+        description: error.message,
+      })
+    },
+    onSuccess: (data) => {
+      router.push({
+        pathname: `/typebots/${data.typebot.id}/edit`,
+        query:
+          router.query.isFirstBot === 'true'
+            ? {
+                isFirstBot: 'true',
+              }
+            : {},
+      })
+    },
+    onSettled: () => {
+      setIsLoading(false)
+    },
+  })
+
+  const { mutate: importTypebot } = trpc.typebot.importTypebot.useMutation({
+    onMutate: () => {
+      setIsLoading(true)
+    },
+    onError: (error) => {
+      showToast({
+        title: 'Failed to import bot',
+        description: error.message,
+      })
     },
     onSuccess: (data) => {
       router.push({
@@ -55,24 +84,26 @@ export const CreateNewTypebotButtons = () => {
   const handleCreateSubmit = async (typebot?: Typebot) => {
     if (!user || !workspace) return
     const folderId = router.query.folderId?.toString() ?? null
-    mutate({
-      workspaceId: workspace.id,
-      typebot: {
-        ...(typebot
-          ? {
-              ...typebot,
-              publicId: undefined,
-              customDomain: undefined,
-            }
-          : {}),
-        folderId,
-      },
-    })
+    if (typebot)
+      importTypebot({
+        workspaceId: workspace.id,
+        typebot: {
+          ...typebot,
+          folderId,
+        },
+      })
+    else
+      createTypebot({
+        workspaceId: workspace.id,
+        typebot: {
+          folderId,
+        },
+      })
   }
 
   return (
     <VStack maxW="600px" w="full" flex="1" pt="20" spacing={10}>
-      <Heading>{scopedT('heading')}</Heading>
+      <Heading>{t('templates.buttons.heading')}</Heading>
       <Stack w="full" spacing={6}>
         <Button
           variant="outline"
@@ -89,7 +120,7 @@ export const CreateNewTypebotButtons = () => {
           onClick={() => handleCreateSubmit()}
           isLoading={isLoading}
         >
-          {scopedT('fromScratchButton.label')}
+          {t('templates.buttons.fromScratchButton.label')}
         </Button>
         <Button
           variant="outline"
@@ -106,7 +137,7 @@ export const CreateNewTypebotButtons = () => {
           onClick={onOpen}
           isLoading={isLoading}
         >
-          {scopedT('fromTemplateButton.label')}
+          {t('templates.buttons.fromTemplateButton.label')}
         </Button>
         <ImportTypebotFromFileButton
           variant="outline"
@@ -123,13 +154,14 @@ export const CreateNewTypebotButtons = () => {
           isLoading={isLoading}
           onNewTypebot={handleCreateSubmit}
         >
-          {scopedT('importFileButton.label')}
+          {t('templates.buttons.importFileButton.label')}
         </ImportTypebotFromFileButton>
       </Stack>
       <TemplatesModal
         isOpen={isOpen}
         onClose={onClose}
         onTypebotChoose={handleCreateSubmit}
+        isLoading={isLoading}
       />
     </VStack>
   )

@@ -1,4 +1,4 @@
-import prisma from '@/lib/prisma'
+import prisma from '@typebot.io/lib/prisma'
 import { authenticatedProcedure } from '@/helpers/server/trpc'
 import { TRPCError } from '@trpc/server'
 import { workspaceInvitationSchema } from '@typebot.io/schemas'
@@ -9,7 +9,7 @@ export const listInvitationsInWorkspace = authenticatedProcedure
   .meta({
     openapi: {
       method: 'GET',
-      path: '/workspaces/{workspaceId}/invitations',
+      path: '/v1/workspaces/{workspaceId}/invitations',
       protect: true,
       summary: 'List invitations in workspace',
       tags: ['Workspace'],

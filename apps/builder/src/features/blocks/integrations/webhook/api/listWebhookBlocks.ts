@@ -1,17 +1,18 @@
-import prisma from '@/lib/prisma'
+import prisma from '@typebot.io/lib/prisma'
 import { canReadTypebots } from '@/helpers/databaseRules'
 import { authenticatedProcedure } from '@/helpers/server/trpc'
 import { TRPCError } from '@trpc/server'
-import { Group, IntegrationBlockType, Typebot } from '@typebot.io/schemas'
-import { byId, isWebhookBlock, parseGroupTitle } from '@typebot.io/lib'
 import { z } from 'zod'
-import { Webhook } from '@typebot.io/prisma'
+import { parseGroups } from '@typebot.io/schemas/features/typebot/group'
+import { IntegrationBlockType } from '@typebot.io/schemas/features/blocks/integrations/constants'
+import { Block } from '@typebot.io/schemas'
+import { byId, isWebhookBlock } from '@typebot.io/lib'
 
 export const listWebhookBlocks = authenticatedProcedure
   .meta({
     openapi: {
       method: 'GET',
-      path: '/typebots/{typebotId}/webhookBlocks',
+      path: '/v1/typebots/{typebotId}/webhookBlocks',
       protect: true,
       summary: 'List webhook blocks',
       description:
@@ -42,17 +43,22 @@ export const listWebhookBlocks = authenticatedProcedure
     })
   )
   .query(async ({ input: { typebotId }, ctx: { user } }) => {
-    const typebot = (await prisma.typebot.findFirst({
+    const typebot = await prisma.typebot.findFirst({
       where: canReadTypebots(typebotId, user),
       select: {
+        version: true,
         groups: true,
         webhooks: true,
       },
-    })) as (Pick<Typebot, 'groups'> & { webhooks: Webhook[] }) | null
+    })
     if (!typebot)
       throw new TRPCError({ code: 'NOT_FOUND', message: 'Typebot not found' })
 
-    const webhookBlocks = (typebot?.groups as Group[]).reduce<
+    const groups = parseGroups(typebot.groups, {
+      typebotVersion: typebot.version,
+    })
+
+    const webhookBlocks = groups.reduce<
       {
         id: string
         label: string
@@ -64,16 +70,17 @@ export const listWebhookBlocks = authenticatedProcedure
           | IntegrationBlockType.PABBLY_CONNECT
       }[]
     >((webhookBlocks, group) => {
-      const blocks = group.blocks.filter(isWebhookBlock)
+      const blocks = (group.blocks as Block[]).filter(isWebhookBlock)
       return [
         ...webhookBlocks,
         ...blocks.map((block) => ({
           id: block.id,
           type: block.type,
-          label: `${parseGroupTitle(group.title)} > ${block.id}`,
-          url: block.options.webhook
-            ? block.options.webhook.url
-            : typebot?.webhooks.find(byId(block.webhookId))?.url ?? undefined,
+          label: `${group.title} > ${block.id}`,
+          url:
+            'webhookId' in block && !block.options?.webhook
+              ? typebot?.webhooks.find(byId(block.webhookId))?.url ?? undefined
+              : block.options?.webhook?.url,
         })),
       ]
     }, [])

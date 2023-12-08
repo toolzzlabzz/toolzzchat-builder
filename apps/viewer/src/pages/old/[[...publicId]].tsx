@@ -3,8 +3,8 @@ import { ErrorPage } from '@/components/ErrorPage'
 import { NotFoundPage } from '@/components/NotFoundPage'
 import { GetServerSideProps, GetServerSidePropsContext } from 'next'
 import { isDefined, isNotDefined, omit } from '@typebot.io/lib'
-import prisma from '../../lib/prisma'
 import { TypebotPageProps, TypebotPageV2 } from '@/components/TypebotPageV2'
+import prisma from '@typebot.io/lib/prisma'
 
 export const getServerSideProps: GetServerSideProps = async (
   context: GetServerSidePropsContext
@@ -16,7 +16,7 @@ export const getServerSideProps: GetServerSideProps = async (
     const publishedTypebot = await getTypebotFromPublicId(
       context.query.publicId?.toString()
     )
-    const headCode = publishedTypebot?.settings.metadata.customHeadCode
+    const headCode = publishedTypebot?.settings.metadata?.customHeadCode
     return {
       props: {
         publishedTypebot,

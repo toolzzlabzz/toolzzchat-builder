@@ -1,20 +1,20 @@
 import { publicProcedure } from '@/helpers/server/trpc'
 import { TRPCError } from '@trpc/server'
 import { z } from 'zod'
-import { getSession } from '../queries/getSession'
-import prisma from '@/lib/prisma'
+import { getSession } from '@typebot.io/bot-engine/queries/getSession'
 import {
   PublicTypebot,
   SessionState,
   Typebot,
   Variable,
 } from '@typebot.io/schemas'
+import prisma from '@typebot.io/lib/prisma'
 
 export const updateTypebotInSession = publicProcedure
   .meta({
     openapi: {
       method: 'POST',
-      path: '/sessions/{sessionId}/updateTypebot',
+      path: '/v1/sessions/{sessionId}/updateTypebot',
       summary: 'Update typebot in session',
       description:
         'Update chat session with latest typebot modifications. This is useful when you want to update the typebot in an ongoing session after making changes to it.',
@@ -94,7 +94,7 @@ const updateSessionState = (
           },
         }
       : typebotInQueue
-  ),
+  ) as SessionState['typebotsQueue'],
 })
 
 const updateVariablesInSession = (

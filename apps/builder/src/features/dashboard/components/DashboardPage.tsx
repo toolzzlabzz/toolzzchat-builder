@@ -5,20 +5,20 @@ import {
   PreCheckoutModalProps,
 } from '@/features/billing/components/PreCheckoutModal'
 import { useWorkspace } from '@/features/workspace/WorkspaceProvider'
-import { useScopedI18n } from '@/locales'
 import { Stack, VStack, Spinner, Text } from '@chakra-ui/react'
 import { Plan } from '@typebot.io/prisma'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
-import { guessIfUserIsEuropean } from '@typebot.io/lib/pricing'
 import { DashboardHeader } from './DashboardHeader'
 import { FolderContent } from '@/features/folders/components/FolderContent'
 import { TypebotDndProvider } from '@/features/folders/TypebotDndProvider'
 import { ParentModalProvider } from '@/features/graph/providers/ParentModalProvider'
 import { trpc } from '@/lib/trpc'
+import { guessIfUserIsEuropean } from '@typebot.io/lib/billing/guessIfUserIsEuropean'
+import { useTranslate } from '@tolgee/react'
 
 export const DashboardPage = () => {
-  const scopedT = useScopedI18n('dashboard')
+  const { t } = useTranslate()
   const [isLoading, setIsLoading] = useState(false)
   const router = useRouter()
   const { user } = useUser()
@@ -33,14 +33,11 @@ export const DashboardPage = () => {
     })
 
   useEffect(() => {
-    const { subscribePlan, chats, storage, isYearly, claimCustomPlan } =
-      router.query as {
-        subscribePlan: Plan | undefined
-        chats: string | undefined
-        storage: string | undefined
-        isYearly: string | undefined
-        claimCustomPlan: string | undefined
-      }
+    const { subscribePlan, claimCustomPlan } = router.query as {
+      subscribePlan: Plan | undefined
+      chats: string | undefined
+      claimCustomPlan: string | undefined
+    }
     if (claimCustomPlan && user?.email && workspace) {
       setIsLoading(true)
       createCustomCheckoutSession({
@@ -54,17 +51,14 @@ export const DashboardPage = () => {
       setPreCheckoutPlan({
         plan: subscribePlan as 'PRO' | 'STARTER',
         workspaceId: workspace.id,
-        additionalChats: chats ? parseInt(chats) : 0,
-        additionalStorage: storage ? parseInt(storage) : 0,
         currency: guessIfUserIsEuropean() ? 'eur' : 'usd',
-        isYearly: isYearly === 'false' ? false : true,
       })
     }
   }, [createCustomCheckoutSession, router.query, user, workspace])
 
   return (
     <Stack minH="100vh">
-      <Seo title={workspace?.name ?? scopedT('title')} />
+      <Seo title={workspace?.name ?? t('dashboard.title')} />
       <DashboardHeader />
       {!workspace?.stripeId && (
         <ParentModalProvider>
@@ -79,7 +73,7 @@ export const DashboardPage = () => {
       <TypebotDndProvider>
         {isLoading ? (
           <VStack w="full" justifyContent="center" pt="10" spacing={6}>
-            <Text>{scopedT('redirectionMessage')}</Text>
+            <Text>{t('dashboard.redirectionMessage')}</Text>
             <Spinner />
           </VStack>
         ) : (

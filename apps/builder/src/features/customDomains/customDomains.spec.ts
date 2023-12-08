@@ -1,9 +1,9 @@
 import test, { expect } from '@playwright/test'
-import { InputBlockType, defaultTextInputOptions } from '@typebot.io/schemas'
 import { createId } from '@paralleldrive/cuid2'
 import { createTypebots } from '@typebot.io/lib/playwright/databaseActions'
 import { parseDefaultGroupWithBlock } from '@typebot.io/lib/playwright/databaseHelpers'
 import { starterWorkspaceId } from '@typebot.io/lib/playwright/databaseSetup'
+import { InputBlockType } from '@typebot.io/schemas/features/blocks/inputs/constants'
 
 test('should be able to connect custom domain', async ({ page }) => {
   const typebotId = createId()
@@ -12,7 +12,6 @@ test('should be able to connect custom domain', async ({ page }) => {
       id: typebotId,
       ...parseDefaultGroupWithBlock({
         type: InputBlockType.TEXT,
-        options: defaultTextInputOptions,
       }),
     },
   ])
@@ -52,12 +51,13 @@ test.describe('Starter workspace', () => {
         workspaceId: starterWorkspaceId,
         ...parseDefaultGroupWithBlock({
           type: InputBlockType.TEXT,
-          options: defaultTextInputOptions,
         }),
       },
     ])
     await page.goto(`/typebots/${typebotId}/share`)
-    await expect(page.locator('[data-testid="pro-lock-tag"]')).toBeVisible()
+    await expect(
+      page.locator('[data-testid="pro-lock-tag"]').nth(0)
+    ).toBeVisible()
     await page.click('text=Add my domain')
     await expect(
       page.locator(

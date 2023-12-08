@@ -1,10 +1,8 @@
 import { useToast } from '@/hooks/useToast'
 import { Button, ButtonProps, chakra } from '@chakra-ui/react'
-import { Typebot, typebotCreateSchema } from '@typebot.io/schemas'
-import { preprocessTypebot } from '@typebot.io/schemas/features/typebot/helpers/preprocessTypebot'
+import { Typebot } from '@typebot.io/schemas'
 import React, { ChangeEvent } from 'react'
-import { z } from 'zod'
-import { useScopedI18n } from '@/locales'
+import { useTranslate } from '@tolgee/react'
 
 type Props = {
   onNewTypebot: (typebot: Typebot) => void
@@ -14,7 +12,7 @@ export const ImportTypebotFromFileButton = ({
   onNewTypebot,
   ...props
 }: Props) => {
-  const scopedT = useScopedI18n('templates.importFromFileButon')
+  const { t } = useTranslate()
   const { showToast } = useToast()
 
   const handleInputChange = async (e: ChangeEvent<HTMLInputElement>) => {
@@ -22,14 +20,17 @@ export const ImportTypebotFromFileButton = ({
     const file = e.target.files[0]
     const fileContent = await readFile(file)
     try {
-      const typebot = z
-        .preprocess(preprocessTypebot, typebotCreateSchema)
-        .parse(JSON.parse(fileContent))
-      onNewTypebot(typebot as Typebot)
+      const typebot = JSON.parse(fileContent)
+      onNewTypebot({
+        ...typebot,
+        events: typebot.events ?? null,
+        icon: typebot.icon ?? null,
+        name: typebot.name ?? 'My typebot',
+      } as Typebot)
     } catch (err) {
       console.error(err)
       showToast({
-        description: scopedT('toastError.description'),
+        description: t('templates.importFromFileButon.toastError.description'),
         details: {
           content: JSON.stringify(err, null, 2),
           lang: 'json',

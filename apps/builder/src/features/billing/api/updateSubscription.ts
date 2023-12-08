@@ -1,25 +1,20 @@
 import { sendTelemetryEvents } from '@typebot.io/lib/telemetry/sendTelemetryEvent'
-import prisma from '@/lib/prisma'
+import prisma from '@typebot.io/lib/prisma'
 import { authenticatedProcedure } from '@/helpers/server/trpc'
 import { TRPCError } from '@trpc/server'
 import { Plan } from '@typebot.io/prisma'
 import { workspaceSchema } from '@typebot.io/schemas'
 import Stripe from 'stripe'
-import { isDefined } from '@typebot.io/lib'
 import { z } from 'zod'
-import { getChatsLimit, getStorageLimit } from '@typebot.io/lib/pricing'
-import { chatPriceIds, storagePriceIds } from './getSubscription'
 import { createCheckoutSessionUrl } from './createCheckoutSession'
 import { isAdminWriteWorkspaceForbidden } from '@/features/workspace/helpers/isAdminWriteWorkspaceForbidden'
-import { getUsage } from '@typebot.io/lib/api/getUsage'
 import { env } from '@typebot.io/env'
-import { priceIds } from '@typebot.io/lib/api/pricing'
 
 export const updateSubscription = authenticatedProcedure
   .meta({
     openapi: {
       method: 'PATCH',
-      path: '/billing/subscription',
+      path: '/v1/billing/subscription',
       protect: true,
       summary: 'Update subscription',
       tags: ['Billing'],
@@ -30,10 +25,7 @@ export const updateSubscription = authenticatedProcedure
       returnUrl: z.string(),
       workspaceId: z.string(),
       plan: z.enum([Plan.STARTER, Plan.PRO]),
-      additionalChats: z.number(),
-      additionalStorage: z.number(),
       currency: z.enum(['usd', 'eur']),
-      isYearly: z.boolean(),
     })
   )
   .output(
@@ -44,15 +36,7 @@ export const updateSubscription = authenticatedProcedure
   )
   .mutation(
     async ({
-      input: {
-        workspaceId,
-        plan,
-        additionalChats,
-        additionalStorage,
-        currency,
-        isYearly,
-        returnUrl,
-      },
+      input: { workspaceId, plan, currency, returnUrl },
       ctx: { user },
     }) => {
       if (!env.STRIPE_SECRET_KEY)
@@ -83,6 +67,7 @@ export const updateSubscription = authenticatedProcedure
           code: 'NOT_FOUND',
           message: 'Workspace not found',
         })
+
       const stripe = new Stripe(env.STRIPE_SECRET_KEY, {
         apiVersion: '2022-11-15',
       })
@@ -93,51 +78,54 @@ export const updateSubscription = authenticatedProcedure
       })
       const subscription = data[0] as Stripe.Subscription | undefined
       const currentPlanItemId = subscription?.items.data.find((item) =>
-        [env.STRIPE_STARTER_PRODUCT_ID, env.STRIPE_PRO_PRODUCT_ID].includes(
-          item.price.product.toString()
+        [env.STRIPE_STARTER_PRICE_ID, env.STRIPE_PRO_PRICE_ID].includes(
+          item.price.id
         )
       )?.id
-      const currentAdditionalChatsItemId = subscription?.items.data.find(
-        (item) => chatPriceIds.includes(item.price.id)
+      const currentUsageItemId = subscription?.items.data.find(
+        (item) =>
+          item.price.id === env.STRIPE_STARTER_CHATS_PRICE_ID ||
+          item.price.id === env.STRIPE_PRO_CHATS_PRICE_ID
       )?.id
-      const currentAdditionalStorageItemId = subscription?.items.data.find(
-        (item) => storagePriceIds.includes(item.price.id)
-      )?.id
-      const frequency = isYearly ? 'yearly' : 'monthly'
 
       const items = [
         {
           id: currentPlanItemId,
-          price: priceIds[plan].base[frequency],
+          price:
+            plan === Plan.STARTER
+              ? env.STRIPE_STARTER_PRICE_ID
+              : env.STRIPE_PRO_PRICE_ID,
           quantity: 1,
         },
-        additionalChats === 0 && !currentAdditionalChatsItemId
-          ? undefined
-          : {
-              id: currentAdditionalChatsItemId,
-              price: priceIds[plan].chats[frequency],
-              quantity: getChatsLimit({
-                plan,
-                additionalChatsIndex: additionalChats,
-                customChatsLimit: null,
-              }),
-              deleted: subscription ? additionalChats === 0 : undefined,
-            },
-        additionalStorage === 0 && !currentAdditionalStorageItemId
-          ? undefined
-          : {
-              id: currentAdditionalStorageItemId,
-              price: priceIds[plan].storage[frequency],
-              quantity: getStorageLimit({
-                plan,
-                additionalStorageIndex: additionalStorage,
-                customStorageLimit: null,
-              }),
-              deleted: subscription ? additionalStorage === 0 : undefined,
-            },
-      ].filter(isDefined)
+        {
+          id: currentUsageItemId,
+          price:
+            plan === Plan.STARTER
+              ? env.STRIPE_STARTER_CHATS_PRICE_ID
+              : env.STRIPE_PRO_CHATS_PRICE_ID,
+        },
+      ]
 
       if (subscription) {
+        if (plan === 'STARTER') {
+          const totalChatsUsed = await prisma.result.count({
+            where: {
+              typebot: { workspaceId },
+              hasStarted: true,
+              createdAt: {
+                gte: new Date(subscription.current_period_start * 1000),
+              },
+            },
+          })
+          if (totalChatsUsed >= 4000) {
+            throw new TRPCError({
+              code: 'BAD_REQUEST',
+              message:
+                "You have collected more than 4000 chats during this billing cycle. You can't downgrade to the Starter.",
+            })
+          }
+        }
+
         await stripe.subscriptions.update(subscription.id, {
           items,
           proration_behavior: 'always_invoice',
@@ -150,33 +138,16 @@ export const updateSubscription = authenticatedProcedure
           currency,
           plan,
           returnUrl,
-          additionalChats,
-          additionalStorage,
-          isYearly,
         })
 
         return { checkoutUrl }
-      }
-
-      let isQuarantined = workspace.isQuarantined
-
-      if (isQuarantined) {
-        const newChatsLimit = getChatsLimit({
-          plan,
-          additionalChatsIndex: additionalChats,
-          customChatsLimit: null,
-        })
-        const { totalChatsUsed } = await getUsage(prisma)(workspaceId)
-        if (totalChatsUsed < newChatsLimit) isQuarantined = false
       }
 
       const updatedWorkspace = await prisma.workspace.update({
         where: { id: workspaceId },
         data: {
           plan,
-          additionalChatsIndex: additionalChats,
-          additionalStorageIndex: additionalStorage,
-          isQuarantined,
+          isQuarantined: false,
         },
       })
 
@@ -187,8 +158,6 @@ export const updateSubscription = authenticatedProcedure
           userId: user.id,
           data: {
             plan,
-            additionalChatsIndex: additionalChats,
-            additionalStorageIndex: additionalStorage,
           },
         },
       ])
