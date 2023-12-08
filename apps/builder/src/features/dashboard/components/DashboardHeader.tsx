@@ -1,10 +1,17 @@
 import React from 'react'
-import { HStack, Flex, Button, useDisclosure } from '@chakra-ui/react'
-import { HardDriveIcon, SettingsIcon } from '@/components/icons'
+import {
+  HStack,
+  Flex,
+  Button,
+  useDisclosure,
+  Image,
+  useColorMode,
+} from '@chakra-ui/react'
+import { SettingsIcon } from '@/components/icons'
 import { useUser } from '@/features/account/hooks/useUser'
 import { isNotDefined } from '@typebot.io/lib'
 import Link from 'next/link'
-import { EmojiOrImageIcon } from '@/components/EmojiOrImageIcon'
+// import { EmojiOrImageIcon } from '@/components/EmojiOrImageIcon'
 import { useTranslate } from '@tolgee/react'
 import { useWorkspace } from '@/features/workspace/WorkspaceProvider'
 import { WorkspaceDropdown } from '@/features/workspace/components/WorkspaceDropdown'
@@ -14,6 +21,7 @@ export const DashboardHeader = () => {
   const { t } = useTranslate()
   const { user, logOut } = useUser()
   const { workspace, switchWorkspace, createWorkspace } = useWorkspace()
+  const { colorMode } = useColorMode()
 
   const { isOpen, onOpen, onClose } = useDisclosure()
 
@@ -30,10 +38,18 @@ export const DashboardHeader = () => {
         flex="1"
       >
         <Link href="/typebots" data-testid="typebot-logo">
-          <EmojiOrImageIcon
-            boxSize="30px"
-            icon={workspace?.icon}
-            defaultIcon={HardDriveIcon}
+          <Image
+            pointerEvents="none"
+            src={
+              colorMode === 'dark'
+                ? '/images/tzz_bots_light.png'
+                : '/images/tzz_bots_dark.png'
+            }
+            height="55px"
+            paddingTop="5px"
+            alt="Group image"
+            rounded="md"
+            objectFit="cover"
           />
         </Link>
         <HStack>
