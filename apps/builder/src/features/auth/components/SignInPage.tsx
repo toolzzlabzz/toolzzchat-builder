@@ -1,7 +1,14 @@
 import { Seo } from '@/components/Seo'
 import { TextLink } from '@/components/TextLink'
 import { T, useTranslate } from '@tolgee/react'
-import { VStack, Heading, Text } from '@chakra-ui/react'
+import {
+  VStack,
+  Heading,
+  Text,
+  Image,
+  Box,
+  useColorMode,
+} from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 import { SignInForm } from './SignInForm'
 
@@ -13,9 +20,30 @@ type Props = {
 export const SignInPage = ({ type }: Props) => {
   const { t } = useTranslate()
   const { query } = useRouter()
+  const { colorMode } = useColorMode()
 
   return (
     <VStack spacing={4} h="100vh" justifyContent="center">
+      <Box
+        w="full"
+        justifyContent="center"
+        alignContent="center"
+        display="flex"
+      >
+        <Image
+          pointerEvents="none"
+          width="150px"
+          height="65px"
+          src={
+            colorMode === 'dark'
+              ? '/images/tzz_bots_light.png'
+              : '/images/tzz_bots_dark.png'
+          }
+          alt="Group image"
+          rounded="md"
+          objectFit="cover"
+        />
+      </Box>
       <Seo
         title={
           type === 'signin'
