@@ -1,5 +1,5 @@
 import { sendTelemetryEvents } from '@typebot.io/lib/telemetry/sendTelemetryEvent'
-import prisma from '@/lib/prisma'
+import prisma from '@typebot.io/lib/prisma'
 import { authenticatedProcedure } from '@/helpers/server/trpc'
 import { TRPCError } from '@trpc/server'
 import { Workspace, workspaceSchema } from '@typebot.io/schemas'
@@ -10,7 +10,7 @@ export const createWorkspace = authenticatedProcedure
   .meta({
     openapi: {
       method: 'POST',
-      path: '/workspaces',
+      path: '/v1/workspaces',
       protect: true,
       summary: 'Create workspace',
       tags: ['Workspace'],

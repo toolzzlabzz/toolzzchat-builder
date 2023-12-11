@@ -8,13 +8,13 @@ import { executeWait } from '@/features/blocks/logic/wait/utils/executeWait'
 import { executeWebhook } from '@/features/blocks/integrations/webhook/executeWebhook'
 import { executePixel } from '@/features/blocks/integrations/pixel/executePixel'
 import { ClientSideActionContext } from '@/types'
-import type { ChatReply, ReplyLog } from '@typebot.io/schemas'
+import type { ContinueChatResponse, ChatLog } from '@typebot.io/schemas'
 import { injectStartProps } from './injectStartProps'
 
 type Props = {
-  clientSideAction: NonNullable<ChatReply['clientSideActions']>[0]
+  clientSideAction: NonNullable<ContinueChatResponse['clientSideActions']>[0]
   context: ClientSideActionContext
-  onMessageStream?: (message: string) => void
+  onMessageStream?: (props: { id: string; message: string }) => void
 }
 
 export const executeClientSideAction = async ({
@@ -23,7 +23,7 @@ export const executeClientSideAction = async ({
   onMessageStream,
 }: Props): Promise<
   | { blockedPopupUrl: string }
-  | { replyToSend: string | undefined; logs?: ReplyLog[] }
+  | { replyToSend: string | undefined; logs?: ChatLog[] }
   | void
 > => {
   if ('chatwoot' in clientSideAction) {
@@ -51,10 +51,7 @@ export const executeClientSideAction = async ({
     const { error, message } = await streamChat(context)(
       clientSideAction.streamOpenAiChatCompletion.messages,
       {
-        onMessageStream: clientSideAction.streamOpenAiChatCompletion
-          .displayStream
-          ? onMessageStream
-          : undefined,
+        onMessageStream,
       }
     )
     if (error)
@@ -63,7 +60,7 @@ export const executeClientSideAction = async ({
         logs: [
           {
             status: 'error',
-            description: 'Failed to stream OpenAI completion',
+            description: 'OpenAI returned an error',
             details: JSON.stringify(error, null, 2),
           },
         ],

@@ -1,4 +1,4 @@
-import prisma from '@/lib/prisma'
+import prisma from '@typebot.io/lib/prisma'
 import { authenticatedProcedure } from '@/helpers/server/trpc'
 import { TRPCError } from '@trpc/server'
 import Stripe from 'stripe'
@@ -12,7 +12,7 @@ export const listInvoices = authenticatedProcedure
   .meta({
     openapi: {
       method: 'GET',
-      path: '/billing/invoices',
+      path: '/v1/billing/invoices',
       protect: true,
       summary: 'List invoices',
       tags: ['Billing'],
@@ -64,12 +64,12 @@ export const listInvoices = authenticatedProcedure
         .filter(
           (invoice) => isDefined(invoice.invoice_pdf) && isDefined(invoice.id)
         )
-        .map((i) => ({
-          id: i.number as string,
-          url: i.invoice_pdf as string,
-          amount: i.subtotal,
-          currency: i.currency,
-          date: i.status_transitions.paid_at,
+        .map((invoice) => ({
+          id: invoice.number as string,
+          url: invoice.invoice_pdf as string,
+          amount: invoice.subtotal,
+          currency: invoice.currency,
+          date: invoice.status_transitions.paid_at,
         })),
     }
   })

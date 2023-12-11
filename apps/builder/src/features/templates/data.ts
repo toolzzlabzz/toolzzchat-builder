@@ -95,6 +95,14 @@ export const templates: TemplateProps[] = [
       'A bot that uses the ChatGPT model to generate responses based on the user input',
   },
   {
+    name: 'Audio ChatGPT',
+    emoji: '🤖',
+    fileName: 'audio-chat-gpt.json',
+    description:
+      'An audio AI bot that uses the OpenAI block to generate responses based on the user input',
+    isNew: true,
+  },
+  {
     name: 'ChatGPT personas',
     emoji: '🎭',
     fileName: 'chat-gpt-personas.json',
@@ -106,7 +114,6 @@ export const templates: TemplateProps[] = [
     emoji: '🦾',
     fileName: 'lead-gen-ai.json',
     category: 'marketing',
-    isNew: true,
     description:
       'You are a marketing agency and this bot allows you generate new leads interested in your services. An AI block is used to dig deeper into the user needs.',
   },
@@ -115,8 +122,15 @@ export const templates: TemplateProps[] = [
     emoji: '🐶',
     fileName: 'dog-insurance-offer.json',
     category: 'marketing',
-    isNew: true,
     description:
       'You are a dog insurance company. This bot allows you to collect information about the dog and provide a quote.',
+  },
+  {
+    name: 'OpenAI conditions',
+    emoji: '🧠',
+    fileName: 'openai-conditions.json',
+    isNew: true,
+    description:
+      'This is an example of how you can use the OpenAI block to take smart decisions based on the user input and redirect the conversation to the right path.',
   },
 ]

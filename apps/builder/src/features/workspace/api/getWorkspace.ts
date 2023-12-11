@@ -1,4 +1,4 @@
-import prisma from '@/lib/prisma'
+import prisma from '@typebot.io/lib/prisma'
 import { authenticatedProcedure } from '@/helpers/server/trpc'
 import { TRPCError } from '@trpc/server'
 import { workspaceSchema } from '@typebot.io/schemas'
@@ -9,7 +9,7 @@ export const getWorkspace = authenticatedProcedure
   .meta({
     openapi: {
       method: 'GET',
-      path: '/workspaces/{workspaceId}',
+      path: '/v1/workspaces/{workspaceId}',
       protect: true,
       summary: 'Get workspace',
       tags: ['Workspace'],

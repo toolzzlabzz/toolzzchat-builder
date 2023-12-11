@@ -1,4 +1,4 @@
-import prisma from '@/lib/prisma'
+import prisma from '@typebot.io/lib/prisma'
 import { authenticatedProcedure } from '@/helpers/server/trpc'
 import { TRPCError } from '@trpc/server'
 import { z } from 'zod'
@@ -8,7 +8,7 @@ export const unpublishTypebot = authenticatedProcedure
   .meta({
     openapi: {
       method: 'POST',
-      path: '/typebots/{typebotId}/unpublish',
+      path: '/v1/typebots/{typebotId}/unpublish',
       protect: true,
       summary: 'Unpublish a typebot',
       tags: ['Typebot'],
@@ -32,6 +32,18 @@ export const unpublishTypebot = authenticatedProcedure
       include: {
         collaborators: true,
         publishedTypebot: true,
+        workspace: {
+          select: {
+            isSuspended: true,
+            isPastDue: true,
+            members: {
+              select: {
+                userId: true,
+                role: true,
+              },
+            },
+          },
+        },
       },
     })
     if (!existingTypebot?.publishedTypebot)

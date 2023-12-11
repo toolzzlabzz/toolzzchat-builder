@@ -1,17 +1,17 @@
 import { Text } from '@chakra-ui/react'
-import { AudioBubbleContent } from '@typebot.io/schemas'
 import { isDefined } from '@typebot.io/lib'
-import { useScopedI18n } from '@/locales'
+import { useTranslate } from '@tolgee/react'
+import { AudioBubbleBlock } from '@typebot.io/schemas'
 
 type Props = {
-  url: AudioBubbleContent['url']
+  url: NonNullable<AudioBubbleBlock['content']>['url']
 }
 
 export const AudioBubbleNode = ({ url }: Props) => {
-  const scopedT = useScopedI18n('editor.blocks.bubbles.audio.node')
+  const { t } = useTranslate()
   return isDefined(url) ? (
     <audio src={url} controls />
   ) : (
-    <Text color={'gray.500'}>{scopedT('clickToEdit.text')}</Text>
+    <Text color={'gray.500'}>{t('clickToEdit')}</Text>
   )
 }

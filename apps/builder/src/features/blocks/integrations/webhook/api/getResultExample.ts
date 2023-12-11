@@ -1,8 +1,8 @@
-import prisma from '@/lib/prisma'
+import prisma from '@typebot.io/lib/prisma'
 import { canReadTypebots } from '@/helpers/databaseRules'
 import { authenticatedProcedure } from '@/helpers/server/trpc'
 import { TRPCError } from '@trpc/server'
-import { Typebot } from '@typebot.io/schemas'
+import { Block, Typebot } from '@typebot.io/schemas'
 import { z } from 'zod'
 import { fetchLinkedTypebots } from '@/features/blocks/logic/typebotLink/helpers/fetchLinkedTypebots'
 import { parseResultExample } from '../helpers/parseResultExample'
@@ -11,7 +11,7 @@ export const getResultExample = authenticatedProcedure
   .meta({
     openapi: {
       method: 'GET',
-      path: '/typebots/{typebotId}/webhookBlocks/{blockId}/getResultExample',
+      path: '/v1/typebots/{typebotId}/webhookBlocks/{blockId}/getResultExample',
       protect: true,
       summary: 'Get result example',
       description:
@@ -45,14 +45,15 @@ export const getResultExample = authenticatedProcedure
         groups: true,
         edges: true,
         variables: true,
+        events: true,
       },
-    })) as Pick<Typebot, 'groups' | 'edges' | 'variables'> | null
+    })) as Pick<Typebot, 'groups' | 'edges' | 'variables' | 'events'> | null
 
     if (!typebot)
       throw new TRPCError({ code: 'NOT_FOUND', message: 'Typebot not found' })
 
     const block = typebot.groups
-      .flatMap((group) => group.blocks)
+      .flatMap<Block>((group) => group.blocks)
       .find((block) => block.id === blockId)
 
     if (!block)
@@ -65,6 +66,6 @@ export const getResultExample = authenticatedProcedure
         typebot,
         linkedTypebots,
         userEmail: user.email ?? 'test@email.com',
-      })(block.groupId),
+      })(block.id),
     }
   })

@@ -34,7 +34,7 @@ test.describe('Send email block', () => {
     )
     await page.fill('[placeholder="John Smith"]', 'John Smith')
     await page.fill('[placeholder="mail.provider.com"]', env.SMTP_HOST)
-    await page.fill('[placeholder="user@provider.com"]', env.SMTP_USERNAME)
+    await page.getByLabel('Username').fill(env.SMTP_USERNAME)
     await page.fill('[type="password"]', env.SMTP_PASSWORD)
     await page.fill('input[role="spinbutton"]', env.SMTP_PORT.toString())
     await expect(createButton).toBeEnabled()
@@ -59,7 +59,7 @@ test.describe('Send email block', () => {
     await page.click('text="Custom content?"')
     await page.locator('textarea').fill('Here is my email')
 
-    await page.click('text=Preview')
+    await page.click('text=Test')
     await page.locator('typebot-standard').locator('text=Go').click()
     await expect(
       page.locator('text=Emails are not sent in preview mode >> nth=0')

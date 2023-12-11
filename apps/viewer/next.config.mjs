@@ -8,6 +8,19 @@ const __filename = fileURLToPath(import.meta.url)
 
 const __dirname = dirname(__filename)
 
+const injectViewerUrlIfVercelPreview = (val) => {
+  if (
+    (val && typeof val === 'string' && val.length > 0) ||
+    process.env.VERCEL_ENV !== 'preview' ||
+    !process.env.VERCEL_BUILDER_PROJECT_NAME ||
+    !process.env.NEXT_PUBLIC_VERCEL_VIEWER_PROJECT_NAME
+  )
+    return
+  process.env.NEXT_PUBLIC_VIEWER_URL = `https://${process.env.VERCEL_BRANCH_URL}`
+}
+
+injectViewerUrlIfVercelPreview(process.env.NEXT_PUBLIC_VIEWER_URL)
+
 configureRuntimeEnv()
 
 const landingPagePaths = [
@@ -30,6 +43,15 @@ const nextConfig = {
   output: 'standalone',
   experimental: {
     outputFileTracingRoot: join(__dirname, '../../'),
+  },
+  async redirects() {
+    return [
+      {
+        source: '/discord',
+        destination: 'https://discord.gg/xjyQczWAXV',
+        permanent: true,
+      },
+    ]
   },
   async rewrites() {
     return {
@@ -134,20 +156,34 @@ const nextConfig = {
   },
 }
 
-const sentryWebpackPluginOptions = {
-  silent: true,
-  release: process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA + '-viewer',
-}
-
 export default process.env.NEXT_PUBLIC_SENTRY_DSN
   ? withSentryConfig(
+      nextConfig,
       {
-        ...nextConfig,
-        sentry: {
-          hideSourceMaps: true,
-          widenClientFileUpload: true,
-        },
+        // For all available options, see:
+        // https://github.com/getsentry/sentry-webpack-plugin#options
+
+        // Suppresses source map uploading logs during build
+        silent: true,
+        release: process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA + '-viewer',
+        org: process.env.SENTRY_ORG,
+        project: process.env.SENTRY_PROJECT,
       },
-      sentryWebpackPluginOptions
+      {
+        // For all available options, see:
+        // https://docs.sentry.io/platforms/javascript/guides/nextjs/manual-setup/
+
+        // Upload a larger set of source maps for prettier stack traces (increases build time)
+        widenClientFileUpload: true,
+
+        // Routes browser requests to Sentry through a Next.js rewrite to circumvent ad-blockers (increases server load)
+        tunnelRoute: '/monitoring',
+
+        // Hides source maps from generated client bundles
+        hideSourceMaps: true,
+
+        // Automatically tree-shake Sentry logger statements to reduce bundle size
+        disableLogger: true,
+      }
     )
   : nextConfig

@@ -1,4 +1,4 @@
-import prisma from '@/lib/prisma'
+import prisma from '@typebot.io/lib/prisma'
 import { authenticatedProcedure } from '@/helpers/server/trpc'
 import { TRPCError } from '@trpc/server'
 import { z } from 'zod'
@@ -9,7 +9,7 @@ export const getCollaborators = authenticatedProcedure
   .meta({
     openapi: {
       method: 'GET',
-      path: '/typebots/{typebotId}/collaborators',
+      path: '/v1/typebots/{typebotId}/collaborators',
       protect: true,
       summary: 'Get collaborators',
       tags: ['Collaborators'],
@@ -32,6 +32,17 @@ export const getCollaborators = authenticatedProcedure
       },
       include: {
         collaborators: true,
+        workspace: {
+          select: {
+            isSuspended: true,
+            isPastDue: true,
+            members: {
+              select: {
+                userId: true,
+              },
+            },
+          },
+        },
       },
     })
     if (

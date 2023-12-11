@@ -8,22 +8,24 @@ import {
   useDisclosure,
 } from '@chakra-ui/react'
 import React from 'react'
-import { ChangePlanModal } from '@/features/billing/components/ChangePlanModal'
-import { useI18n } from '@/locales'
+import {
+  ChangePlanModal,
+  ChangePlanModalProps,
+} from '@/features/billing/components/ChangePlanModal'
+import { useTranslate } from '@tolgee/react'
 
 type Props = {
-  contentLabel: React.ReactNode
   buttonLabel?: string
-  type?: string
-} & AlertProps
+} & AlertProps &
+  Pick<ChangePlanModalProps, 'type' | 'excludedPlans'>
 
 export const UnlockPlanAlertInfo = ({
-  contentLabel,
   buttonLabel,
   type,
+  excludedPlans,
   ...props
 }: Props) => {
-  const t = useI18n()
+  const { t } = useTranslate()
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <Alert
@@ -35,7 +37,7 @@ export const UnlockPlanAlertInfo = ({
     >
       <HStack>
         <AlertIcon />
-        <Text>{contentLabel}</Text>
+        <Text>{props.children}</Text>
       </HStack>
       <Button
         colorScheme={props.status === 'warning' ? 'orange' : 'blue'}
@@ -45,7 +47,12 @@ export const UnlockPlanAlertInfo = ({
       >
         {buttonLabel ?? t('billing.upgradeAlert.buttonDefaultLabel')}
       </Button>
-      <ChangePlanModal isOpen={isOpen} onClose={onClose} type={type} />
+      <ChangePlanModal
+        isOpen={isOpen}
+        onClose={onClose}
+        type={type}
+        excludedPlans={excludedPlans}
+      />
     </Alert>
   )
 }

@@ -22,8 +22,8 @@ import { parseResultHeader } from '@typebot.io/lib/results'
 import { useResults } from '../../ResultsProvider'
 import { parseColumnOrder } from '../../helpers/parseColumnsOrder'
 import { convertResultsToTableData } from '../../helpers/convertResultsToTableData'
-import { parseAccessor } from '../../helpers/parseAccessor'
-import { isDefined } from '@typebot.io/lib'
+import { byId, isDefined } from '@typebot.io/lib'
+import { Typebot } from '@typebot.io/schemas'
 
 type Props = {
   isOpen: boolean
@@ -60,7 +60,7 @@ export const ExportAllResultsModal = ({ isOpen, onClose }: Props) => {
         const { results, nextCursor } =
           await trpcContext.results.getResults.fetch({
             typebotId,
-            limit: '200',
+            limit: 100,
             cursor,
           })
         allResults.push(...results)
@@ -83,47 +83,45 @@ export const ExportAllResultsModal = ({ isOpen, onClose }: Props) => {
     const resultHeader = areDeletedBlocksIncluded
       ? parseResultHeader(
           publishedTypebot,
-          linkedTypebotsData?.typebots,
+          linkedTypebotsData?.typebots as Pick<
+            Typebot,
+            'groups' | 'variables'
+          >[],
           results
         )
       : existingResultHeader
 
     const dataToUnparse = convertResultsToTableData(results, resultHeader)
 
-    const fields = parseColumnOrder(
+    const headerIds = parseColumnOrder(
       typebot?.resultsTablePreferences?.columnsOrder,
       resultHeader
-    ).reduce<string[]>((currentHeaderLabels, columnId) => {
+    ).reduce<string[]>((currentHeaderIds, columnId) => {
       if (
         typebot?.resultsTablePreferences?.columnsVisibility[columnId] === false
       )
-        return currentHeaderLabels
+        return currentHeaderIds
       const columnLabel = resultHeader.find(
         (headerCell) => headerCell.id === columnId
-      )?.label
-      if (!columnLabel) return currentHeaderLabels
-      return [...currentHeaderLabels, columnLabel]
+      )?.id
+      if (!columnLabel) return currentHeaderIds
+      return [...currentHeaderIds, columnLabel]
     }, [])
 
     const data = dataToUnparse.map<{ [key: string]: string }>((data) => {
       const newObject: { [key: string]: string } = {}
-      fields?.forEach((field) => {
-        newObject[field] = data[parseAccessor(field)]?.plainText
+      headerIds?.forEach((headerId) => {
+        const headerLabel = resultHeader.find(byId(headerId))?.label
+        if (!headerLabel) return
+        const newKey = parseUniqueKey(headerLabel, Object.keys(newObject))
+        newObject[newKey] = data[headerId]?.plainText
       })
       return newObject
     })
 
-    const csvData = new Blob(
-      [
-        unparse({
-          data,
-          fields,
-        }),
-      ],
-      {
-        type: 'text/csv;charset=utf-8;',
-      }
-    )
+    const csvData = new Blob([unparse(data)], {
+      type: 'text/csv;charset=utf-8;',
+    })
     const fileName = `typebot-export_${new Date()
       .toLocaleDateString()
       .replaceAll('/', '-')}`
@@ -165,4 +163,13 @@ export const ExportAllResultsModal = ({ isOpen, onClose }: Props) => {
       </ModalContent>
     </Modal>
   )
+}
+
+export const parseUniqueKey = (
+  key: string,
+  existingKeys: string[],
+  count = 0
+): string => {
+  if (!existingKeys.includes(key)) return key
+  return parseUniqueKey(`${key} (${count + 1})`, existingKeys, count + 1)
 }

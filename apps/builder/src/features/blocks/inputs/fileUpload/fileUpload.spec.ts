@@ -1,10 +1,10 @@
 import test, { expect } from '@playwright/test'
 import { createTypebots } from '@typebot.io/lib/playwright/databaseActions'
 import { parseDefaultGroupWithBlock } from '@typebot.io/lib/playwright/databaseHelpers'
-import { defaultFileInputOptions, InputBlockType } from '@typebot.io/schemas'
 import { createId } from '@paralleldrive/cuid2'
 import { freeWorkspaceId } from '@typebot.io/lib/playwright/databaseSetup'
 import { getTestAsset } from '@/test/utils/playwright'
+import { InputBlockType } from '@typebot.io/schemas/features/blocks/inputs/constants'
 
 test.describe.configure({ mode: 'parallel' })
 
@@ -15,14 +15,13 @@ test('options should work', async ({ page }) => {
       id: typebotId,
       ...parseDefaultGroupWithBlock({
         type: InputBlockType.FILE,
-        options: defaultFileInputOptions,
       }),
     },
   ])
 
   await page.goto(`/typebots/${typebotId}/edit`)
 
-  await page.click('text=Preview')
+  await page.click('text=Test')
   await expect(page.locator(`text=Click to upload`)).toBeVisible()
   await expect(page.locator(`text="Skip"`)).toBeHidden()
   await page
@@ -36,7 +35,6 @@ test('options should work', async ({ page }) => {
   await page.fill('[value="Upload"]', 'Go')
   await page.fill('[value="Clear"]', 'Reset')
   await page.fill('[value="Skip"]', 'Pass')
-  await page.fill('input[value="10"]', '20')
   await page.click('text="Restart"')
   await expect(page.locator(`text="Pass"`)).toBeVisible()
   await expect(page.locator(`text="Upload now!!"`)).toBeVisible()
@@ -60,8 +58,8 @@ test.describe('Free workspace', () => {
         id: typebotId,
         ...parseDefaultGroupWithBlock({
           type: InputBlockType.FILE,
-          options: defaultFileInputOptions,
         }),
+        version: '6',
         workspaceId: freeWorkspaceId,
       },
     ])

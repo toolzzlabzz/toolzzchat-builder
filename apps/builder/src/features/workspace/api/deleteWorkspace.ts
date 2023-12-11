@@ -1,4 +1,4 @@
-import prisma from '@/lib/prisma'
+import prisma from '@typebot.io/lib/prisma'
 import { authenticatedProcedure } from '@/helpers/server/trpc'
 import { z } from 'zod'
 import { isAdminWriteWorkspaceForbidden } from '../helpers/isAdminWriteWorkspaceForbidden'
@@ -8,7 +8,7 @@ export const deleteWorkspace = authenticatedProcedure
   .meta({
     openapi: {
       method: 'DELETE',
-      path: '/workspaces/{workspaceId}',
+      path: '/v1/workspaces/{workspaceId}',
       protect: true,
       summary: 'Delete workspace',
       tags: ['Workspace'],

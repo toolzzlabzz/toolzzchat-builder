@@ -4,13 +4,9 @@ import {
   importTypebotInDatabase,
 } from '@typebot.io/lib/playwright/databaseActions'
 import { parseDefaultGroupWithBlock } from '@typebot.io/lib/playwright/databaseHelpers'
-import {
-  defaultChoiceInputOptions,
-  InputBlockType,
-  ItemType,
-} from '@typebot.io/schemas'
 import { createId } from '@paralleldrive/cuid2'
 import { getTestAsset } from '@/test/utils/playwright'
+import { InputBlockType } from '@typebot.io/schemas/features/blocks/inputs/constants'
 
 test.describe.parallel('Buttons input block', () => {
   test('can edit button items', async ({ page }) => {
@@ -23,11 +19,8 @@ test.describe.parallel('Buttons input block', () => {
           items: [
             {
               id: 'choice1',
-              blockId: 'block1',
-              type: ItemType.BUTTON,
             },
           ],
-          options: { ...defaultChoiceInputOptions },
         }),
       },
     ])
@@ -44,7 +37,7 @@ test.describe.parallel('Buttons input block', () => {
     await page.click('text=Delete')
     await expect(page.locator('text=Item 2')).toBeHidden()
 
-    await page.click('text=Preview')
+    await page.click('text=Test')
     await page.getByRole('button', { name: 'Item 3' }).click()
     await expect(page.getByRole('button', { name: 'Item 3' })).toBeHidden()
     await expect(page.getByTestId('guest-bubble')).toHaveText('Item 3')
@@ -64,7 +57,7 @@ test.describe.parallel('Buttons input block', () => {
     await page.fill('input[value="Click to edit"]', 'Item 2')
     await page.press('input[value="Item 2"]', 'Enter')
 
-    await page.click('text=Preview')
+    await page.click('text=Test')
 
     await page.getByRole('checkbox', { name: 'Item 3' }).click()
     await page.getByRole('checkbox', { name: 'Item 1' }).click()
@@ -84,7 +77,7 @@ test('Variable buttons should work', async ({ page }) => {
   )
 
   await page.goto(`/typebots/${typebotId}/edit`)
-  await page.click('text=Preview')
+  await page.click('text=Test')
   await page.getByRole('button', { name: 'Variable item' }).click()
   await expect(page.getByTestId('guest-bubble')).toHaveText('Variable item')
   await expect(page.locator('text=Ok great!')).toBeVisible()

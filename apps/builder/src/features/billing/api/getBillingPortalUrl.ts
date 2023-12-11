@@ -1,4 +1,4 @@
-import prisma from '@/lib/prisma'
+import prisma from '@typebot.io/lib/prisma'
 import { authenticatedProcedure } from '@/helpers/server/trpc'
 import { TRPCError } from '@trpc/server'
 import Stripe from 'stripe'
@@ -10,7 +10,7 @@ export const getBillingPortalUrl = authenticatedProcedure
   .meta({
     openapi: {
       method: 'GET',
-      path: '/billing/subscription/portal',
+      path: '/v1/billing/subscription/portal',
       protect: true,
       summary: 'Get Stripe billing portal URL',
       tags: ['Billing'],

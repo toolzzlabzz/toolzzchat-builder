@@ -24,17 +24,15 @@ Typebot is an open-source chatbot builder. It allows you to create advanced chat
 <a href="https://status.typebot.io"><img height="20px" src="https://betteruptime.com/status-badges/v1/monitor/a9kf.svg" alt="Uptime"></a>
 <a href="https://github.com/baptisteArno/typebot.io/issues/new"><img src="https://img.shields.io/badge/Report a bug-Github-%231F80C0" alt="Report a bug"></a>
 <a href="https://github.com/baptisteArno/typebot.io/discussions/new?category=q-a"><img src="https://img.shields.io/badge/Ask a question-Github-%231F80C0" alt="Ask a question"></a>
-<a href="https://www.facebook.com/groups/typebot"><img src="https://img.shields.io/badge/Join community-Facebook-%23016DE5" alt="Ask a question"></a>
+<a href="https://console.algora.io/org/typebot/bounties?status=open"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fconsole.algora.io%2Fapi%2Fshields%2Ftypebot%2Fbounties%3Fstatus%3Dopen" alt="Ask a question"></a>
+<a href="https://typebot.io/discord"><img src="https://img.shields.io/badge/Join community-Discord-%23404EED" alt="Ask a question"></a>
 
 </p>
 
 <h3 align="center">
-  <b><a href="https://app.typebot.io/register">Get Started</a></b>
+  <b><a href="https://app.typebot.io/register">Try Typebot</a></b>
   •
   <b><a href="https://docs.typebot.io/">Docs</a></b>
-  •
-  <b><a href="https://www.youtube.com/@typebot4666/videos">YouTube</a></b>
-</h3>
 
 ---
 
@@ -87,8 +85,7 @@ So you’ll be supporting open source software and getting a great service! 💙
 
 You'll find a lot of resources to help you get started with Typebot in the [documentation](https://docs.typebot.io/).
 
-- Have a product-related question? Ask it to the [community](https://www.facebook.com/groups/typebot)
-- Have a technical question? Ask it on [Github discussions](https://github.com/baptisteArno/typebot.io/discussions/new/choose)
+- Have a question? Join the [Discord server](https://typebot.io/discord) and get instant help.
 - Found a bug? [Create an issue](https://github.com/baptisteArno/typebot.io/issues/new)
 
 ## Self-hosting
@@ -98,6 +95,15 @@ Interested in self-hosting Typebot on your server? Take a look at the [self-host
 ## How to Contribute
 
 You are awesome, lets build great software together. Head over to the [Contribute guidelines](https://github.com/baptisteArno/typebot.io/blob/main/CONTRIBUTING.md) to get started. 💪
+
+### Claim these open bounties 👇
+
+<a href="https://console.algora.io/org/typebot/bounties?status=open">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://console.algora.io/api/og/typebot/bounties.png?p=0&status=open&theme=dark">
+    <img alt="Bounties of typebot" src="https://console.algora.io/api/og/typebot/bounties.png?p=0&status=open&theme=light">
+  </picture>
+</a>
 
 ## Run the project locally
 

@@ -1,16 +1,17 @@
 import { TextInput, NumberInput } from '@/components/inputs'
-import { HStack, Stack, Text } from '@chakra-ui/react'
-import { EmbedBubbleContent } from '@typebot.io/schemas'
+import { Stack, Text } from '@chakra-ui/react'
+import { EmbedBubbleBlock } from '@typebot.io/schemas'
 import { sanitizeUrl } from '@typebot.io/lib'
-import { useScopedI18n } from '@/locales'
+import { useTranslate } from '@tolgee/react'
+import { defaultEmbedBubbleContent } from '@typebot.io/schemas/features/blocks/bubbles/embed/constants'
 
 type Props = {
-  content: EmbedBubbleContent
-  onSubmit: (content: EmbedBubbleContent) => void
+  content: EmbedBubbleBlock['content']
+  onSubmit: (content: EmbedBubbleBlock['content']) => void
 }
 
 export const EmbedUploadContent = ({ content, onSubmit }: Props) => {
-  const scopedT = useScopedI18n('editor.blocks.bubbles.embed.settings')
+  const { t } = useTranslate()
   const handleUrlChange = (url: string) => {
     const iframeUrl = sanitizeUrl(
       url.trim().startsWith('<iframe') ? extractUrlFromIframe(url) : url
@@ -18,30 +19,32 @@ export const EmbedUploadContent = ({ content, onSubmit }: Props) => {
     onSubmit({ ...content, url: iframeUrl })
   }
 
-  const handleHeightChange = (height?: EmbedBubbleContent['height']) =>
-    height && onSubmit({ ...content, height })
+  const handleHeightChange = (
+    height?: NonNullable<EmbedBubbleBlock['content']>['height']
+  ) => height && onSubmit({ ...content, height })
 
   return (
     <Stack p="2" spacing={6}>
       <Stack>
         <TextInput
-          placeholder={scopedT('worksWith.placeholder')}
+          placeholder={t(
+            'editor.blocks.bubbles.embed.settings.worksWith.placeholder'
+          )}
           defaultValue={content?.url ?? ''}
           onChange={handleUrlChange}
         />
         <Text fontSize="sm" color="gray.400" textAlign="center">
-          {scopedT('worksWith.text')}
+          {t('editor.blocks.bubbles.embed.settings.worksWith.text')}
         </Text>
       </Stack>
 
-      <HStack>
-        <NumberInput
-          label="Height:"
-          defaultValue={content?.height}
-          onValueChange={handleHeightChange}
-        />
-        <Text>{scopedT('numberInput.unit')}</Text>
-      </HStack>
+      <NumberInput
+        label="Height:"
+        defaultValue={content?.height ?? defaultEmbedBubbleContent.height}
+        onValueChange={handleHeightChange}
+        suffix={t('editor.blocks.bubbles.embed.settings.numberInput.unit')}
+        width="150px"
+      />
     </Stack>
   )
 }

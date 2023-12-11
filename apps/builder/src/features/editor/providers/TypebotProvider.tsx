@@ -1,4 +1,4 @@
-import { PublicTypebot, Typebot } from '@typebot.io/schemas'
+import { PublicTypebot, PublicTypebotV6, TypebotV6 } from '@typebot.io/schemas'
 import { Router, useRouter } from 'next/router'
 import {
   createContext,
@@ -7,6 +7,7 @@ import {
   useContext,
   useEffect,
   useMemo,
+  useState,
 } from 'react'
 import { isDefined, omit } from '@typebot.io/lib'
 import { edgesAction, EdgesActions } from './typebotActions/edges'
@@ -23,13 +24,13 @@ import { areTypebotsEqual } from '@/features/publish/helpers/areTypebotsEqual'
 import { isPublished as isPublishedHelper } from '@/features/publish/helpers/isPublished'
 import { convertPublicTypebotToTypebot } from '@/features/publish/helpers/convertPublicTypebotToTypebot'
 import { trpc } from '@/lib/trpc'
-import { useScopedI18n } from '@/locales'
+import { EventsActions, eventsActions } from './typebotActions/events'
 
 const autoSaveTimeout = 10000
 
 type UpdateTypebotPayload = Partial<
   Pick<
-    Typebot,
+    TypebotV6,
     | 'theme'
     | 'selectedThemeTemplateId'
     | 'settings'
@@ -39,22 +40,25 @@ type UpdateTypebotPayload = Partial<
     | 'customDomain'
     | 'resultsTablePreferences'
     | 'isClosed'
-    | 'whatsAppPhoneNumberId'
+    | 'whatsAppCredentialsId'
+    | 'riskLevel'
   >
 >
 
 export type SetTypebot = (
-  newPresent: Typebot | ((current: Typebot) => Typebot)
+  newPresent: TypebotV6 | ((current: TypebotV6) => TypebotV6)
 ) => void
 
 const typebotContext = createContext<
   {
-    typebot?: Typebot
-    publishedTypebot?: PublicTypebot
-    isReadOnly?: boolean
+    typebot?: TypebotV6
+    publishedTypebot?: PublicTypebotV6
+    publishedTypebotVersion?: PublicTypebot['version']
+    currentUserMode: 'guest' | 'read' | 'write'
+    is404: boolean
     isPublished: boolean
     isSavingLoading: boolean
-    save: () => Promise<Typebot | undefined>
+    save: () => Promise<TypebotV6 | undefined>
     undo: () => void
     redo: () => void
     canRedo: boolean
@@ -62,13 +66,14 @@ const typebotContext = createContext<
     updateTypebot: (props: {
       updates: UpdateTypebotPayload
       save?: boolean
-    }) => Promise<Typebot | undefined>
+    }) => Promise<TypebotV6 | undefined>
     restorePublishedTypebot: () => void
   } & GroupsActions &
     BlocksActions &
     ItemsActions &
     VariablesActions &
-    EdgesActions
+    EdgesActions &
+    EventsActions
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   //@ts-ignore
 >({})
@@ -80,45 +85,60 @@ export const TypebotProvider = ({
   children: ReactNode
   typebotId?: string
 }) => {
-  const scopedT = useScopedI18n('editor.provider')
   const { push } = useRouter()
   const { showToast } = useToast()
+  const [is404, setIs404] = useState(false)
 
   const {
     data: typebotData,
     isLoading: isFetchingTypebot,
     refetch: refetchTypebot,
   } = trpc.typebot.getTypebot.useQuery(
-    { typebotId: typebotId as string },
+    { typebotId: typebotId as string, migrateToLatestVersion: true },
     {
       enabled: isDefined(typebotId),
+      retry: 0,
       onError: (error) => {
         if (error.data?.httpStatus === 404) {
-          showToast({
-            status: 'info',
-            description: scopedT('messages.getTypebotError.description'),
-          })
-          push('/typebots')
+          setIs404(true)
           return
         }
+        setIs404(false)
         showToast({
-          title: scopedT('messages.getTypebotError.title'),
+          title: 'Could not fetch typebot',
           description: error.message,
+          details: {
+            content: JSON.stringify(error.data?.zodError?.fieldErrors, null, 2),
+            lang: 'json',
+          },
         })
+      },
+      onSuccess: () => {
+        setIs404(false)
       },
     }
   )
 
   const { data: publishedTypebotData } =
     trpc.typebot.getPublishedTypebot.useQuery(
-      { typebotId: typebotId as string },
+      { typebotId: typebotId as string, migrateToLatestVersion: true },
       {
-        enabled: isDefined(typebotId),
+        enabled:
+          isDefined(typebotId) &&
+          (typebotData?.currentUserMode === 'read' ||
+            typebotData?.currentUserMode === 'write'),
         onError: (error) => {
-          if (error.data?.httpStatus === 404) return
           showToast({
-            title: scopedT('messages.publishedTypebotError.title'),
+            title: 'Could not fetch published typebot',
             description: error.message,
+            details: {
+              content: JSON.stringify(
+                error.data?.zodError?.fieldErrors,
+                null,
+                2
+              ),
+              lang: 'json',
+            },
           })
         },
       }
@@ -128,7 +148,7 @@ export const TypebotProvider = ({
     trpc.typebot.updateTypebot.useMutation({
       onError: (error) =>
         showToast({
-          title: scopedT('messages.updateTypebotError.title'),
+          title: 'Error while updating typebot',
           description: error.message,
         }),
       onSuccess: () => {
@@ -137,13 +157,19 @@ export const TypebotProvider = ({
       },
     })
 
-  const typebot = typebotData?.typebot
-  const publishedTypebot = publishedTypebotData?.publishedTypebot ?? undefined
+  const typebot = typebotData?.typebot as TypebotV6
+  const publishedTypebot = (publishedTypebotData?.publishedTypebot ??
+    undefined) as PublicTypebotV6 | undefined
+  const isReadOnly =
+    typebotData &&
+    ['read', 'guest'].includes(typebotData?.currentUserMode ?? 'guest')
 
   const [
     localTypebot,
     { redo, undo, flush, canRedo, canUndo, set: setLocalTypebot },
-  ] = useUndo<Typebot>(undefined)
+  ] = useUndo<TypebotV6>(undefined, {
+    isReadOnly,
+  })
 
   useEffect(() => {
     if (!typebot && isDefined(localTypebot)) setLocalTypebot(undefined)
@@ -167,8 +193,8 @@ export const TypebotProvider = ({
   ])
 
   const saveTypebot = useCallback(
-    async (updates?: Partial<Typebot>) => {
-      if (!localTypebot || !typebot) return
+    async (updates?: Partial<TypebotV6>) => {
+      if (!localTypebot || !typebot || isReadOnly) return
       const typebotToSave = { ...localTypebot, ...updates }
       if (dequal(omit(typebot, 'updatedAt'), omit(typebotToSave, 'updatedAt')))
         return
@@ -180,7 +206,7 @@ export const TypebotProvider = ({
       setLocalTypebot({ ...newTypebot })
       return newTypebot
     },
-    [localTypebot, setLocalTypebot, typebot, updateTypebot]
+    [isReadOnly, localTypebot, setLocalTypebot, typebot, updateTypebot]
   )
 
   useAutoSave(
@@ -212,7 +238,7 @@ export const TypebotProvider = ({
   )
 
   useEffect(() => {
-    if (!localTypebot || !typebot) return
+    if (!localTypebot || !typebot || isReadOnly) return
     if (!areTypebotsEqual(localTypebot, typebot)) {
       window.addEventListener('beforeunload', preventUserFromRefreshing)
     }
@@ -220,7 +246,7 @@ export const TypebotProvider = ({
     return () => {
       window.removeEventListener('beforeunload', preventUserFromRefreshing)
     }
-  }, [localTypebot, typebot])
+  }, [localTypebot, typebot, isReadOnly])
 
   const updateLocalTypebot = async ({
     updates,
@@ -229,7 +255,7 @@ export const TypebotProvider = ({
     updates: UpdateTypebotPayload
     save?: boolean
   }) => {
-    if (!localTypebot) return
+    if (!localTypebot || isReadOnly) return
     const newTypebot = { ...localTypebot, ...updates }
     setLocalTypebot(newTypebot)
     if (save) await saveTypebot(newTypebot)
@@ -248,8 +274,10 @@ export const TypebotProvider = ({
       value={{
         typebot: localTypebot,
         publishedTypebot,
-        isReadOnly: typebotData?.isReadOnly,
+        publishedTypebotVersion: publishedTypebotData?.version,
+        currentUserMode: typebotData?.currentUserMode ?? 'guest',
         isSavingLoading: isSaving,
+        is404,
         save: saveTypebot,
         undo,
         redo,
@@ -258,14 +286,12 @@ export const TypebotProvider = ({
         isPublished,
         updateTypebot: updateLocalTypebot,
         restorePublishedTypebot,
-        ...groupsActions(
-          setLocalTypebot as SetTypebot,
-          scopedT('groups.copy.title')
-        ),
+        ...groupsActions(setLocalTypebot as SetTypebot),
         ...blocksAction(setLocalTypebot as SetTypebot),
         ...variablesAction(setLocalTypebot as SetTypebot),
         ...edgesAction(setLocalTypebot as SetTypebot),
         ...itemsAction(setLocalTypebot as SetTypebot),
+        ...eventsActions(setLocalTypebot as SetTypebot),
       }}
     >
       {children}

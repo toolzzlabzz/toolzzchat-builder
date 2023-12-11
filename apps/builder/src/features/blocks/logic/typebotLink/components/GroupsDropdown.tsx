@@ -1,7 +1,6 @@
 import { Select } from '@/components/inputs/Select'
 import { Input } from '@chakra-ui/react'
 import { Group } from '@typebot.io/schemas'
-import { parseGroupTitle } from '@typebot.io/lib'
 
 type Props = {
   groups: Group[]
@@ -23,11 +22,11 @@ export const GroupsDropdown = ({
     <Select
       selectedItem={groupId}
       items={(groups ?? []).map((group) => ({
-        label: parseGroupTitle(group.title),
+        label: group.title,
         value: group.id,
       }))}
       onSelect={onGroupIdSelected}
-      placeholder={'Select a block'}
+      placeholder={'Select a group'}
     />
   )
 }

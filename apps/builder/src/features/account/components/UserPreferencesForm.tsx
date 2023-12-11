@@ -14,9 +14,10 @@ import React, { useEffect } from 'react'
 import { GraphNavigationRadioGroup } from './GraphNavigationRadioGroup'
 import { AppearanceRadioGroup } from './AppearanceRadioGroup'
 import { useUser } from '../hooks/useUser'
-import { useChangeLocale, useCurrentLocale, useScopedI18n } from '@/locales'
 import { ChevronDownIcon } from '@/components/icons'
 import { MoreInfoTooltip } from '@/components/MoreInfoTooltip'
+import { useTranslate, useTolgee } from '@tolgee/react'
+import { useRouter } from 'next/router'
 
 const localeHumanReadable = {
   en: 'English',
@@ -24,14 +25,16 @@ const localeHumanReadable = {
   de: 'Deutsch',
   pt: 'Português',
   'pt-BR': 'Português (BR)',
+  ro: 'Română',
+  es: 'Español',
 } as const
 
 export const UserPreferencesForm = () => {
-  const scopedT = useScopedI18n('account.preferences')
-  const { colorMode, setColorMode } = useColorMode()
+  const { getLanguage } = useTolgee()
+  const router = useRouter()
+  const { t } = useTranslate()
+  const { colorMode } = useColorMode()
   const { user, updateUser } = useUser()
-  const changeLocale = useChangeLocale()
-  const currentLocale = useCurrentLocale()
 
   useEffect(() => {
     if (!user?.graphNavigation)
@@ -43,22 +46,34 @@ export const UserPreferencesForm = () => {
   }
 
   const changeAppearance = async (value: string) => {
-    setColorMode(value)
     updateUser({ preferredAppAppearance: value })
   }
 
   const updateLocale = (locale: keyof typeof localeHumanReadable) => () => {
-    changeLocale(locale)
     document.cookie = `NEXT_LOCALE=${locale}; path=/; max-age=31536000`
+    router.replace(
+      {
+        pathname: router.pathname,
+        query: router.query,
+      },
+      undefined,
+      { locale }
+    )
   }
+
+  const currentLanguage = getLanguage()
 
   return (
     <Stack spacing={12}>
       <HStack spacing={4}>
-        <Heading size="md">{scopedT('language.heading')}</Heading>
+        <Heading size="md">{t('account.preferences.language.heading')}</Heading>
         <Menu>
           <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-            {localeHumanReadable[currentLocale]}
+            {currentLanguage
+              ? localeHumanReadable[
+                  currentLanguage as keyof typeof localeHumanReadable
+                ]
+              : 'Loading...'}
           </MenuButton>
           <MenuList>
             {Object.keys(localeHumanReadable).map((locale) => (
@@ -77,19 +92,25 @@ export const UserPreferencesForm = () => {
             ))}
           </MenuList>
         </Menu>
-        {currentLocale !== 'en' && (
-          <MoreInfoTooltip>{scopedT('language.tooltip')}</MoreInfoTooltip>
+        {currentLanguage !== 'en' && (
+          <MoreInfoTooltip>
+            {t('account.preferences.language.tooltip')}
+          </MoreInfoTooltip>
         )}
       </HStack>
       <Stack spacing={6}>
-        <Heading size="md">{scopedT('graphNavigation.heading')}</Heading>
+        <Heading size="md">
+          {t('account.preferences.graphNavigation.heading')}
+        </Heading>
         <GraphNavigationRadioGroup
           defaultValue={user?.graphNavigation ?? GraphNavigation.TRACKPAD}
           onChange={changeGraphNavigation}
         />
       </Stack>
       <Stack spacing={6}>
-        <Heading size="md">{scopedT('appearance.heading')}</Heading>
+        <Heading size="md">
+          {t('account.preferences.appearance.heading')}
+        </Heading>
         <AppearanceRadioGroup
           defaultValue={
             user?.preferredAppAppearance

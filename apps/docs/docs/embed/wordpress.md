@@ -12,6 +12,18 @@ Of course, before using it, you need to create and publish your first typebot.
 
 The code snippet to paste is easily configurable in the Share tab of your bot after clicking on the "Wordpress" button.
 
+## Excluded pages
+
+The excluded pages input is a comma-separated list of pages where you don't want your typebot to appear.
+
+Examples:
+
+- `/app/*` will exclude all pages starting with `/app/`
+- `/app` will only exclude the `/app` page
+- `/app?param=1` will only exclude the `/app` page **and** with the `param` query parameter set to `1`
+- `/app?param=*` will exclude the page at `/app` **and** with the `param` query parameter set to anything
+- `/app/*?param=*` will exclude all pages starting with `/app/` **and** with the `param` query parameter set to anything
+
 ## Personalize user experience
 
 You can leverage the [prefilled variables](/editor/variables#prefilled-variables) and inject your user information directly into your typebot so that the experience is entirely customized to your user.
@@ -20,7 +32,10 @@ Here are the available variables from WordPress, make sure to create them in you
 
 <img src="/img/embeddings/wp-variables.png" alt="WP predefined variables" width="400px"/>
 
-You can use these variables anywhere on your typebot. For more informations, check out the [Prefilled variables doc](https://docs.typebot.io/editor/variables#prefilled-variables)
+The only thing you need to do to enable this is:
+
+- Use the [Wordpress Typebot plugin](https://wordpress.com/plugins/typebot)
+- Have the variables declared in your Typebot with the exact syntaxes. For the email for example, make sure your variable is spelled `WP Email`. These won't work: `wp Email`, `WP email`.
 
 ## Your typebot isn't showing?
 

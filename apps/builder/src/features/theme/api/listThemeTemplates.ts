@@ -1,4 +1,4 @@
-import prisma from '@/lib/prisma'
+import prisma from '@typebot.io/lib/prisma'
 import { authenticatedProcedure } from '@/helpers/server/trpc'
 import { TRPCError } from '@trpc/server'
 import { ThemeTemplate, themeTemplateSchema } from '@typebot.io/schemas'
@@ -10,7 +10,7 @@ export const listThemeTemplates = authenticatedProcedure
   .meta({
     openapi: {
       method: 'GET',
-      path: '/themeTemplates',
+      path: '/v1/themeTemplates',
       protect: true,
       summary: 'List theme templates',
       tags: ['Theme template'],

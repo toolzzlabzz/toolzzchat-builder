@@ -12,6 +12,7 @@ import {
 import {
   BuoyIcon,
   ChevronLeftIcon,
+  PlayIcon,
   RedoIcon,
   UndoIcon,
 } from '@/components/icons'
@@ -23,17 +24,18 @@ import Link from 'next/link'
 import { EditableEmojiOrImageIcon } from '@/components/EditableEmojiOrImageIcon'
 import { useUndoShortcut } from '@/hooks/useUndoShortcut'
 import { useDebouncedCallback } from 'use-debounce'
-import { CollaborationMenuButton } from '@/features/collaboration/components/CollaborationMenuButton'
+import { ShareTypebotButton } from '@/features/share/components/ShareTypebotButton'
 import { PublishButton } from '@/features/publish/components/PublishButton'
 import { headerHeight } from '../constants'
 import { RightPanel, useEditor } from '../providers/EditorProvider'
 import { useTypebot } from '../providers/TypebotProvider'
 import { SupportBubble } from '@/components/SupportBubble'
 import { isCloudProdInstance } from '@/helpers/isCloudProdInstance'
-import { useScopedI18n } from '@/locales'
+import { useTranslate } from '@tolgee/react'
+import { GuestTypebotHeader } from './UnauthenticatedTypebotHeader'
 
 export const TypebotHeader = () => {
-  const scopedT = useScopedI18n('editor.headers')
+  const { t } = useTranslate()
   const router = useRouter()
   const {
     typebot,
@@ -45,14 +47,21 @@ export const TypebotHeader = () => {
     canUndo,
     canRedo,
     isSavingLoading,
+    currentUserMode,
   } = useTypebot()
-  const { setRightPanel, rightPanel, setStartPreviewAtGroup } = useEditor()
+  const {
+    setRightPanel,
+    rightPanel,
+    setStartPreviewAtGroup,
+    setStartPreviewAtEvent,
+  } = useEditor()
   const [isUndoShortcutTooltipOpen, setUndoShortcutTooltipOpen] =
     useState(false)
   const hideUndoShortcutTooltipLater = useDebouncedCallback(() => {
     setUndoShortcutTooltipOpen(false)
   }, 1000)
   const { isOpen, onOpen } = useDisclosure()
+  const headerBgColor = useColorModeValue('white', 'gray.900')
 
   const handleNameSubmit = (name: string) =>
     updateTypebot({ updates: { name } })
@@ -62,6 +71,7 @@ export const TypebotHeader = () => {
 
   const handlePreviewClick = async () => {
     setStartPreviewAtGroup(undefined)
+    setStartPreviewAtEvent(undefined)
     save().then()
     setRightPanel(RightPanel.PREVIEW)
   }
@@ -80,6 +90,7 @@ export const TypebotHeader = () => {
       : window.open('https://docs.typebot.io', '_blank')
   }
 
+  if (currentUserMode === 'guest') return <GuestTypebotHeader />
   return (
     <Flex
       w="full"
@@ -89,7 +100,7 @@ export const TypebotHeader = () => {
       h={`${headerHeight}px`}
       zIndex={100}
       pos="relative"
-      bgColor={useColorModeValue('white', 'gray.900')}
+      bgColor={headerBgColor}
       flexShrink={0}
     >
       {isOpen && <SupportBubble autoShowDelay={0} />}
@@ -105,7 +116,7 @@ export const TypebotHeader = () => {
           variant={router.pathname.includes('/edit') ? 'outline' : 'ghost'}
           size="sm"
         >
-          {scopedT('flowButton.label')}
+          {t('editor.headers.flowButton.label')}
         </Button>
         <Button
           as={Link}
@@ -114,7 +125,7 @@ export const TypebotHeader = () => {
           variant={router.pathname.endsWith('theme') ? 'outline' : 'ghost'}
           size="sm"
         >
-          {scopedT('themeButton.label')}
+          {t('editor.headers.themeButton.label')}
         </Button>
         <Button
           as={Link}
@@ -123,7 +134,7 @@ export const TypebotHeader = () => {
           variant={router.pathname.endsWith('settings') ? 'outline' : 'ghost'}
           size="sm"
         >
-          {scopedT('settingsButton.label')}
+          {t('editor.headers.settingsButton.label')}
         </Button>
         <Button
           as={Link}
@@ -132,7 +143,7 @@ export const TypebotHeader = () => {
           variant={router.pathname.endsWith('share') ? 'outline' : 'ghost'}
           size="sm"
         >
-          {scopedT('shareButton.label')}
+          {t('editor.headers.shareButton.label')}
         </Button>
         {isDefined(publishedTypebot) && (
           <Button
@@ -142,7 +153,7 @@ export const TypebotHeader = () => {
             variant={router.pathname.includes('results') ? 'outline' : 'ghost'}
             size="sm"
           >
-            {scopedT('resultsButton.label')}
+            {t('editor.headers.resultsButton.label')}
           </Button>
         )}
       </HStack>
@@ -197,60 +208,65 @@ export const TypebotHeader = () => {
             )
           </HStack>
 
-          <HStack>
-            <Tooltip
-              label={isUndoShortcutTooltipOpen ? 'Changes reverted!' : 'Undo'}
-              isOpen={isUndoShortcutTooltipOpen ? true : undefined}
-              hasArrow={isUndoShortcutTooltipOpen}
-            >
-              <IconButton
-                display={['none', 'flex']}
-                icon={<UndoIcon />}
-                size="sm"
-                aria-label="Undo"
-                onClick={undo}
-                isDisabled={!canUndo}
-              />
-            </Tooltip>
+          {currentUserMode === 'write' && (
+            <HStack>
+              <Tooltip
+                label={isUndoShortcutTooltipOpen ? 'Changes reverted!' : 'Undo'}
+                isOpen={isUndoShortcutTooltipOpen ? true : undefined}
+                hasArrow={isUndoShortcutTooltipOpen}
+              >
+                <IconButton
+                  display={['none', 'flex']}
+                  icon={<UndoIcon />}
+                  size="sm"
+                  aria-label="Undo"
+                  onClick={undo}
+                  isDisabled={!canUndo}
+                />
+              </Tooltip>
 
-            <Tooltip label="Redo">
-              <IconButton
-                display={['none', 'flex']}
-                icon={<RedoIcon />}
-                size="sm"
-                aria-label="Redo"
-                onClick={redo}
-                isDisabled={!canRedo}
-              />
-            </Tooltip>
-          </HStack>
+              <Tooltip label="Redo">
+                <IconButton
+                  display={['none', 'flex']}
+                  icon={<RedoIcon />}
+                  size="sm"
+                  aria-label="Redo"
+                  onClick={redo}
+                  isDisabled={!canRedo}
+                />
+              </Tooltip>
+            </HStack>
+          )}
           <Button leftIcon={<BuoyIcon />} onClick={handleHelpClick} size="sm">
-            {scopedT('helpButton.label')}
+            {t('editor.headers.helpButton.label')}
           </Button>
         </HStack>
         {isSavingLoading && (
           <HStack>
             <Spinner speed="0.7s" size="sm" color="gray.400" />
             <Text fontSize="sm" color="gray.400">
-              {scopedT('savingSpinner.label')}
+              {t('editor.headers.savingSpinner.label')}
             </Text>
           </HStack>
         )}
       </HStack>
 
       <HStack right="40px" pos="absolute" display={['none', 'flex']}>
-        <CollaborationMenuButton isLoading={isNotDefined(typebot)} />
+        <Flex pos="relative">
+          <ShareTypebotButton isLoading={isNotDefined(typebot)} />
+        </Flex>
         {router.pathname.includes('/edit') && isNotDefined(rightPanel) && (
           <Button
             colorScheme="gray"
             onClick={handlePreviewClick}
             isLoading={isNotDefined(typebot)}
+            leftIcon={<PlayIcon />}
             size="sm"
           >
-            {scopedT('previewButton.label')}
+            {t('editor.headers.previewButton.label')}
           </Button>
         )}
-        <PublishButton size="sm" />
+        {currentUserMode === 'write' && <PublishButton size="sm" />}
       </HStack>
     </Flex>
   )

@@ -62,8 +62,15 @@ const subscriptionUpdatedEventSchema = workspaceEvent.merge(
     name: z.literal('Subscription updated'),
     data: z.object({
       plan: z.nativeEnum(Plan),
-      additionalChatsIndex: z.number(),
-      additionalStorageIndex: z.number(),
+    }),
+  })
+)
+
+const subscriptionAutoUpdatedEventSchema = workspaceEvent.merge(
+  z.object({
+    name: z.literal('Subscription automatically updated'),
+    data: z.object({
+      plan: z.nativeEnum(Plan),
     }),
   })
 )
@@ -83,9 +90,7 @@ const workspaceLimitReachedEventSchema = workspaceEvent.merge(
     name: z.literal('Workspace limit reached'),
     data: z.object({
       chatsLimit: z.number(),
-      storageLimit: z.number(),
       totalChatsUsed: z.number(),
-      totalStorageUsed: z.number(),
     }),
   })
 )
@@ -100,6 +105,18 @@ const workspaceAutoQuarantinedEventSchema = workspaceEvent.merge(
   })
 )
 
+export const workspacePastDueEventSchema = workspaceEvent.merge(
+  z.object({
+    name: z.literal('Workspace past due'),
+  })
+)
+
+export const workspaceNotPastDueEventSchema = workspaceEvent.merge(
+  z.object({
+    name: z.literal('Workspace past due status removed'),
+  })
+)
+
 export const eventSchema = z.discriminatedUnion('name', [
   workspaceCreatedEventSchema,
   userCreatedEventSchema,
@@ -109,6 +126,9 @@ export const eventSchema = z.discriminatedUnion('name', [
   newResultsCollectedEventSchema,
   workspaceLimitReachedEventSchema,
   workspaceAutoQuarantinedEventSchema,
+  subscriptionAutoUpdatedEventSchema,
+  workspacePastDueEventSchema,
+  workspaceNotPastDueEventSchema,
 ])
 
 export type TelemetryEvent = z.infer<typeof eventSchema>

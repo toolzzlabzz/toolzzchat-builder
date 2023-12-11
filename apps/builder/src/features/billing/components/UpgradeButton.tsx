@@ -3,12 +3,19 @@ import { useWorkspace } from '@/features/workspace/WorkspaceProvider'
 import React from 'react'
 import { isNotDefined } from '@typebot.io/lib'
 import { ChangePlanModal } from './ChangePlanModal'
-import { useI18n } from '@/locales'
+import { useTranslate } from '@tolgee/react'
 
-type Props = { limitReachedType?: string } & ButtonProps
+type Props = {
+  limitReachedType?: string
+  excludedPlans?: ('STARTER' | 'PRO')[]
+} & ButtonProps
 
-export const UpgradeButton = ({ limitReachedType, ...props }: Props) => {
-  const t = useI18n()
+export const UpgradeButton = ({
+  limitReachedType,
+  excludedPlans,
+  ...props
+}: Props) => {
+  const { t } = useTranslate()
   const { isOpen, onOpen, onClose } = useDisclosure()
   const { workspace } = useWorkspace()
   return (
@@ -23,6 +30,7 @@ export const UpgradeButton = ({ limitReachedType, ...props }: Props) => {
         isOpen={isOpen}
         onClose={onClose}
         type={limitReachedType}
+        excludedPlans={excludedPlans}
       />
     </Button>
   )
