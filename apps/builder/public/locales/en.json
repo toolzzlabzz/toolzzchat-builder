@@ -125,7 +125,7 @@
   "downgrade": "Downgrade",
   "editor.blockCard.logicBlock.tooltip.code.label": "Execute Javascript code",
   "editor.blockCard.logicBlock.tooltip.jump.label": "Fast forward the flow to another group",
-  "editor.blockCard.logicBlock.tooltip.typebotLink.label": "Link and jump to another typebot",
+  "editor.blockCard.logicBlock.tooltip.typebotLink.label": "Link and jump to another bot",
   "editor.blocks.bubbles.audio.settings.autoplay.label": "Enable autoplay",
   "editor.blocks.bubbles.audio.settings.chooseFile.label": "Choose a file",
   "editor.blocks.bubbles.audio.settings.embedLink.label": "Embed link",

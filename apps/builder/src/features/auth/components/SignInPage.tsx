@@ -29,6 +29,7 @@ export const SignInPage = ({ type }: Props) => {
         justifyContent="center"
         alignContent="center"
         display="flex"
+        marginBottom="25px"
       >
         <Image
           pointerEvents="none"
