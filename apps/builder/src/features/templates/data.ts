@@ -13,12 +13,12 @@ export const templates: TemplateProps[] = [
     name: 'Suporte ao Cliente',
     emoji: '😍',
     fileName: 'customer-support.json',
-    category: 'product',
+    category: 'atendimento',
     description:
       'Um bot cuja função é coletar feedback dos usuários: perguntas, bugs e solicitações de recursos.',
   },
   {
-    name: 'Quiz',
+    name: 'Quiz interativo',
     emoji: '🕹️',
     fileName: 'quiz.json',
     category: 'marketing',
@@ -43,7 +43,7 @@ export const templates: TemplateProps[] = [
   },
   {
     name: 'Recomendação de Produto',
-    emoji: '🍫',
+    emoji: '🔀',
     fileName: 'product-recommendation.json',
     category: 'recomendação',
     description:
@@ -67,7 +67,7 @@ export const templates: TemplateProps[] = [
       'Um bot que solicita informações de novos usuários antes de começarem a usar seu produto.',
   },
   {
-    name: 'Pagamento de Produto Digital',
+    name: 'Cobrança de Infoproduto',
     emoji: '💳',
     fileName: 'digital-product-payment.json',
     category: 'financeiro',
@@ -94,7 +94,7 @@ export const templates: TemplateProps[] = [
     name: 'ChatGPT de Áudio',
     emoji: '🤖',
     fileName: 'audio-chat-gpt.json',
-    category: 'outros',
+    category: 'populares',
     description:
       'Um bot de IA de áudio que usa o bloco OpenAI para gerar respostas com base na entrada do usuário.',
     isNew: true,
@@ -103,7 +103,7 @@ export const templates: TemplateProps[] = [
     name: 'Personas ChatGPT',
     emoji: '🎭',
     fileName: 'chat-gpt-personas.json',
-    category: 'outros',
+    category: 'populares',
     description:
       'Um bot que usa o modelo ChatGPT para gerar respostas com base na entrada do usuário e na persona selecionada.',
   },
@@ -119,7 +119,7 @@ export const templates: TemplateProps[] = [
     name: 'Oferta de Seguro',
     emoji: '🐶',
     fileName: 'dog-insurance-offer.json',
-    category: 'marketing',
+    category: 'vendas',
     description:
       'Você é uma empresa de seguro para cães. Este bot permite coletar informações sobre o cão e fornecer uma cotação.',
   },
@@ -167,12 +167,12 @@ export const templates: TemplateProps[] = [
     name: 'Assistente de Vendas',
     emoji: '💼',
     fileName: 'sales-assistant.json',
-    category: 'marketing',
+    category: 'vendas',
     description:
       'Um bot que ajuda equipes de vendas a acompanhar leads, agendar reuniões e gerenciar funil de vendas, aumentando a eficiência do processo comercial.',
   },
   {
-    name: 'Análise de Tendências de Mercado',
+    name: 'Tendências de Mercado',
     emoji: '🔍',
     fileName: 'market-trend-analysis.json',
     category: 'marketing',
@@ -183,7 +183,7 @@ export const templates: TemplateProps[] = [
     name: 'Suporte Técnico',
     emoji: '🔧',
     fileName: 'tech-support.json',
-    category: 'tecnologia',
+    category: 'atendimento',
     description:
       'Um bot projetado para oferecer suporte técnico, resolvendo problemas comuns e encaminhando casos mais complexos para especialistas técnicos.',
   },
@@ -213,7 +213,7 @@ export const templates: TemplateProps[] = [
   {
     name: 'Consulta de Produtos',
     emoji: '🔍',
-    category: 'marketing',
+    category: 'vendas',
     description: 'Um bot que ajuda os usuários a encontrar produtos específicos em seu catálogo.',
     fileName: 'product-query-bot.json'
   },

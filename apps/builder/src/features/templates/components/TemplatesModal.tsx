@@ -118,22 +118,23 @@ export const TemplatesModal = ({
             className="hide-scrollbar"
           >
             <Stack spacing={5}>
-              {renderCategory('marketing')}
-              {renderCategory('product')}
+              {renderCategory('populares')}
+              {renderCategory('atendimento')}
+              {renderCategory('faq')}
+              {renderCategory('educação')}
               {renderCategory('financeiro')}
               {renderCategory('rh')}
-              {renderCategory('tecnologia')}
-              {renderCategory('educação')}
-              {renderCategory('atendimento')}
+              {renderCategory('jurídico')}
               {renderCategory('vendas')}
               {renderCategory('customer-success')}
               {renderCategory('customer-experience')}
-              {renderCategory('jurídico')}
+              {renderCategory('marketing')}
+              {renderCategory('product')}
+              {renderCategory('tecnologia')}
               {renderCategory('relatórios')}
-              {renderCategory('faq')}
-              {renderCategory('outros')}
-              {renderCategory('others')}
               {renderCategory('recomendação')}
+              {renderCategory('other')}
+             
             </Stack>
           </Stack>
           <Stack
