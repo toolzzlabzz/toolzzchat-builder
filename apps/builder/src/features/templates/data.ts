@@ -7,7 +7,7 @@ export const templates: TemplateProps[] = [
     fileName: 'lead-gen.json',
     category: 'marketing',
     description:
-      'Você é uma agência de marketing e este bot permite gerar novos leads interessados nos seus serviços',
+      'Você é uma agência de marketing e este bot permite gerar novos leads interessados nos seus serviços.',
   },
   {
     name: 'Suporte ao Cliente',
@@ -23,7 +23,7 @@ export const templates: TemplateProps[] = [
     fileName: 'quiz.json',
     category: 'marketing',
     description:
-      'Um quiz divertido para interagir com seus usuários e coletar seus e-mails',
+      'Um quiz divertido para interagir com seus usuários e coletar seus e-mails.',
   },
   {
     name: 'Pontuação de Leads',
@@ -31,7 +31,7 @@ export const templates: TemplateProps[] = [
     fileName: 'lead-scoring.json',
     category: 'marketing',
     description:
-      'Calcule uma pontuação ao lado de perguntas de qualificação de leads para classificar seus novos prospects',
+      'Calcule uma pontuação ao lado de perguntas de qualificação de leads para classificar seus novos prospects.',
   },
   {
     name: 'Lead Magnet',
@@ -56,7 +56,7 @@ export const templates: TemplateProps[] = [
     fileName: 'nps.json',
     category: 'product',
     description:
-      'Uma simples pesquisa NPS para medir a satisfação do cliente e melhorar o seu produto',
+      'Uma simples pesquisa NPS para medir a satisfação do cliente e melhorar o seu produto.',
   },
   {
     name: 'Integração de Usuários',
@@ -64,14 +64,14 @@ export const templates: TemplateProps[] = [
     fileName: 'onboarding.json',
     category: 'product',
     description:
-      'Um bot que solicita informações de novos usuários antes de começarem a usar seu produto',
+      'Um bot que solicita informações de novos usuários antes de começarem a usar seu produto.',
   },
   {
     name: 'Pagamento de Produto Digital',
     emoji: '🖼️',
     fileName: 'digital-product-payment.json',
     description:
-      'Um bot que permite vender produtos digitais (e-books, cursos, etc.) e só disponibiliza o conteúdo após a confirmação do pagamento',
+      'Um bot que permite vender produtos digitais (e-books, cursos, etc.) e só disponibiliza o conteúdo após a confirmação do pagamento.',
   },
   {
     name: 'FAQ',
@@ -79,27 +79,27 @@ export const templates: TemplateProps[] = [
     fileName: 'faq.json',
     category: 'product',
     description:
-      'Um bot que responde a perguntas frequentes sobre o seu produto ou serviço',
+      'Um bot que responde a perguntas frequentes sobre o seu produto ou serviço.',
   },
   {
     name: 'Recomendação de Filme',
     emoji: '🍿',
     fileName: 'movie-recommendation.json',
-    description: 'Um bot que recomenda filmes baseados nas preferências do usuário',
+    description: 'Um bot que recomenda filmes baseados nas preferências do usuário.',
   },
   {
     name: 'ChatGPT Básico',
     emoji: '🤖',
     fileName: 'basic-chat-gpt.json',
     description:
-      'Um bot que usa o modelo ChatGPT para gerar respostas com base na entrada do usuário',
+      'Um bot que usa o modelo ChatGPT para gerar respostas com base na entrada do usuário.',
   },
   {
     name: 'ChatGPT de Áudio',
     emoji: '🤖',
     fileName: 'audio-chat-gpt.json',
     description:
-      'Um bot de IA de áudio que usa o bloco OpenAI para gerar respostas com base na entrada do usuário',
+      'Um bot de IA de áudio que usa o bloco OpenAI para gerar respostas com base na entrada do usuário.',
     isNew: true,
   },
   {
@@ -107,7 +107,7 @@ export const templates: TemplateProps[] = [
     emoji: '🎭',
     fileName: 'chat-gpt-personas.json',
     description:
-      'Um bot que usa o modelo ChatGPT para gerar respostas com base na entrada do usuário e na persona selecionada',
+      'Um bot que usa o modelo ChatGPT para gerar respostas com base na entrada do usuário e na persona selecionada.',
   },
   {
     name: 'Geração de Leads com IA',
@@ -174,14 +174,6 @@ export const templates: TemplateProps[] = [
       'Um bot que ajuda equipes de vendas a acompanhar leads, agendar reuniões e gerenciar funil de vendas, aumentando a eficiência do processo comercial.',
   },
   {
-    name: 'Controle de Estoque',
-    emoji: '📦',
-    fileName: 'inventory-control.json',
-    category: 'produto',
-    description:
-      'Automatize o controle de estoque, rastreando níveis de produtos, gerando alertas de reabastecimento e fornecendo relatórios detalhados sobre a movimentação de itens.',
-  },
-  {
     name: 'Análise de Tendências de Mercado',
     emoji: '🔍',
     fileName: 'market-trend-analysis.json',
@@ -212,5 +204,124 @@ export const templates: TemplateProps[] = [
     category: 'financeiro',
     description:
       'Um bot especializado em identificar e analisar riscos financeiros, ajudando empresas a tomar decisões mais informadas e seguras.',
+  },
+  {
+    name: 'Bot de Distribuição de Conteúdo',
+    emoji: '📰',
+    category: 'marketing',
+    description: 'Um bot que distribui conteúdo para sua audiência, como artigos, vídeos ou notícias.',
+    fileName: 'content-distribution-bot.json'
+  },
+  {
+    name: 'Bot de Consulta de Produtos',
+    emoji: '🔍',
+    category: 'marketing',
+    description: 'Um bot que ajuda os usuários a encontrar produtos específicos em seu catálogo.',
+    fileName: 'product-query-bot.json'
+  },
+  {
+    name: 'Bot de Qualificação de Leads com IA',
+    emoji: '🤖',
+    category: 'marketing',
+    description: 'Um bot que usa IA para qualificar leads automaticamente com base em critérios predefinidos.',
+    fileName: 'ai-lead-qualification-bot.json'
+  },
+  {
+    name: 'Bot de Campanha de Marketing Digital',
+    emoji: '💻',
+    category: 'marketing',
+    description: 'Um bot que ajuda a criar e gerenciar campanhas de marketing digital.',
+    fileName: 'digital-marketing-campaign-bot.json'
+  },
+  {
+    name: 'Bot de Análise de Mercado',
+    emoji: '📊',
+    category: 'marketing',
+    description: 'Um bot que fornece análises e insights sobre o mercado relevante para o seu negócio.',
+    fileName: 'market-analysis-bot.json'
+  },
+  {
+    name: 'Bot de Estratégia de Branding',
+    emoji: '🌟',
+    category: 'marketing',
+    description: 'Um bot que ajuda a desenvolver estratégias de branding para fortalecer a identidade da marca.',
+    fileName: 'branding-strategy-bot.json'
+  },
+  {
+    name: 'Bot de Controle de Fluxo de Caixa',
+    emoji: '💰',
+    category: 'financeiro',
+    description: 'Um bot que auxilia na gestão e controle do fluxo de caixa da empresa.',
+    fileName: 'cash-flow-management-bot.json'
+  },
+  {
+    name: 'Bot de Consulta de Investimentos',
+    emoji: '💹',
+    category: 'financeiro',
+    description: 'Um bot que fornece informações sobre investimentos e ajuda os usuários a tomar decisões financeiras.',
+    fileName: 'investment-consultation-bot.json'
+  },
+  {
+    name: 'Bot de Treinamento Corporativo',
+    emoji: '🏢',
+    category: 'educação',
+    description: 'Um bot que ajuda a criar e gerenciar programas educacionais para funcionários.',
+    fileName: 'corporate-educational-programs-bot.json'
+  },
+  {
+    name: 'Bot de Tutoria Inteligente',
+    emoji: '🧑‍🏫',
+    category: 'educação',
+    description: 'Um bot que oferece tutoria personalizada e respostas a perguntas dos alunos.',
+    fileName: 'intelligent-tutoring-bot.json'
+  },
+  {
+    name: 'Bot de Estratégias de Retenção',
+    emoji: '🔄',
+    category: 'atendimento',
+    description: 'Um bot que ajuda a implementar estratégias de retenção de clientes.',
+    fileName: 'customer-retention-strategies-bot.json'
+  },
+  {
+    name: 'Bot de Resposta a Incidentes',
+    emoji: '🚨',
+    category: 'atendimento',
+    description: 'Um bot que ajuda a lidar com incidentes e problemas de forma eficiente.',
+    fileName: 'incident-response-bot.json'
+  },
+  {
+    name: 'Bot de Análise de Satisfação do Cliente',
+    emoji: '😄',
+    category: 'atendimento',
+    description: 'Um bot que analisa a satisfação do cliente por meio de pesquisas e feedbacks.',
+    fileName: 'customer-satisfaction-analysis-bot.json'
+  },
+  {
+    name: 'Bot de Respostas Automáticas a FAQ',
+    emoji: '❓',
+    category: 'faq',
+    description: 'Um bot que fornece respostas automáticas para perguntas frequentes dos clientes.',
+    fileName: 'auto-faq-responses-bot.json'
+  },
+  {
+    name: 'Bot de Relatórios Automatizados',
+    emoji: '📊',
+    category: 'relatórios',
+    description: 'Um bot que gera relatórios automatizados com base em dados específicos.',
+    fileName: 'automated-reports-bot.json'
+  },
+  {
+    name: 'Bot de Análise de Dados',
+    emoji: '📈',
+    category: 'relatórios',
+    description: 'Um bot especializado em analisar dados e fornecer insights valiosos.',
+    fileName: 'data-analysis-bot.json'
+  },
+  {
+    name: 'Bot de Relatórios Financeiros',
+    emoji: '💹',
+    category: 'relatórios',
+    description: 'Um bot que gera relatórios financeiros detalhados com base em informações financeiras.',
+    fileName: 'financial-reports-bot.json'
   },
 ]
