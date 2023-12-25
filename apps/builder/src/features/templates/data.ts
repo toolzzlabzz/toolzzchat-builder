@@ -228,42 +228,42 @@ export const templates: TemplateProps[] = [
     name: 'Gestão de NDA',
     emoji: '🔒',
     fileName: 'nda-management.json',
-    category: 'Jurídico',
+    category: 'jurídico',
     description: 'Um bot que auxilia na gestão de Acordos de Não Divulgação (NDA), coletando informações sobre os acordos e fornecendo lembretes para renovação.'
   },
   {
     name: 'Análise de Contratos',
     emoji: '📜',
     fileName: 'contract-analysis.json',
-    category: 'Jurídico',
+    category: 'jurídico',
     description: 'Um bot que auxilia na análise de contratos, destacando termos importantes e identificando possíveis riscos.'
   },
   {
     name: 'Solicitações para Jurídico',
     emoji: '📝',
     fileName: 'legal-requests.json',
-    category: 'Jurídico',
+    category: 'jurídico',
     description: 'Um bot que permite que os funcionários façam solicitações ao departamento jurídico, como pedidos de pareceres e consultas.'
   },
   {
     name: 'Processo de LGPD',
     emoji: '🔐',
     fileName: 'lgpd-process.json',
-    category: 'Jurídico',
+    category: 'jurídico',
     description: 'Um bot que auxilia no cumprimento dos requisitos da Lei Geral de Proteção de Dados (LGPD), orientando sobre coleta e tratamento de dados pessoais.'
   },
   {
     name: 'Processo de Contratação',
     emoji: '📋',
     fileName: 'hiring-process.json',
-    category: 'Jurídico',
+    category: 'jurídico',
     description: 'Um bot que auxilia no processo de contratação, fornecendo informações sobre documentos necessários e orientações legais.'
   },
   {
     name: 'Criação de Contratos',
     emoji: '🖋️',
     fileName: 'contract-creation.json',
-    category: 'Jurídico',
+    category: 'jurídico',
     description: 'Um bot que auxilia na criação de contratos, coletando informações sobre os termos e gerando documentos personalizados.'
   },  
   {
