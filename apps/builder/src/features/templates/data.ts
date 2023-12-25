@@ -324,4 +324,88 @@ export const templates: TemplateProps[] = [
     description: 'Um bot que gera relatórios financeiros detalhados com base em informações financeiras.',
     fileName: 'financial-reports-bot.json'
   },
+  {
+    name: 'Assistente de Vendas Online',
+    emoji: '💻',
+    category: 'vendas',
+    description: 'Um assistente virtual que ajuda a vender produtos digitais, fornecendo informações e suporte aos clientes durante o processo de compra.',
+    fileName: 'digital-product-sales-assistant.json'
+  },
+  {
+    name: 'Gerenciamento de Funil de Vendas',
+    emoji: '📊',
+    category: 'vendas',
+    description: 'Um assistente de vendas que ajuda a gerenciar e otimizar seu funil de vendas, identificando oportunidades e acompanhando leads.',
+    fileName: 'sales-funnel-management.json'
+  },
+  {
+    name: 'Avaliação de Necessidades do Cliente',
+    emoji: '📋',
+    category: 'vendas',
+    description: 'Um assistente que realiza avaliações detalhadas das necessidades dos clientes, recomendando produtos e serviços personalizados.',
+    fileName: 'customer-needs-assessment.json'
+  },
+  {
+    name: 'Acompanhamento de Sucesso do Cliente',
+    emoji: '👥',
+    category: 'customer-success',
+    description: 'Um assistente de acompanhamento que garante que os clientes alcancem seus objetivos e estejam satisfeitos com seus produtos ou serviços.',
+    fileName: 'customer-success-follow-up.json'
+  },
+  {
+    name: 'Resolução de Problemas de Cliente',
+    emoji: '🔍',
+    category: 'customer-success',
+    description: 'Um assistente que ajuda a resolver problemas e desafios específicos relatados pelos clientes, proporcionando uma experiência positiva.',
+    fileName: 'customer-issue-resolution.json'
+  },
+  {
+    name: 'Programa de Lealdade do Cliente',
+    emoji: '🤝',
+    category: 'customer-success',
+    description: 'Um assistente que gerencia programas de fidelidade para recompensar clientes fiéis e incentivá-los a continuar comprando.',
+    fileName: 'customer-loyalty-program.json'
+  },
+  {
+    name: 'Análise de Experiência do Cliente',
+    emoji: '📈',
+    category: 'customer-experience',
+    description: 'Um assistente que analisa a experiência do cliente em vários pontos de contato e fornece insights para melhorias.',
+    fileName: 'customer-experience-analysis.json'
+  },
+  {
+    name: 'Mapeamento de Jornada do Cliente',
+    emoji: '🗺️',
+    category: 'customer-experience',
+    description: 'Um assistente que mapeia a jornada do cliente e identifica oportunidades para aprimorar a experiência em cada etapa.',
+    fileName: 'customer-journey-mapping.json'
+  },
+  {
+    name: 'Coleta de Feedback do Cliente',
+    emoji: '🗣️',
+    category: 'customer-experience',
+    description: 'Um assistente que coleta feedback contínuo dos clientes por meio de pesquisas e avaliações para melhorias constantes.',
+    fileName: 'customer-feedback-collection.json'
+  },
+  {
+    name: 'Assistente Jurídico de Documentos',
+    emoji: '📃',
+    category: 'jurídico',
+    description: 'Um assistente que ajuda na criação e revisão de documentos legais, economizando tempo e garantindo precisão.',
+    fileName: 'legal-document-assistant.json'
+  },
+  {
+    name: 'Avaliação de Contratos',
+    emoji: '📜',
+    category: 'jurídico',
+    description: 'Um assistente que avalia contratos em busca de cláusulas problemáticas ou riscos legais, protegendo seus interesses.',
+    fileName: 'contract-assessment.json'
+  },
+  {
+    name: 'Suporte Jurídico Online',
+    emoji: '💼',
+    category: 'jurídico',
+    description: 'Um assistente jurídico online que fornece respostas a perguntas legais comuns e orientações sobre questões jurídicas.',
+    fileName: 'online-legal-support.json'
+  },
 ]
