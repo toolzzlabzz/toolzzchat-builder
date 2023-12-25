@@ -96,12 +96,12 @@
             "labels": {
               "placeholder": "Descreva o bug..."
             },
-            "variableId": "bug_description_variable_id",
+            "variableId": "v51BcuecnB6kRU1tsttaGyR",
             "isLong": true
           }
         },
         {
-          "id": "bug_additional_question",
+          "id": "gV4bFzhgmYoQeSthprfWv7_additional_question",
           "type": "text",
           "content": {
             "richText": [
@@ -117,30 +117,30 @@
           }
         },
         {
-          "id": "bug_additional_input",
-          "outgoingEdgeId": "bug_additional_response",
+          "id": "gV4bFzhgmYoQeSthprfWv7_additional_input",
+          "outgoingEdgeId": "gV4bFzhgmYoQeSthprfWv7_additional_response",
           "type": "choice input",
           "items": [
             {
-              "id": "bug_additional_yes",
-              "outgoingEdgeId": "bug_additional_response",
+              "id": "gV4bFzhgmYoQeSthprfWv7_additional_yes",
+              "outgoingEdgeId": "gV4bFzhgmYoQeSthprfWv7_additional_response",
               "content": "Sim"
             },
             {
-              "id": "bug_additional_no",
-              "outgoingEdgeId": "bug_additional_response",
+              "id": "gV4bFzhgmYoQeSthprfWv7_additional_no",
+              "outgoingEdgeId": "gV4bFzhgmYoQeSthprfWv7_additional_response",
               "content": "Não"
             }
           ]
         },
         {
-          "id": "bug_additional_response",
+          "id": "gV4bFzhgmYoQeSthprfWv7_additional_response",
           "type": "text input",
           "options": {
             "labels": {
               "placeholder": "Forneça mais detalhes..."
             },
-            "variableId": "additional_bug_description_variable_id",
+            "variableId": "gV4bFzhgmYoQeSthprfWv7_additional_details",
             "isLong": true
           }
         }
@@ -182,12 +182,12 @@
             "labels": {
               "placeholder": "Forneça mais detalhes..."
             },
-            "variableId": "more_assistance_description_variable_id",
+            "variableId": "vZNTGsfCNi6sGyddz3mNXQA",
             "isLong": true
           }
         },
         {
-          "id": "additional_question",
+          "id": "kyK8JQ77NodUYaz3JLS88A_additional_question",
           "type": "text",
           "content": {
             "richText": [
@@ -203,30 +203,30 @@
           }
         },
         {
-          "id": "additional_input",
-          "outgoingEdgeId": "additional_response",
+          "id": "kyK8JQ77NodUYaz3JLS88A_additional_input",
+          "outgoingEdgeId": "kyK8JQ77NodUYaz3JLS88A_additional_response",
           "type": "choice input",
           "items": [
             {
-              "id": "additional_yes",
-              "outgoingEdgeId": "additional_response",
+              "id": "kyK8JQ77NodUYaz3JLS88A_additional_yes",
+              "outgoingEdgeId": "kyK8JQ77NodUYaz3JLS88A_additional_response",
               "content": "Sim"
             },
             {
-              "id": "additional_no",
-              "outgoingEdgeId": "additional_response",
+              "id": "kyK8JQ77NodUYaz3JLS88A_additional_no",
+              "outgoingEdgeId": "kyK8JQ77NodUYaz3JLS88A_additional_response",
               "content": "Não"
             }
           ]
         },
         {
-          "id": "additional_response",
+          "id": "kyK8JQ77NodUYaz3JLS88A_additional_response",
           "type": "text input",
           "options": {
             "labels": {
               "placeholder": "Forneça mais detalhes..."
             },
-            "variableId": "additional_bug_description_variable_id",
+            "variableId": "kyK8JQ77NodUYaz3JLS88A_additional_details",
             "isLong": true
           }
         }
@@ -268,33 +268,7 @@
       ]
     }
   ],
-  "variables": [
-    {
-      "id": "bug_description_variable_id",
-      "name": "BugDescription",
-      "type": "string"
-    },
-    {
-      "id": "additional_bug_description_variable_id",
-      "name": "AdditionalBugDescription",
-      "type": "string"
-    },
-    {
-      "id": "ticket_number_variable_id",
-      "name": "TicketNumber",
-      "type": "string"
-    },
-    {
-      "id": "troubleshoot_description_variable_id",
-      "name": "TroubleshootDescription",
-      "type": "string"
-    },
-    {
-      "id": "more_assistance_description_variable_id",
-      "name": "MoreAssistanceDescription",
-      "type": "string"
-    }
-  ],
+  "variables": [],
   "localizedContents": [],
   "customAliases": []
 }
