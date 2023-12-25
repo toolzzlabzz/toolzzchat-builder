@@ -118,7 +118,7 @@ export const TemplatesModal = ({
             className="hide-scrollbar"
           >
             <Stack spacing={5}>
-              {renderCategory('populares')}
+              
               {renderCategory('atendimento')}
               {renderCategory('faq')}
               {renderCategory('educação')}
@@ -133,6 +133,7 @@ export const TemplatesModal = ({
               {renderCategory('tecnologia')}
               {renderCategory('relatórios')}
               {renderCategory('recomendação')}
+              {renderCategory('populares')}
               {renderCategory('other')}
              
             </Stack>

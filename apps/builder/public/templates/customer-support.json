@@ -21,8 +21,14 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Hey friend 👋" }] },
-              { "type": "p", "children": [{ "text": "How can I help you?" }] }
+              {
+                "type": "p",
+                "children": [{ "text": "Olá amigo, tudo bem? 👋" }]
+              },
+              {
+                "type": "p",
+                "children": [{ "text": "Como posso te ajudar hoje?" }]
+              }
             ]
           }
         },
@@ -33,17 +39,17 @@
             {
               "id": "fQ8oLDnKmDBuPDK7riJ2kt",
               "outgoingEdgeId": "dhniFxrsH5r54aEE5JXwK2",
-              "content": "I have a feature request ✨"
+              "content": "Tenho uma solicitação de melhoria ✨"
             },
             {
               "id": "h2rFDX2UnKS4Kdu3Eyuqq3",
               "outgoingEdgeId": "2C4mhU5o2Hdm7dztR9xNE9",
-              "content": "There is a bug 🐛"
+              "content": "Quero reportar um bug 🐛"
             },
             {
               "id": "hcUFBPeQA3gSyXRprRk2v9",
               "outgoingEdgeId": "bTo6CZD1YapDDyVdvJgFDV",
-              "content": "I have a question 💭"
+              "content": "Eu tenho uma dúvida 💭"
             }
           ]
         }
@@ -58,7 +64,7 @@
           "id": "sjsECyfSBMkUnoWaEnBTmJX",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Shoot! 🤪" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "OK! 🤪" }] }]
           }
         },
         {
@@ -70,7 +76,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Can you describe the bug with as many details as possible?"
+                    "text": "Você pode descrever o bug com o máximo de detalhes possível?"
                   }
                 ]
               }
@@ -83,7 +89,7 @@
           "type": "text input",
           "options": {
             "labels": {
-              "placeholder": "Describe the bug..."
+              "placeholder": "Descreva o bug..."
             },
             "variableId": "v51BcuecnB6kRU1tsttaGyR",
             "isLong": true
@@ -93,7 +99,7 @@
     },
     {
       "id": "kyK8JQ77NodUYaz3JLS88A",
-      "title": "Feature request",
+      "title": "Solicitação de melhoria",
       "graphCoordinates": { "x": 364.36, "y": -517.93 },
       "blocks": [
         {
@@ -110,7 +116,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Head up to the feedback board." }]
+                "children": [{ "text": "Vá até o quadro de feedback." }]
               },
               { "type": "p", "children": [{ "text": "" }] },
               {
@@ -118,9 +124,11 @@
                 "children": [
                   { "text": "👉 " },
                   {
-                    "url": "https://app.typebot.io/feedback",
+                    "url": "https://toolzz.com.br/bots/feedback",
                     "type": "a",
-                    "children": [{ "text": "https://app.typebot.io/feedback" }]
+                    "children": [
+                      { "text": "https://toolzz.com.br/bots/feedback" }
+                    ]
                   },
                   { "text": "" }
                 ]
@@ -130,7 +138,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "There, you'll be able to check existing feature requests and submit yours if it's missing 💪"
+                    "text": "Lá, você poderá verificar as solicitações de recursos existentes e enviar a sua, caso esteja faltando 💪"
                   }
                 ]
               }
@@ -140,7 +148,7 @@
         {
           "id": "cl16lb3b300092e6dh4h01vxw",
           "type": "choice input",
-          "items": [{ "id": "cl16lb3b3000a2e6dy8zdhzpz", "content": "Restart" }]
+          "items": [{ "id": "cl16lb3b3000a2e6dy8zdhzpz", "content": "Reiniciar" }]
         },
         {
           "id": "j08qxg0h804rngfroedblt5f",
@@ -151,7 +159,7 @@
     },
     {
       "id": "puWCBhGWSQRbqTkVH89RCf",
-      "title": "Question",
+      "title": "Dúvida",
       "graphCoordinates": { "x": 365.4, "y": 491.3 },
       "blocks": [
         {
@@ -164,9 +172,9 @@
                 "children": [
                   { "text": "First, don't forget to check out the " },
                   {
-                    "url": "https://docs.typebot.io/",
+                    "url": "https://toolzz.com.br/bots/docs",
                     "type": "a",
-                    "children": [{ "text": "Documentation 🙏" }]
+                    "children": [{ "text": "Documentação 🙏" }]
                   }
                 ]
               }
@@ -180,7 +188,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Otherwise, I'm all ears!" }]
+                "children": [{ "text": "Caso contrário, sou todo ouvidos 🦻!" }]
               }
             ]
           }
@@ -216,7 +224,7 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Thank you so much for your submission 💙" }
+                  { "text": "Muito obrigado pelo seu envio 💙" }
                 ]
               }
             ]
@@ -231,7 +239,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "I'll get back to you ASAP (usually within 24 hours)"
+                    "text": "Entrarei em contato com você o mais rápido possível (geralmente dentro de 24 horas)"
                   }
                 ]
               }
@@ -241,7 +249,7 @@
         {
           "id": "s4JATFkBxzmcqqEKQB2xFfa",
           "type": "choice input",
-          "items": [{ "id": "jqm8wZa5yYb73493n5s3Uc", "content": "Restart" }]
+          "items": [{ "id": "jqm8wZa5yYb73493n5s3Uc", "content": "Reiniciar" }]
         },
         {
           "id": "igdnc34rcmiyamazghr8s708",
@@ -262,7 +270,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "On which email can I contact you?" }]
+                "children": [{ "text": "Em qual e-mail posso entrar em contato com você?" }]
               }
             ]
           }

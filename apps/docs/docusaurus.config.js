@@ -1,83 +1,83 @@
 /** @type {import('@docusaurus/types').Config} */
 module.exports = {
-  title: 'Typebot docs',
-  tagline: 'Get to Typebot next level with its documentation',
-  url: 'https://docs.typebot.io',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.png',
-  organizationName: 'baptisteArno', // Usually your GitHub org/user name.
+  title: "Typebot docs",
+  tagline: "Get to Typebot next level with its documentation",
+  url: "https://docs.typebot.io",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/favicon.png",
+  organizationName: "baptisteArno", // Usually your GitHub org/user name.
   themeConfig: {
     navbar: {
-      title: 'Typebot',
+      title: "Typebot",
       logo: {
-        alt: 'Typebot Logo',
-        src: 'img/logo.svg',
+        alt: "Typebot Logo",
+        src: "img/logo.svg",
       },
       items: [
         {
-          href: '/',
-          label: 'Docs',
-          position: 'left',
+          href: "/",
+          label: "Docs",
+          position: "left",
         },
         {
-          href: '/api',
-          label: 'API Reference',
-          position: 'left',
+          href: "/api",
+          label: "API Reference",
+          position: "left",
         },
         {
-          href: 'https://github.com/baptisteArno/typebot.io/tree/main/apps/docs',
-          label: 'Contribute',
-          position: 'right',
+          href: "https://github.com/baptisteArno/typebot.io/tree/main/apps/docs",
+          label: "Contribute",
+          position: "right",
         },
       ],
     },
     algolia: {
-      apiKey: '978429d40094dc0fd2dd02db741b3dbe',
-      indexName: 'typebot',
-      appId: '6GBQ91COKA',
+      apiKey: "978429d40094dc0fd2dd02db741b3dbe",
+      indexName: "typebot",
+      appId: "6GBQ91COKA",
       contextualSearch: false,
     },
     footer: {
       links: [
         {
-          title: 'Product',
+          title: "Product",
           items: [
             {
-              label: 'Homepage',
-              to: 'https://www.typebot.io',
+              label: "Homepage",
+              to: "https://www.typebot.io",
             },
-            { label: 'Status', to: 'https://status.typebot.io' },
+            { label: "Status", to: "https://status.typebot.io" },
             {
-              label: 'Roadmap',
-              to: 'https://app.typebot.io/feedback',
+              label: "Roadmap",
+              to: "https://toolzz.com.br/bots",
             },
           ],
         },
         {
-          title: 'Community',
+          title: "Community",
           items: [
             {
-              label: 'Discord',
-              href: 'https://typebot.io/discord',
+              label: "Discord",
+              href: "https://typebot.io/discord",
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/Typebot_io',
+              label: "Twitter",
+              href: "https://twitter.com/Typebot_io",
             },
           ],
         },
         {
-          title: 'Company',
+          title: "Company",
           items: [
             {
-              label: 'Terms of Service',
-              href: 'https://www.typebot.io/terms-of-service',
+              label: "Terms of Service",
+              href: "https://www.typebot.io/terms-of-service",
             },
             {
-              label: 'Privacy Policy',
-              href: 'https://www.typebot.io/privacy-policies',
+              label: "Privacy Policy",
+              href: "https://www.typebot.io/privacy-policies",
             },
           ],
         },
@@ -89,24 +89,24 @@ module.exports = {
   },
   presets: [
     [
-      '@typebot.io/docusaurus-preset-openapi',
+      "@typebot.io/docusaurus-preset-openapi",
       /** @type {import('@typebot.io/docusaurus-preset-openapi').Options} */
       {
         api: {
-          path: 'openapi',
-          routeBasePath: '/api',
+          path: "openapi",
+          routeBasePath: "/api",
         },
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          routeBasePath: '/',
+          sidebarPath: require.resolve("./sidebars.js"),
+          routeBasePath: "/",
           editUrl: ({ docPath }) => {
-            return `https://github.com/baptistearno/typebot.io/edit/main/apps/docs/docs/${docPath}`
+            return `https://github.com/baptistearno/typebot.io/edit/main/apps/docs/docs/${docPath}`;
           },
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       },
     ],
   ],
-}
+};
