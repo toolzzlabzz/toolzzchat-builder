@@ -360,7 +360,7 @@ export const templates: TemplateProps[] = [
     fileName: 'customer-issue-resolution.json'
   },
   {
-    name: 'Programa de Lealdade do Cliente',
+    name: 'Lealdade do Cliente',
     emoji: '🤝',
     category: 'customer-success',
     description: 'Um assistente que gerencia programas de fidelidade para recompensar clientes fiéis e incentivá-los a continuar comprando.',
