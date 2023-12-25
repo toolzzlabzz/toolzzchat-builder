@@ -101,7 +101,7 @@
           }
         },
         {
-          "id": "gV4bFzhgmYoQeSthprfWv7_additional_question",
+          "id": "bug_additional_question",
           "type": "text",
           "content": {
             "richText": [
@@ -117,24 +117,24 @@
           }
         },
         {
-          "id": "gV4bFzhgmYoQeSthprfWv7_additional_input",
-          "outgoingEdgeId": "gV4bFzhgmYoQeSthprfWv7_additional_response",
+          "id": "bug_additional_input",
+          "outgoingEdgeId": "bug_additional_response",
           "type": "choice input",
           "items": [
             {
-              "id": "gV4bFzhgmYoQeSthprfWv7_additional_yes",
-              "outgoingEdgeId": "gV4bFzhgmYoQeSthprfWv7_additional_response",
+              "id": "bug_additional_yes",
+              "outgoingEdgeId": "bug_additional_response",
               "content": "Sim"
             },
             {
-              "id": "gV4bFzhgmYoQeSthprfWv7_additional_no",
-              "outgoingEdgeId": "gV4bFzhgmYoQeSthprfWv7_additional_response",
+              "id": "bug_additional_no",
+              "outgoingEdgeId": "bug_additional_response",
               "content": "Não"
             }
           ]
         },
         {
-          "id": "gV4bFzhgmYoQeSthprfWv7_additional_response",
+          "id": "bug_additional_response",
           "type": "text input",
           "options": {
             "labels": {
@@ -165,9 +165,7 @@
             "richText": [
               {
                 "type": "p",
-                "children
-
-": [
+                "children": [
                   {
                     "text": "Você pode fornecer mais detalhes sobre a melhoria que você gostaria de ver?"
                   }
@@ -189,7 +187,7 @@
           }
         },
         {
-          "id": "kyK8JQ77NodUYaz3JLS88A_additional_question",
+          "id": "additional_question",
           "type": "text",
           "content": {
             "richText": [
@@ -205,24 +203,24 @@
           }
         },
         {
-          "id": "kyK8JQ77NodUYaz3JLS88A_additional_input",
-          "outgoingEdgeId": "kyK8JQ77NodUYaz3JLS88A_additional_response",
+          "id": "additional_input",
+          "outgoingEdgeId": "additional_response",
           "type": "choice input",
           "items": [
             {
-              "id": "kyK8JQ77NodUYaz3JLS88A_additional_yes",
-              "outgoingEdgeId": "kyK8JQ77NodUYaz3JLS88A_additional_response",
+              "id": "additional_yes",
+              "outgoingEdgeId": "additional_response",
               "content": "Sim"
             },
             {
-              "id": "kyK8JQ77NodUYaz3JLS88A_additional_no",
-              "outgoingEdgeId": "kyK8JQ77NodUYaz3JLS88A_additional_response",
+              "id": "additional_no",
+              "outgoingEdgeId": "additional_response",
               "content": "Não"
             }
           ]
         },
         {
-          "id": "kyK8JQ77NodUYaz3JLS88A_additional_response",
+          "id": "additional_response",
           "type": "text input",
           "options": {
             "labels": {
