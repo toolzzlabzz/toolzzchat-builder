@@ -133,4 +133,84 @@ export const templates: TemplateProps[] = [
     description:
       'Este é um exemplo de como você pode usar o bloco OpenAI para tomar decisões inteligentes com base na entrada do usuário e redirecionar a conversa para o caminho certo.',
   },
+  {
+    name: 'Análise Financeira',
+    emoji: '💹',
+    fileName: 'financial-analysis.json',
+    category: 'financeiro',
+    description:
+      'Um bot destinado a ajudar na análise de dados financeiros, fornecendo insights e relatórios personalizados com base nas informações do usuário.',
+  },
+  {
+    name: 'Recrutamento Inteligente',
+    emoji: '🔍',
+    fileName: 'smart-recruitment.json',
+    category: 'rh',
+    description:
+      'Automatize o processo de recrutamento, utilizando IA para filtrar candidatos com base em habilidades e experiência, melhorando a eficiência do RH.',
+  },
+  {
+    name: 'Feedback de Equipe',
+    emoji: '🗣️',
+    fileName: 'team-feedback.json',
+    category: 'rh',
+    description:
+      'Colete e analise feedback de funcionários sobre o ambiente de trabalho, políticas da empresa e satisfação geral, para melhorar a gestão de RH.',
+  },
+  {
+    name: 'Gerenciamento de Projetos',
+    emoji: '📊',
+    fileName: 'project-management.json',
+    category: 'tecnologia',
+    description:
+      'Um bot que auxilia no gerenciamento de projetos de TI, organizando tarefas, prazos e recursos, facilitando a comunicação entre as equipes.',
+  },
+  {
+    name: 'Assistente de Vendas',
+    emoji: '💼',
+    fileName: 'sales-assistant.json',
+    category: 'marketing',
+    description:
+      'Um bot que ajuda equipes de vendas a acompanhar leads, agendar reuniões e gerenciar funil de vendas, aumentando a eficiência do processo comercial.',
+  },
+  {
+    name: 'Controle de Estoque',
+    emoji: '📦',
+    fileName: 'inventory-control.json',
+    category: 'produto',
+    description:
+      'Automatize o controle de estoque, rastreando níveis de produtos, gerando alertas de reabastecimento e fornecendo relatórios detalhados sobre a movimentação de itens.',
+  },
+  {
+    name: 'Análise de Tendências de Mercado',
+    emoji: '🔍',
+    fileName: 'market-trend-analysis.json',
+    category: 'marketing',
+    description:
+      'Um bot que utiliza IA para analisar tendências de mercado e fornecer insights valiosos para estratégias de marketing e desenvolvimento de produtos.',
+  },
+  {
+    name: 'Suporte Técnico',
+    emoji: '🔧',
+    fileName: 'tech-support.json',
+    category: 'tecnologia',
+    description:
+      'Um bot projetado para oferecer suporte técnico, resolvendo problemas comuns e encaminhando casos mais complexos para especialistas técnicos.',
+  },
+  {
+    name: 'Gestão de Desempenho',
+    emoji: '📈',
+    fileName: 'performance-management.json',
+    category: 'rh',
+    description:
+      'Este bot ajuda na gestão de desempenho dos funcionários, facilitando avaliações, feedbacks e planejamento de desenvolvimento de carreira.',
+  },
+  {
+    name: 'Análise de Risco Financeiro',
+    emoji: '🔥',
+    fileName: 'financial-risk-analysis.json',
+    category: 'financeiro',
+    description:
+      'Um bot especializado em identificar e analisar riscos financeiros, ajudando empresas a tomar decisões mais informadas e seguras.',
+  },
 ]
