@@ -1,343 +1,336 @@
 {
-  "version": "6",
-  "id": "cloo046v300051aorhtv76f0i",
-  "name": "Tech Support",
+  "version": "8",
+  "id": "bot_id_123",
+  "name": "Bot de Suporte",
   "events": [
     {
-      "id": "uG1tt8JdDyu2nju3oJ4wc1",
-      "outgoingEdgeId": "2dzxChB1qm9WGfzNF91tfg",
-      "graphCoordinates": { "x": -281, "y": -89 },
+      "id": "start_event_id",
+      "outgoingEdgeId": "menu_group_id",
+      "graphCoordinates": { "x": 0, "y": 0 },
       "type": "start"
     }
   ],
   "groups": [
     {
-      "id": "vLUAPaxKwPF49iZhg4XZYa",
-      "title": "Menu",
-      "graphCoordinates": { "x": -28.4, "y": -88.19 },
+      "id": "menu_group_id",
+      "title": "Menu Principal",
+      "graphCoordinates": { "x": 257.86, "y": 0.85 },
       "blocks": [
         {
-          "id": "spud6U3K1omh2dZG8yN2CW4",
+          "id": "menu_text_block_id",
           "type": "text",
           "content": {
             "richText": [
-              {
-                "type": "p",
-                "children": [{ "text": "Olá amigo, tudo bem? 👋" }]
-              },
-              {
-                "type": "p",
-                "children": [{ "text": "Como posso te ajudar hoje?" }]
-              }
+              { "type": "p", "children": [{ "text": "Olá! Como posso ajudar você hoje?" }] }
             ]
           }
         },
         {
-          "id": "s6kp2Z4igeY3kL7B64qBdUg",
+          "id": "menu_choice_block_id",
           "type": "choice input",
           "items": [
             {
-              "id": "h2rFDX2UnKS4Kdu3Eyuqq3",
-              "outgoingEdgeId": "2C4mhU5o2Hdm7dztR9xNE9",
-              "content": "Quero reportar um bug 🐛"
+              "id": "report_bug_choice_id",
+              "outgoingEdgeId": "report_bug_group_id",
+              "content": "Reportar um Bug"
+            },
+            {
+              "id": "check_ticket_status_choice_id",
+              "outgoingEdgeId": "check_ticket_status_group_id",
+              "content": "Consultar Status de Ticket"
+            },
+            {
+              "id": "troubleshoot_assistance_choice_id",
+              "outgoingEdgeId": "troubleshoot_assistance_group_id",
+              "content": "Assistência na Solução de Problemas"
             }
           ]
         }
       ]
     },
     {
-      "id": "7MuqF6nen1ZTwGB53Mz8VY",
-      "title": "Bug",
-      "graphCoordinates": { "x": 364.46, "y": 92.39 },
+      "id": "report_bug_group_id",
+      "title": "Reportar um Bug",
+      "graphCoordinates": { "x": 500, "y": 0 },
       "blocks": [
         {
-          "id": "sjsECyfSBMkUnoWaEnBTmJX",
-          "type": "text",
-          "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "OK!" }] }]
-          }
-        },
-        {
-          "id": "seomQsnPWgiMzQVeZ3us7x2",
+          "id": "report_bug_text_block_id",
           "type": "text",
           "content": {
             "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Você pode descrever o bug com o máximo de detalhes possível?"
-                  }
-                ]
-              }
+              { "type": "p", "children": [{ "text": "Por favor, descreva o bug com detalhes para que possamos ajudar você melhor:" }] }
             ]
           }
         },
         {
-          "id": "s3LYyyYtjdQ88jkMMV5DSW7",
-          "outgoingEdgeId": "cl1571jhh00022e6dk77f52wg",
+          "id": "bug_description_input_block_id",
           "type": "text input",
+          "outgoingEdgeId": "bug_description_given_block_id",
           "options": {
-            "labels": {
-              "placeholder": "Descreva o bug..."
+            "labels": { "placeholder": "Descreva o bug..." },
+            "variableId": "bug_description_variable_id"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bug_description_given_block_id",
+      "title": "Descrição do Bug Fornecida",
+      "graphCoordinates": { "x": 750, "y": 0 },
+      "blocks": [
+        {
+          "id": "bug_description_given_text_block_id",
+          "type": "text",
+          "content": {
+            "richText": [
+              { "type": "p", "children": [{ "text": "Obrigado por fornecer detalhes sobre o bug. Você deseja adicionar mais informações ou algo mais?" }] }
+            ]
+          }
+        },
+        {
+          "id": "additional_info_choice_block_id",
+          "type": "choice input",
+          "outgoingEdgeId": "additional_info_given_block_id",
+          "items": [
+            {
+              "id": "yes_additional_info_choice_id",
+              "outgoingEdgeId": "bug_description_input_block_id",
+              "content": "Sim, adicionar mais informações"
             },
-            "variableId": "v51BcuecnB6kRU1tsttaGyR",
-            "isLong": true
-          }
+            {
+              "id": "no_additional_info_choice_id",
+              "outgoingEdgeId": "bug_reported_group_id",
+              "content": "Não, bug reportado"
+            }
+          ]
         }
       ]
     },
     {
-      "id": "kyK8JQ77NodUYaz3JLS88A",
-      "title": "Solicitação de melhoria",
-      "graphCoordinates": { "x": 364.36, "y": -517.93 },
+      "id": "additional_info_given_block_id",
+      "title": "Informações Adicionais Fornecidas",
+      "graphCoordinates": { "x": 1000, "y": 0 },
       "blocks": [
         {
-          "id": "s9bgHcWdobb8Z5cTbrnTz6R",
-          "type": "text",
-          "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Incrível!" }] }]
-          }
-        },
-        {
-          "id": "s2NbNaBGKhMvdEUdVPXKZjy",
+          "id": "additional_info_given_text_block_id",
           "type": "text",
           "content": {
             "richText": [
-              {
-                "type": "p",
-                "children": [{ "text": "Vá até o quadro de feedback." }]
-              },
-              { "type": "p", "children": [{ "text": "" }] },
-              {
-                "type": "p",
-                "children": [
-                  { "text": "👉 " },
-                  {
-                    "url": "https://toolzz.com.br/bots/feedback",
-                    "type": "a",
-                    "children": [
-                      { "text": "https://toolzz.com.br/bots/feedback" }
-                    ]
-                  },
-                  { "text": "" }
-                ]
-              },
-              { "type": "p", "children": [{ "text": "" }] },
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Lá, você poderá verificar as solicitações de recursos existentes e enviar a sua, caso esteja faltando 💪"
-                  }
-                ]
-              }
+              { "type": "p", "children": [{ "text": "Por favor, adicione mais informações sobre o bug:" }] }
             ]
           }
         },
         {
-          "id": "cl16lb3b300092e6dh4h01vxw",
-          "type": "choice input",
-          "items": [{ "id": "cl16lb3b3000a2e6dy8zdhzpz", "content": "Reiniciar" }]
-        },
-        {
-          "id": "j08qxg0h804rngfroedblt5f",
-          "type": "Jump",
-          "options": { "groupId": "vLUAPaxKwPF49iZhg4XZYa" }
-        }
-      ]
-    },
-    {
-      "id": "puWCBhGWSQRbqTkVH89RCf",
-      "title": "Dúvida",
-      "graphCoordinates": { "x": 365.4, "y": 491.3 },
-      "blocks": [
-        {
-          "id": "sm4iHhLQs9yNdRG3b7xqV8Y",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  { "text": "First, don't forget to check out the " },
-                  {
-                    "url": "https://toolzz.com.br/bots/docs",
-                    "type": "a",
-                    "children": [{ "text": "Documentação 🙏" }]
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "sreX6rwMevEmbTpnkGCtp3k",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [{ "text": "Caso contrário, sou todo ouvidos 🦻!" }]
-              }
-            ]
-          }
-        },
-        {
-          "id": "so4GiKFWWjKCjXgmMJYCGbe",
-          "type": "image",
-          "content": {
-            "url": "https://media0.giphy.com/media/rhgwg4qBu97ISgbfni/giphy-downsized.gif?cid=fe3852a3wimy48e55djt23j44uto7gdlu8ksytylafisvr0q&rid=giphy-downsized.gif&ct=g"
-          }
-        },
-        {
-          "id": "sjd4qACugMarB7gJC8nMhb3",
-          "outgoingEdgeId": "cl1571ktd00032e6dyti22850",
+          "id": "additional_bug_description_input_block_id",
           "type": "text input",
+          "outgoingEdgeId": "bug_reported_group_id",
           "options": {
-            "variableId": "v51BcuecnB6kRU1tsttaGyR",
-            "isLong": true
+            "labels": { "placeholder": "Adicionar mais informações..." },
+            "variableId": "additional_bug_description_variable_id"
           }
         }
       ]
     },
     {
-      "id": "1GvxCAAEysxJMxrVngud3X",
-      "title": "Bye",
-      "graphCoordinates": { "x": 1115.81, "y": 728.71 },
+      "id": "check_ticket_status_group_id",
+      "title": "Consultar Status de Ticket",
+      "graphCoordinates": { "x": 750, "y": 200 },
       "blocks": [
         {
-          "id": "s6uLw72EAKbACrpYHr7DSyY",
+          "id": "check_ticket_text_block_id",
           "type": "text",
           "content": {
             "richText": [
-              {
-                "type": "p",
-                "children": [
-                  { "text": "Muito obrigado pelo seu envio 💙" }
-                ]
-              }
+              { "type": "p", "children": [{ "text": "Por favor, insira o número do seu ticket para verificar o status:" }] }
             ]
           }
         },
         {
-          "id": "stM7cTBFCLhpQagRHT64K6u",
+          "id": "ticket_number_input_block_id",
+          "type": "text input",
+          "outgoingEdgeId": "ticket_number_given_block_id",
+          "options": {
+            "labels": { "placeholder": "Número do Ticket" },
+            "variableId": "ticket_number_variable_id"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ticket_number_given_block_id",
+      "title": "Número do Ticket Fornecido",
+      "graphCoordinates": { "x": 1000, "y": 200 },
+      "blocks": [
+        {
+          "id": "ticket_number_given_text_block_id",
           "type": "text",
           "content": {
             "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Entrarei em contato com você o mais rápido possível (geralmente dentro de 24 horas)"
-                  }
-                ]
-              }
+              { "type": "p", "children": [{ "text": "O número do ticket foi fornecido. Você deseja fazer algo mais?" }] }
             ]
           }
         },
         {
-          "id": "s4JATFkBxzmcqqEKQB2xFfa",
+          "id": "more_options_choice_block_id",
           "type": "choice input",
-          "items": [{ "id": "jqm8wZa5yYb73493n5s3Uc", "content": "Reiniciar" }]
-        },
-        {
-          "id": "igdnc34rcmiyamazghr8s708",
-          "type": "Jump",
-          "options": { "groupId": "vLUAPaxKwPF49iZhg4XZYa" }
+          "outgoingEdgeId": "menu_group_id",
+          "items": [
+            {
+              "id": "yes_more_options_choice_id",
+              "outgoingEdgeId": "menu_group_id",
+              "content": "Sim, ver mais opções"
+            },
+            {
+              "id": "no_more_options_choice_id",
+              "outgoingEdgeId": "ticket_status_group_id",
+              "content": "Não, verificar status do ticket"
+            }
+          ]
         }
       ]
     },
     {
-      "id": "wncvzVDFJDvhh1M3CXJ6aL",
-      "title": "Email",
-      "graphCoordinates": { "x": 746.29, "y": 577.22 },
+      "id": "troubleshoot_assistance_group_id",
+      "title": "Assistência na Solução de Problemas",
+      "graphCoordinates": { "x": 500, "y": 400 },
       "blocks": [
         {
-          "id": "soiDpBL5r1dbvHxuT2Sd3mH",
+          "id": "troubleshoot_text_block_id",
           "type": "text",
           "content": {
             "richText": [
-              {
-                "type": "p",
-                "children": [{ "text": "Em qual e-mail posso entrar em contato com você?" }]
-              }
+              { "type": "p", "children": [{ "text": "Como posso ajudar você a solucionar seu problema?" }] }
             ]
           }
         },
         {
-          "id": "s5Fh7zHUw3j4zDM5xjzwsXB",
-          "outgoingEdgeId": "cl1571xtc00042e6dcptam5jw",
-          "type": "email input",
+          "id": "troubleshoot_input_block_id",
+          "type": "text input",
+          "outgoingEdgeId": "troubleshoot_solution_block_id",
           "options": {
-            "variableId": "t2k6cj3uYfNdJX13APA4b9"
+            "labels": { "placeholder": "Descreva seu problema..." },
+            "variableId": "troubleshoot_description_variable_id"
           }
         }
       ]
-    }
-  ],
-  "edges": [
-    {
-      "id": "2dzxChB1qm9WGfzNF91tfg",
-      "from": { "eventId": "uG1tt8JdDyu2nju3oJ4wc1" },
-      "to": { "groupId": "vLUAPaxKwPF49iZhg4XZYa" }
     },
     {
-      "id": "dhniFxrsH5r54aEE5JXwK2",
-      "from": {
-        "blockId": "s6kp2Z4igeY3kL7B64qBdUg",
-        "itemId": "fQ8oLDnKmDBuPDK7riJ2kt"
-      },
-      "to": { "groupId": "kyK8JQ77NodUYaz3JLS88A" }
+      "id": "troubleshoot_solution_block_id",
+      "title": "Descrição do Problema Fornecida",
+      "graphCoordinates": { "x": 750, "y": 400 },
+      "blocks": [
+        {
+          "id": "troubleshoot_solution_text_block_id",
+          "type": "text",
+          "content": {
+            "richText": [
+              { "type": "p", "children": [{ "text": "Obrigado por descrever seu problema. Você deseja mais assistência ou algo mais?" }] }
+            ]
+          }
+        },
+        {
+          "id": "more_assistance_choice_block_id",
+          "type": "choice input",
+          "outgoingEdgeId": "more_assistance_given_block_id",
+          "items": [
+            {
+              "id": "yes_more_assistance_choice_id",
+              "outgoingEdgeId": "troubleshoot_input_block_id",
+              "content": "Sim, preciso de mais ajuda"
+            },
+            {
+              "id": "no_more_assistance_choice_id",
+              "outgoingEdgeId": "troubleshoot_solution_given_block_id",
+              "content": "Não, problema descrito"
+            }
+          ]
+        }
+      ]
     },
     {
-      "id": "2C4mhU5o2Hdm7dztR9xNE9",
-      "from": {
-        "blockId": "s6kp2Z4igeY3kL7B64qBdUg",
-        "itemId": "h2rFDX2UnKS4Kdu3Eyuqq3"
-      },
-      "to": { "groupId": "7MuqF6nen1ZTwGB53Mz8VY" }
+      "id": "more_assistance_given_block_id",
+      "title": "Mais Assistência Fornecida",
+      "graphCoordinates": { "x": 1000, "y": 400 },
+      "blocks": [
+        {
+          "id": "more_assistance_given_text_block_id",
+          "type": "text",
+          "content": {
+            "richText": [
+              { "type": "p", "children": [{ "text": "Por favor, descreva em detalhes no que mais posso ajudar você:" }] }
+            ]
+          }
+        },
+        {
+          "id": "more_assistance_description_input_block_id",
+          "type": "text input",
+          "outgoingEdgeId": "troubleshoot_solution_given_block_id",
+          "options": {
+            "labels": { "placeholder": "Descreva sua necessidade..." },
+            "variableId": "more_assistance_description_variable_id"
+          }
+        }
+      ]
     },
     {
-      "id": "bTo6CZD1YapDDyVdvJgFDV",
-      "from": {
-        "blockId": "s6kp2Z4igeY3kL7B64qBdUg",
-        "itemId": "hcUFBPeQA3gSyXRprRk2v9"
-      },
-      "to": { "groupId": "puWCBhGWSQRbqTkVH89RCf" }
-    },
-    {
-      "id": "cl1571jhh00022e6dk77f52wg",
-      "from": { "blockId": "s3LYyyYtjdQ88jkMMV5DSW7" },
-      "to": { "groupId": "wncvzVDFJDvhh1M3CXJ6aL" }
-    },
-    {
-      "id": "cl1571ktd00032e6dyti22850",
-      "from": { "blockId": "sjd4qACugMarB7gJC8nMhb3" },
-      "to": { "groupId": "wncvzVDFJDvhh1M3CXJ6aL" }
-    },
-    {
-      "id": "cl1571xtc00042e6dcptam5jw",
-      "from": { "blockId": "s5Fh7zHUw3j4zDM5xjzwsXB" },
-      "to": { "groupId": "1GvxCAAEysxJMxrVngud3X" }
+      "id": "troubleshoot_solution_given_block_id",
+      "title": "Problema Descrito",
+      "graphCoordinates": { "x": 1250, "y": 400 },
+      "blocks": [
+        {
+          "id": "troubleshoot_solution_given_text_block_id",
+          "type": "text",
+          "content": {
+            "richText": [
+              { "type": "p", "children": [{ "text": "Obrigado por descrever seu problema. Você deseja fazer algo mais?" }] }
+            ]
+          }
+        },
+        {
+          "id": "more_options_choice_block_id",
+          "type": "choice input",
+          "outgoingEdgeId": "menu_group_id",
+          "items": [
+            {
+              "id": "yes_more_options_choice_id",
+              "outgoingEdgeId": "menu_group_id",
+              "content": "Sim, ver mais opções"
+            },
+            {
+              "id": "no_more_options_choice_id",
+              "outgoingEdgeId": "troubleshoot_solution_given_block_id",
+              "content": "Não, problema descrito"
+            }
+          ]
+        }
+      ]
     }
   ],
   "variables": [
-    { "id": "t2k6cj3uYfNdJX13APA4b9", "name": "Email" },
-    { "id": "v51BcuecnB6kRU1tsttaGyR", "name": "Content" }
-  ],
-  "theme": {},
-  "selectedThemeTemplateId": null,
-  "settings": {},
-  "createdAt": "2023-11-07T07:20:05.823Z",
-  "updatedAt": "2023-11-07T07:24:28.824Z",
-  "icon": "😍",
-  "folderId": null,
-  "publicId": null,
-  "customDomain": null,
-  "workspaceId": "proWorkspace",
-  "resultsTablePreferences": null,
-  "isArchived": false,
-  "isClosed": false,
-  "whatsAppCredentialsId": null
+    {
+      "id": "bug_description_variable_id",
+      "name": "BugDescription",
+      "type": "string"
+    },
+    {
+      "id": "additional_bug_description_variable_id",
+      "name": "AdditionalBugDescription",
+      "type": "string"
+    },
+    {
+      "id": "ticket_number_variable_id",
+      "name": "TicketNumber",
+      "type": "string"
+    },
+    {
+      "id": "troubleshoot_description_variable_id",
+      "name": "TroubleshootDescription",
+      "type": "string"
+    },
+    {
+      "id": "more_assistance_description_variable_id",
+      "name": "MoreAssistanceDescription",
+      "type": "string"
+    }
+  ]
 }
