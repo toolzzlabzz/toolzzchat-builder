@@ -131,6 +131,8 @@ export const TemplatesModal = ({
               {renderCategory('jurídico')}
               {renderCategory('relatórios')}
               {renderCategory('faq')}
+              {renderCategory('outros')}
+              {renderCategory('others')}
               {renderCategory('recomendação')}
             </Stack>
           </Stack>

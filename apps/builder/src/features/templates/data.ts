@@ -45,7 +45,7 @@ export const templates: TemplateProps[] = [
     name: 'Recomendação de Produto',
     emoji: '🍫',
     fileName: 'product-recommendation.json',
-    category: 'marketing',
+    category: 'recomendação',
     description:
       'Näak é uma empresa que vende barras de energia, misturas de hidratação e produtos de recuperação. Este bot ajuda um visitante a escolher o produto certo. Ele ajuda você a qualificar seu lead e fornecer uma recomendação personalizada.',
     backgroundColor: '#010000',
@@ -59,7 +59,7 @@ export const templates: TemplateProps[] = [
       'Uma simples pesquisa NPS para medir a satisfação do cliente e melhorar o seu produto.',
   },
   {
-    name: 'Integração de Usuários',
+    name: 'Onboarding de Usuários',
     emoji: '🧑‍🚀',
     fileName: 'onboarding.json',
     category: 'product',
@@ -68,8 +68,9 @@ export const templates: TemplateProps[] = [
   },
   {
     name: 'Pagamento de Produto Digital',
-    emoji: '🖼️',
+    emoji: '💳',
     fileName: 'digital-product-payment.json',
+    category: 'financeiro',
     description:
       'Um bot que permite vender produtos digitais (e-books, cursos, etc.) e só disponibiliza o conteúdo após a confirmação do pagamento.',
   },
@@ -77,15 +78,9 @@ export const templates: TemplateProps[] = [
     name: 'FAQ',
     emoji: '💬',
     fileName: 'faq.json',
-    category: 'product',
+    category: 'faq',
     description:
       'Um bot que responde a perguntas frequentes sobre o seu produto ou serviço.',
-  },
-  {
-    name: 'Recomendação de Filme',
-    emoji: '🍿',
-    fileName: 'movie-recommendation.json',
-    description: 'Um bot que recomenda filmes baseados nas preferências do usuário.',
   },
   {
     name: 'ChatGPT Básico',
@@ -98,6 +93,7 @@ export const templates: TemplateProps[] = [
     name: 'ChatGPT de Áudio',
     emoji: '🤖',
     fileName: 'audio-chat-gpt.json',
+    category: 'outros',
     description:
       'Um bot de IA de áudio que usa o bloco OpenAI para gerar respostas com base na entrada do usuário.',
     isNew: true,
@@ -106,6 +102,7 @@ export const templates: TemplateProps[] = [
     name: 'Personas ChatGPT',
     emoji: '🎭',
     fileName: 'chat-gpt-personas.json',
+    category: 'outros',
     description:
       'Um bot que usa o modelo ChatGPT para gerar respostas com base na entrada do usuário e na persona selecionada.',
   },
@@ -129,6 +126,7 @@ export const templates: TemplateProps[] = [
     name: 'Condições OpenAI',
     emoji: '🧠',
     fileName: 'openai-conditions.json',
+    category: 'outros',
     isNew: true,
     description:
       'Este é um exemplo de como você pode usar o bloco OpenAI para tomar decisões inteligentes com base na entrada do usuário e redirecionar a conversa para o caminho certo.',
