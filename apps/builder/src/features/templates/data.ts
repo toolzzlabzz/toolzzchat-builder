@@ -206,119 +206,119 @@ export const templates: TemplateProps[] = [
       'Um bot especializado em identificar e analisar riscos financeiros, ajudando empresas a tomar decisões mais informadas e seguras.',
   },
   {
-    name: 'Bot de Distribuição de Conteúdo',
+    name: 'Distribuição de Conteúdo',
     emoji: '📰',
     category: 'marketing',
     description: 'Um bot que distribui conteúdo para sua audiência, como artigos, vídeos ou notícias.',
     fileName: 'content-distribution-bot.json'
   },
   {
-    name: 'Bot de Consulta de Produtos',
+    name: 'Consulta de Produtos',
     emoji: '🔍',
     category: 'marketing',
     description: 'Um bot que ajuda os usuários a encontrar produtos específicos em seu catálogo.',
     fileName: 'product-query-bot.json'
   },
   {
-    name: 'Bot de Qualificação de Leads com IA',
+    name: 'Qualificação de Leads com IA',
     emoji: '🤖',
     category: 'marketing',
     description: 'Um bot que usa IA para qualificar leads automaticamente com base em critérios predefinidos.',
     fileName: 'ai-lead-qualification-bot.json'
   },
   {
-    name: 'Bot de Campanha de Marketing Digital',
+    name: 'Campanha de Marketing Digital',
     emoji: '💻',
     category: 'marketing',
     description: 'Um bot que ajuda a criar e gerenciar campanhas de marketing digital.',
     fileName: 'digital-marketing-campaign-bot.json'
   },
   {
-    name: 'Bot de Análise de Mercado',
+    name: 'Análise de Mercado',
     emoji: '📊',
     category: 'marketing',
     description: 'Um bot que fornece análises e insights sobre o mercado relevante para o seu negócio.',
     fileName: 'market-analysis-bot.json'
   },
   {
-    name: 'Bot de Estratégia de Branding',
+    name: 'Estratégia de Branding',
     emoji: '🌟',
     category: 'marketing',
     description: 'Um bot que ajuda a desenvolver estratégias de branding para fortalecer a identidade da marca.',
     fileName: 'branding-strategy-bot.json'
   },
   {
-    name: 'Bot de Controle de Fluxo de Caixa',
+    name: 'Controle de Fluxo de Caixa',
     emoji: '💰',
     category: 'financeiro',
     description: 'Um bot que auxilia na gestão e controle do fluxo de caixa da empresa.',
     fileName: 'cash-flow-management-bot.json'
   },
   {
-    name: 'Bot de Consulta de Investimentos',
+    name: 'Consulta de Investimentos',
     emoji: '💹',
     category: 'financeiro',
     description: 'Um bot que fornece informações sobre investimentos e ajuda os usuários a tomar decisões financeiras.',
     fileName: 'investment-consultation-bot.json'
   },
   {
-    name: 'Bot de Treinamento Corporativo',
+    name: 'Treinamento Corporativo',
     emoji: '🏢',
     category: 'educação',
     description: 'Um bot que ajuda a criar e gerenciar programas educacionais para funcionários.',
     fileName: 'corporate-educational-programs-bot.json'
   },
   {
-    name: 'Bot de Tutoria Inteligente',
+    name: 'Tutoria Inteligente',
     emoji: '🧑‍🏫',
     category: 'educação',
     description: 'Um bot que oferece tutoria personalizada e respostas a perguntas dos alunos.',
     fileName: 'intelligent-tutoring-bot.json'
   },
   {
-    name: 'Bot de Estratégias de Retenção',
+    name: 'Estratégias de Retenção',
     emoji: '🔄',
     category: 'atendimento',
     description: 'Um bot que ajuda a implementar estratégias de retenção de clientes.',
     fileName: 'customer-retention-strategies-bot.json'
   },
   {
-    name: 'Bot de Resposta a Incidentes',
+    name: 'Resposta a Incidentes',
     emoji: '🚨',
     category: 'atendimento',
     description: 'Um bot que ajuda a lidar com incidentes e problemas de forma eficiente.',
     fileName: 'incident-response-bot.json'
   },
   {
-    name: 'Bot de Análise de Satisfação do Cliente',
+    name: 'Análise de Satisfação do Cliente',
     emoji: '😄',
     category: 'atendimento',
     description: 'Um bot que analisa a satisfação do cliente por meio de pesquisas e feedbacks.',
     fileName: 'customer-satisfaction-analysis-bot.json'
   },
   {
-    name: 'Bot de Respostas Automáticas a FAQ',
+    name: 'Respostas Automáticas a FAQ',
     emoji: '❓',
     category: 'faq',
     description: 'Um bot que fornece respostas automáticas para perguntas frequentes dos clientes.',
     fileName: 'auto-faq-responses-bot.json'
   },
   {
-    name: 'Bot de Relatórios Automatizados',
+    name: 'Relatórios Automatizados',
     emoji: '📊',
     category: 'relatórios',
     description: 'Um bot que gera relatórios automatizados com base em dados específicos.',
     fileName: 'automated-reports-bot.json'
   },
   {
-    name: 'Bot de Análise de Dados',
+    name: 'Análise de Dados',
     emoji: '📈',
     category: 'relatórios',
     description: 'Um bot especializado em analisar dados e fornecer insights valiosos.',
     fileName: 'data-analysis-bot.json'
   },
   {
-    name: 'Bot de Relatórios Financeiros',
+    name: 'Relatórios Financeiros',
     emoji: '💹',
     category: 'relatórios',
     description: 'Um bot que gera relatórios financeiros detalhados com base em informações financeiras.',
