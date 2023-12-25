@@ -37,24 +37,9 @@
           "type": "choice input",
           "items": [
             {
-              "id": "fQ8oLDnKmDBuPDK7riJ2kt",
-              "outgoingEdgeId": "dhniFxrsH5r54aEE5JXwK2",
-              "content": "Reportar um bug"
-            },
-            {
               "id": "h2rFDX2UnKS4Kdu3Eyuqq3",
               "outgoingEdgeId": "2C4mhU5o2Hdm7dztR9xNE9",
-              "content": "Consultar status ticket"
-            },
-            {
-              "id": "hcUFBPeQA3gSyXRprRk2v9",
-              "outgoingEdgeId": "bTo6CZD1YapDDyVdvJgFDV",
-              "content": "Assistência na Solução de Problemas"
-            },
-            {
-              "id": "gV4bFzhgmYoQeSthprfWv7",
-              "outgoingEdgeId": "d4bCzUBKQ3rxeRqkMDcF64",
-              "content": "Solicitação de melhoria"
+              "content": "Quero reportar um bug 🐛"
             }
           ]
         }
@@ -99,50 +84,6 @@
             "variableId": "v51BcuecnB6kRU1tsttaGyR",
             "isLong": true
           }
-        },
-        {
-          "id": "gV4bFzhgmYoQeSthprfWv7_additional_question",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Você gostaria de fornecer mais detalhes sobre o bug?"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "gV4bFzhgmYoQeSthprfWv7_additional_input",
-          "outgoingEdgeId": "gV4bFzhgmYoQeSthprfWv7_additional_response",
-          "type": "choice input",
-          "items": [
-            {
-              "id": "gV4bFzhgmYoQeSthprfWv7_additional_yes",
-              "outgoingEdgeId": "gV4bFzhgmYoQeSthprfWv7_additional_response",
-              "content": "Sim"
-            },
-            {
-              "id": "gV4bFzhgmYoQeSthprfWv7_additional_no",
-              "outgoingEdgeId": "gV4bFzhgmYoQeSthprfWv7_additional_response",
-              "content": "Não"
-            }
-          ]
-        },
-        {
-          "id": "gV4bFzhgmYoQeSthprfWv7_additional_response",
-          "type": "text input",
-          "options": {
-            "labels": {
-              "placeholder": "Forneça mais detalhes..."
-            },
-            "variableId": "gV4bFzhgmYoQeSthprfWv7_additional_details",
-            "isLong": true
-          }
         }
       ]
     },
@@ -159,15 +100,35 @@
           }
         },
         {
-          "id": "sz0HqN9x5iuw4BMEaJJYZ87",
+          "id": "s2NbNaBGKhMvdEUdVPXKZjy",
           "type": "text",
           "content": {
             "richText": [
               {
                 "type": "p",
+                "children": [{ "text": "Vá até o quadro de feedback." }]
+              },
+              { "type": "p", "children": [{ "text": "" }] },
+              {
+                "type": "p",
+                "children": [
+                  { "text": "👉 " },
+                  {
+                    "url": "https://toolzz.com.br/bots/feedback",
+                    "type": "a",
+                    "children": [
+                      { "text": "https://toolzz.com.br/bots/feedback" }
+                    ]
+                  },
+                  { "text": "" }
+                ]
+              },
+              { "type": "p", "children": [{ "text": "" }] },
+              {
+                "type": "p",
                 "children": [
                   {
-                    "text": "Você pode fornecer mais detalhes sobre a melhoria que você gostaria de ver?"
+                    "text": "Lá, você poderá verificar as solicitações de recursos existentes e enviar a sua, caso esteja faltando 💪"
                   }
                 ]
               }
@@ -175,100 +136,208 @@
           }
         },
         {
-          "id": "spDVkxtyvQ2RLJZW81ShcB",
-          "outgoingEdgeId": "cS9bmSwhD5PjBvKb6UT3c2",
-          "type": "text input",
-          "options": {
-            "labels": {
-              "placeholder": "Forneça mais detalhes..."
-            },
-            "variableId": "vZNTGsfCNi6sGyddz3mNXQA",
-            "isLong": true
-          }
-        },
-        {
-          "id": "kyK8JQ77NodUYaz3JLS88A_additional_question",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Você gostaria de adicionar mais detalhes à sua solicitação de melhoria?"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "kyK8JQ77NodUYaz3JLS88A_additional_input",
-          "outgoingEdgeId": "kyK8JQ77NodUYaz3JLS88A_additional_response",
+          "id": "cl16lb3b300092e6dh4h01vxw",
           "type": "choice input",
-          "items": [
-            {
-              "id": "kyK8JQ77NodUYaz3JLS88A_additional_yes",
-              "outgoingEdgeId": "kyK8JQ77NodUYaz3JLS88A_additional_response",
-              "content": "Sim"
-            },
-            {
-              "id": "kyK8JQ77NodUYaz3JLS88A_additional_no",
-              "outgoingEdgeId": "kyK8JQ77NodUYaz3JLS88A_additional_response",
-              "content": "Não"
-            }
-          ]
+          "items": [{ "id": "cl16lb3b3000a2e6dy8zdhzpz", "content": "Reiniciar" }]
         },
         {
-          "id": "kyK8JQ77NodUYaz3JLS88A_additional_response",
+          "id": "j08qxg0h804rngfroedblt5f",
+          "type": "Jump",
+          "options": { "groupId": "vLUAPaxKwPF49iZhg4XZYa" }
+        }
+      ]
+    },
+    {
+      "id": "puWCBhGWSQRbqTkVH89RCf",
+      "title": "Dúvida",
+      "graphCoordinates": { "x": 365.4, "y": 491.3 },
+      "blocks": [
+        {
+          "id": "sm4iHhLQs9yNdRG3b7xqV8Y",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  { "text": "First, don't forget to check out the " },
+                  {
+                    "url": "https://toolzz.com.br/bots/docs",
+                    "type": "a",
+                    "children": [{ "text": "Documentação 🙏" }]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "sreX6rwMevEmbTpnkGCtp3k",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [{ "text": "Caso contrário, sou todo ouvidos 🦻!" }]
+              }
+            ]
+          }
+        },
+        {
+          "id": "so4GiKFWWjKCjXgmMJYCGbe",
+          "type": "image",
+          "content": {
+            "url": "https://media0.giphy.com/media/rhgwg4qBu97ISgbfni/giphy-downsized.gif?cid=fe3852a3wimy48e55djt23j44uto7gdlu8ksytylafisvr0q&rid=giphy-downsized.gif&ct=g"
+          }
+        },
+        {
+          "id": "sjd4qACugMarB7gJC8nMhb3",
+          "outgoingEdgeId": "cl1571ktd00032e6dyti22850",
           "type": "text input",
           "options": {
-            "labels": {
-              "placeholder": "Forneça mais detalhes..."
-            },
-            "variableId": "kyK8JQ77NodUYaz3JLS88A_additional_details",
+            "variableId": "v51BcuecnB6kRU1tsttaGyR",
             "isLong": true
           }
         }
       ]
     },
     {
-      "id": "doqNyzKKyC4X3RfwN9oKk5",
-      "title": "Default",
-      "graphCoordinates": { "x": -54.25, "y": -103.27 },
+      "id": "1GvxCAAEysxJMxrVngud3X",
+      "title": "Bye",
+      "graphCoordinates": { "x": 1115.81, "y": 728.71 },
       "blocks": [
         {
-          "id": "szTc2XTAQgoMRmzCz2TGeqS",
+          "id": "s6uLw72EAKbACrpYHr7DSyY",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Desculpe, não entendi. Por favor, escolha uma das opções abaixo:" }] }]
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  { "text": "Muito obrigado pelo seu envio 💙" }
+                ]
+              }
+            ]
           }
         },
         {
-          "id": "sTtugrwWBh4AxPYug3R6Ls",
+          "id": "stM7cTBFCLhpQagRHT64K6u",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Entrarei em contato com você o mais rápido possível (geralmente dentro de 24 horas)"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "s4JATFkBxzmcqqEKQB2xFfa",
           "type": "choice input",
-          "items": [
-            {
-              "id": "fQn5qTAgpDxMExK9qKG3Yb",
-              "outgoingEdgeId": "9D7zbQtnRQhoYR7Nrc42VE",
-              "content": "Reportar um bug"
-            },
-            {
-              "id": "b5tugqTAgpDxMExK9qKxYb",
-              "outgoingEdgeId": "CpKJrxT8rDpeNzvC2NgRxw",
-              "content": "Solicitação de melhoria"
-            },
-            {
-              "id": "a5hugqTAgpDxMExK9qK3Yb",
-              "outgoingEdgeId": "7DR7xT4tD8r4NzvC2J4zRJ",
-              "content": "Menu Principal"
-            }
-          ]
+          "items": [{ "id": "jqm8wZa5yYb73493n5s3Uc", "content": "Reiniciar" }]
+        },
+        {
+          "id": "igdnc34rcmiyamazghr8s708",
+          "type": "Jump",
+          "options": { "groupId": "vLUAPaxKwPF49iZhg4XZYa" }
+        }
+      ]
+    },
+    {
+      "id": "wncvzVDFJDvhh1M3CXJ6aL",
+      "title": "Email",
+      "graphCoordinates": { "x": 746.29, "y": 577.22 },
+      "blocks": [
+        {
+          "id": "soiDpBL5r1dbvHxuT2Sd3mH",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [{ "text": "Em qual e-mail posso entrar em contato com você?" }]
+              }
+            ]
+          }
+        },
+        {
+          "id": "s5Fh7zHUw3j4zDM5xjzwsXB",
+          "outgoingEdgeId": "cl1571xtc00042e6dcptam5jw",
+          "type": "email input",
+          "options": {
+            "variableId": "t2k6cj3uYfNdJX13APA4b9"
+          }
         }
       ]
     }
   ],
-  "variables": [],
-  "localizedContents": [],
-  "customAliases": []
+  "edges": [
+    {
+      "id": "2dzxChB1qm9WGfzNF91tfg",
+      "from": { "eventId": "uG1tt8JdDyu2nju3oJ4wc1" },
+      "to": { "groupId": "vLUAPaxKwPF49iZhg4XZYa" }
+    },
+    {
+      "id": "dhniFxrsH5r54aEE5JXwK2",
+      "from": {
+        "blockId": "s6kp2Z4igeY3kL7B64qBdUg",
+        "itemId": "fQ8oLDnKmDBuPDK7riJ2kt"
+      },
+      "to": { "groupId": "kyK8JQ77NodUYaz3JLS88A" }
+    },
+    {
+      "id": "2C4mhU5o2Hdm7dztR9xNE9",
+      "from": {
+        "blockId": "s6kp2Z4igeY3kL7B64qBdUg",
+        "itemId": "h2rFDX2UnKS4Kdu3Eyuqq3"
+      },
+      "to": { "groupId": "7MuqF6nen1ZTwGB53Mz8VY" }
+    },
+    {
+      "id": "bTo6CZD1YapDDyVdvJgFDV",
+      "from": {
+        "blockId": "s6kp2Z4igeY3kL7B64qBdUg",
+        "itemId": "hcUFBPeQA3gSyXRprRk2v9"
+      },
+      "to": { "groupId": "puWCBhGWSQRbqTkVH89RCf" }
+    },
+    {
+      "id": "cl1571jhh00022e6dk77f52wg",
+      "from": { "blockId": "s3LYyyYtjdQ88jkMMV5DSW7" },
+      "to": { "groupId": "wncvzVDFJDvhh1M3CXJ6aL" }
+    },
+    {
+      "id": "cl1571ktd00032e6dyti22850",
+      "from": { "blockId": "sjd4qACugMarB7gJC8nMhb3" },
+      "to": { "groupId": "wncvzVDFJDvhh1M3CXJ6aL" }
+    },
+    {
+      "id": "cl1571xtc00042e6dcptam5jw",
+      "from": { "blockId": "s5Fh7zHUw3j4zDM5xjzwsXB" },
+      "to": { "groupId": "1GvxCAAEysxJMxrVngud3X" }
+    }
+  ],
+  "variables": [
+    { "id": "t2k6cj3uYfNdJX13APA4b9", "name": "Email" },
+    { "id": "v51BcuecnB6kRU1tsttaGyR", "name": "Content" }
+  ],
+  "theme": {},
+  "selectedThemeTemplateId": null,
+  "settings": {},
+  "createdAt": "2023-11-07T07:20:05.823Z",
+  "updatedAt": "2023-11-07T07:24:28.824Z",
+  "icon": "😍",
+  "folderId": null,
+  "publicId": null,
+  "customDomain": null,
+  "workspaceId": "proWorkspace",
+  "resultsTablePreferences": null,
+  "isArchived": false,
+  "isClosed": false,
+  "whatsAppCredentialsId": null
 }
