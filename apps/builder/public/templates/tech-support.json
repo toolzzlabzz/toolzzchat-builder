@@ -36,10 +36,20 @@
           "id": "s6kp2Z4igeY3kL7B64qBdUg",
           "type": "choice input",
           "items": [
-            {
+           {
               "id": "h2rFDX2UnKS4Kdu3Eyuqq3",
               "outgoingEdgeId": "2C4mhU5o2Hdm7dztR9xNE9",
-              "content": "Quero reportar um bug 🐛"
+              "content": "Quero reportar um bug 🦠"
+            },
+            {
+              "id": "fQ8oLDnKmDBuPDK7riJ2kt",
+              "outgoingEdgeId": "dhniFxrsH5r54aEE5JXwK2",
+              "content": "Consultar status de um ticket 🔎"
+            },
+            {
+              "id": "hcUFBPeQA3gSyXRprRk2v9",
+              "outgoingEdgeId": "bTo6CZD1YapDDyVdvJgFDV",
+              "content": "Ajuda para Resolução de Problemas 🆘"
             }
           ]
         }
@@ -89,14 +99,14 @@
     },
     {
       "id": "kyK8JQ77NodUYaz3JLS88A",
-      "title": "Solicitação de melhoria",
+      "title": "Consultar status de um ticket 🔎",
       "graphCoordinates": { "x": 364.36, "y": -517.93 },
       "blocks": [
         {
           "id": "s9bgHcWdobb8Z5cTbrnTz6R",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Incrível!" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "Ok!" }] }]
           }
         },
         {
@@ -106,31 +116,7 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Vá até o quadro de feedback." }]
-              },
-              { "type": "p", "children": [{ "text": "" }] },
-              {
-                "type": "p",
-                "children": [
-                  { "text": "👉 " },
-                  {
-                    "url": "https://toolzz.com.br/bots/feedback",
-                    "type": "a",
-                    "children": [
-                      { "text": "https://toolzz.com.br/bots/feedback" }
-                    ]
-                  },
-                  { "text": "" }
-                ]
-              },
-              { "type": "p", "children": [{ "text": "" }] },
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Lá, você poderá verificar as solicitações de recursos existentes e enviar a sua, caso esteja faltando 💪"
-                  }
-                ]
+                "children": [{ "text": "Digite o número do seu ticket ou protocolo" }]
               }
             ]
           }
