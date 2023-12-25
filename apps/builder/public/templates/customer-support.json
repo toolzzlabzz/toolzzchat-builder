@@ -64,7 +64,7 @@
           "id": "sjsECyfSBMkUnoWaEnBTmJX",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "OK! 🤪" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "OK!" }] }]
           }
         },
         {
@@ -106,7 +106,7 @@
           "id": "s9bgHcWdobb8Z5cTbrnTz6R",
           "type": "text",
           "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Awesome!" }] }]
+            "richText": [{ "type": "p", "children": [{ "text": "Incrível!" }] }]
           }
         },
         {
