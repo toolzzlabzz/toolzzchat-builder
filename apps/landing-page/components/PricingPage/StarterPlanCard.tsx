@@ -35,7 +35,7 @@ export const StarterPlanCard = () => {
               </Tooltip>
             </HStack>
             <Text fontSize="sm" color="gray.400">
-              Extra chats: $10 per 500
+              Extra chats: R$10 per 500
             </Text>
           </Stack>,
           'Branding removed',

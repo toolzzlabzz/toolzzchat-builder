@@ -159,7 +159,7 @@ test("plan changes should work", async ({ page }) => {
   await expect(page.getByText("R$ 899.00")).toBeVisible({
     timeout: 10000,
   });
-  await expect(page.getByText("$50.00")).toBeVisible({
+  await expect(page.getByText("R$50.00")).toBeVisible({
     timeout: 10000,
   });
   await expect(page.locator('text="Add payment method"')).toBeVisible();
@@ -189,7 +189,7 @@ test("should display invoices", async ({ page }) => {
   await expect(page.locator('text="Invoices"')).toBeVisible();
   await expect(page.locator("tr")).toHaveCount(4);
   await expect(page.getByText("R$ 899.00")).toBeVisible();
-  await expect(page.getByText("$50.00")).toBeVisible();
+  await expect(page.getByText("R$50.00")).toBeVisible();
 });
 
 test("custom plans should work", async ({ page }) => {

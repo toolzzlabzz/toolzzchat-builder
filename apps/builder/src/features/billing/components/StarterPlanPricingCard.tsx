@@ -82,7 +82,7 @@ export const StarterPlanPricingCard = ({
                 fontSize="sm"
                 color={useColorModeValue('gray.500', 'gray.400')}
               >
-                Extra chats: $10 per 500
+                Extra chats: R$10 per 500
               </Text>
             </Stack>,
             t('billing.pricingCard.starter.brandingRemoved'),
