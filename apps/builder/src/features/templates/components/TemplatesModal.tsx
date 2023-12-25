@@ -126,8 +126,8 @@ export const TemplatesModal = ({
               {renderCategory('educação')}
               {renderCategory('atendimento')}
               {renderCategory('vendas')}
-              {renderCategory('customerSuccess')}
-              {renderCategory('customerExperience')}
+              {renderCategory('customer-success')}
+              {renderCategory('customer-experience')}
               {renderCategory('jurídico')}
               {renderCategory('relatórios')}
               {renderCategory('faq')}

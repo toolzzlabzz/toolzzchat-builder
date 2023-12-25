@@ -86,6 +86,7 @@ export const templates: TemplateProps[] = [
     name: 'ChatGPT Básico',
     emoji: '🤖',
     fileName: 'basic-chat-gpt.json',
+    category: 'populares',
     description:
       'Um bot que usa o modelo ChatGPT para gerar respostas com base na entrada do usuário.',
   },
@@ -126,7 +127,6 @@ export const templates: TemplateProps[] = [
     name: 'Condições OpenAI',
     emoji: '🧠',
     fileName: 'openai-conditions.json',
-    category: 'outros',
     isNew: true,
     description:
       'Este é um exemplo de como você pode usar o bloco OpenAI para tomar decisões inteligentes com base na entrada do usuário e redirecionar a conversa para o caminho certo.',
