@@ -2,20 +2,20 @@ import { TemplateProps } from './types'
 
 export const templates: TemplateProps[] = [
   {
-    name: 'Lead Generation',
+    name: 'Geração de Leads',
     emoji: '🤝',
     fileName: 'lead-gen.json',
     category: 'marketing',
     description:
-      'You are a marketing agency and this bot allows you generate new leads interested in your services',
+      'Você é uma agência de marketing e este bot permite gerar novos leads interessados nos seus serviços',
   },
   {
-    name: 'Customer Support',
+    name: 'Suporte ao Cliente',
     emoji: '😍',
     fileName: 'customer-support.json',
-    category: 'product',
+    category: 'produto',
     description:
-      'A bot whose job is to collect user feedback: questions, bugs and feature requests.',
+      'Um bot cuja função é coletar feedback dos usuários: perguntas, bugs e solicitações de recursos.',
   },
   {
     name: 'Quiz',
@@ -23,114 +23,114 @@ export const templates: TemplateProps[] = [
     fileName: 'quiz.json',
     category: 'marketing',
     description:
-      'A fun quizz to engage with your users and collect their emails',
+      'Um quiz divertido para interagir com seus usuários e coletar seus e-mails',
   },
   {
-    name: 'Lead Scoring',
+    name: 'Pontuação de Leads',
     emoji: '🏆',
     fileName: 'lead-scoring.json',
     category: 'marketing',
     description:
-      'Compute a score alongside lead qualification questions to rank your new prospects',
+      'Calcule uma pontuação ao lado de perguntas de qualificação de leads para classificar seus novos prospects',
   },
   {
-    name: 'Lead magnet',
+    name: 'Lead Magnet',
     emoji: '🧲',
     fileName: 'lead-magnet.json',
     category: 'marketing',
     description:
-      'Provide a free content to your prospects in exchange for their contact information.',
+      'Forneça um conteúdo gratuito aos seus prospects em troca das informações de contato deles.',
   },
   {
-    name: 'Product recommendation',
+    name: 'Recomendação de Produto',
     emoji: '🍫',
     fileName: 'product-recommendation.json',
     category: 'marketing',
     description:
-      'Näak is a company that sells energy bars, hydration mix and recovery prodcuts. This bot helps a visitor choosing the right product. It helps you qualify your lead and provide a personalized recommendation.',
+      'Näak é uma empresa que vende barras de energia, misturas de hidratação e produtos de recuperação. Este bot ajuda um visitante a escolher o produto certo. Ele ajuda você a qualificar seu lead e fornecer uma recomendação personalizada.',
     backgroundColor: '#010000',
   },
   {
-    name: 'NPS Survey',
+    name: 'Pesquisa NPS',
     emoji: '⭐',
     fileName: 'nps.json',
-    category: 'product',
+    category: 'produto',
     description:
-      'A simple NPS survey to measure your customer satisfaction and improve your product',
+      'Uma simples pesquisa NPS para medir a satisfação do cliente e melhorar o seu produto',
   },
   {
-    name: 'User Onboarding',
+    name: 'Integração de Usuários',
     emoji: '🧑‍🚀',
     fileName: 'onboarding.json',
-    category: 'product',
+    category: 'produto',
     description:
-      'A bot that asks for new user information before he start using your product',
+      'Um bot que solicita informações de novos usuários antes de começarem a usar seu produto',
   },
   {
-    name: 'Digital Product Payment',
+    name: 'Pagamento de Produto Digital',
     emoji: '🖼️',
     fileName: 'digital-product-payment.json',
     description:
-      'A bot that allows you to sell digital products (ebooks, courses, etc.) and only provide the content after the payment is confirmed',
+      'Um bot que permite vender produtos digitais (e-books, cursos, etc.) e só disponibiliza o conteúdo após a confirmação do pagamento',
   },
   {
     name: 'FAQ',
     emoji: '💬',
     fileName: 'faq.json',
-    category: 'product',
+    category: 'produto',
     description:
-      'A bot that answers frequently asked questions about your product or service',
+      'Um bot que responde a perguntas frequentes sobre o seu produto ou serviço',
   },
   {
-    name: 'Movie Recommendation',
+    name: 'Recomendação de Filme',
     emoji: '🍿',
     fileName: 'movie-recommendation.json',
-    description: 'A bot that recommends movies based on the user preferences',
+    description: 'Um bot que recomenda filmes baseados nas preferências do usuário',
   },
   {
-    name: 'Basic ChatGPT',
+    name: 'ChatGPT Básico',
     emoji: '🤖',
     fileName: 'basic-chat-gpt.json',
     description:
-      'A bot that uses the ChatGPT model to generate responses based on the user input',
+      'Um bot que usa o modelo ChatGPT para gerar respostas com base na entrada do usuário',
   },
   {
-    name: 'Audio ChatGPT',
+    name: 'ChatGPT de Áudio',
     emoji: '🤖',
     fileName: 'audio-chat-gpt.json',
     description:
-      'An audio AI bot that uses the OpenAI block to generate responses based on the user input',
+      'Um bot de IA de áudio que usa o bloco OpenAI para gerar respostas com base na entrada do usuário',
     isNew: true,
   },
   {
-    name: 'ChatGPT personas',
+    name: 'Personas ChatGPT',
     emoji: '🎭',
     fileName: 'chat-gpt-personas.json',
     description:
-      'A bot that uses the ChatGPT model to generate responses based on the user input and the selected persona',
+      'Um bot que usa o modelo ChatGPT para gerar respostas com base na entrada do usuário e na persona selecionada',
   },
   {
-    name: 'Lead Gen with AI',
+    name: 'Geração de Leads com IA',
     emoji: '🦾',
     fileName: 'lead-gen-ai.json',
     category: 'marketing',
     description:
-      'You are a marketing agency and this bot allows you generate new leads interested in your services. An AI block is used to dig deeper into the user needs.',
+      'Você é uma agência de marketing e este bot permite gerar novos leads interessados nos seus serviços. Um bloco de IA é usado para aprofundar nas necessidades do usuário.',
   },
   {
-    name: 'Insurance offer',
+    name: 'Oferta de Seguro',
     emoji: '🐶',
     fileName: 'dog-insurance-offer.json',
     category: 'marketing',
     description:
-      'You are a dog insurance company. This bot allows you to collect information about the dog and provide a quote.',
+      'Você é uma empresa de seguro para cães. Este bot permite coletar informações sobre o cão e fornecer uma cotação.',
   },
   {
-    name: 'OpenAI conditions',
+    name: 'Condições OpenAI',
     emoji: '🧠',
     fileName: 'openai-conditions.json',
     isNew: true,
     description:
-      'This is an example of how you can use the OpenAI block to take smart decisions based on the user input and redirect the conversation to the right path.',
+      'Este é um exemplo de como você pode usar o bloco OpenAI para tomar decisões inteligentes com base na entrada do usuário e redirecionar a conversa para o caminho certo.',
   },
 ]
