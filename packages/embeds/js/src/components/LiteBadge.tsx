@@ -46,7 +46,10 @@ export const LiteBadge = (props: Props) => {
       class="lite-badge"
       id="lite-badge"
     >
-      <TypebotLogo />
+      <img
+      src="https://cdn.discordapp.com/attachments/915691669234548746/1188799346246942821/icon_abccb074d42741b945659e2fe097ea05.ico"
+      alt="Toolzz Bots Logo"
+    />
       <span>Powered by Toolzz Bots</span>
     </a>
   );
