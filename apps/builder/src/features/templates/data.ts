@@ -13,7 +13,7 @@ export const templates: TemplateProps[] = [
     name: 'Suporte ao Cliente',
     emoji: '😍',
     fileName: 'customer-support.json',
-    category: 'produto',
+    category: 'product',
     description:
       'Um bot cuja função é coletar feedback dos usuários: perguntas, bugs e solicitações de recursos.',
   },
@@ -54,7 +54,7 @@ export const templates: TemplateProps[] = [
     name: 'Pesquisa NPS',
     emoji: '⭐',
     fileName: 'nps.json',
-    category: 'produto',
+    category: 'product',
     description:
       'Uma simples pesquisa NPS para medir a satisfação do cliente e melhorar o seu produto',
   },
@@ -62,7 +62,7 @@ export const templates: TemplateProps[] = [
     name: 'Integração de Usuários',
     emoji: '🧑‍🚀',
     fileName: 'onboarding.json',
-    category: 'produto',
+    category: 'product',
     description:
       'Um bot que solicita informações de novos usuários antes de começarem a usar seu produto',
   },
@@ -77,7 +77,7 @@ export const templates: TemplateProps[] = [
     name: 'FAQ',
     emoji: '💬',
     fileName: 'faq.json',
-    category: 'produto',
+    category: 'product',
     description:
       'Um bot que responde a perguntas frequentes sobre o seu produto ou serviço',
   },
