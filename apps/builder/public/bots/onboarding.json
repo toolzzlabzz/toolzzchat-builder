@@ -106,7 +106,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Estou super entusiasmado por você ter decidido experimentar o Toolzz Chat 😍"
+                    "text": "Estou super entusiasmado por você ter decidido experimentar o Toolzz Bots 😍"
                   }
                 ]
               }
@@ -139,7 +139,9 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Vamos preparar você para sua jornada no Toolzz Chat." }
+                  {
+                    "text": "Vamos preparar você para sua jornada no Toolzz Bots."
+                  }
                 ]
               }
             ]
@@ -153,7 +155,9 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Você trabalha para uma empresa específica?" }]
+                "children": [
+                  { "text": "Você trabalha para uma empresa específica?" }
+                ]
               }
             ]
           },
@@ -210,7 +214,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Que tipo de bots você planeja construir com o Toolzz Chat?"
+                    "text": "Que tipo de bots você planeja construir com o Toolzz Bots?"
                   }
                 ]
               }
@@ -357,7 +361,9 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Vamos criar seu primeiro Bot no Toolzz Chat..." }]
+                "children": [
+                  { "text": "Vamos criar seu primeiro Bot no Toolzz Bots..." }
+                ]
               }
             ]
           },

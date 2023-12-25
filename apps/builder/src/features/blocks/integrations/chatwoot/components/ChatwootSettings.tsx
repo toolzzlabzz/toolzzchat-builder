@@ -1,5 +1,5 @@
-import { DropdownList } from '@/components/DropdownList'
-import { TextInput } from '@/components/inputs'
+import { DropdownList } from "@/components/DropdownList";
+import { TextInput } from "@/components/inputs";
 import {
   Accordion,
   AccordionButton,
@@ -7,25 +7,25 @@ import {
   AccordionItem,
   AccordionPanel,
   Stack,
-} from '@chakra-ui/react'
-import { ChatwootBlock } from '@typebot.io/schemas'
+} from "@chakra-ui/react";
+import { ChatwootBlock } from "@typebot.io/schemas";
 import {
   chatwootTasks,
   defaultChatwootOptions,
-} from '@typebot.io/schemas/features/blocks/integrations/chatwoot/constants'
-import React from 'react'
+} from "@typebot.io/schemas/features/blocks/integrations/chatwoot/constants";
+import React from "react";
 
 type Props = {
-  options: ChatwootBlock['options']
-  onOptionsChange: (options: ChatwootBlock['options']) => void
-}
+  options: ChatwootBlock["options"];
+  onOptionsChange: (options: ChatwootBlock["options"]) => void;
+};
 
 export const ChatwootSettings = ({ options, onOptionsChange }: Props) => {
   const updateTask = (task: (typeof chatwootTasks)[number]) => {
-    onOptionsChange({ ...options, task })
-  }
+    onOptionsChange({ ...options, task });
+  };
 
-  const task = options?.task ?? defaultChatwootOptions.task
+  const task = options?.task ?? defaultChatwootOptions.task;
 
   return (
     <Stack spacing={4}>
@@ -35,14 +35,14 @@ export const ChatwootSettings = ({ options, onOptionsChange }: Props) => {
         items={chatwootTasks}
       />
       {!task ||
-        (task === 'Show widget' && (
+        (task === "Show widget" && (
           <>
             <TextInput
               isRequired
               label="Base URL"
               defaultValue={options?.baseUrl}
               onChange={(baseUrl: string) => {
-                onOptionsChange({ ...options, baseUrl })
+                onOptionsChange({ ...options, baseUrl });
               }}
               withVariableButton={false}
             />
@@ -53,7 +53,7 @@ export const ChatwootSettings = ({ options, onOptionsChange }: Props) => {
               onChange={(websiteToken) =>
                 onOptionsChange({ ...options, websiteToken })
               }
-              moreInfoTooltip="Pode ser encontrado no Toolzz Chat em Configurações > Caixas de entrada > Configurações > Configuração, no trecho de código."
+              moreInfoTooltip="Pode ser encontrado no Toolzz Bots em Configurações > Caixas de entrada > Configurações > Configuração, no trecho de código."
             />
             <Accordion allowMultiple>
               <AccordionItem>
@@ -69,7 +69,7 @@ export const ChatwootSettings = ({ options, onOptionsChange }: Props) => {
                       onOptionsChange({
                         ...options,
                         user: { ...options?.user, id },
-                      })
+                      });
                     }}
                   />
                   <TextInput
@@ -79,7 +79,7 @@ export const ChatwootSettings = ({ options, onOptionsChange }: Props) => {
                       onOptionsChange({
                         ...options,
                         user: { ...options?.user, name },
-                      })
+                      });
                     }}
                   />
                   <TextInput
@@ -89,7 +89,7 @@ export const ChatwootSettings = ({ options, onOptionsChange }: Props) => {
                       onOptionsChange({
                         ...options,
                         user: { ...options?.user, email },
-                      })
+                      });
                     }}
                   />
                   <TextInput
@@ -99,7 +99,7 @@ export const ChatwootSettings = ({ options, onOptionsChange }: Props) => {
                       onOptionsChange({
                         ...options,
                         user: { ...options?.user, avatarUrl },
-                      })
+                      });
                     }}
                   />
                   <TextInput
@@ -109,7 +109,7 @@ export const ChatwootSettings = ({ options, onOptionsChange }: Props) => {
                       onOptionsChange({
                         ...options,
                         user: { ...options?.user, phoneNumber },
-                      })
+                      });
                     }}
                   />
                 </AccordionPanel>
@@ -118,5 +118,5 @@ export const ChatwootSettings = ({ options, onOptionsChange }: Props) => {
           </>
         ))}
     </Stack>
-  )
-}
+  );
+};

@@ -51,7 +51,10 @@
           "type": "text",
           "content": {
             "richText": [
-              { "type": "p", "children": [{ "text": "Olá, seja bem vindo(a) 👋" }] }
+              {
+                "type": "p",
+                "children": [{ "text": "Olá, seja bem vindo(a) 👋" }]
+              }
             ]
           },
           "groupId": "clcueadzi00063b6sch7b1f32"
@@ -106,7 +109,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "Estou super entusiasmado por você ter decidido experimentar o Toolzz Chat 😍"
+                    "text": "Estou super entusiasmado por você ter decidido experimentar o Toolzz Bots 😍"
                   }
                 ]
               }
@@ -139,7 +142,9 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Vamos preparar você para sua jornada no Toolzz Chat" }
+                  {
+                    "text": "Vamos preparar você para sua jornada no Toolzz Bots"
+                  }
                 ]
               }
             ]
@@ -153,7 +158,9 @@
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Você trabalha para uma empresa específica" }]
+                "children": [
+                  { "text": "Você trabalha para uma empresa específica" }
+                ]
               }
             ]
           },

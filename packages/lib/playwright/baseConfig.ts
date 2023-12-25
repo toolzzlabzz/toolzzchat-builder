@@ -25,7 +25,7 @@ export const playwrightBaseConfig: PlaywrightTestConfig = {
   use: {
     trace: 'on-first-retry',
     video: 'retain-on-failure',
-    locale: 'en-US',
+    locale: 'pt-BR',
     browserName: 'chromium',
     viewport: { width: 1400, height: 1000 },
   },
