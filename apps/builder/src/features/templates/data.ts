@@ -75,6 +75,41 @@ export const templates: TemplateProps[] = [
       'Um bot que permite vender produtos digitais (e-books, cursos, etc.) e só disponibiliza o conteúdo após a confirmação do pagamento.',
   },
   {
+    name: 'Processo de Compras',
+    emoji: '🛒',
+    fileName: 'process-purchase.json',
+    category: 'financeiro',
+    description: 'Um bot que permite guiar os usuários pelo processo de compra de produtos ou serviços em sua loja online.'
+  },
+  {
+    name: 'Solicitação de Reembolso',
+    emoji: '💰',
+    fileName: 'refund-request.json',
+    category: 'financeiro',
+    description: 'Um bot que permite aos clientes solicitar reembolsos para produtos ou serviços adquiridos e fornece assistência durante o processo de reembolso.'
+  },
+  {
+    name: 'Envio de 2ª via de Boleto',
+    emoji: '📄',
+    fileName: 'send-invoice-copy.json',
+    category: 'financeiro',
+    description: 'Um bot que ajuda os clientes a solicitar e receber uma segunda via de boleto para pagamento de faturas pendentes.'
+  },
+  {
+    name: 'Pagamento via Cartão',
+    emoji: '💳',
+    fileName: 'card-payment.json',
+    category: 'financeiro',
+    description: 'Um bot que facilita o processo de pagamento de produtos ou serviços utilizando cartão de crédito, incluindo a verificação e confirmação do pagamento.'
+  },
+  {
+    name: 'Cobrança de Inadimplentes',
+    emoji: '⚖️',
+    fileName: 'debt-collection.json',
+    category: 'financeiro',
+    description: 'Um bot que auxilia na cobrança de clientes inadimplentes, enviando lembretes de pagamento e fornecendo opções para regularização de dívidas.'
+  },  
+  {
     name: 'FAQ',
     emoji: '💬',
     fileName: 'faq.json',
@@ -82,6 +117,48 @@ export const templates: TemplateProps[] = [
     description:
       'Um bot que responde a perguntas frequentes sobre o seu produto ou serviço.',
   },
+  {
+    name: 'Recrutamento e Seleção',
+    emoji: '👥',
+    fileName: 'recruitment-selection.json',
+    category: 'rh',
+    description: 'Um bot que auxilia o departamento de RH no processo de recrutamento e seleção de novos talentos, coletando informações dos candidatos e agendando entrevistas.'
+  },
+  {
+    name: 'Onboarding de Colaboradores',
+    emoji: '🤝',
+    fileName: 'employee-onboarding.json',
+    category: 'rh',
+    description: 'Um bot que orienta os novos colaboradores durante o processo de onboarding, apresentando a empresa, sua cultura, políticas e procedimentos.'
+  },
+  {
+    name: 'Avaliação de Desempenho',
+    emoji: '📈',
+    fileName: 'performance-evaluation.json',
+    category: 'rh',
+    description: 'Um bot que facilita o processo de avaliação de desempenho dos funcionários, permitindo que eles preencham formulários de avaliação e acompanhem feedbacks.'
+  },
+  {
+    name: 'Desligamento de Funcionário',
+    emoji: '🚪',
+    fileName: 'employee-offboarding.json',
+    category: 'rh',
+    description: 'Um bot que guia os processos de desligamento de funcionários, auxiliando em tarefas como entrega de documentos e feedback de saída.'
+  },
+  {
+    name: 'Admissão Digital',
+    emoji: '📄',
+    fileName: 'digital-admission.json',
+    category: 'rh',
+    description: 'Um bot que permite que os novos funcionários realizem a admissão digitalmente, preenchendo formulários e enviando documentos necessários online.'
+  },
+  {
+    name: 'Abertura de Vagas',
+    emoji: '📢',
+    fileName: 'job-opening.json',
+    category: 'rh',
+    description: 'Um bot que auxilia no processo de abertura de vagas, coletando informações sobre os cargos disponíveis e orientando os funcionários sobre como se candidatar.'
+  },  
   {
     name: 'ChatGPT Básico',
     emoji: '🤖',
@@ -147,6 +224,48 @@ export const templates: TemplateProps[] = [
     description:
       'Automatize o processo de recrutamento, utilizando IA para filtrar candidatos com base em habilidades e experiência, melhorando a eficiência do RH.',
   },
+  {
+    name: 'Gestão de NDA',
+    emoji: '🔒',
+    fileName: 'nda-management.json',
+    category: 'Jurídico',
+    description: 'Um bot que auxilia na gestão de Acordos de Não Divulgação (NDA), coletando informações sobre os acordos e fornecendo lembretes para renovação.'
+  },
+  {
+    name: 'Análise de Contratos',
+    emoji: '📜',
+    fileName: 'contract-analysis.json',
+    category: 'Jurídico',
+    description: 'Um bot que auxilia na análise de contratos, destacando termos importantes e identificando possíveis riscos.'
+  },
+  {
+    name: 'Solicitações para Jurídico',
+    emoji: '📝',
+    fileName: 'legal-requests.json',
+    category: 'Jurídico',
+    description: 'Um bot que permite que os funcionários façam solicitações ao departamento jurídico, como pedidos de pareceres e consultas.'
+  },
+  {
+    name: 'Processo de LGPD',
+    emoji: '🔐',
+    fileName: 'lgpd-process.json',
+    category: 'Jurídico',
+    description: 'Um bot que auxilia no cumprimento dos requisitos da Lei Geral de Proteção de Dados (LGPD), orientando sobre coleta e tratamento de dados pessoais.'
+  },
+  {
+    name: 'Processo de Contratação',
+    emoji: '📋',
+    fileName: 'hiring-process.json',
+    category: 'Jurídico',
+    description: 'Um bot que auxilia no processo de contratação, fornecendo informações sobre documentos necessários e orientações legais.'
+  },
+  {
+    name: 'Criação de Contratos',
+    emoji: '🖋️',
+    fileName: 'contract-creation.json',
+    category: 'Jurídico',
+    description: 'Um bot que auxilia na criação de contratos, coletando informações sobre os termos e gerando documentos personalizados.'
+  },  
   {
     name: 'Feedback de Equipe',
     emoji: '🗣️',
