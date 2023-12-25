@@ -3,7 +3,7 @@ export type TemplateProps = {
   emoji: string
   fileName: string
   description: string
-  category?: 'marketing' | 'product' | 'produto' | 'financeiro' | 'rh' | 'tecnologia' | 'educação' | 'atendimento' | 'vendas' | 'customer sucess' | 'customer experience' | 'jurídico' | 'jurídico' | 'relatórios' | 'faq' | 'recomendação'
+  category?: 'marketing' | 'product' | 'produto' | 'financeiro' | 'rh' | 'tecnologia' | 'educação' | 'atendimento' | 'vendas' | 'customer-success' | 'customer-experience' | 'jurídico' | 'jurídico' | 'relatórios' | 'faq' | 'recomendação'
   isComingSoon?: boolean
   isNew?: boolean
   backgroundColor?: string
