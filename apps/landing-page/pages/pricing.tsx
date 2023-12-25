@@ -78,14 +78,7 @@ const Pricing = () => {
               p="4"
               rounded="md"
             >
-              <StripeClimateLogo />
-              <Text fontSize="sm">
-                Typebot is contributing 1% of your subscription to remove CO₂
-                from the atmosphere.{' '}
-                <TextLink href="https://climate.stripe.com/5VCRAq" isExternal>
-                  More info
-                </TextLink>
-              </Text>
+              
             </HStack>
             <Stack
               direction={['column', 'row']}
