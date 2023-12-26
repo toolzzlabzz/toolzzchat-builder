@@ -120,7 +120,6 @@ export const TemplatesModal = ({
             <Stack spacing={5}>
               
               {renderCategory('atendimento')}
-              {renderCategory('faq')}
               {renderCategory('educação')}
               {renderCategory('financeiro')}
               {renderCategory('rh')}

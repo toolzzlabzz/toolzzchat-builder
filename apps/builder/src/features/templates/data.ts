@@ -18,20 +18,37 @@ export const templates: TemplateProps[] = [
       'Um bot cuja função é coletar feedback dos usuários: perguntas, bugs e solicitações de recursos.',
   },
   {
+    name: 'Suporte ao Aluno',
+    emoji: '🧑‍🎓',
+    fileName: 'student-support.json',
+    category: 'educação',
+    description:
+      'Um bot cuja função é coletar feedback dos alunos: perguntas, bugs e solicitações de recursos.',
+  },
+  {
+    name: 'Trilha Personalizada',
+    emoji: '🚩',
+    fileName: 'trails-recommendation.json',
+    category: 'educação',
+    description:
+      'Este bot cria uma trilha personalizada para cada aluno e fornece uma recomendação personalizada.',
+    backgroundColor: '#010000',
+  },
+  {
+    name: 'Quiz via chatbot',
+    emoji: '🕹️',
+    fileName: 'quiz.json',
+    category: 'educação',
+    description:
+      'Esse bot funciona como um quiz para seu aluno. Teste o conhecimento de seus alunos e colete as respostas.',
+  },
+  {
     name: 'Agendamento de Reuniões',
     emoji: '🗓️',
     fileName: 'agendamento-reunioes.json',
     category: 'produtividade',
     description:
       'Um bot cuja função é facilitar o agendamento de reuniões no Google Meet.',
-  },
-  {
-    name: 'Quiz interativo',
-    emoji: '🕹️',
-    fileName: 'quiz.json',
-    category: 'marketing',
-    description:
-      'Um quiz divertido para interagir com seus usuários e coletar seus e-mails.',
   },
   {
     name: 'Pontuação de Leads',
@@ -118,10 +135,18 @@ export const templates: TemplateProps[] = [
     description: 'Um bot que auxilia na cobrança de clientes inadimplentes, enviando lembretes de pagamento e fornecendo opções para regularização de dívidas.'
   },  
   {
-    name: 'FAQ',
+    name: 'FAQ - Perguntas Frequentes',
     emoji: '💬',
     fileName: 'faq.json',
-    category: 'faq',
+    category: 'atendimento',
+    description:
+      'Um bot que responde a perguntas frequentes sobre o seu produto ou serviço.',
+  },
+  {
+    name: 'Resolution Bot',
+    emoji: '🤖',
+    fileName: 'resolution.json',
+    category: 'atendimento',
     description:
       'Um bot que responde a perguntas frequentes sobre o seu produto ou serviço.',
   },
@@ -417,7 +442,7 @@ export const templates: TemplateProps[] = [
   {
     name: 'Respostas Automáticas a FAQ',
     emoji: '❓',
-    category: 'faq',
+    category: 'atendimento',
     description: 'Um bot que fornece respostas automáticas para perguntas frequentes dos clientes.',
     fileName: 'auto-faq-responses-bot.json'
   },
