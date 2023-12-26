@@ -64,7 +64,6 @@ export const templates: TemplateProps[] = [
     description:
       "Este bot cria uma trilha personalizada para cada aluno e fornece uma recomendação personalizada.",
     backgroundColor: "#010000",
-    isComingSoon: true,
   },
   {
     name: "Treinamento Corporativo",
@@ -73,7 +72,6 @@ export const templates: TemplateProps[] = [
     description:
       "Um bot que ajuda a criar e gerenciar programas educacionais para funcionários.",
     fileName: "corporate-educational-programs-bot.json",
-    isComingSoon: true,
   },
   {
     name: "Recomendação de Conteúdos",
@@ -83,7 +81,6 @@ export const templates: TemplateProps[] = [
     description:
       "Este bot ajuda um aluno a encontrar o curso ou conteúdo certo na hora certa fornecer uma recomendação personalizada.",
     backgroundColor: "#010000",
-    isComingSoon: true,
   },
   {
     name: "Tutoria Inteligente",
@@ -116,7 +113,6 @@ export const templates: TemplateProps[] = [
     category: "gestão-projetos",
     description:
       "Esse bot te ajuda a criar um novo projeto de forma organizada e já criar as automações necessarias para gestão ",
-      isComingSoon: true,
   },
   {
     name: "Solicitar Status Report",
@@ -308,6 +304,15 @@ export const templates: TemplateProps[] = [
       isNew: true,
   },
   {
+    name: "Condições OpenAI",
+    emoji: "🧠",
+    fileName: "openai-conditions.json",
+    category: "populares",
+    isNew: true,
+    description:
+      "Este é um exemplo de como você pode usar o bloco OpenAI para tomar decisões inteligentes com base na entrada do usuário e redirecionar a conversa para o caminho certo.",
+  },
+  {
     name: "GPT4-Vision",
     emoji: "👁️",
     fileName: "vision-chat-gpt.json",
@@ -334,15 +339,6 @@ export const templates: TemplateProps[] = [
     category: "marketing",
     description:
       "Você é uma agência de marketing e este bot permite gerar novos leads interessados nos seus serviços. Um bloco de IA é usado para aprofundar nas necessidades do usuário.",
-  },
-  {
-    name: "Condições OpenAI",
-    emoji: "🧠",
-    fileName: "openai-conditions.json",
-    category: "populares",
-    isNew: true,
-    description:
-      "Este é um exemplo de como você pode usar o bloco OpenAI para tomar decisões inteligentes com base na entrada do usuário e redirecionar a conversa para o caminho certo.",
   },
   {
     name: "Gestão de NDA",
