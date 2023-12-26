@@ -131,6 +131,14 @@ export const templates: TemplateProps[] = [
       "Um bot cuja função é facilitar o agendamento de reuniões no Google Meet.",
   },
   {
+    name: "Gerar resumo de reuniões",
+    emoji: "🗓️",
+    fileName: "resumo-reunioes.json",
+    category: "produtividade",
+    description:
+      "Um bot cuja função é gerar um resumo da transcrição da reunião gravada.",
+  },
+  {
     name: "Pontuação de Leads",
     emoji: "🏆",
     fileName: "lead-scoring.json",
@@ -159,7 +167,7 @@ export const templates: TemplateProps[] = [
     name: "Pesquisa NPS",
     emoji: "⭐",
     fileName: "nps.json",
-    category: "product",
+    category: "customer-success",
     description:
       "Uma simples pesquisa NPS para medir a satisfação do cliente e melhorar o seu produto.",
   },
@@ -167,7 +175,7 @@ export const templates: TemplateProps[] = [
     name: "Onboarding de Usuários",
     emoji: "🧑‍🚀",
     fileName: "onboarding.json",
-    category: "product",
+    category: "customer-success",
     description:
       "Um bot que solicita informações de novos usuários antes de começarem a usar seu produto.",
   },
@@ -588,7 +596,7 @@ export const templates: TemplateProps[] = [
     fileName: "customer-needs-assessment.json",
   },
   {
-    name: "Agendamento de Demonstração",
+    name: "Agendamento de Demo",
     emoji: "📅",
     category: "vendas",
     description:
@@ -809,13 +817,6 @@ export const templates: TemplateProps[] = [
     category: "vendas",
     description: "Avalia o custo-benefício de funcionalidades de software.",
     fileName: "feature-cost-benefit-analysis.json",
-  },
-  {
-    name: "Gestão de Leads de Vendas",
-    emoji: "📈",
-    category: "vendas",
-    description: "Ajuda a gerenciar e acompanhar leads de vendas.",
-    fileName: "sales-lead-management.json",
   },
   {
     name: "Materiais de Vendas",
