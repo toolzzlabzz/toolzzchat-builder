@@ -288,6 +288,7 @@ export const templates: TemplateProps[] = [
       "Um bot que usa o modelo ChatGPT para gerar respostas com base na entrada do usuário.",
       isNew: true,
   },
+  
   {
     name: "ChatGPT de Áudio",
     emoji: "🤖",
@@ -307,6 +308,26 @@ export const templates: TemplateProps[] = [
       isNew: true,
   },
   {
+    name: "GPT4-Vision",
+    emoji: "👁️",
+    fileName: "vision-chat-gpt.json",
+    category: "populares",
+    description:
+      "Um bot que usa o modelo GPT4-Vision para analisar imagens.",
+      isNew: true,
+      isComingSoon: true,
+  },
+  {
+    name: "GPT Assistant",
+    emoji: "✨",
+    fileName: "assitant-chat-gpt.json",
+    category: "populares",
+    description:
+      "Um bot que permite você se integrar com seu Assistant criado na OpenAI",
+      isNew: true,
+      isComingSoon: true,
+  },
+  {
     name: "Geração de Leads com IA",
     emoji: "🦾",
     fileName: "lead-gen-ai.json",
@@ -318,6 +339,7 @@ export const templates: TemplateProps[] = [
     name: "Condições OpenAI",
     emoji: "🧠",
     fileName: "openai-conditions.json",
+    category: "populares",
     isNew: true,
     description:
       "Este é um exemplo de como você pode usar o bloco OpenAI para tomar decisões inteligentes com base na entrada do usuário e redirecionar a conversa para o caminho certo.",
@@ -470,14 +492,6 @@ export const templates: TemplateProps[] = [
     description:
       "Um bot que ajuda a criar e gerenciar campanhas de marketing digital.",
     fileName: "digital-marketing-campaign-bot.json",
-  },
-  {
-    name: "Estratégias de Retenção",
-    emoji: "🔄",
-    category: "customer-success",
-    description:
-      "Um bot que ajuda a implementar estratégias de retenção de clientes.",
-    fileName: "customer-retention-strategies-bot.json",
   },
   {
     name: "Análise de Satisfação do Cliente",
