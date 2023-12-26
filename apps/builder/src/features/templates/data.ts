@@ -358,7 +358,7 @@ export const templates: TemplateProps[] = [
   },
   {
     name: "Gestão de Projetos",
-    emoji: "📋",
+    emoji: "👔",
     fileName: "project-management.json",
     category: "gestão-projetos",
     description:
@@ -672,8 +672,15 @@ export const templates: TemplateProps[] = [
   {
     name: "Teste A/B",
     emoji: "🧪",
-    category: "tecnologia",
+    category: "marketing",
     description: "Realiza testes A/B automaticamente para otimizar conversões.",
+    fileName: "customer-needs-assessment.json",
+  },
+  {
+    name: "Teste de UX",
+    emoji: "🎨",
+    category: "product",
+    description: "Realiza testes de UX com sua audiência",
     fileName: "customer-needs-assessment.json",
   },
   {
@@ -704,13 +711,6 @@ export const templates: TemplateProps[] = [
     emoji: "✍️",
     category: "tecnologia",
     description: "Otimiza o uso de recursos na nuvem para custo-benefício.",
-    fileName: "customer-needs-assessment.json",
-  },
-  {
-    name: "Sincronização de Dados",
-    emoji: "🔄",
-    category: "tecnologia",
-    description: "Mantém dados sincronizados em plataformas múltiplas.",
     fileName: "customer-needs-assessment.json",
   },
   {
