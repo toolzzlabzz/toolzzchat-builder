@@ -64,6 +64,7 @@ export const templates: TemplateProps[] = [
     description:
       "Este bot cria uma trilha personalizada para cada aluno e fornece uma recomendação personalizada.",
     backgroundColor: "#010000",
+    isComingSoon: true,
   },
   {
     name: "Treinamento Corporativo",
@@ -72,6 +73,7 @@ export const templates: TemplateProps[] = [
     description:
       "Um bot que ajuda a criar e gerenciar programas educacionais para funcionários.",
     fileName: "corporate-educational-programs-bot.json",
+    isComingSoon: true,
   },
   {
     name: "Recomendação de Conteúdos",
@@ -81,6 +83,7 @@ export const templates: TemplateProps[] = [
     description:
       "Este bot ajuda um aluno a encontrar o curso ou conteúdo certo na hora certa fornecer uma recomendação personalizada.",
     backgroundColor: "#010000",
+    isComingSoon: true,
   },
   {
     name: "Tutoria Inteligente",
@@ -113,6 +116,7 @@ export const templates: TemplateProps[] = [
     category: "gestão-projetos",
     description:
       "Esse bot te ajuda a criar um novo projeto de forma organizada e já criar as automações necessarias para gestão ",
+      isComingSoon: true,
   },
   {
     name: "Solicitar Status Report",
@@ -282,6 +286,7 @@ export const templates: TemplateProps[] = [
     category: "populares",
     description:
       "Um bot que usa o modelo ChatGPT para gerar respostas com base na entrada do usuário.",
+      isNew: true,
   },
   {
     name: "ChatGPT de Áudio",
@@ -299,6 +304,7 @@ export const templates: TemplateProps[] = [
     category: "populares",
     description:
       "Um bot que usa o modelo ChatGPT para gerar respostas com base na entrada do usuário e na persona selecionada.",
+      isNew: true,
   },
   {
     name: "Geração de Leads com IA",
