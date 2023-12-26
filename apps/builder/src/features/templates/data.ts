@@ -18,6 +18,14 @@ export const templates: TemplateProps[] = [
       "Um bot cuja função é coletar feedback dos usuários: perguntas, bugs e solicitações de recursos.",
   },
   {
+    name: "Consultar status de ticket",
+    emoji: "🔎",
+    fileName: "status-ticket.json",
+    category: "atendimento",
+    description:
+      "Um bot que facilita o cliente a consultar o status de um ticket aberto, reduzindo o número de solicitações deste tipo",
+  },
+  {
     name: "Suporte ao Aluno",
     emoji: "🧑‍🎓",
     fileName: "student-support.json",
