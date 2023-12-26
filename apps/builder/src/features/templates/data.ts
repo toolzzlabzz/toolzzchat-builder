@@ -18,20 +18,20 @@ export const templates: TemplateProps[] = [
       'Um bot cuja função é coletar feedback dos usuários: perguntas, bugs e solicitações de recursos.',
   },
   {
-    name: 'Atendimento ao Acadêmico',
-    emoji: '🏫',
-    fileName: 'school-support.json',
-    category: 'educação',
-    description:
-      'Um bot cuja função é oferecer atendimento e suporte academico automatizado referente a matrícula, notas, provas, agenda do aluno e mais.',
-  },
-  {
     name: 'Suporte ao Aluno',
     emoji: '🧑‍🎓',
     fileName: 'student-support.json',
     category: 'educação',
     description:
       'Um bot cuja função é coletar feedback dos alunos: perguntas, bugs e solicitações de recursos.',
+  },
+  {
+    name: 'Atendimento Acadêmico',
+    emoji: '🏫',
+    fileName: 'school-support.json',
+    category: 'educação',
+    description:
+      'Um bot cuja função é oferecer atendimento e suporte academico automatizado referente a matrícula, notas, provas, agenda do aluno e mais.',
   },
   {
     name: 'Trilha Personalizada',
@@ -41,6 +41,37 @@ export const templates: TemplateProps[] = [
     description:
       'Este bot cria uma trilha personalizada para cada aluno e fornece uma recomendação personalizada.',
     backgroundColor: '#010000',
+  },
+  {
+    name: 'Treinamento Corporativo',
+    emoji: '🏢',
+    category: 'educação',
+    description: 'Um bot que ajuda a criar e gerenciar programas educacionais para funcionários.',
+    fileName: 'corporate-educational-programs-bot.json'
+  },
+  {
+    name: 'Recomendação de Conteúdos',
+    emoji: '📚',
+    fileName: 'content-recommendation.json',
+    category: 'educação',
+    description:
+      'Este bot ajuda um aluno a encontrar o curso ou conteúdo certo na hora certa fornecer uma recomendação personalizada.',
+    backgroundColor: '#010000',
+  },
+  {
+    name: 'Tutoria Inteligente',
+    emoji: '🧑‍🏫',
+    category: 'educação',
+    description: 'Um bot que oferece tutoria personalizada e respostas a perguntas dos alunos.',
+    fileName: 'intelligent-tutoring-bot.json'
+  },
+  {
+    name: 'Solicitar Relatórios do LMS',
+    emoji: '📊',
+    fileName: 'lms-reports.json',
+    category: 'educação',
+    description:
+      'Um bot cuja função é extrair relatórios do Toolzz LMS em minutos e enviar para o email do solicitante',
   },
   {
     name: 'Quiz via chatbot',
@@ -113,15 +144,6 @@ export const templates: TemplateProps[] = [
     category: 'recomendação',
     description:
       'Näak é uma empresa que vende barras de energia, misturas de hidratação e produtos de recuperação. Este bot ajuda um visitante a escolher o produto certo. Ele ajuda você a qualificar seu lead e fornecer uma recomendação personalizada.',
-    backgroundColor: '#010000',
-  },
-  {
-    name: 'Recomendação de Conteúdos',
-    emoji: '📚',
-    fileName: 'content-recommendation.json',
-    category: 'educação',
-    description:
-      'Este bot ajuda um aluno a encontrar o curso ou conteúdo certo na hora certa fornecer uma recomendação personalizada.',
     backgroundColor: '#010000',
   },
   {
@@ -406,28 +428,6 @@ export const templates: TemplateProps[] = [
     category: 'marketing',
     description: 'Um bot que ajuda a desenvolver estratégias de branding para fortalecer a identidade da marca.',
     fileName: 'branding-strategy-bot.json'
-  },
-  {
-    name: 'Treinamento Corporativo',
-    emoji: '🏢',
-    category: 'educação',
-    description: 'Um bot que ajuda a criar e gerenciar programas educacionais para funcionários.',
-    fileName: 'corporate-educational-programs-bot.json'
-  },
-  {
-    name: 'Tutoria Inteligente',
-    emoji: '🧑‍🏫',
-    category: 'educação',
-    description: 'Um bot que oferece tutoria personalizada e respostas a perguntas dos alunos.',
-    fileName: 'intelligent-tutoring-bot.json'
-  },
-  {
-    name: 'Solicitar Relatórios do LMS',
-    emoji: '🏫',
-    fileName: 'lms-reports.json',
-    category: 'educação',
-    description:
-      'Um bot cuja função é extrair relatórios do Toolzz LMS em minutos e enviar para o email do solicitante',
   },
   {
     name: 'Estratégias de Retenção',
