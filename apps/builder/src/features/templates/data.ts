@@ -91,14 +91,6 @@ export const templates: TemplateProps[] = [
       "Um bot cuja função é extrair relatórios do Toolzz LMS em minutos e enviar para o email do solicitante",
   },
   {
-    name: "Quiz interativo via Chatbot",
-    emoji: "🕹️",
-    fileName: "quiz.json",
-    category: "educação",
-    description:
-      "Esse bot funciona como um quiz para seu aluno. Teste o conhecimento de seus alunos e colete as respostas.",
-  },
-  {
     name: "Criar video com Avatar IA",
     emoji: "📽️",
     fileName: "criar-video.json",
@@ -552,6 +544,13 @@ export const templates: TemplateProps[] = [
     fileName: "customer-needs-assessment.json",
   },
   {
+    name: "Renovação de Contratos",
+    emoji: "📅",
+    category: "financeiro",
+    description: "Automatiza lembretes e processos de renovação.",
+    fileName: "contract-renewal-management.json",
+  },
+  {
     name: "Suporte de Nível 1",
     emoji: "🔵",
     category: "atendimento",
@@ -586,14 +585,6 @@ export const templates: TemplateProps[] = [
     emoji: "📈",
     category: "vendas",
     description: "Usa dados históricos para prever vendas futuras.",
-    fileName: "customer-needs-assessment.json",
-  },
-  {
-    name: "Acompanhamento Pós-Venda",
-    emoji: "🚀",
-    category: "vendas",
-    description:
-      "Acompanha e mantém relacionamento com os clientes após a conclusão das vendas.",
     fileName: "customer-needs-assessment.json",
   },
   {
@@ -658,13 +649,6 @@ export const templates: TemplateProps[] = [
     fileName: "customer-needs-assessment.json",
   },
   {
-    name: "Automação de Cobrança",
-    emoji: "💰",
-    category: "financeiro",
-    description: "Automatiza processos de cobrança e faturamento.",
-    fileName: "customer-needs-assessment.json",
-  },
-  {
     name: "Roadmap de Produtos",
     emoji: "🗺️",
     category: "produto",
@@ -695,11 +679,11 @@ export const templates: TemplateProps[] = [
     fileName: "customer-needs-assessment.json",
   },
   {
-    name: "Gestão de Projetos Ágeis",
+    name: "Criar nova Sprint",
     emoji: "🔄",
     category: "gestão-projetos",
     description:
-      "Facilita a gestão de projetos ágeis e equipes de desenvolvimento.",
+      "Cria uma nova sprint. Facilita a gestão de projetos ágeis e equipes de desenvolvimento.",
     fileName: "customer-needs-assessment.json",
   },
   {
@@ -740,13 +724,6 @@ export const templates: TemplateProps[] = [
     fileName: "customer-needs-assessment.json",
   },
   {
-    name: "Controle de Versão",
-    emoji: "🔄",
-    category: "tecnologia",
-    description: "Auxilia no gerenciamento de versões de código e documentos.",
-    fileName: "customer-needs-assessment.json",
-  },
-  {
     name: "Suporte Multilíngue",
     emoji: "🌐",
     category: "atendimento",
@@ -769,24 +746,16 @@ export const templates: TemplateProps[] = [
     fileName: "incident-response-bot.json",
   },
   {
-    name: "Tendências de Suporte",
-    emoji: "📈",
-    category: "atendimento",
-    description:
-      "Identifica tendências nas questões de suporte para prevenção.",
-    fileName: "customer-needs-assessment.json",
-  },
-  {
     name: "Treinamento de Produto",
     emoji: "🎓",
-    category: "vendas",
+    category: "produtos",
     description:
       "Fornece treinamento automático sobre produtos SaaS para clientes.",
     fileName: "customer-needs-assessment.json",
   },
   {
-    name: "Criar nova estória técnica",
-    emoji: "☁️",
+    name: "Criar nova história técnica",
+    emoji: "✍️",
     category: "tecnologia",
     description: "Otimiza o uso de recursos na nuvem para custo-benefício.",
     fileName: "customer-needs-assessment.json",
@@ -801,23 +770,16 @@ export const templates: TemplateProps[] = [
   {
     name: "Ativação de Funcionalidades",
     emoji: "⚙️",
-    category: "tecnologia",
+    category: "atendimento",
     description: "Gerencia a ativação de recursos baseados em uso.",
     fileName: "customer-needs-assessment.json",
   },
   {
     name: "Notificação de Manutenção",
     emoji: "🔧",
-    category: "tecnologia",
+    category: "atendimento",
     description: "Informa usuários sobre manutenções planejadas.",
     fileName: "customer-needs-assessment.json",
-  },
-  {
-    name: "Renovação de Contrato",
-    emoji: "📅",
-    category: "financeiro",
-    description: "Automatiza lembretes e processos de renovação.",
-    fileName: "contract-renewal-management.json",
   },
   {
     name: "Planejamento de Recursos",
@@ -827,16 +789,9 @@ export const templates: TemplateProps[] = [
     fileName: "resource-planning.json",
   },
   {
-    name: "Análise de Rentabilidade",
-    emoji: "💰",
-    category: "financeiro",
-    description: "Calcula a rentabilidade de clientes ou produtos.",
-    fileName: "profitability-analysis.json",
-  },
-  {
     name: "Previsão de Churn",
     emoji: "🔮",
-    category: "vendas",
+    category: "customer-success",
     description:
       "Usa dados históricos para prever e mitigar o churn de clientes.",
     fileName: "churn-prediction.json",
