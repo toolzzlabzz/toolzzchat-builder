@@ -291,14 +291,6 @@ export const templates: TemplateProps[] = [
       'Este é um exemplo de como você pode usar o bloco OpenAI para tomar decisões inteligentes com base na entrada do usuário e redirecionar a conversa para o caminho certo.',
   },
   {
-    name: 'Recrutamento Inteligente',
-    emoji: '🔍',
-    fileName: 'smart-recruitment.json',
-    category: 'rh',
-    description:
-      'Automatize o processo de recrutamento, utilizando IA para filtrar candidatos com base em habilidades e experiência, melhorando a eficiência do RH.',
-  },
-  {
     name: 'Gestão de NDA',
     emoji: '🔒',
     fileName: 'nda-management.json',
@@ -313,6 +305,13 @@ export const templates: TemplateProps[] = [
     description: 'Um bot que auxilia na análise de contratos, destacando termos importantes e identificando possíveis riscos.'
   },
   {
+    name: 'Criação de Contratos',
+    emoji: '🖋️',
+    fileName: 'contract-creation.json',
+    category: 'jurídico',
+    description: 'Um bot que auxilia na criação de contratos, coletando informações sobre os termos e gerando documentos personalizados.'
+  }, 
+  {
     name: 'Solicitações para Jurídico',
     emoji: '📝',
     fileName: 'legal-requests.json',
@@ -325,21 +324,7 @@ export const templates: TemplateProps[] = [
     fileName: 'lgpd-process.json',
     category: 'jurídico',
     description: 'Um bot que auxilia no cumprimento dos requisitos da Lei Geral de Proteção de Dados (LGPD), orientando sobre coleta e tratamento de dados pessoais.'
-  },
-  {
-    name: 'Processo de Contratação',
-    emoji: '📋',
-    fileName: 'hiring-process.json',
-    category: 'jurídico',
-    description: 'Um bot que auxilia no processo de contratação, fornecendo informações sobre documentos necessários e orientações legais.'
-  },
-  {
-    name: 'Criação de Contratos',
-    emoji: '🖋️',
-    fileName: 'contract-creation.json',
-    category: 'jurídico',
-    description: 'Um bot que auxilia na criação de contratos, coletando informações sobre os termos e gerando documentos personalizados.'
-  },  
+  }, 
   {
     name: 'Feedback de Equipe',
     emoji: '🗣️',
@@ -365,6 +350,13 @@ export const templates: TemplateProps[] = [
       'Um bot que ajuda equipes de vendas a acompanhar leads, agendar reuniões e gerenciar funil de vendas, aumentando a eficiência do processo comercial.',
   },
   {
+    name: 'Assistente Jurídico',
+    emoji: '📃',
+    category: 'jurídico',
+    description: 'Um assistente que ajuda na criação e revisão de documentos legais, economizando tempo e garantindo precisão.',
+    fileName: 'legal-document-assistant.json'
+  },
+  {
     name: 'Tendências de Mercado',
     emoji: '🔍',
     fileName: 'market-trend-analysis.json',
@@ -379,22 +371,6 @@ export const templates: TemplateProps[] = [
     category: 'atendimento',
     description:
       'Um bot projetado para oferecer suporte técnico, resolvendo problemas comuns e encaminhando casos mais complexos para especialistas técnicos.',
-  },
-  {
-    name: 'Gestão de Desempenho',
-    emoji: '📈',
-    fileName: 'performance-management.json',
-    category: 'rh',
-    description:
-      'Este bot ajuda na gestão de desempenho dos funcionários, facilitando avaliações, feedbacks e planejamento de desenvolvimento de carreira.',
-  },
-  {
-    name: 'Análise de Risco Financeiro',
-    emoji: '🔥',
-    fileName: 'financial-risk-analysis.json',
-    category: 'financeiro',
-    description:
-      'Um bot especializado em identificar e analisar riscos financeiros, ajudando empresas a tomar decisões mais informadas e seguras.',
   },
   {
     name: 'Distribuição de Conteúdo',
@@ -423,13 +399,6 @@ export const templates: TemplateProps[] = [
     category: 'marketing',
     description: 'Um bot que ajuda a criar e gerenciar campanhas de marketing digital.',
     fileName: 'digital-marketing-campaign-bot.json'
-  },
-  {
-    name: 'Análise de Mercado',
-    emoji: '📊',
-    category: 'marketing',
-    description: 'Um bot que fornece análises e insights sobre o mercado relevante para o seu negócio.',
-    fileName: 'market-analysis-bot.json'
   },
   {
     name: 'Estratégia de Branding',
@@ -482,13 +451,6 @@ export const templates: TemplateProps[] = [
     fileName: 'customer-satisfaction-analysis-bot.json'
   },
   {
-    name: 'Respostas Automáticas a FAQ',
-    emoji: '❓',
-    category: 'atendimento',
-    description: 'Um bot que fornece respostas automáticas para perguntas frequentes dos clientes.',
-    fileName: 'auto-faq-responses-bot.json'
-  },
-  {
     name: 'Relatórios Automatizados',
     emoji: '📊',
     category: 'relatórios',
@@ -517,7 +479,7 @@ export const templates: TemplateProps[] = [
     fileName: 'digital-product-sales-assistant.json'
   },
   {
-    name: 'Gerenciamento de Funil de Vendas',
+    name: 'Gestão Funil de Vendas',
     emoji: '📊',
     category: 'vendas',
     description: 'Um assistente de vendas que ajuda a gerenciar e otimizar seu funil de vendas, identificando oportunidades e acompanhando leads.',
@@ -557,26 +519,5 @@ export const templates: TemplateProps[] = [
     category: 'customer-experience',
     description: 'Um assistente que coleta feedback contínuo dos clientes por meio de pesquisas e avaliações para melhorias constantes.',
     fileName: 'customer-feedback-collection.json'
-  },
-  {
-    name: 'Assistente Jurídico',
-    emoji: '📃',
-    category: 'jurídico',
-    description: 'Um assistente que ajuda na criação e revisão de documentos legais, economizando tempo e garantindo precisão.',
-    fileName: 'legal-document-assistant.json'
-  },
-  {
-    name: 'Avaliação de Contratos',
-    emoji: '📜',
-    category: 'jurídico',
-    description: 'Um assistente que avalia contratos em busca de cláusulas problemáticas ou riscos legais, protegendo seus interesses.',
-    fileName: 'contract-assessment.json'
-  },
-  {
-    name: 'Suporte Jurídico Online',
-    emoji: '💼',
-    category: 'jurídico',
-    description: 'Um assistente jurídico online que fornece respostas a perguntas legais comuns e orientações sobre questões jurídicas.',
-    fileName: 'online-legal-support.json'
   },
 ]
