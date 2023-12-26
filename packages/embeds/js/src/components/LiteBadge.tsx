@@ -49,7 +49,7 @@ export const LiteBadge = (props: Props) => {
       <img
       src="https://cdn.discordapp.com/attachments/915691669234548746/1188799346246942821/icon_abccb074d42741b945659e2fe097ea05.ico"
       alt="Toolzz Bots Logo"
-      style={{ width: '10px', height: '10px' }}
+      style={{ width: '20px', height: '20px' }}
     />
       <span>Powered by Toolzz Bots</span>
     </a>

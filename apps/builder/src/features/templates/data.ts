@@ -26,6 +26,22 @@ export const templates: TemplateProps[] = [
       'Um bot cuja função é coletar feedback dos alunos: perguntas, bugs e solicitações de recursos.',
   },
   {
+    name: 'Incidentes de Segurança',
+    emoji: '👾',
+    fileName: 'security-issues.json',
+    category: 'tecnologia',
+    description:
+      'Um bot que auxilia o CTO na formalização e gestão de incidentes de segurança',
+  },
+  {
+    name: 'Gerar Post Morten',
+    emoji: '📋',
+    fileName: 'postmorten.json',
+    category: 'tecnologia',
+    description:
+      'Um bot que auxilia o CTO na geração de postmorten',
+  },
+  {
     name: 'Atendimento Acadêmico',
     emoji: '🏫',
     fileName: 'school-support.json',
@@ -370,6 +386,22 @@ export const templates: TemplateProps[] = [
     category: 'vendas',
     description:
       'Um bot que ajuda equipes de vendas a acompanhar leads, agendar reuniões e gerenciar funil de vendas, aumentando a eficiência do processo comercial.',
+  },
+  {
+    name: 'Bot SDR',
+    emoji: '📋',
+    fileName: 'sdr.json',
+    category: 'vendas',
+    description:
+      'Um bot que faz o processo de Sales Development',
+  },
+  {
+    name: 'Bot Hunter',
+    emoji: '🎯',
+    fileName: 'sdr.json',
+    category: 'vendas',
+    description:
+      'Um bot que faz o processo de Sales Development',
   },
   {
     name: 'Assistente Jurídico',
