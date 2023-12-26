@@ -91,14 +91,6 @@ export const templates: TemplateProps[] = [
       "Um bot cuja função é extrair relatórios do Toolzz LMS em minutos e enviar para o email do solicitante",
   },
   {
-    name: "Criar video com Avatar IA",
-    emoji: "📽️",
-    fileName: "criar-video.json",
-    category: "educação",
-    description:
-      "Esse bot coleta os inputs necessarios para criação de um video usando Synthesia",
-  },
-  {
     name: "Criar tarefa no Pipefy",
     emoji: "📤",
     fileName: "criar-task-pipefy.json",
@@ -596,14 +588,6 @@ export const templates: TemplateProps[] = [
     fileName: "customer-needs-assessment.json",
   },
   {
-    name: "Gestão de Licenças de Software",
-    emoji: "📝",
-    category: "financeiro",
-    description:
-      "Facilita o gerenciamento de licenças de software para clientes.",
-    fileName: "customer-needs-assessment.json",
-  },
-  {
     name: "Benefícios dos Funcionários",
     emoji: "👥",
     category: "rh",
@@ -611,11 +595,11 @@ export const templates: TemplateProps[] = [
     fileName: "customer-needs-assessment.json",
   },
   {
-    name: "Mudança de Função Interna",
-    emoji: "🔄",
+    name: "Solicitação de Férias",
+    emoji: "🏖️",
     category: "rh",
     description:
-      "Oferece assistência aos funcionários durante mudanças de função interna.",
+      "Bot para solicitação de férias de colaboradores",
     fileName: "customer-needs-assessment.json",
   },
   {
@@ -740,7 +724,7 @@ export const templates: TemplateProps[] = [
   {
     name: "Ativação de Funcionalidades",
     emoji: "⚙️",
-    category: "atendimento",
+    category: "customer-success",
     description: "Gerencia a ativação de recursos baseados em uso.",
     fileName: "customer-needs-assessment.json",
   },
@@ -781,28 +765,12 @@ export const templates: TemplateProps[] = [
     fileName: "feature-cost-benefit-analysis.json",
   },
   {
-    name: "Materiais de Vendas",
-    emoji: "📓",
-    category: "vendas",
-    description:
-      "Auxilia na preparação de materiais de vendas e apresentações.",
-    fileName: "sales-material-preparation.json",
-  },
-  {
     name: "Análise Competitiva",
     emoji: "📈",
     category: "marketing",
     description:
       "Realiza análise competitiva de mercado para tomada de decisões estratégicas.",
     fileName: "competitive-analysis.json",
-  },
-  {
-    name: "Coleta de Necessidades",
-    emoji: "📋",
-    category: "vendas",
-    description:
-      "Um assistente que realiza avaliações detalhadas das necessidades dos clientes, recomendando produtos e serviços personalizados.",
-    fileName: "customer-needs-assessment.json",
   },
   {
     name: "Sucesso do Cliente",
