@@ -518,401 +518,467 @@ export const templates: TemplateProps[] = [
     fileName: 'sales-funnel-management.json'
   },
   {
-    "name": "Qualificação de Leads",
-    "emoji": "🤝",
-    "category": "marketing",
-    "description": "Gerar novos leads interessados nos seus serviços."
+    name: 'Qualificação de Leads',
+    emoji: '🤝',
+    category: 'marketing',
+    description: 'Gerar novos leads interessados nos seus serviços.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Automação de Onboarding de Clientes",
-    "emoji": "🚀",
-    "category": "atendimento",
-    "description": "Facilita a integração de novos clientes."
+    name: 'Automação de Onboarding de Clientes',
+    emoji: '🚀',
+    category: 'atendimento',
+    description: 'Facilita a integração de novos clientes.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Renovação de Assinaturas",
-    "emoji": "🔄",
-    "category": "atendimento",
-    "description": "Ajuda a renovar assinaturas de clientes automaticamente."
+    name: 'Renovação de Assinaturas',
+    emoji: '🔄',
+    category: 'atendimento',
+    description: 'Ajuda a renovar assinaturas de clientes automaticamente.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Automação de Suporte de Nível 1",
-    "emoji": "🔵",
-    "category": "atendimento",
-    "description": "Automatiza o suporte de nível 1 para resolver problemas comuns."
+    name: 'Automação de Suporte de Nível 1',
+    emoji: '🔵',
+    category: 'atendimento',
+    description: 'Automatiza o suporte de nível 1 para resolver problemas comuns.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Segurança Cibernética",
-    "emoji": "🔒",
-    "category": "tecnologia",
-    "description": "Mantém a segurança cibernética da sua empresa."
+    name: 'Segurança Cibernética',
+    emoji: '🔒',
+    category: 'tecnologia',
+    description: 'Mantém a segurança cibernética da sua empresa.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Análise de Feedback de Produto",
-    "emoji": "📊",
-    "category": "produto",
-    "description": "Coleta e analisa o feedback dos clientes sobre seu produto."
+    name: 'Análise de Feedback de Produto',
+    emoji: '📊',
+    category: 'produto',
+    description: 'Coleta e analisa o feedback dos clientes sobre seu produto.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Monitoramento de Mídia Social",
-    "emoji": "📱",
-    "category": "marketing",
-    "description": "Acompanha e analisa as menções da sua marca nas redes sociais."
+    name: 'Monitoramento de Mídia Social',
+    emoji: '📱',
+    category: 'marketing',
+    description: 'Acompanha e analisa as menções da sua marca nas redes sociais.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Escalonamento de Suporte Técnico",
-    "emoji": "📈",
-    "category": "atendimento",
-    "description": "Lida com casos de suporte técnico que exigem escalonamento."
+    name: 'Escalonamento de Suporte Técnico',
+    emoji: '📈',
+    category: 'atendimento',
+    description: 'Lida com casos de suporte técnico que exigem escalonamento.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Gerenciamento de Conteúdo de Marketing",
-    "emoji": "📋",
-    "category": "marketing",
-    "description": "Ajuda a gerenciar e distribuir conteúdo de marketing."
+    name: 'Gerenciamento de Conteúdo de Marketing',
+    emoji: '📋',
+    category: 'marketing',
+    description: 'Ajuda a gerenciar e distribuir conteúdo de marketing.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Previsão de Vendas",
-    "emoji": "📈",
-    "category": "vendas",
-    "description": "Usa dados históricos para prever vendas futuras."
+    name: 'Previsão de Vendas',
+    emoji: '📈',
+    category: 'vendas',
+    description: 'Usa dados históricos para prever vendas futuras.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Acompanhamento Pós-Venda",
-    "emoji": "🚀",
-    "category": "vendas",
-    "description": "Acompanha e mantém relacionamento com os clientes após a conclusão das vendas."
+    name: 'Acompanhamento Pós-Venda',
+    emoji: '🚀',
+    category: 'vendas',
+    description: 'Acompanha e mantém relacionamento com os clientes após a conclusão das vendas.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Automação de Agendamento de Demonstração de Produto",
-    "emoji": "📅",
-    "category": "vendas",
-    "description": "Automatiza o agendamento de demonstrações de produtos para leads interessados."
+    name: 'Automação de Agendamento de Demonstração de Produto',
+    emoji: '📅',
+    category: 'vendas',
+    description: 'Automatiza o agendamento de demonstrações de produtos para leads interessados.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Ativação de Cliente",
-    "emoji": "👥",
-    "category": "atendimento",
-    "description": "Ajuda a ativar e engajar clientes após a aquisição."
+    name: 'Ativação de Cliente',
+    emoji: '👥',
+    category: 'atendimento',
+    description: 'Ajuda a ativar e engajar clientes após a aquisição.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Upsell e Cross-Sell Automatizado",
-    "emoji": "💼",
-    "category": "vendas",
-    "description": "Promove automaticamente upsells e cross-sells para clientes existentes."
+    name: 'Upsell e Cross-Sell Automatizado',
+    emoji: '💼',
+    category: 'vendas',
+    description: 'Promove automaticamente upsells e cross-sells para clientes existentes.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Gestão de Documentação Técnica",
-    "emoji": "📑",
-    "category": "tecnologia",
-    "description": "Ajuda a gerenciar e manter a documentação técnica de produtos ou serviços."
+    name: 'Gestão de Documentação Técnica',
+    emoji: '📑',
+    category: 'tecnologia',
+    description: 'Ajuda a gerenciar e manter a documentação técnica de produtos ou serviços.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Gestão de Licenças de Software",
-    "emoji": "📝",
-    "category": "tecnologia",
-    "description": "Facilita o gerenciamento de licenças de software para clientes."
+    name: 'Gestão de Licenças de Software',
+    emoji: '📝',
+    category: 'tecnologia',
+    description: 'Facilita o gerenciamento de licenças de software para clientes.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Gestão de Benefícios dos Funcionários",
-    "emoji": "👥",
-    "category": "recursos humanos",
-    "description": "Gerencia os benefícios oferecidos aos funcionários."
+    name: 'Gestão de Benefícios dos Funcionários',
+    emoji: '👥',
+    category: 'recursos humanos',
+    description: 'Gerencia os benefícios oferecidos aos funcionários.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Assistência de Mudança de Função Interna",
-    "emoji": "🔄",
-    "category": "recursos humanos",
-    "description": "Oferece assistência aos funcionários durante mudanças de função interna."
+    name: 'Assistência de Mudança de Função Interna',
+    emoji: '🔄',
+    category: 'recursos humanos',
+    description: 'Oferece assistência aos funcionários durante mudanças de função interna.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Relacionamento com Investidores",
-    "emoji": "💼",
-    "category": "financeiro",
-    "description": "Facilita o relacionamento com investidores e acionistas."
+    name: 'Relacionamento com Investidores',
+    emoji: '💼',
+    category: 'financeiro',
+    description: 'Facilita o relacionamento com investidores e acionistas.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Automação de Cobrança",
-    "emoji": "💰",
-    "category": "financeiro",
-    "description": "Automatiza processos de cobrança e faturamento."
+    name: 'Automação de Cobrança',
+    emoji: '💰',
+    category: 'financeiro',
+    description: 'Automatiza processos de cobrança e faturamento.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Auditoria Financeira Automatizada",
-    "emoji": "🔍",
-    "category": "financeiro",
-    "description": "Realiza auditoria financeira de forma automatizada e eficiente."
+    name: 'Auditoria Financeira Automatizada',
+    emoji: '🔍',
+    category: 'financeiro',
+    description: 'Realiza auditoria financeira de forma automatizada e eficiente.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Análise de Lucratividade de Produto",
-    "emoji": "📈",
-    "category": "financeiro",
-    "description": "Analisa a lucratividade de produtos ou serviços para otimização."
+    name: 'Análise de Lucratividade de Produto',
+    emoji: '📈',
+    category: 'financeiro',
+    description: 'Analisa a lucratividade de produtos ou serviços para otimização.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Gerenciamento de Roadmap de Produtos",
-    "emoji": "🗺️",
-    "category": "produto",
-    "description": "Ajuda a gerenciar e planejar o roadmap de desenvolvimento de produtos."
+    name: 'Gerenciamento de Roadmap de Produtos',
+    emoji: '🗺️',
+    category: 'produto',
+    description: 'Ajuda a gerenciar e planejar o roadmap de desenvolvimento de produtos.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Coleta de Dados de Pesquisa de Mercado",
-    "emoji": "📊",
-    "category": "produto",
-    "description": "Coleta e analisa dados de pesquisa de mercado para insights."
+    name: 'Coleta de Dados de Pesquisa de Mercado',
+    emoji: '📊',
+    category: 'produto',
+    description: 'Coleta e analisa dados de pesquisa de mercado para insights.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Treinamento de Vendas",
-    "emoji": "📚",
-    "category": "vendas",
-    "description": "Fornece treinamento em vendas para a equipe de vendas."
+    name: 'Treinamento de Vendas',
+    emoji: '📚',
+    category: 'vendas',
+    description: 'Fornece treinamento em vendas para a equipe de vendas.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Gestão de Contratos de Vendas",
-    "emoji": "📑",
-    "category": "vendas",
-    "description": "Facilita a gestão de contratos de vendas e acordos."
+    name: 'Gestão de Contratos de Vendas',
+    emoji: '📑',
+    category: 'vendas',
+    description: 'Facilita a gestão de contratos de vendas e acordos.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Suporte Pós-Implementação",
-    "emoji": "🛠️",
-    "category": "atendimento",
-    "description": "Oferece suporte após a implementação de produtos ou serviços."
+    name: 'Suporte Pós-Implementação',
+    emoji: '🛠️',
+    category: 'atendimento',
+    description: 'Oferece suporte após a implementação de produtos ou serviços.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Gestão de Projetos Ágeis",
-    "emoji": "🔄",
-    "category": "tecnologia",
-    "description": "Facilita a gestão de projetos ágeis e equipes de desenvolvimento."
+    name: 'Gestão de Projetos Ágeis',
+    emoji: '🔄',
+    category: 'tecnologia',
+    description: 'Facilita a gestão de projetos ágeis e equipes de desenvolvimento.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Controle de Qualidade de Desenvolvimento",
-    "emoji": "🧪",
-    "category": "tecnologia",
-    "description": "Realiza controle de qualidade em processos de desenvolvimento."
+    name: 'Controle de Qualidade de Desenvolvimento',
+    emoji: '🧪',
+    category: 'tecnologia',
+    description: 'Realiza controle de qualidade em processos de desenvolvimento.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Code Review",
-    "emoji": "🔍",
-    "category": "tecnologia",
-    "description": "Facilita a revisão de código e colaboração entre desenvolvedores."
+    name: 'Code Review',
+    emoji: '🔍',
+    category: 'tecnologia',
+    description: 'Facilita a revisão de código e colaboração entre desenvolvedores.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Análise Preditiva de Churn de Cliente",
-    "emoji": "🔮",
-    "category": "vendas",
-    "description": "Utiliza análise preditiva para prever o churn de clientes."
+    name: 'Análise Preditiva de Churn de Cliente',
+    emoji: '🔮',
+    category: 'vendas',
+    description: 'Utiliza análise preditiva para prever o churn de clientes.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Otimização de Jornada do Cliente",
-    "emoji": "🌟",
-    "category": "vendas",
-    "description": "Otimiza a jornada do cliente para aumentar a retenção."
+    name: 'Otimização de Jornada do Cliente',
+    emoji: '🌟',
+    category: 'vendas',
+    description: 'Otimiza a jornada do cliente para aumentar a retenção.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Gestão de Campanhas de Retenção",
-    "emoji": "🔄",
-    "category": "vendas",
-    "description": "Gerencia campanhas de retenção de clientes."
+    name: 'Gestão de Campanhas de Retenção',
+    emoji: '🔄',
+    category: 'vendas',
+    description: 'Gerencia campanhas de retenção de clientes.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Backup e Recuperação",
-    "emoji": "🔒",
-    "category": "tecnologia",
-    "description": "Automatiza backups regulares e procedimentos de recuperação."
+    name: 'Backup e Recuperação',
+    emoji: '🔒',
+    category: 'tecnologia',
+    description: 'Automatiza backups regulares e procedimentos de recuperação.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Monitoramento de Latência",
-    "emoji": "⏱️",
-    "category": "tecnologia",
-    "description": "Acompanha o tempo de resposta do sistema para otimização."
+    name: 'Monitoramento de Latência',
+    emoji: '⏱️',
+    category: 'tecnologia',
+    description: 'Acompanha o tempo de resposta do sistema para otimização.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Análise de Tráfego Web",
-    "emoji": "🌐",
-    "category": "tecnologia",
-    "description": "Analisa o tráfego do website para insights de UX e conversão."
+    name: 'Análise de Tráfego Web',
+    emoji: '🌐',
+    category: 'tecnologia',
+    description: 'Analisa o tráfego do website para insights de UX e conversão.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Teste A/B",
-    "emoji": "🧪",
-    "category": "tecnologia",
-    "description": "Realiza testes A/B automaticamente para otimizar conversões."
+    name: 'Teste A/B',
+    emoji: '🧪',
+    category: 'tecnologia',
+    description: 'Realiza testes A/B automaticamente para otimizar conversões.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Gestão de Conteúdo Dinâmico",
-    "emoji": "📄",
-    "category": "marketing",
-    "description": "Personaliza conteúdo baseado no comportamento do usuário."
+    name: 'Gestão de Conteúdo Dinâmico',
+    emoji: '📄',
+    category: 'marketing',
+    description: 'Personaliza conteúdo baseado no comportamento do usuário.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Engajamento de Usuário",
-    "emoji": "🤝",
-    "category": "marketing",
-    "description": "Cria interações personalizadas para aumentar o engajamento."
+    name: 'Engajamento de Usuário',
+    emoji: '🤝',
+    category: 'marketing',
+    description: 'Cria interações personalizadas para aumentar o engajamento.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Controle de Versão",
-    "emoji": "🔄",
-    "category": "tecnologia",
-    "description": "Auxilia no gerenciamento de versões de código e documentos."
+    name: 'Controle de Versão',
+    emoji: '🔄',
+    category: 'tecnologia',
+    description: 'Auxilia no gerenciamento de versões de código e documentos.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Suporte Multilíngue",
-    "emoji": "🌐",
-    "category": "atendimento",
-    "description": "Oferece suporte ao cliente em diferentes idiomas."
+    name: 'Suporte Multilíngue',
+    emoji: '🌐',
+    category: 'atendimento',
+    description: 'Oferece suporte ao cliente em diferentes idiomas.',
+    fileName: 'customer-needs-assessment.json'
   },
   {
-    "name": "Gestão de Assinaturas",
-    "emoji": "📋",
-    "category": "vendas",
-    "description": "Controla as assinaturas ativas e comunica-se com assinantes."
-  },
-  {
-    "name": "Análise de Redes Sociais",
-    "emoji": "📊",
-    "category": "marketing",
-    "description": "Coleta e analisa dados de mídias sociais."
-  },
-  {
-    "name": "Análise de Tendências de Suporte",
-    "emoji": "📈",
-    "category": "atendimento",
-    "description": "Identifica tendências nas questões de suporte para prevenção."
-  },
-  {
-    "name": "Treinamento de Produto",
-    "emoji": "🎓",
-    "category": "vendas",
-    "description": "Fornece treinamento automático sobre produtos SaaS para clientes."
-  },
-  {
-    "name": "Melhoria Contínua",
-    "emoji": "📈",
-    "category": "tecnologia",
-    "description": "Utiliza feedback para melhorias contínuas do produto."
-  },
-  {
-    "name": "Gestão de Recursos de Cloud",
-    "emoji": "☁️",
-    "category": "tecnologia",
-    "description": "Otimiza o uso de recursos na nuvem para custo-benefício."
-  },
-  {
-    "name": "Sincronização de Dados",
-    "emoji": "🔄",
-    "category": "tecnologia",
-    "description": "Mantém dados sincronizados em plataformas múltiplas."
-  },
-  {
-    "name": "Ativação de Funcionalidades",
-    "emoji": "⚙️",
-    "category": "tecnologia",
-    "description": "Gerencia a ativação de recursos baseados em uso."
-  },
-  {
-    "name": "Notificação de Manutenção",
-    "emoji": "🔧",
-    "category": "tecnologia",
-    "description": "Informa usuários sobre manutenções planejadas."
-  },
-  {
-    "name": "Gestão de Desempenho de Rede",
-    "emoji": "🌐",
-    "category": "tecnologia",
-    "description": "Acompanha e otimiza o desempenho da rede."
-  },
-  {
-    "name": "Rastreamento de Erros",
-    "emoji": "🐞",
-    "category": "tecnologia",
-    "description": "Detecta e rastreia erros em tempo real para correção rápida."
-  },
-  {
-    "name": "Gestão de Campanhas PPC",
-    "emoji": "💲",
-    "category": "marketing",
-    "description": "Otimiza campanhas de pay-per-click para ROI máximo."
-  },
-  {
-    "name": "Acompanhamento de Engajamento de Email",
-    "emoji": "✉️",
-    "category": "marketing",
-    "description": "Monitora o engajamento com emails enviados."
-  },
-  {
-    "name": "Gestão de Renovação de Contrato",
-    "emoji": "📅",
-    "category": "vendas",
-    "description": "Automatiza lembretes e processos de renovação."
-  },
-  {
-    "name": "Planejamento de Recursos",
-    "emoji": "📊",
-    "category": "tecnologia",
-    "description": "Ajuda a planejar e alocar recursos para projetos."
-  },
-  {
-    "name": "Análise de Risco de Projetos",
-    "emoji": "📈",
-    "category": "tecnologia",
-    "description": "Avalia riscos em potencial em projetos em andamento."
-  },
-  {
-    "name": "Análise de Rentabilidade",
-    "emoji": "💰",
-    "category": "tecnologia",
-    "description": "Calcula a rentabilidade de clientes ou produtos."
-  },
-  {
-    "name": "Previsão de Churn",
-    "emoji": "🔮",
-    "category": "vendas",
-    "description": "Usa dados históricos para prever e mitigar o churn de clientes."
-  },
-  {
-    "name": "Planejamento de Capacidade de Serviço",
-    "emoji": "📅",
-    "category": "tecnologia",
-    "description": "Auxilia no planejamento da capacidade de serviço de TI."
-  },
-  {
-    "name": "Análise de Custo-Benefício de Funcionalidades",
-    "emoji": "💰",
-    "category": "tecnologia",
-    "description": "Avalia o custo-benefício de funcionalidades de software."
-  },
-  {
-    "name": "Gestão de Leads de Vendas",
-    "emoji": "📈",
-    "category": "vendas",
-    "description": "Ajuda a gerenciar e acompanhar leads de vendas."
-  },
-  {
-    "name": "Preparação de Materiais de Vendas",
-    "emoji": "📋",
-    "category": "vendas",
-    "description": "Auxilia na preparação de materiais de vendas e apresentações."
-  },
-  {
-    "name": "Análise de Tendências de Vendas",
-    "emoji": "📊",
-    "category": "vendas",
-    "description": "Analisa as tendências de vendas para estratégias futuras."
-  },
-  {
-    "name": "Análise Competitiva",
-    "emoji": "📈",
-    "category": "estratégia",
-    "description": "Realiza análise competitiva de mercado para tomada de decisões estratégicas."
-  },
-  {
-    "name": "Gestão de Parcerias Estratégicas",
-    "emoji": "🤝",
-    "category": "estratégia",
-    "description": "Gerencia parcerias estratégicas para crescimento de negócios."
-  },
+    name: 'Gestão de Assinaturas',
+    emoji: '📋',
+    category: 'vendas',
+    description: 'Controla as assinaturas ativas e comunica-se com assinantes.',
+    fileName: 'customer-needs-assessment.json'
+  },
+  {
+    name: 'Análise de Redes Sociais',
+    emoji: '📊',
+    category: 'marketing',
+    description: 'Coleta e analisa dados de mídias sociais.',
+    fileName: 'customer-needs-assessment.json'
+  },
+  {
+    name: 'Análise de Tendências de Suporte',
+    emoji: '📈',
+    category: 'atendimento',
+    description: 'Identifica tendências nas questões de suporte para prevenção.',
+    fileName: 'customer-needs-assessment.json'
+  },
+  {
+    name: 'Treinamento de Produto',
+    emoji: '🎓',
+    category: 'vendas',
+    description: 'Fornece treinamento automático sobre produtos SaaS para clientes.',
+    fileName: 'customer-needs-assessment.json'
+  },
+  {
+    name: 'Melhoria Contínua',
+    emoji: '📈',
+    category: 'tecnologia',
+    description: 'Utiliza feedback para melhorias contínuas do produto.',
+    fileName: 'customer-needs-assessment.json'
+  },
+  {
+    name: 'Gestão de Recursos de Cloud',
+    emoji: '☁️',
+    category: 'tecnologia',
+    description: 'Otimiza o uso de recursos na nuvem para custo-benefício.',
+    fileName: 'customer-needs-assessment.json'
+  },
+  {
+    name: 'Sincronização de Dados',
+    emoji: '🔄',
+    category: 'tecnologia',
+    description: 'Mantém dados sincronizados em plataformas múltiplas.',
+    fileName: 'customer-needs-assessment.json'
+  },
+  {
+    name: 'Ativação de Funcionalidades',
+    emoji: '⚙️',
+    category: 'tecnologia',
+    description: 'Gerencia a ativação de recursos baseados em uso.',
+    fileName: 'customer-needs-assessment.json'
+  },
+  {
+    name: 'Notificação de Manutenção',
+    emoji: '🔧',
+    category: 'tecnologia',
+    description: 'Informa usuários sobre manutenções planejadas.',
+    fileName: 'customer-needs-assessment.json'
+  },
+  {
+    name: 'Gestão de Desempenho de Rede',
+    emoji: '🌐',
+    category: 'tecnologia',
+    description: 'Acompanha e otimiza o desempenho da rede.',
+    fileName: 'network-performance-management.json'
+},
+{
+    name: 'Rastreamento de Erros',
+    emoji: '🐞',
+    category: 'tecnologia',
+    description: 'Detecta e rastreia erros em tempo real para correção rápida.',
+    fileName: 'error-tracking.json'
+},
+{
+    name: 'Gestão de Campanhas PPC',
+    emoji: '💲',
+    category: 'marketing',
+    description: 'Otimiza campanhas de pay-per-click para ROI máximo.',
+    fileName: 'ppc-campaign-management.json'
+},
+{
+    name: 'Acompanhamento de Engajamento de Email',
+    emoji: '✉️',
+    category: 'marketing',
+    description: 'Monitora o engajamento com emails enviados.',
+    fileName: 'email-engagement-tracking.json'
+},
+{
+    name: 'Gestão de Renovação de Contrato',
+    emoji: '📅',
+    category: 'vendas',
+    description: 'Automatiza lembretes e processos de renovação.',
+    fileName: 'contract-renewal-management.json'
+},
+{
+    name: 'Planejamento de Recursos',
+    emoji: '📊',
+    category: 'tecnologia',
+    description: 'Ajuda a planejar e alocar recursos para projetos.',
+    fileName: 'resource-planning.json'
+},
+{
+    name: 'Análise de Risco de Projetos',
+    emoji: '📈',
+    category: 'tecnologia',
+    description: 'Avalia riscos em potencial em projetos em andamento.',
+    fileName: 'project-risk-analysis.json'
+},
+{
+    name: 'Análise de Rentabilidade',
+    emoji: '💰',
+    category: 'tecnologia',
+    description: 'Calcula a rentabilidade de clientes ou produtos.',
+    fileName: 'profitability-analysis.json'
+},
+{
+    name: 'Previsão de Churn',
+    emoji: '🔮',
+    category: 'vendas',
+    description: 'Usa dados históricos para prever e mitigar o churn de clientes.',
+    fileName: 'churn-prediction.json'
+},
+{
+    name: 'Planejamento de Capacidade de Serviço',
+    emoji: '📅',
+    category: 'tecnologia',
+    description: 'Auxilia no planejamento da capacidade de serviço de TI.',
+    fileName: 'service-capacity-planning.json'
+},
+{
+    name: 'Análise de Custo-Benefício de Funcionalidades',
+    emoji: '💰',
+    category: 'tecnologia',
+    description: 'Avalia o custo-benefício de funcionalidades de software.',
+    fileName: 'feature-cost-benefit-analysis.json'
+},
+{
+    name: 'Gestão de Leads de Vendas',
+    emoji: '📈',
+    category: 'vendas',
+    description: 'Ajuda a gerenciar e acompanhar leads de vendas.',
+    fileName: 'sales-lead-management.json'
+},
+{
+    name: 'Preparação de Materiais de Vendas',
+    emoji: '📋',
+    category: 'vendas',
+    description: 'Auxilia na preparação de materiais de vendas e apresentações.',
+    fileName: 'sales-material-preparation.json'
+},
+{
+    name: 'Análise de Tendências de Vendas',
+    emoji: '📊',
+    category: 'vendas',
+    description: 'Analisa as tendências de vendas para estratégias futuras.',
+    fileName: 'sales-trend-analysis.json'
+},
+{
+    name: 'Análise Competitiva',
+    emoji: '📈',
+    category: 'estratégia',
+    description: 'Realiza análise competitiva de mercado para tomada de decisões estratégicas.',
+    fileName: 'competitive-analysis.json'
+},
+{
+    name: 'Gestão de Parcerias Estratégicas',
+    emoji: '🤝',
+    category: 'estratégia',
+    description: 'Gerencia parcerias estratégicas para crescimento de negócios.',
+    fileName: 'strategic-partnership-management.json'
+},
   {
     name: 'Avaliação de Necessidades',
     emoji: '📋',
