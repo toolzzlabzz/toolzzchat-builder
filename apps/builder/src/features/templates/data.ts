@@ -67,8 +67,15 @@ export const templates: TemplateProps[] = [
       'Um bot que solicita informações de novos usuários antes de começarem a usar seu produto.',
   },
   {
-    name: 'Cobrança de Infoproduto',
+    name: 'Pagamento via Cartão',
     emoji: '💳',
+    fileName: 'card-payment.json',
+    category: 'financeiro',
+    description: 'Um bot que facilita o processo de pagamento de produtos ou serviços utilizando cartão de crédito, incluindo a verificação e confirmação do pagamento.'
+  },
+  {
+    name: 'Cobrança de Infoproduto',
+    emoji: '📚',
     fileName: 'digital-product-payment.json',
     category: 'financeiro',
     description:
@@ -94,13 +101,6 @@ export const templates: TemplateProps[] = [
     fileName: 'send-invoice-copy.json',
     category: 'financeiro',
     description: 'Um bot que ajuda os clientes a solicitar e receber uma segunda via de boleto para pagamento de faturas pendentes.'
-  },
-  {
-    name: 'Pagamento via Cartão',
-    emoji: '💳',
-    fileName: 'card-payment.json',
-    category: 'financeiro',
-    description: 'Um bot que facilita o processo de pagamento de produtos ou serviços utilizando cartão de crédito, incluindo a verificação e confirmação do pagamento.'
   },
   {
     name: 'Cobrança de Inadimplentes',
@@ -372,13 +372,6 @@ export const templates: TemplateProps[] = [
     fileName: 'cash-flow-management-bot.json'
   },
   {
-    name: 'Consulta de Investimentos',
-    emoji: '💹',
-    category: 'financeiro',
-    description: 'Um bot que fornece informações sobre investimentos e ajuda os usuários a tomar decisões financeiras.',
-    fileName: 'investment-consultation-bot.json'
-  },
-  {
     name: 'Treinamento Corporativo',
     emoji: '🏢',
     category: 'educação',
@@ -395,7 +388,7 @@ export const templates: TemplateProps[] = [
   {
     name: 'Estratégias de Retenção',
     emoji: '🔄',
-    category: 'atendimento',
+    category: 'customer-sucess',
     description: 'Um bot que ajuda a implementar estratégias de retenção de clientes.',
     fileName: 'customer-retention-strategies-bot.json'
   },
@@ -409,7 +402,7 @@ export const templates: TemplateProps[] = [
   {
     name: 'Análise de Satisfação do Cliente',
     emoji: '😄',
-    category: 'atendimento',
+    category: 'customer-sucess',
     description: 'Um bot que analisa a satisfação do cliente por meio de pesquisas e feedbacks.',
     fileName: 'customer-satisfaction-analysis-bot.json'
   },
@@ -436,8 +429,8 @@ export const templates: TemplateProps[] = [
   },
   {
     name: 'Relatórios Financeiros',
-    emoji: '💹',
-    category: 'relatórios',
+    emoji: '📊',
+    category: 'financeiro',
     description: 'Um bot que gera relatórios financeiros detalhados com base em informações financeiras.',
     fileName: 'financial-reports-bot.json'
   },
