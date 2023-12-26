@@ -388,7 +388,7 @@ export const templates: TemplateProps[] = [
   {
     name: 'Estratégias de Retenção',
     emoji: '🔄',
-    category: 'customer-sucess',
+    category: 'customer-success',
     description: 'Um bot que ajuda a implementar estratégias de retenção de clientes.',
     fileName: 'customer-retention-strategies-bot.json'
   },
@@ -402,7 +402,7 @@ export const templates: TemplateProps[] = [
   {
     name: 'Análise de Satisfação do Cliente',
     emoji: '😄',
-    category: 'customer-sucess',
+    category: 'customer-success',
     description: 'Um bot que analisa a satisfação do cliente por meio de pesquisas e feedbacks.',
     fileName: 'customer-satisfaction-analysis-bot.json'
   },
