@@ -43,6 +43,38 @@ export const templates: TemplateProps[] = [
       'Esse bot funciona como um quiz para seu aluno. Teste o conhecimento de seus alunos e colete as respostas.',
   },
   {
+    name: 'Criar video com Avatar IA',
+    emoji: '📽️',
+    fileName: 'criar-video.json',
+    category: 'educação',
+    description:
+      'Esse bot coleta os inputs necessarios para criação de um video usando Synthesia',
+  },
+  {
+    name: 'Criar tarefa no Pipefy',
+    emoji: '📤',
+    fileName: 'criar-task-pipefy.json',
+    category: 'gestão-projetos',
+    description:
+      'Esse bot cria tarefas em um board no Pipefy, mas pode ser alterado para criar no Trello ou em outra plataforma de gestão',
+  },
+  {
+    name: 'Criar novo projeto',
+    emoji: '🆕',
+    fileName: 'criar-novo-projeto.json',
+    category: 'gestão-projetos',
+    description:
+      'Esse bot te ajuda a criar um novo projeto de forma organizada e já criar as automações necessarias para gestão ',
+  },
+  {
+    name: 'Solicitar Status Report',
+    emoji: '📋',
+    fileName: 'solicitar-status-report.json',
+    category: 'gestão-projetos',
+    description:
+      'Esse bot ajuda o cliente final a solicitar um status report do projeto, e facilita a sua vida na hora de gerar o relatorio feito pelo bot',
+  },
+  {
     name: 'Agendamento de Reuniões',
     emoji: '🗓️',
     fileName: 'agendamento-reunioes.json',
@@ -242,14 +274,6 @@ export const templates: TemplateProps[] = [
       'Este é um exemplo de como você pode usar o bloco OpenAI para tomar decisões inteligentes com base na entrada do usuário e redirecionar a conversa para o caminho certo.',
   },
   {
-    name: 'Análise Financeira',
-    emoji: '💹',
-    fileName: 'financial-analysis.json',
-    category: 'financeiro',
-    description:
-      'Um bot destinado a ajudar na análise de dados financeiros, fornecendo insights e relatórios personalizados com base nas informações do usuário.',
-  },
-  {
     name: 'Recrutamento Inteligente',
     emoji: '🔍',
     fileName: 'smart-recruitment.json',
@@ -398,13 +422,6 @@ export const templates: TemplateProps[] = [
     fileName: 'branding-strategy-bot.json'
   },
   {
-    name: 'Controle de Fluxo de Caixa',
-    emoji: '💰',
-    category: 'financeiro',
-    description: 'Um bot que auxilia na gestão e controle do fluxo de caixa da empresa.',
-    fileName: 'cash-flow-management-bot.json'
-  },
-  {
     name: 'Treinamento Corporativo',
     emoji: '🏢',
     category: 'educação',
@@ -482,32 +499,18 @@ export const templates: TemplateProps[] = [
     fileName: 'sales-funnel-management.json'
   },
   {
-    name: 'Avaliação de Necessidades do Cliente',
+    name: 'Avaliação de Necessidades',
     emoji: '📋',
     category: 'vendas',
     description: 'Um assistente que realiza avaliações detalhadas das necessidades dos clientes, recomendando produtos e serviços personalizados.',
     fileName: 'customer-needs-assessment.json'
   },
   {
-    name: 'Acompanhamento de Sucesso do Cliente',
+    name: 'Acompanhamento do Cliente',
     emoji: '👥',
     category: 'customer-success',
     description: 'Um assistente de acompanhamento que garante que os clientes alcancem seus objetivos e estejam satisfeitos com seus produtos ou serviços.',
     fileName: 'customer-success-follow-up.json'
-  },
-  {
-    name: 'Resolução de Problemas de Cliente',
-    emoji: '🔍',
-    category: 'customer-success',
-    description: 'Um assistente que ajuda a resolver problemas e desafios específicos relatados pelos clientes, proporcionando uma experiência positiva.',
-    fileName: 'customer-issue-resolution.json'
-  },
-  {
-    name: 'Lealdade do Cliente',
-    emoji: '🤝',
-    category: 'customer-success',
-    description: 'Um assistente que gerencia programas de fidelidade para recompensar clientes fiéis e incentivá-los a continuar comprando.',
-    fileName: 'customer-loyalty-program.json'
   },
   {
     name: 'Análise de Experiência do Cliente',
@@ -517,21 +520,21 @@ export const templates: TemplateProps[] = [
     fileName: 'customer-experience-analysis.json'
   },
   {
-    name: 'Mapeamento de Jornada do Cliente',
+    name: 'Mapeamento de Jornada',
     emoji: '🗺️',
     category: 'customer-experience',
     description: 'Um assistente que mapeia a jornada do cliente e identifica oportunidades para aprimorar a experiência em cada etapa.',
     fileName: 'customer-journey-mapping.json'
   },
   {
-    name: 'Coleta de Feedback do Cliente',
+    name: 'Coleta de Feedback',
     emoji: '🗣️',
     category: 'customer-experience',
     description: 'Um assistente que coleta feedback contínuo dos clientes por meio de pesquisas e avaliações para melhorias constantes.',
     fileName: 'customer-feedback-collection.json'
   },
   {
-    name: 'Assistente Jurídico de Documentos',
+    name: 'Assistente Jurídico',
     emoji: '📃',
     category: 'jurídico',
     description: 'Um assistente que ajuda na criação e revisão de documentos legais, economizando tempo e garantindo precisão.',
