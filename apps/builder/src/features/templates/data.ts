@@ -632,14 +632,14 @@ export const templates: TemplateProps[] = [
   {
     name: 'Gestão de Benefícios dos Funcionários',
     emoji: '👥',
-    category: 'recursos humanos',
+    category: 'rh',
     description: 'Gerencia os benefícios oferecidos aos funcionários.',
     fileName: 'customer-needs-assessment.json'
   },
   {
     name: 'Assistência de Mudança de Função Interna',
     emoji: '🔄',
-    category: 'recursos humanos',
+    category: 'rh',
     description: 'Oferece assistência aos funcionários durante mudanças de função interna.',
     fileName: 'customer-needs-assessment.json'
   },
