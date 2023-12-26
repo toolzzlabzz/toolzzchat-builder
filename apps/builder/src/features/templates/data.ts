@@ -313,14 +313,6 @@ export const templates: TemplateProps[] = [
       'Você é uma agência de marketing e este bot permite gerar novos leads interessados nos seus serviços. Um bloco de IA é usado para aprofundar nas necessidades do usuário.',
   },
   {
-    name: 'Oferta de Seguro',
-    emoji: '🐶',
-    fileName: 'dog-insurance-offer.json',
-    category: 'vendas',
-    description:
-      'Você é uma empresa de seguro para cães. Este bot permite coletar informações sobre o cão e fornecer uma cotação.',
-  },
-  {
     name: 'Condições OpenAI',
     emoji: '🧠',
     fileName: 'openai-conditions.json',
@@ -388,7 +380,7 @@ export const templates: TemplateProps[] = [
       'Um bot que ajuda equipes de vendas a acompanhar leads, agendar reuniões e gerenciar funil de vendas, aumentando a eficiência do processo comercial.',
   },
   {
-    name: 'Bot SDR',
+    name: 'Assistente SDR',
     emoji: '📋',
     fileName: 'sdr.json',
     category: 'vendas',
@@ -396,12 +388,28 @@ export const templates: TemplateProps[] = [
       'Um bot que faz o processo de Sales Development',
   },
   {
-    name: 'Bot Hunter',
+    name: 'Assistente Hunter',
     emoji: '🎯',
     fileName: 'hunter.json',
     category: 'vendas',
     description:
       'Um bot que faz o processo de Hunter de Leads no Linkedin',
+  },
+  {
+    name: 'Apresentação Comercial',
+    emoji: '👩‍💻',
+    fileName: 'apresentacao.json',
+    category: 'vendas',
+    description:
+      'Um bot que faz o processo de apresentação comercial',
+  },
+  {
+    name: 'Demonstração software',
+    emoji: '💻',
+    fileName: 'demo.json',
+    category: 'vendas',
+    description:
+      'Um bot que faz o processo de apresentação demo do seu software',
   },
   {
     name: 'Assistente Jurídico',
@@ -469,13 +477,6 @@ export const templates: TemplateProps[] = [
     fileName: 'customer-retention-strategies-bot.json'
   },
   {
-    name: 'Resposta a Incidentes',
-    emoji: '🚨',
-    category: 'atendimento',
-    description: 'Um bot que ajuda a lidar com incidentes e problemas de forma eficiente.',
-    fileName: 'incident-response-bot.json'
-  },
-  {
     name: 'Análise de Satisfação do Cliente',
     emoji: '😄',
     category: 'customer-success',
@@ -502,13 +503,6 @@ export const templates: TemplateProps[] = [
     category: 'financeiro',
     description: 'Um bot que gera relatórios financeiros detalhados com base em informações financeiras.',
     fileName: 'financial-reports-bot.json'
-  },
-  {
-    name: 'Assistente de Vendas Online',
-    emoji: '💻',
-    category: 'vendas',
-    description: 'Um assistente virtual que ajuda a vender produtos digitais, fornecendo informações e suporte aos clientes durante o processo de compra.',
-    fileName: 'digital-product-sales-assistant.json'
   },
   {
     name: 'Gestão Funil de Vendas',
@@ -637,20 +631,6 @@ export const templates: TemplateProps[] = [
     fileName: 'customer-needs-assessment.json'
   },
   {
-    name: 'Auditoria Financeira',
-    emoji: '🔍',
-    category: 'financeiro',
-    description: 'Realiza auditoria financeira de forma automatizada e eficiente.',
-    fileName: 'customer-needs-assessment.json'
-  },
-  {
-    name: 'Análise de Lucratividade',
-    emoji: '📈',
-    category: 'financeiro',
-    description: 'Analisa a lucratividade de produtos ou serviços para otimização.',
-    fileName: 'customer-needs-assessment.json'
-  },
-  {
     name: 'Roadmap de Produtos',
     emoji: '🗺️',
     category: 'produto',
@@ -669,13 +649,6 @@ export const templates: TemplateProps[] = [
     emoji: '📚',
     category: 'vendas',
     description: 'Fornece treinamento em vendas para a equipe de vendas.',
-    fileName: 'customer-needs-assessment.json'
-  },
-  {
-    name: 'Gestão de Contratos de Vendas',
-    emoji: '📑',
-    category: 'vendas',
-    description: 'Facilita a gestão de contratos de vendas e acordos.',
     fileName: 'customer-needs-assessment.json'
   },
   {
@@ -707,13 +680,6 @@ export const templates: TemplateProps[] = [
     fileName: 'customer-needs-assessment.json'
   },
   {
-    name: 'Análise Preditiva de Churn',
-    emoji: '🔮',
-    category: 'vendas',
-    description: 'Utiliza análise preditiva para prever o churn de clientes.',
-    fileName: 'customer-needs-assessment.json'
-  },
-  {
     name: 'Otimização de Jornada do Cliente',
     emoji: '🌟',
     category: 'vendas',
@@ -723,7 +689,7 @@ export const templates: TemplateProps[] = [
   {
     name: 'Campanhas de Retenção',
     emoji: '🔄',
-    category: 'vendas',
+    category: 'customer-success',
     description: 'Gerencia campanhas de retenção de clientes.',
     fileName: 'customer-needs-assessment.json'
   },
@@ -777,6 +743,13 @@ export const templates: TemplateProps[] = [
     fileName: 'customer-needs-assessment.json'
   },
   {
+    name: 'Resposta a Incidentes',
+    emoji: '🚨',
+    category: 'atendimento',
+    description: 'Um bot que ajuda a lidar com incidentes e problemas de forma eficiente.',
+    fileName: 'incident-response-bot.json'
+  },
+  {
     name: 'Tendências de Suporte',
     emoji: '📈',
     category: 'atendimento',
@@ -828,7 +801,7 @@ export const templates: TemplateProps[] = [
 {
     name: 'Renovação de Contrato',
     emoji: '📅',
-    category: 'vendas',
+    category: 'financeiro',
     description: 'Automatiza lembretes e processos de renovação.',
     fileName: 'contract-renewal-management.json'
 },
@@ -876,17 +849,10 @@ export const templates: TemplateProps[] = [
 },
 {
     name: 'Materiais de Vendas',
-    emoji: '📋',
+    emoji: '📓',
     category: 'vendas',
     description: 'Auxilia na preparação de materiais de vendas e apresentações.',
     fileName: 'sales-material-preparation.json'
-},
-{
-    name: 'Análise de Tendências de Vendas',
-    emoji: '📊',
-    category: 'vendas',
-    description: 'Analisa as tendências de vendas para estratégias futuras.',
-    fileName: 'sales-trend-analysis.json'
 },
 {
     name: 'Análise Competitiva',
