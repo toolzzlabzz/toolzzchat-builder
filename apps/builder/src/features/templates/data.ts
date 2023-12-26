@@ -260,16 +260,8 @@ export const templates: TemplateProps[] = [
       "Um bot que facilita o processo de avaliação de desempenho dos funcionários, permitindo que eles preencham formulários de avaliação e acompanhem feedbacks.",
   },
   {
-    name: "Admissão Digital",
-    emoji: "📄",
-    fileName: "digital-admission.json",
-    category: "rh",
-    description:
-      "Um bot que permite que os novos funcionários realizem a admissão digitalmente, preenchendo formulários e enviando documentos necessários online.",
-  },
-  {
     name: "Abertura de Vagas",
-    emoji: "📢",
+    emoji: "💼",
     fileName: "job-opening.json",
     category: "rh",
     description:
@@ -458,8 +450,8 @@ export const templates: TemplateProps[] = [
     fileName: "ai-lead-qualification-bot.json",
   },
   {
-    name: "Campanha de Marketing Digital",
-    emoji: "💻",
+    name: "Campanha de Marketing",
+    emoji: "📢",
     category: "marketing",
     description:
       "Um bot que ajuda a criar e gerenciar campanhas de marketing digital.",
@@ -528,7 +520,7 @@ export const templates: TemplateProps[] = [
   },
   {
     name: "Suporte de Nível 1",
-    emoji: "🔵",
+    emoji: "👩‍💻",
     category: "atendimento",
     description:
       "Automatiza o suporte de nível 1 para resolver problemas comuns.",
@@ -730,7 +722,7 @@ export const templates: TemplateProps[] = [
   },
   {
     name: "Notificação de Manutenção",
-    emoji: "🔧",
+    emoji: "🔔",
     category: "atendimento",
     description: "Informa usuários sobre manutenções planejadas.",
     fileName: "customer-needs-assessment.json",
