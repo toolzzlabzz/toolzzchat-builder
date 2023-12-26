@@ -561,7 +561,7 @@ export const templates: TemplateProps[] = [
   {
     name: "Análise de Feedback de Produto",
     emoji: "📊",
-    category: "produto",
+    category: "product",
     description: "Coleta e analisa o feedback dos clientes sobre seu produto.",
     fileName: "customer-needs-assessment.json",
   },
@@ -651,15 +651,15 @@ export const templates: TemplateProps[] = [
   {
     name: "Roadmap de Produtos",
     emoji: "🗺️",
-    category: "produto",
+    category: "product",
     description:
       "Ajuda a gerenciar e planejar o roadmap de desenvolvimento de produtos.",
     fileName: "customer-needs-assessment.json",
   },
   {
-    name: "Coleta de Dados de Pesquisa de Mercado",
+    name: "Coleta de Dados de Pesquisa",
     emoji: "📊",
-    category: "produto",
+    category: "product",
     description: "Coleta e analisa dados de pesquisa de mercado para insights.",
     fileName: "customer-needs-assessment.json",
   },
@@ -748,7 +748,7 @@ export const templates: TemplateProps[] = [
   {
     name: "Treinamento de Produto",
     emoji: "🎓",
-    category: "produtos",
+    category: "product",
     description:
       "Fornece treinamento automático sobre produtos SaaS para clientes.",
     fileName: "customer-needs-assessment.json",
