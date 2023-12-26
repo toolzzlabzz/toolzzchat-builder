@@ -131,6 +131,7 @@ export const TemplatesModal = ({
               {renderCategory('marketing')}
               {renderCategory('product')}
               {renderCategory('gestão-projetos')}
+              {renderCategory('produtividade')}
               {renderCategory('tecnologia')}
               {renderCategory('relatórios')}
               {renderCategory('recomendação')}

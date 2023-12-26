@@ -18,6 +18,14 @@ export const templates: TemplateProps[] = [
       'Um bot cuja função é coletar feedback dos usuários: perguntas, bugs e solicitações de recursos.',
   },
   {
+    name: 'Agendamento de Reuniões',
+    emoji: '🗓️',
+    fileName: 'agendamento-reunioes.json',
+    category: 'produtividade',
+    description:
+      'Um bot cuja função é facilitar o agendamento de reuniões no Google Meet.',
+  },
+  {
     name: 'Quiz interativo',
     emoji: '🕹️',
     fileName: 'quiz.json',
