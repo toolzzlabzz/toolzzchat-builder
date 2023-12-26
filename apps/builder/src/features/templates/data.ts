@@ -132,7 +132,7 @@ export const templates: TemplateProps[] = [
   },
   {
     name: "Gerar resumo de reuniões",
-    emoji: "🗓️",
+    emoji: "🎙️",
     fileName: "resumo-reunioes.json",
     category: "produtividade",
     description:
@@ -266,14 +266,6 @@ export const templates: TemplateProps[] = [
     category: "rh",
     description:
       "Um bot que facilita o processo de avaliação de desempenho dos funcionários, permitindo que eles preencham formulários de avaliação e acompanhem feedbacks.",
-  },
-  {
-    name: "Desligamento de Funcionário",
-    emoji: "🚪",
-    fileName: "employee-offboarding.json",
-    category: "rh",
-    description:
-      "Um bot que guia os processos de desligamento de funcionários, auxiliando em tarefas como entrega de documentos e feedback de saída.",
   },
   {
     name: "Admissão Digital",
@@ -468,7 +460,7 @@ export const templates: TemplateProps[] = [
   {
     name: "Qualificação de Leads com IA",
     emoji: "🤖",
-    category: "marketing",
+    category: "vendas",
     description:
       "Um bot que usa IA para qualificar leads automaticamente com base em critérios predefinidos.",
     fileName: "ai-lead-qualification-bot.json",
@@ -480,14 +472,6 @@ export const templates: TemplateProps[] = [
     description:
       "Um bot que ajuda a criar e gerenciar campanhas de marketing digital.",
     fileName: "digital-marketing-campaign-bot.json",
-  },
-  {
-    name: "Estratégia de Branding",
-    emoji: "🌟",
-    category: "marketing",
-    description:
-      "Um bot que ajuda a desenvolver estratégias de branding para fortalecer a identidade da marca.",
-    fileName: "branding-strategy-bot.json",
   },
   {
     name: "Estratégias de Retenção",
@@ -528,14 +512,6 @@ export const templates: TemplateProps[] = [
     description:
       "Um bot que gera relatórios financeiros detalhados com base em informações financeiras.",
     fileName: "financial-reports-bot.json",
-  },
-  {
-    name: "Gestão Funil de Vendas",
-    emoji: "📊",
-    category: "vendas",
-    description:
-      "Um assistente de vendas que ajuda a gerenciar e otimizar seu funil de vendas, identificando oportunidades e acompanhando leads.",
-    fileName: "sales-funnel-management.json",
   },
   {
     name: "Onboarding de Clientes",
@@ -579,13 +555,6 @@ export const templates: TemplateProps[] = [
     category: "marketing",
     description:
       "Acompanha e analisa as menções da sua marca nas redes sociais.",
-    fileName: "customer-needs-assessment.json",
-  },
-  {
-    name: "Gerenciamento de Conteúdo",
-    emoji: "📋",
-    category: "marketing",
-    description: "Ajuda a gerenciar e distribuir conteúdo de marketing.",
     fileName: "customer-needs-assessment.json",
   },
   {
@@ -739,13 +708,6 @@ export const templates: TemplateProps[] = [
     fileName: "customer-needs-assessment.json",
   },
   {
-    name: "Análise de Redes Sociais",
-    emoji: "📊",
-    category: "marketing",
-    description: "Coleta e analisa dados de mídias sociais.",
-    fileName: "customer-needs-assessment.json",
-  },
-  {
     name: "Resposta a Incidentes",
     emoji: "🚨",
     category: "atendimento",
@@ -833,14 +795,6 @@ export const templates: TemplateProps[] = [
     description:
       "Realiza análise competitiva de mercado para tomada de decisões estratégicas.",
     fileName: "competitive-analysis.json",
-  },
-  {
-    name: "Parcerias Estratégicas",
-    emoji: "🤝",
-    category: "marketing",
-    description:
-      "Gerencia parcerias estratégicas para crescimento de negócios.",
-    fileName: "strategic-partnership-management.json",
   },
   {
     name: "Coleta de Necessidades",
