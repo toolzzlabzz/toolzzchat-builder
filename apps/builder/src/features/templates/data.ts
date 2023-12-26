@@ -276,9 +276,9 @@ export const templates: TemplateProps[] = [
   },
   {
     name: 'Gerenciamento de Projetos',
-    emoji: '📊',
+    emoji: '📋',
     fileName: 'project-management.json',
-    category: 'tecnologia',
+    category: 'gestão-projetos',
     description:
       'Um bot que auxilia no gerenciamento de projetos de TI, organizando tarefas, prazos e recursos, facilitando a comunicação entre as equipes.',
   },

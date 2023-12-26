@@ -130,6 +130,7 @@ export const TemplatesModal = ({
               {renderCategory('customer-experience')}
               {renderCategory('marketing')}
               {renderCategory('product')}
+              {renderCategory('gestão-projetos')}
               {renderCategory('tecnologia')}
               {renderCategory('relatórios')}
               {renderCategory('recomendação')}
