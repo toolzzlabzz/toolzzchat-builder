@@ -968,14 +968,14 @@ export const templates: TemplateProps[] = [
 {
     name: 'Análise Competitiva',
     emoji: '📈',
-    category: 'estratégia',
+    category: 'marketing',
     description: 'Realiza análise competitiva de mercado para tomada de decisões estratégicas.',
     fileName: 'competitive-analysis.json'
 },
 {
     name: 'Gestão de Parcerias Estratégicas',
     emoji: '🤝',
-    category: 'estratégia',
+    category: 'marketing',
     description: 'Gerencia parcerias estratégicas para crescimento de negócios.',
     fileName: 'strategic-partnership-management.json'
 },
