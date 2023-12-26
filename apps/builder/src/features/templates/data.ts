@@ -518,13 +518,6 @@ export const templates: TemplateProps[] = [
     fileName: 'sales-funnel-management.json'
   },
   {
-    name: 'Qualificação de Leads',
-    emoji: '🤝',
-    category: 'marketing',
-    description: 'Gerar novos leads interessados nos seus serviços.',
-    fileName: 'customer-needs-assessment.json'
-  },
-  {
     name: 'Automação de Onboarding de Clientes',
     emoji: '🚀',
     category: 'customer-success',
@@ -581,7 +574,7 @@ export const templates: TemplateProps[] = [
     fileName: 'customer-needs-assessment.json'
   },
   {
-    name: 'Agendamento de Demo de Produto',
+    name: 'Agendamento de Demonstração',
     emoji: '📅',
     category: 'vendas',
     description: 'Automatiza o agendamento de demonstrações de produtos para leads interessados.',
@@ -589,13 +582,13 @@ export const templates: TemplateProps[] = [
   },
   {
     name: 'Ativação de Cliente',
-    emoji: '👥',
+    emoji: '🚪',
     category: 'customer-success',
     description: 'Ajuda a ativar e engajar clientes após a aquisição.',
     fileName: 'customer-needs-assessment.json'
   },
   {
-    name: 'Upsell e Cross-Sell Automatizado',
+    name: 'Upsell e Cross-Sell',
     emoji: '💼',
     category: 'vendas',
     description: 'Promove automaticamente upsells e cross-sells para clientes existentes.',
@@ -756,13 +749,6 @@ export const templates: TemplateProps[] = [
     fileName: 'customer-needs-assessment.json'
   },
   {
-    name: 'Engajamento de Usuário',
-    emoji: '🤝',
-    category: 'marketing',
-    description: 'Cria interações personalizadas para aumentar o engajamento.',
-    fileName: 'customer-needs-assessment.json'
-  },
-  {
     name: 'Controle de Versão',
     emoji: '🔄',
     category: 'tecnologia',
@@ -910,7 +896,7 @@ export const templates: TemplateProps[] = [
     fileName: 'competitive-analysis.json'
 },
 {
-    name: 'Gestão de Parcerias Estratégicas',
+    name: 'Parcerias Estratégicas',
     emoji: '🤝',
     category: 'marketing',
     description: 'Gerencia parcerias estratégicas para crescimento de negócios.',
@@ -924,14 +910,14 @@ export const templates: TemplateProps[] = [
     fileName: 'customer-needs-assessment.json'
   },
   {
-    name: 'Acompanhamento do Cliente',
-    emoji: '👥',
+    name: 'Sucesso do Cliente',
+    emoji: '😍',
     category: 'customer-success',
     description: 'Um assistente de acompanhamento que garante que os clientes alcancem seus objetivos e estejam satisfeitos com seus produtos ou serviços.',
     fileName: 'customer-success-follow-up.json'
   },
   {
-    name: 'Análise de Experiência do Cliente',
+    name: 'Experiência do Cliente',
     emoji: '📈',
     category: 'customer-experience',
     description: 'Um assistente que analisa a experiência do cliente em vários pontos de contato e fornece insights para melhorias.',
