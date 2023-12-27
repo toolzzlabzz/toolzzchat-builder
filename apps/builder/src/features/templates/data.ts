@@ -99,6 +99,30 @@ export const templates: TemplateProps[] = [
       "Um bot cuja função é extrair relatórios do Toolzz LMS em minutos e enviar para o email do solicitante",
   },
   {
+    name: "Criar curso no LMS",
+    emoji: "📖",
+    fileName: "lms-criar-curso.json",
+    category: "educação",
+    description:
+      "Um bot cuja função é auxiliar o admin do Toolzz LMS a criar um curso",
+  },
+  {
+    name: "Criar trilha no LMS",
+    emoji: "🏔️",
+    fileName: "lms-criar-trilha.json",
+    category: "educação",
+    description:
+      "Um bot cuja função é auxiliar o admin do Toolzz LMS a criar uma Trilha",
+  },
+  {
+    name: "Cadastrar usuário no LMS",
+    emoji: "👤",
+    fileName: "lms-cadastrar-user.json",
+    category: "educação",
+    description:
+      "Um bot cuja função é auxiliar o admin do Toolzz LMS na gestão de membros",
+  },
+  {
     name: "Criar tarefa no Pipefy",
     emoji: "📤",
     fileName: "criar-task-pipefy.json",
@@ -690,6 +714,22 @@ export const templates: TemplateProps[] = [
     category: "financeiro",
     description: "Facilita o relacionamento com investidores e acionistas.",
     fileName: "ri.json",
+  },
+  {
+    name: "Simulador de Valuation",
+    emoji: "💸",
+    fileName: "valuation.json",
+    category: "financeiro",
+    description:
+      "Um bot que auxilia o empreendedor a simular o valuation e gerar um PDF com o resumo das suas respostas",
+  },
+  {
+    name: "Análise de Valuation com IA",
+    emoji: "🤖",
+    fileName: "valuation-review.json",
+    category: "financeiro",
+    description:
+      "Um bot que auxilia o fundo de investimento a analisar o plano de negocios e simular o valuation e gerar um PDF com o resumo das respostas do empreendedor",
   },
   {
     name: "Roadmap de Produtos",
