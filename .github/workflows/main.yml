@@ -23,6 +23,9 @@ jobs:
     - name: Set DATABASE_URL
       run: echo "DATABASE_URL=${{ secrets.DATABASE_URL }}" >> $GITHUB_ENV
 
+    - name: Install pnpm
+      run: npm install -g pnpm
+
     - name: Install dependencies
       run: pnpm install
 
