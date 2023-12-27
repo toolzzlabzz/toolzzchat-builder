@@ -479,7 +479,7 @@ export const templates: TemplateProps[] = [
     "description": "Um bot que oferece módulos de treinamento para garantir que os colaboradores estejam atualizados com as regulamentações."
   },
   {
-    "name": "Gestão de Propriedade Intelectual",
+    "name": "Propriedade Intelectual",
     "emoji": "🛡️",
     "fileName": "intellectual-property-management.json",
     "category": "jurídico",
