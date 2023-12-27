@@ -244,6 +244,14 @@ export const templates: TemplateProps[] = [
       "Um bot que responde a perguntas frequentes sobre o seu produto ou serviço.",
   },
   {
+    name: "Abertura de Vagas",
+    emoji: "💼",
+    fileName: "job-opening.json",
+    category: "rh",
+    description:
+      "Um bot que auxilia no processo de abertura de vagas, coletando informações sobre os cargos disponíveis e orientando os funcionários sobre como se candidatar.",
+  },
+  {
     name: "Recrutamento e Seleção",
     emoji: "👥",
     fileName: "recruitment-selection.json",
@@ -268,20 +276,20 @@ export const templates: TemplateProps[] = [
       "Um bot que envia um comunicado ou diretriz para os colaboradores via e-mail, discord e whatsapp.",
   },
   {
+    name: "Metas e OKR",
+    emoji: "🎯",
+    fileName: "metas-e-okr.json",
+    category: "rh",
+    description:
+      "Um bot que auxilia o departamento de RH no processo de gestão e distribuição de metas e OKR",
+  },
+  {
     name: "Avaliação de Desempenho",
     emoji: "📈",
     fileName: "performance-evaluation.json",
     category: "rh",
     description:
       "Um bot que facilita o processo de avaliação de desempenho dos funcionários, permitindo que eles preencham formulários de avaliação e acompanhem feedbacks.",
-  },
-  {
-    name: "Abertura de Vagas",
-    emoji: "💼",
-    fileName: "job-opening.json",
-    category: "rh",
-    description:
-      "Um bot que auxilia no processo de abertura de vagas, coletando informações sobre os cargos disponíveis e orientando os funcionários sobre como se candidatar.",
   },
   {
     name: "ChatGPT Básico",
@@ -448,6 +456,48 @@ export const templates: TemplateProps[] = [
     description:
       "Um assistente que ajuda na criação e revisão de documentos legais, economizando tempo e garantindo precisão.",
     fileName: "legal-document-assistant.json",
+  },
+  {
+    "name": "FAQ Legal",
+    "emoji": "❓",
+    "fileName": "legal-faq.json",
+    "category": "jurídico",
+    "description": "Um bot que responde a perguntas frequentes sobre questões legais da empresa."
+  },
+  {
+    "name": "Alertas de Compliance",
+    "emoji": "🚨",
+    "fileName": "compliance-alerts.json",
+    "category": "jurídico",
+    "description": "Notificações sobre atualizações ou mudanças em leis relevantes para a empresa."
+  },
+  {
+    "name": "Treinamento de Compliance",
+    "emoji": "📚",
+    "fileName": "compliance-training.json",
+    "category": "jurídico",
+    "description": "Um bot que oferece módulos de treinamento para garantir que os colaboradores estejam atualizados com as regulamentações."
+  },
+  {
+    "name": "Gestão de Propriedade Intelectual",
+    "emoji": "🛡️",
+    "fileName": "intellectual-property-management.json",
+    "category": "jurídico",
+    "description": "Auxiliar no rastreamento e gestão de patentes, marcas registradas e direitos autorais."
+  },
+  {
+    "name": "Gestão de Litígios e Processos",
+    "emoji": "⚖️",
+    "fileName": "litigation-management.json",
+    "category": "jurídico",
+    "description": "Organizar informações sobre casos em andamento e prazos legais."
+  },
+  {
+    "name": "Automatização de Due Diligence",
+    "emoji": "🔍",
+    "fileName": "due-diligence-automation.json",
+    "category": "jurídico",
+    "description": "Coletar e analisar dados para processos de due diligence."
   },
   {
     name: "Tendências de Mercado",
@@ -796,6 +846,13 @@ export const templates: TemplateProps[] = [
     fileName: "feature-cost-benefit-analysis.json",
   },
   {
+    name: "Notificar promoções",
+    emoji: "🏷️",
+    category: "vendas",
+    description: "Bot que envia notificações de promoções automaticas para base de leads ou clientes",
+    fileName: "promocoes.json",
+  },
+  {
     name: "Análise Competitiva",
     emoji: "📈",
     category: "marketing",
@@ -818,6 +875,14 @@ export const templates: TemplateProps[] = [
     description:
       "Um assistente que analisa a experiência do cliente em vários pontos de contato e fornece insights para melhorias.",
     fileName: "customer-experience-analysis.json",
+  },
+  {
+    name: "Criar um novo tutorial",
+    emoji: "📃",
+    category: "customer-experience",
+    description:
+      "Um bot que cria um novo tutorial na Central de Ajuda do Toolzz Chat",
+    fileName: "criar-tutorial.json",
   },
   {
     name: "Mapeamento de Jornada",
