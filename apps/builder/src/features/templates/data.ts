@@ -260,6 +260,14 @@ export const templates: TemplateProps[] = [
       "Um bot que orienta os novos colaboradores durante o processo de onboarding, apresentando a empresa, sua cultura, políticas e procedimentos.",
   },
   {
+    name: "Enviar comunicado ou diretriz",
+    emoji: "📢",
+    fileName: "comunicado-diretriz.json",
+    category: "rh",
+    description:
+      "Um bot que envia um comunicado ou diretriz para os colaboradores via e-mail, discord e whatsapp.",
+  },
+  {
     name: "Avaliação de Desempenho",
     emoji: "📈",
     fileName: "performance-evaluation.json",
@@ -605,7 +613,7 @@ export const templates: TemplateProps[] = [
   },
   {
     name: "Benefícios dos Funcionários",
-    emoji: "👥",
+    emoji: "🎁",
     category: "rh",
     description: "Gerencia os benefícios oferecidos aos funcionários.",
     fileName: "customer-needs-assessment.json",
@@ -677,13 +685,6 @@ export const templates: TemplateProps[] = [
     category: "tecnologia",
     description:
       "Facilita a revisão de código e colaboração entre desenvolvedores.",
-    fileName: "customer-needs-assessment.json",
-  },
-  {
-    name: "Otimização de Jornada do Cliente",
-    emoji: "🌟",
-    category: "customer-experience",
-    description: "Otimiza a jornada do cliente para aumentar a retenção.",
     fileName: "customer-needs-assessment.json",
   },
   {
