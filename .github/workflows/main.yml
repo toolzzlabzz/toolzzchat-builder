@@ -1,0 +1,30 @@
+name: Main Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14
+
+    - name: Set DATABASE_URL environment variable
+      run: echo "DATABASE_URL=${{ secrets.DB_URL }}" >> $GITHUB_ENV
+
+    - name: Install dependencies
+      run: pnpm install
+
+    - name: Run checkAndReportChatsUsage
+      run: pnpm turbo run checkAndReportChatsUsage
