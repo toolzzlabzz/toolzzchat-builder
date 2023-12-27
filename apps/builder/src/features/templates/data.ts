@@ -167,7 +167,7 @@ export const templates: TemplateProps[] = [
     name: "Pesquisa NPS",
     emoji: "⭐",
     fileName: "nps.json",
-    category: "customer-success",
+    category: "customer-experience",
     description:
       "Uma simples pesquisa NPS para medir a satisfação do cliente e melhorar o seu produto.",
   },
@@ -662,11 +662,19 @@ export const templates: TemplateProps[] = [
     fileName: "customer-needs-assessment.json",
   },
   {
+    name: "Sprint Poker",
+    emoji: "🎲",
+    category: "tecnologia",
+    description:
+      "Ajuda o processo de SCRUM do time ao criar o Sprint Poker",
+    fileName: "sprint-poker.json",
+  },
+  {
     name: "Benefícios dos Funcionários",
     emoji: "🎁",
     category: "rh",
     description: "Gerencia os benefícios oferecidos aos funcionários.",
-    fileName: "customer-needs-assessment.json",
+    fileName: "beneficios.json",
   },
   {
     name: "Solicitação de Férias",
@@ -674,14 +682,14 @@ export const templates: TemplateProps[] = [
     category: "rh",
     description:
       "Bot para solicitação de férias de colaboradores",
-    fileName: "customer-needs-assessment.json",
+    fileName: "ferias.json",
   },
   {
     name: "Relacionamento com Investidores",
     emoji: "💼",
     category: "financeiro",
     description: "Facilita o relacionamento com investidores e acionistas.",
-    fileName: "customer-needs-assessment.json",
+    fileName: "ri.json",
   },
   {
     name: "Roadmap de Produtos",
@@ -689,21 +697,21 @@ export const templates: TemplateProps[] = [
     category: "product",
     description:
       "Ajuda a gerenciar e planejar o roadmap de desenvolvimento de produtos.",
-    fileName: "customer-needs-assessment.json",
+    fileName: "roadmap.json",
   },
   {
     name: "Coleta de Dados de Pesquisa",
     emoji: "📊",
     category: "product",
     description: "Coleta e analisa dados de pesquisa de mercado para insights.",
-    fileName: "customer-needs-assessment.json",
+    fileName: "coleta-dados.json",
   },
   {
     name: "Treinamento de Vendas",
     emoji: "📚",
     category: "vendas",
     description: "Fornece treinamento em vendas para a equipe de vendas.",
-    fileName: "customer-needs-assessment.json",
+    fileName: "treinamento-vendas.json",
   },
   {
     name: "Suporte Pós-Implementação",
@@ -711,7 +719,7 @@ export const templates: TemplateProps[] = [
     category: "atendimento",
     description:
       "Oferece suporte após a implementação de produtos ou serviços.",
-    fileName: "customer-needs-assessment.json",
+    fileName: "suporte-pos-setup.json",
   },
   {
     name: "Criar nova Sprint",
@@ -719,7 +727,15 @@ export const templates: TemplateProps[] = [
     category: "gestão-projetos",
     description:
       "Cria uma nova sprint. Facilita a gestão de projetos ágeis e equipes de desenvolvimento.",
-    fileName: "customer-needs-assessment.json",
+    fileName: "criar-nova-sprint.json",
+  },
+  {
+    name: "Priorizar Backlog",
+    emoji: "📚",
+    category: "gestão-projetos",
+    description:
+      "Facilita o P.O a gerenciar o backlog da sprint desejada.",
+    fileName: "criar-nova-sprint.json",
   },
   {
     name: "Controle de Qualidade",
