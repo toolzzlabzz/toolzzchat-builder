@@ -20,6 +20,9 @@ jobs:
       with:
         node-version: 14
 
+    - name: Install pnpm
+      run: npm install -g pnpm
+
     - name: Set DATABASE_URL environment variable
       run: echo "DATABASE_URL=${{ secrets.DB_URL }}" >> $GITHUB_ENV
 
