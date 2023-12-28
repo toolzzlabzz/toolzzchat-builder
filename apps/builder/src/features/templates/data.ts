@@ -99,6 +99,14 @@ export const templates: TemplateProps[] = [
       "Um bot cuja função é extrair relatórios do Toolzz LMS em minutos e enviar para o email do solicitante",
   },
   {
+    name: "Solicitar Relatórios do LMS",
+    emoji: "📊",
+    fileName: "lms-reports.json",
+    category: "relatórios",
+    description:
+      "Um bot cuja função é extrair relatórios do Toolzz LMS em minutos e enviar para o email do solicitante",
+  },
+  {
     name: "Criar curso no LMS",
     emoji: "📖",
     fileName: "lms-criar-curso.json",
@@ -139,6 +147,14 @@ export const templates: TemplateProps[] = [
       "Esse bot te ajuda a criar um novo projeto de forma organizada e já criar as automações necessarias para gestão ",
   },
   {
+    name: "Criar novo board no pipe",
+    emoji: "🆕",
+    fileName: "criar-novo-board.json",
+    category: "gestão-projetos",
+    description:
+      "Esse bot te ajuda a criar um novo board no pipefy de forma organizada ",
+  },
+  {
     name: "Solicitar Status Report",
     emoji: "📋",
     fileName: "solicitar-status-report.json",
@@ -177,6 +193,30 @@ export const templates: TemplateProps[] = [
     category: "produtividade",
     description:
       "Um bot cuja função é gerar tarefas com base na transcrição de uma reunião",
+  },
+  {
+    name: "Criar plano de negócios",
+    emoji: "📑",
+    fileName: "criar-business-plan.json",
+    category: "negócios",
+    description:
+      "Esse bot te ajuda a criar um business plan e gera um PDF no final",
+  },
+  {
+    name: "Criar Business Model Canvas",
+    emoji: "📦",
+    fileName: "criar-canvas.json",
+    category: "negócios",
+    description:
+      "Esse bot te ajuda a criar um business model canvas",
+  },
+  {
+    name: "Análise S.W.O.T",
+    emoji: "🤔",
+    fileName: "criar-swot.json",
+    category: "negócios",
+    description:
+      "Esse bot te ajuda a realizar uma análise swot",
   },
   {
     name: "Pontuação de Leads",

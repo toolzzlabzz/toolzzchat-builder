@@ -134,6 +134,7 @@ export const TemplatesModal = ({
               {renderCategory('tecnologia')}
               {renderCategory('relatórios')}
               {renderCategory('recomendação')}
+              {renderCategory('negócios')}
               {renderCategory('populares')}
               {renderCategory('other')}
              
