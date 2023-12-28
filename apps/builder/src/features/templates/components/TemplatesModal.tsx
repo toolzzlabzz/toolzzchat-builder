@@ -136,6 +136,7 @@ export const TemplatesModal = ({
               {renderCategory('recomendação')}
               {renderCategory('negócios')}
               {renderCategory('populares')}
+              {renderCategory('saúde')}
               {renderCategory('other')}
              
             </Stack>

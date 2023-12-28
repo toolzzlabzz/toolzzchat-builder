@@ -10,6 +10,14 @@ export const templates: TemplateProps[] = [
       "Você é uma agência de marketing e este bot permite gerar novos leads interessados nos seus serviços.",
   },
   {
+    name: "Chatbot no Whatsapp",
+    emoji: "📞",
+    fileName: "customer-support.json",
+    category: "atendimento",
+    description:
+      "Um bot no whatsapp cuja função é coletar feedback dos usuários: perguntas, bugs e solicitações de recursos.",
+  },
+  {
     name: "Suporte ao Cliente",
     emoji: "😍",
     fileName: "customer-support.json",
@@ -1028,4 +1036,36 @@ export const templates: TemplateProps[] = [
       "Um assistente que coleta feedback contínuo dos clientes por meio de pesquisas e avaliações para melhorias constantes.",
     fileName: "customer-feedback-collection.json",
   },
+  {
+    name: "Triagem Médica Online",
+    emoji: "💊",
+    fileName: "triagem-medica-online.json",
+    category: "saúde",
+    description:
+    "Este bot realiza uma triagem médica interativa, fazendo perguntas sobre sintomas e histórico médico para avaliar a gravidade e fornecer recomendações.",
+    },
+    {
+    name: "Agendamento de Consultas Médicas",
+    emoji: "📅",
+    fileName: "agendamento-consultas-medicas.json",
+    category: "saúde",
+    description:
+    "Este bot permite que os pacientes agendem consultas médicas com base na disponibilidade do médico e das instalações.",
+    },
+    {
+      name: "Coleta de Dados - Plano de Saúde",
+      emoji: "📄",
+      fileName: "coleta-dados-plano-saude.json",
+      category: "saúde",
+      description:
+        "Este bot ajuda os usuários a inserir informações sobre seus planos de saúde, incluindo número da apólice, rede de prestadores e cobertura.",
+    },
+    {
+      name: "Encontre Profissionais de Saúde",
+      emoji: "👩‍⚕️👨‍⚕️",
+      fileName: "encontre-profissionais-saude.json",
+      category: "saúde",
+      description:
+        "Este bot permite que você encontre profissionais de saúde, como médicos, enfermeiros e fisioterapeutas, com base em sua localização e especialização desejada.",
+    }
 ];
