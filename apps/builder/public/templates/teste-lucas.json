@@ -38,12 +38,12 @@
           "items": [
             {
               "id": "fQ8oLDnKmDBuPDK7riJ2kt",
-              "outgoingEdgeId": "dhniFxrsH5r54aEE5JXwK2",
+              "outgoingEdgeId": "2C4mhU5o2Hdm7dztR9xNE9",
               "content": "Agendar Setup/Implantação"
             },
             {
               "id": "h2rFDX2UnKS4Kdu3Eyuqq3",
-              "outgoingEdgeId": "2C4mhU5o2Hdm7dztR9xNE9",
+              "outgoingEdgeId": "dhniFxrsH5r54aEE5JXwK2",
               "content": "Agendar Consultoria"
             },
             {
@@ -216,7 +216,7 @@
       "id": "dhniFxrsH5r54aEE5JXwK2",
       "from": {
         "blockId": "s6kp2Z4igeY3kL7B64qBdUg",
-        "itemId": "fQ8oLDnKmDBuPDK7riJ2kt"
+        "itemId": "h2rFDX2UnKS4Kdu3yEyuqq3"
       },
       "to": { "groupId": "kyK8JQ77NodUYaz3JLS88A" }
     },
@@ -224,7 +224,7 @@
       "id": "2C4mhU5o2Hdm7dztR9xNE9",
       "from": {
         "blockId": "s6kp2Z4igeY3kL7B64qBdUg",
-        "itemId": "h2rFDX2UnKS4Kdu3Eyuqq3"
+        "itemId": "fQ8oLDnKmDBuPDK7riJ2kt"
       },
       "to": { "groupId": "7MuqF6nen1ZTwGB53Mz8VY" }
     },
@@ -261,7 +261,7 @@
   "settings": {},
   "createdAt": "2023-11-07T07:20:05.823Z",
   "updatedAt": "2023-11-07T07:24:28.824Z",
-  "icon": "😍",
+  "icon": "📆",
   "folderId": null,
   "publicId": null,
   "customDomain": null,
