@@ -1061,16 +1061,16 @@ export const templates: TemplateProps[] = [
     "Este bot realiza uma triagem médica interativa, fazendo perguntas sobre sintomas e histórico médico para avaliar a gravidade e fornecer recomendações.",
     },
     {
-    name: "Agendamento de Consultas Médicas",
-    emoji: "📅",
+    name: "Agendamento de Consultas",
+    emoji: "🩺",
     fileName: "agendamento-consultas-medicas.json",
     category: "saúde",
     description:
     "Este bot permite que os pacientes agendem consultas médicas com base na disponibilidade do médico e das instalações.",
     },
     {
-      name: "Coleta de Dados - Plano de Saúde",
-      emoji: "📄",
+      name: "Formulário - Plano de Saúde",
+      emoji: "📋",
       fileName: "coleta-dados-plano-saude.json",
       category: "saúde",
       description:
@@ -1078,7 +1078,7 @@ export const templates: TemplateProps[] = [
     },
     {
       name: "Encontre Profissionais de Saúde",
-      emoji: "👩‍⚕️👨‍⚕️",
+      emoji: "👩‍⚕️",
       fileName: "encontre-profissionais-saude.json",
       category: "saúde",
       description:
