@@ -179,6 +179,22 @@ export const templates: TemplateProps[] = [
       "Um bot cuja função é facilitar o agendamento de reuniões no Google Meet.",
   },
   {
+    name: "Agendamento de Serviços",
+    emoji: "🗓️",
+    fileName: "agendamento-servicos.json",
+    category: "other",
+    description:
+      "Um bot cuja função é facilitar o agendamento de serviços",
+  },
+  {
+    name: "Consultar status entrega",
+    emoji: "🚚",
+    fileName: "entrega-log.json",
+    category: "other",
+    description:
+      "Um bot cuja função é facilitar a consulta do status de uma entrega",
+  },
+  {
     name: "Gerar resumo da reunião",
     emoji: "🎙️",
     fileName: "resumo-reunioes.json",
