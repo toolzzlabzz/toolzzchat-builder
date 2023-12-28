@@ -183,8 +183,7 @@ export const templates: TemplateProps[] = [
     emoji: "🗓️",
     fileName: "teste-lucas.json",
     category: "outros",
-    description:
-      "Um bot cuja função é facilitar o agendamento de serviços",
+    description: "Um bot cuja função é facilitar o agendamento de serviços",
   },
   {
     name: "Consultar status entrega",
@@ -223,8 +222,7 @@ export const templates: TemplateProps[] = [
     emoji: "📐",
     fileName: "gerar-fluxograma.json",
     category: "produtividade",
-    description:
-      "Um bot cuja função é gerar um fluxograma com base no input",
+    description: "Um bot cuja função é gerar um fluxograma com base no input",
   },
   {
     name: "Criar plano de negócios",
@@ -239,8 +237,7 @@ export const templates: TemplateProps[] = [
     emoji: "📦",
     fileName: "criar-canvas.json",
     category: "negócios",
-    description:
-      "Esse bot te ajuda a criar um business model canvas",
+    description: "Esse bot te ajuda a criar um business model canvas",
   },
   {
     name: "Criar Pitch Deck",
@@ -255,8 +252,7 @@ export const templates: TemplateProps[] = [
     emoji: "🤔",
     fileName: "criar-swot.json",
     category: "negócios",
-    description:
-      "Esse bot te ajuda a realizar uma análise swot",
+    description: "Esse bot te ajuda a realizar uma análise swot",
   },
   {
     name: "Pontuação de Leads",
@@ -418,9 +414,9 @@ export const templates: TemplateProps[] = [
     category: "populares",
     description:
       "Um bot que usa o modelo ChatGPT para gerar respostas com base na entrada do usuário.",
-      isNew: true,
+    isNew: true,
   },
-  
+
   {
     name: "ChatGPT de Áudio",
     emoji: "🤖",
@@ -437,7 +433,7 @@ export const templates: TemplateProps[] = [
     category: "populares",
     description:
       "Um bot que usa o modelo ChatGPT para gerar respostas com base na entrada do usuário e na persona selecionada.",
-      isNew: true,
+    isNew: true,
   },
   {
     name: "Condições OpenAI",
@@ -453,10 +449,9 @@ export const templates: TemplateProps[] = [
     emoji: "👁️",
     fileName: "vision-chat-gpt.json",
     category: "populares",
-    description:
-      "Um bot que usa o modelo GPT4-Vision para analisar imagens.",
-      isNew: true,
-      isComingSoon: true,
+    description: "Um bot que usa o modelo GPT4-Vision para analisar imagens.",
+    isNew: true,
+    isComingSoon: true,
   },
   {
     name: "GPT Assistant",
@@ -465,8 +460,8 @@ export const templates: TemplateProps[] = [
     category: "populares",
     description:
       "Um bot que permite você se integrar com seu Assistant criado na OpenAI",
-      isNew: true,
-      isComingSoon: true,
+    isNew: true,
+    isComingSoon: true,
   },
   {
     name: "Geração de Leads com IA",
@@ -578,46 +573,51 @@ export const templates: TemplateProps[] = [
     fileName: "legal-document-assistant.json",
   },
   {
-    "name": "FAQ Legal",
-    "emoji": "❓",
-    "fileName": "legal-faq.json",
-    "category": "jurídico",
-    "description": "Um bot que responde a perguntas frequentes sobre questões legais da empresa."
+    name: "FAQ Legal",
+    emoji: "❓",
+    fileName: "legal-faq.json",
+    category: "jurídico",
+    description:
+      "Um bot que responde a perguntas frequentes sobre questões legais da empresa.",
   },
   {
-    "name": "Alertas de Compliance",
-    "emoji": "🚨",
-    "fileName": "compliance-alerts.json",
-    "category": "jurídico",
-    "description": "Notificações sobre atualizações ou mudanças em leis relevantes para a empresa."
+    name: "Alertas de Compliance",
+    emoji: "🚨",
+    fileName: "compliance-alerts.json",
+    category: "jurídico",
+    description:
+      "Notificações sobre atualizações ou mudanças em leis relevantes para a empresa.",
   },
   {
-    "name": "Treinamento de Compliance",
-    "emoji": "📚",
-    "fileName": "compliance-training.json",
-    "category": "jurídico",
-    "description": "Um bot que oferece módulos de treinamento para garantir que os colaboradores estejam atualizados com as regulamentações."
+    name: "Treinamento de Compliance",
+    emoji: "📚",
+    fileName: "compliance-training.json",
+    category: "jurídico",
+    description:
+      "Um bot que oferece módulos de treinamento para garantir que os colaboradores estejam atualizados com as regulamentações.",
   },
   {
-    "name": "Propriedade Intelectual",
-    "emoji": "🛡️",
-    "fileName": "intellectual-property-management.json",
-    "category": "jurídico",
-    "description": "Auxiliar no rastreamento e gestão de patentes, marcas registradas e direitos autorais."
+    name: "Propriedade Intelectual",
+    emoji: "🛡️",
+    fileName: "intellectual-property-management.json",
+    category: "jurídico",
+    description:
+      "Auxiliar no rastreamento e gestão de patentes, marcas registradas e direitos autorais.",
   },
   {
-    "name": "Gestão de Litígios e Processos",
-    "emoji": "⚖️",
-    "fileName": "litigation-management.json",
-    "category": "jurídico",
-    "description": "Organizar informações sobre casos em andamento e prazos legais."
+    name: "Gestão de Litígios e Processos",
+    emoji: "⚖️",
+    fileName: "litigation-management.json",
+    category: "jurídico",
+    description:
+      "Organizar informações sobre casos em andamento e prazos legais.",
   },
   {
-    "name": "Automatização de Due Diligence",
-    "emoji": "🔍",
-    "fileName": "due-diligence-automation.json",
-    "category": "jurídico",
-    "description": "Coletar e analisar dados para processos de due diligence."
+    name: "Automatização de Due Diligence",
+    emoji: "🔍",
+    fileName: "due-diligence-automation.json",
+    category: "jurídico",
+    description: "Coletar e analisar dados para processos de due diligence.",
   },
   {
     name: "Tendências de Mercado",
@@ -785,8 +785,7 @@ export const templates: TemplateProps[] = [
     name: "Sprint Poker",
     emoji: "🎲",
     category: "tecnologia",
-    description:
-      "Ajuda o processo de SCRUM do time ao criar o Sprint Poker",
+    description: "Ajuda o processo de SCRUM do time ao criar o Sprint Poker",
     fileName: "sprint-poker.json",
   },
   {
@@ -800,8 +799,7 @@ export const templates: TemplateProps[] = [
     name: "Solicitação de Férias",
     emoji: "🏖️",
     category: "rh",
-    description:
-      "Bot para solicitação de férias de colaboradores",
+    description: "Bot para solicitação de férias de colaboradores",
     fileName: "ferias.json",
   },
   {
@@ -869,8 +867,7 @@ export const templates: TemplateProps[] = [
     name: "Priorizar Backlog",
     emoji: "📚",
     category: "gestão-projetos",
-    description:
-      "Facilita o P.O a gerenciar o backlog da sprint desejada.",
+    description: "Facilita o P.O a gerenciar o backlog da sprint desejada.",
     fileName: "criar-nova-sprint.json",
   },
   {
@@ -1001,7 +998,8 @@ export const templates: TemplateProps[] = [
     name: "Notificar promoções",
     emoji: "🏷️",
     category: "vendas",
-    description: "Bot que envia notificações de promoções automaticas para base de leads ou clientes",
+    description:
+      "Bot que envia notificações de promoções automaticas para base de leads ou clientes",
     fileName: "promocoes.json",
   },
   {
@@ -1058,30 +1056,30 @@ export const templates: TemplateProps[] = [
     fileName: "triagem-medica-online.json",
     category: "saúde",
     description:
-    "Este bot realiza uma triagem médica interativa, fazendo perguntas sobre sintomas e histórico médico para avaliar a gravidade e fornecer recomendações.",
-    },
-    {
+      "Este bot realiza uma triagem médica interativa, fazendo perguntas sobre sintomas e histórico médico para avaliar a gravidade e fornecer recomendações.",
+  },
+  {
     name: "Agendamento de Consultas",
     emoji: "🩺",
     fileName: "agendamento-consultas-medicas.json",
     category: "saúde",
     description:
-    "Este bot permite que os pacientes agendem consultas médicas com base na disponibilidade do médico e das instalações.",
-    },
-    {
-      name: "Formulário - Plano de Saúde",
-      emoji: "📋",
-      fileName: "coleta-dados-plano-saude.json",
-      category: "saúde",
-      description:
-        "Este bot ajuda os usuários a inserir informações sobre seus planos de saúde, incluindo número da apólice, rede de prestadores e cobertura.",
-    },
-    {
-      name: "Encontre Profissionais de Saúde",
-      emoji: "👩‍⚕️",
-      fileName: "encontre-profissionais-saude.json",
-      category: "saúde",
-      description:
-        "Este bot permite que você encontre profissionais de saúde, como médicos, enfermeiros e fisioterapeutas, com base em sua localização e especialização desejada.",
-    }
+      "Este bot permite que os pacientes agendem consultas médicas com base na disponibilidade do médico e das instalações.",
+  },
+  {
+    name: "Formulário - Plano de Saúde",
+    emoji: "📋",
+    fileName: "coleta-dados-plano-saude.json",
+    category: "saúde",
+    description:
+      "Este bot ajuda os usuários a inserir informações sobre seus planos de saúde, incluindo número da apólice, rede de prestadores e cobertura.",
+  },
+  {
+    name: "Encontre Profissionais de Saúde",
+    emoji: "👩‍⚕️",
+    fileName: "encontre-profissionais-saude.json",
+    category: "saúde",
+    description:
+      "Este bot permite que você encontre profissionais de saúde, como médicos, enfermeiros e fisioterapeutas, com base em sua localização e especialização desejada.",
+  },
 ];
