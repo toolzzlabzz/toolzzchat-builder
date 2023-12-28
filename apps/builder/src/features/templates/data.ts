@@ -189,6 +189,7 @@ export const templates: TemplateProps[] = [
     name: "Consultar status entrega",
     emoji: "🚚",
     fileName: "entrega-log.json",
+    category: "outros",
     description:
       "Um bot cuja função é facilitar a consulta do status de uma entrega",
   },
@@ -197,6 +198,7 @@ export const templates: TemplateProps[] = [
     emoji: "🎙️",
     fileName: "resumo-reunioes.json",
     category: "produtividade",
+    category: "outros",
     description:
       "Um bot cuja função é gerar um resumo da transcrição da reunião gravada.",
   },
