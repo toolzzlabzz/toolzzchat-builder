@@ -182,6 +182,7 @@ export const templates: TemplateProps[] = [
     name: "Agendamento de Serviços",
     emoji: "🗓️",
     fileName: "agendamento-servicos.json",
+    category: "outros",
     description:
       "Um bot cuja função é facilitar o agendamento de serviços",
   },
@@ -198,7 +199,6 @@ export const templates: TemplateProps[] = [
     emoji: "🎙️",
     fileName: "resumo-reunioes.json",
     category: "produtividade",
-    category: "outros",
     description:
       "Um bot cuja função é gerar um resumo da transcrição da reunião gravada.",
   },
