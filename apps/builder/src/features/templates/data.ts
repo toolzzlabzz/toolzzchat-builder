@@ -195,6 +195,14 @@ export const templates: TemplateProps[] = [
       "Um bot cuja função é gerar tarefas com base na transcrição de uma reunião",
   },
   {
+    name: "Criar um novo Fluxograma",
+    emoji: "📐",
+    fileName: "gerar-fluxograma.json",
+    category: "produtividade",
+    description:
+      "Um bot cuja função é gerar um fluxograma com base no input",
+  },
+  {
     name: "Criar plano de negócios",
     emoji: "📑",
     fileName: "criar-business-plan.json",
@@ -209,6 +217,14 @@ export const templates: TemplateProps[] = [
     category: "negócios",
     description:
       "Esse bot te ajuda a criar um business model canvas",
+  },
+  {
+    name: "Criar Pitch Deck",
+    emoji: "🎤",
+    fileName: "criar-canvas.json",
+    category: "negócios",
+    description:
+      "Esse bot te ajuda a criar um pitch deck baseado no input do usuário",
   },
   {
     name: "Análise S.W.O.T",
