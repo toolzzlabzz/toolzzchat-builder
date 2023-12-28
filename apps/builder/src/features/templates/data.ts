@@ -181,7 +181,7 @@ export const templates: TemplateProps[] = [
   {
     name: "Agendamento de Serviços",
     emoji: "🗓️",
-    fileName: "agendamento-servicos.json",
+    fileName: "teste-lucas.json",
     category: "outros",
     description:
       "Um bot cuja função é facilitar o agendamento de serviços",
