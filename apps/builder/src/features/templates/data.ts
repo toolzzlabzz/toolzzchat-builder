@@ -963,7 +963,7 @@ export const templates: TemplateProps[] = [
     emoji: "🔔",
     category: "atendimento",
     description: "Informa usuários sobre manutenções planejadas.",
-    fileName: "customer-needs-assessment.json",
+    fileName: "notify-maintenance.json",
   },
   {
     name: "Planejamento de Recursos",
