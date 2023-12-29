@@ -173,7 +173,7 @@ export const templates: TemplateProps[] = [
   {
     name: "Agendamento de Reuniões",
     emoji: "🗓️",
-    fileName: "agendamento-reunioes.json",
+    fileName: "teste-lucas2.json",
     category: "produtividade",
     description:
       "Um bot cuja função é facilitar o agendamento de reuniões no Google Meet.",
