@@ -96,7 +96,10 @@
         {
           "id": "cl16lb3b300092e6dh4h01vxw",
           "type": "choice input",
-          "items": [{ "id": "cl16lb3b3000a2e6dy8zdhzpz", "content": "Reiniciar" }]
+          "items": [
+            { "id": "cl16lb3b3000a2e6dy8zdhzpz", "content": "Agendar Consultoria por E-mail" },
+            { "id": "cl16lb3b3000a2e6dy8zdhzpw", "content": "Agendar Consultoria por Telefone" }
+          ]
         },
         {
           "id": "j08qxg0h804rngfroedblt5f",
@@ -261,7 +264,7 @@
   "settings": {},
   "createdAt": "2023-11-07T07:20:05.823Z",
   "updatedAt": "2023-11-07T07:24:28.824Z",
-  "icon": "📆",
+  "icon": "😍",
   "folderId": null,
   "publicId": null,
   "customDomain": null,
