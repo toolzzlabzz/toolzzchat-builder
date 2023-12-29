@@ -23,6 +23,22 @@
 },
 "blocks":[
 {
+"id":"legbfyi5n6ojly1fx5whjcc0",
+"type":"text",
+"content":{
+"richText":[
+{
+"type":"p",
+"children":[
+{
+"text":"Olá, eu sou o Eduardo, a Inteligência Artificial da Toolzz. Escolha uma das opções abaixo:"
+}
+]
+}
+]
+}
+},
+{
 "id":"t057pzohbdi0d6nkrebhwtdg",
 "type":"choice input",
 "items":[
@@ -158,8 +174,8 @@
 "id":"e4dum2zv2vpxlv41ha84jcyz",
 "title":"Localizar por ID",
 "graphCoordinates":{
-"x":1131.87,
-"y":1170.73
+"x":1152.87,
+"y":1084.73
 },
 "blocks":[
 {
@@ -171,7 +187,7 @@
 "type":"p",
 "children":[
 {
-"text":""
+"text":"Ok, digite o número do protocolo"
 }
 ]
 }
@@ -192,12 +208,15 @@
 "id":"ha9wvy3bwg1pgk0w3bvdbenx",
 "type":"image",
 "content":{
-"url":"https://media1.giphy.com/media/xT9IgFLfWUZigjoem4/giphy.gif?cid=9355458dhfnaqpahgi8uzy6n2jo8qoe72wrif8t5vwdc6k3g&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+"url":"https://media2.giphy.com/media/2kXLNQypdX9O1A3zxX/giphy-downsized.gif?cid=9355458d814j6o4gf0f2hnppvfa108r4wdb4jrqbyqxmwh35&ep=v1_gifs_search&rid=giphy-downsized.gif&ct=g"
 }
 },
 {
 "id":"cbg2q0pv56tl8nrhoa1j70wm",
-"type":"Webhook"
+"type":"Webhook",
+"options":{
+"isAdvancedConfig":false
+}
 },
 {
 "id":"ao9wcd3u93xfbtkyeepo6l5i",
@@ -243,7 +262,7 @@
 },
 {
 "id":"bgn0x9xhm93t23w59rj090e5",
-"outgoingEdgeId":"yiv10tjwqtrfo3dgt6f042bf",
+"outgoingEdgeId":"phqwnhz1v6433z7hlvv4faz4",
 "content":"{{ticketAberto_2}}",
 "displayCondition":{
 "isEnabled":true,
@@ -259,7 +278,7 @@
 },
 {
 "id":"bqd4f2rrz9qcw1ke2dk8k9cz",
-"outgoingEdgeId":"clmzbpij5y9s56ns0xtdqms1",
+"outgoingEdgeId":"gur7v1yn74k2oytb31faznbe",
 "content":"{{ticketAberto_3}}"
 }
 ]
@@ -275,10 +294,10 @@
 },
 "blocks":[
 {
-"id":"rzxr9zn8sfia9jv3kmsh4538",
+"id":"c6juvwhvneza1mz932mqqxf0",
 "type":"image",
 "content":{
-"url":"https://media1.giphy.com/media/xT9IgFLfWUZigjoem4/giphy.gif?cid=9355458dhfnaqpahgi8uzy6n2jo8qoe72wrif8t5vwdc6k3g&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+"url":"https://media2.giphy.com/media/2kXLNQypdX9O1A3zxX/giphy-downsized.gif?cid=9355458d814j6o4gf0f2hnppvfa108r4wdb4jrqbyqxmwh35&ep=v1_gifs_search&rid=giphy-downsized.gif&ct=g"
 }
 },
 {
@@ -365,17 +384,6 @@
 }
 },
 {
-"id":"clmzbpij5y9s56ns0xtdqms1",
-"from":{
-"blockId":"hd01uvlb1my0czr916w5b07z",
-"itemId":"bqd4f2rrz9qcw1ke2dk8k9cz"
-},
-"to":{
-"groupId":"pff396yvpo30f4weicz7zzn0",
-"blockId":"rzxr9zn8sfia9jv3kmsh4538"
-}
-},
-{
 "id":"ded4lhp78y0y2qp49ptuqtzj",
 "from":{
 "blockId":"hd01uvlb1my0czr916w5b07z",
@@ -386,14 +394,24 @@
 }
 },
 {
-"id":"yiv10tjwqtrfo3dgt6f042bf",
+"id":"phqwnhz1v6433z7hlvv4faz4",
 "from":{
 "blockId":"hd01uvlb1my0czr916w5b07z",
 "itemId":"bgn0x9xhm93t23w59rj090e5"
 },
 "to":{
+"groupId":"pff396yvpo30f4weicz7zzn0"
+}
+},
+{
+"id":"gur7v1yn74k2oytb31faznbe",
+"from":{
+"blockId":"hd01uvlb1my0czr916w5b07z",
+"itemId":"bqd4f2rrz9qcw1ke2dk8k9cz"
+},
+"to":{
 "groupId":"pff396yvpo30f4weicz7zzn0",
-"blockId":"rzxr9zn8sfia9jv3kmsh4538"
+"blockId":"c6juvwhvneza1mz932mqqxf0"
 }
 }
 ],
@@ -476,7 +494,7 @@
 }
 },
 "createdAt":"2023-12-29T09:54:11.567Z",
-"updatedAt":"2023-12-29T09:57:28.344Z",
+"updatedAt":"2023-12-29T10:27:16.824Z",
 "icon":"🔎",
 "folderId":"clqqaqvpi0001jy08su0jved4",
 "publicId":"consultar-status-ticket-aberto-xb0ud50",
