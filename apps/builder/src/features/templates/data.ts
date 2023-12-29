@@ -726,7 +726,7 @@ export const templates: TemplateProps[] = [
     category: "atendimento",
     description:
       "Automatiza o suporte de nível 1 para resolver problemas comuns.",
-    fileName: "customer-needs-assessment.json",
+    fileName: "suporte-n1.json",
   },
   {
     name: "Análise de Feedback de Produto",
