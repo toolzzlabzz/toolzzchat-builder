@@ -43,7 +43,7 @@
           "options": {
             "labels": {
               "button": "Upload",
-              "placeholder": "<strong>\n      Click to upload\n    </strong> or drag and drop<br>\n    (size limit: 10MB)"
+              "placeholder": "<strong>\n      Clique aqui para fazer upload\n    </strong> ou arraste e solte o arquivo aqui<br>\n    (limite de tamanho: 10MB)"
             },
             "variableId": "vcl45ok77i000a2e6g79ye53a2",
             "isMultipleAllowed": true

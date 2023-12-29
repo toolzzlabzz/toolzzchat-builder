@@ -6,10 +6,10 @@ type Props = {
 };
 
 export const ChatwootNodeBody = ({ block }: Props) =>
-  block.options?.task === "Close widget" ? (
-    <Text>Close Toolzz Bots</Text>
+  block.options?.task === "Fechar widget" ? (
+    <Text>Fechar Toolzz Chat</Text>
   ) : block?.options?.websiteToken?.length === 0 ? (
     <Text color="gray.500">Configure...</Text>
   ) : (
-    <Text>Open Toolzz Bots</Text>
+    <Text>Abrir Toolzz Chat</Text>
   );
