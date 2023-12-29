@@ -1,7 +1,7 @@
 {
 "version":"6",
 "id":"clqqjzn9r0001jk081m5orm0i",
-"name":"🤖 Resolution Bot",
+"name":"Resolution Bot",
 "events":[
 {
 "id":"phb6s71snxkajhtd0yur5ll6",
@@ -1146,7 +1146,7 @@
 },
 "createdAt":"2023-12-29T11:31:23.150Z",
 "updatedAt":"2023-12-29T11:33:03.020Z",
-"icon":"📞",
+"icon":"🤖",
 "folderId":null,
 "publicId":null,
 "customDomain":null,
