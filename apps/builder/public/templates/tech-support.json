@@ -1,329 +1,608 @@
 {
-  "version": "6",
-  "id": "cloo046v300051aorhtv76f0i",
-  "name": "Customer Support",
-  "events": [
-    {
-      "id": "uG1tt8JdDyu2nju3oJ4wc1",
-      "outgoingEdgeId": "2dzxChB1qm9WGfzNF91tfg",
-      "graphCoordinates": { "x": -281, "y": -89 },
-      "type": "start"
-    }
-  ],
-  "groups": [
-    {
-      "id": "vLUAPaxKwPF49iZhg4XZYa",
-      "title": "Menu",
-      "graphCoordinates": { "x": -28.4, "y": -88.19 },
-      "blocks": [
-        {
-          "id": "spud6U3K1omh2dZG8yN2CW4",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [{ "text": "Olá amigo, tudo bem? 👋" }]
-              },
-              {
-                "type": "p",
-                "children": [{ "text": "Como posso te ajudar hoje?" }]
-              }
-            ]
-          }
-        },
-        {
-          "id": "s6kp2Z4igeY3kL7B64qBdUg",
-          "type": "choice input",
-          "items": [
-           {
-              "id": "h2rFDX2UnKS4Kdu3Eyuqq3",
-              "outgoingEdgeId": "2C4mhU5o2Hdm7dztR9xNE9",
-              "content": "Quero reportar um bug 🦠"
-            },
-            {
-              "id": "fQ8oLDnKmDBuPDK7riJ2kt",
-              "outgoingEdgeId": "dhniFxrsH5r54aEE5JXwK2",
-              "content": "Consultar status de um ticket 🔎"
-            },
-            {
-              "id": "hcUFBPeQA3gSyXRprRk2v9",
-              "outgoingEdgeId": "bTo6CZD1YapDDyVdvJgFDV",
-              "content": "Ajuda para Resolução de Problemas 🆘"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "7MuqF6nen1ZTwGB53Mz8VY",
-      "title": "Bug",
-      "graphCoordinates": { "x": 364.46, "y": 92.39 },
-      "blocks": [
-        {
-          "id": "sjsECyfSBMkUnoWaEnBTmJX",
-          "type": "text",
-          "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "OK!" }] }]
-          }
-        },
-        {
-          "id": "seomQsnPWgiMzQVeZ3us7x2",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Você pode descrever o bug com o máximo de detalhes possível?"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "s3LYyyYtjdQ88jkMMV5DSW7",
-          "outgoingEdgeId": "cl1571jhh00022e6dk77f52wg",
-          "type": "text input",
-          "options": {
-            "labels": {
-              "placeholder": "Descreva o bug..."
-            },
-            "variableId": "v51BcuecnB6kRU1tsttaGyR",
-            "isLong": true
-          }
-        }
-      ]
-    },
-    {
-      "id": "kyK8JQ77NodUYaz3JLS88A",
-      "title": "Consultar status de um ticket 🔎",
-      "graphCoordinates": { "x": 364.36, "y": -517.93 },
-      "blocks": [
-        {
-          "id": "s9bgHcWdobb8Z5cTbrnTz6R",
-          "type": "text",
-          "content": {
-            "richText": [{ "type": "p", "children": [{ "text": "Ok!" }] }]
-          }
-        },
-        {
-          "id": "s2NbNaBGKhMvdEUdVPXKZjy",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [{ "text": "Digite o número do seu ticket ou protocolo" }]
-              }
-            ]
-          }
-        },
-        {
-          "id": "cl16lb3b300092e6dh4h01vxw",
-          "type": "choice input",
-          "items": [{ "id": "cl16lb3b3000a2e6dy8zdhzpz", "content": "Reiniciar" }]
-        },
-        {
-          "id": "j08qxg0h804rngfroedblt5f",
-          "type": "Jump",
-          "options": { "groupId": "vLUAPaxKwPF49iZhg4XZYa" }
-        }
-      ]
-    },
-    {
-      "id": "puWCBhGWSQRbqTkVH89RCf",
-      "title": "Dúvida",
-      "graphCoordinates": { "x": 365.4, "y": 491.3 },
-      "blocks": [
-        {
-          "id": "sm4iHhLQs9yNdRG3b7xqV8Y",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  { "text": "First, don't forget to check out the " },
-                  {
-                    "url": "https://toolzz.com.br/bots/docs",
-                    "type": "a",
-                    "children": [{ "text": "Documentação 🙏" }]
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "sreX6rwMevEmbTpnkGCtp3k",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [{ "text": "Caso contrário, sou todo ouvidos 🦻!" }]
-              }
-            ]
-          }
-        },
-        {
-          "id": "so4GiKFWWjKCjXgmMJYCGbe",
-          "type": "image",
-          "content": {
-            "url": "https://media0.giphy.com/media/rhgwg4qBu97ISgbfni/giphy-downsized.gif?cid=fe3852a3wimy48e55djt23j44uto7gdlu8ksytylafisvr0q&rid=giphy-downsized.gif&ct=g"
-          }
-        },
-        {
-          "id": "sjd4qACugMarB7gJC8nMhb3",
-          "outgoingEdgeId": "cl1571ktd00032e6dyti22850",
-          "type": "text input",
-          "options": {
-            "variableId": "v51BcuecnB6kRU1tsttaGyR",
-            "isLong": true
-          }
-        }
-      ]
-    },
-    {
-      "id": "1GvxCAAEysxJMxrVngud3X",
-      "title": "Bye",
-      "graphCoordinates": { "x": 1115.81, "y": 728.71 },
-      "blocks": [
-        {
-          "id": "s6uLw72EAKbACrpYHr7DSyY",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  { "text": "Muito obrigado pelo seu envio 💙" }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "stM7cTBFCLhpQagRHT64K6u",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Entrarei em contato com você o mais rápido possível (geralmente dentro de 24 horas)"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "s4JATFkBxzmcqqEKQB2xFfa",
-          "type": "choice input",
-          "items": [{ "id": "jqm8wZa5yYb73493n5s3Uc", "content": "Reiniciar" }]
-        },
-        {
-          "id": "igdnc34rcmiyamazghr8s708",
-          "type": "Jump",
-          "options": { "groupId": "vLUAPaxKwPF49iZhg4XZYa" }
-        }
-      ]
-    },
-    {
-      "id": "wncvzVDFJDvhh1M3CXJ6aL",
-      "title": "Email",
-      "graphCoordinates": { "x": 746.29, "y": 577.22 },
-      "blocks": [
-        {
-          "id": "soiDpBL5r1dbvHxuT2Sd3mH",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [{ "text": "Em qual e-mail posso entrar em contato com você?" }]
-              }
-            ]
-          }
-        },
-        {
-          "id": "s5Fh7zHUw3j4zDM5xjzwsXB",
-          "outgoingEdgeId": "cl1571xtc00042e6dcptam5jw",
-          "type": "email input",
-          "options": {
-            "variableId": "t2k6cj3uYfNdJX13APA4b9"
-          }
-        }
-      ]
-    }
-  ],
-  "edges": [
-    {
-      "id": "2dzxChB1qm9WGfzNF91tfg",
-      "from": { "eventId": "uG1tt8JdDyu2nju3oJ4wc1" },
-      "to": { "groupId": "vLUAPaxKwPF49iZhg4XZYa" }
-    },
-    {
-      "id": "dhniFxrsH5r54aEE5JXwK2",
-      "from": {
-        "blockId": "s6kp2Z4igeY3kL7B64qBdUg",
-        "itemId": "fQ8oLDnKmDBuPDK7riJ2kt"
-      },
-      "to": { "groupId": "kyK8JQ77NodUYaz3JLS88A" }
-    },
-    {
-      "id": "2C4mhU5o2Hdm7dztR9xNE9",
-      "from": {
-        "blockId": "s6kp2Z4igeY3kL7B64qBdUg",
-        "itemId": "h2rFDX2UnKS4Kdu3Eyuqq3"
-      },
-      "to": { "groupId": "7MuqF6nen1ZTwGB53Mz8VY" }
-    },
-    {
-      "id": "bTo6CZD1YapDDyVdvJgFDV",
-      "from": {
-        "blockId": "s6kp2Z4igeY3kL7B64qBdUg",
-        "itemId": "hcUFBPeQA3gSyXRprRk2v9"
-      },
-      "to": { "groupId": "puWCBhGWSQRbqTkVH89RCf" }
-    },
-    {
-      "id": "cl1571jhh00022e6dk77f52wg",
-      "from": { "blockId": "s3LYyyYtjdQ88jkMMV5DSW7" },
-      "to": { "groupId": "wncvzVDFJDvhh1M3CXJ6aL" }
-    },
-    {
-      "id": "cl1571ktd00032e6dyti22850",
-      "from": { "blockId": "sjd4qACugMarB7gJC8nMhb3" },
-      "to": { "groupId": "wncvzVDFJDvhh1M3CXJ6aL" }
-    },
-    {
-      "id": "cl1571xtc00042e6dcptam5jw",
-      "from": { "blockId": "s5Fh7zHUw3j4zDM5xjzwsXB" },
-      "to": { "groupId": "1GvxCAAEysxJMxrVngud3X" }
-    }
-  ],
-  "variables": [
-    { "id": "t2k6cj3uYfNdJX13APA4b9", "name": "Email" },
-    { "id": "v51BcuecnB6kRU1tsttaGyR", "name": "Content" }
-  ],
-  "theme": {},
-  "selectedThemeTemplateId": null,
-  "settings": {},
-  "createdAt": "2023-11-07T07:20:05.823Z",
-  "updatedAt": "2023-11-07T07:24:28.824Z",
-  "icon": "😍",
-  "folderId": null,
-  "publicId": null,
-  "customDomain": null,
-  "workspaceId": "proWorkspace",
-  "resultsTablePreferences": null,
-  "isArchived": false,
-  "isClosed": false,
-  "whatsAppCredentialsId": null
+"version":"6",
+"id":"clqqmjnz90001jq085v8rbj4j",
+"name":"Suporte Técnico",
+"events":[
+{
+"id":"phb6s71snxkajhtd0yur5ll6",
+"outgoingEdgeId":"b3icjvx8emn9c1e8mf5wd1fi",
+"graphCoordinates":{
+"x":-237.65,
+"y":303.21
+},
+"type":"start"
+}
+],
+"groups":[
+{
+"id":"u1fbedw66m377lej7wj03fgu",
+"title":"Welcome",
+"graphCoordinates":{
+"x":130.14,
+"y":303.43
+},
+"blocks":[
+{
+"id":"yjcvub30p8l1a3qogkf3anqo",
+"type":"Set variable",
+"options":{
+"variableId":"vdzrx77w6zj9zf5mzv7qcdtyi",
+"expressionToEvaluate":"Toolzz"
+}
+},
+{
+"id":"r2y0fm5kqrxqt4p9b7iaoc86",
+"type":"Set variable",
+"options":{
+"variableId":"vwcf1fvkdmm11d9myovwg82sw",
+"expressionToEvaluate":"Eduardo"
+}
+},
+{
+"id":"wb86yna26ffjibn3zw0gp2su",
+"type":"text",
+"content":{
+"richText":[
+{
+"type":"p",
+"children":[
+{
+"text":"Olá, tudo bem? Eu sou o {{Nome do Bot}}, o assistente técnico da {{Nome da Empresa}}."
+}
+]
+}
+]
+}
+},
+{
+"id":"cwl459xq6eapa7vnuwqo8l1b",
+"type":"text",
+"content":{
+"richText":[
+{
+"type":"p",
+"children":[
+{
+"text":"Como posso te ajudar hoje? "
+}
+]
+},
+{
+"type":"p",
+"children":[
+{
+"text":""
+}
+]
+},
+{
+"type":"p",
+"children":[
+{
+"text":"Selecione uma das opções:"
+}
+]
+}
+]
+}
+},
+{
+"id":"t057pzohbdi0d6nkrebhwtdg",
+"type":"choice input",
+"items":[
+{
+"id":"hphje5d48d7us9f2w9vevwm6",
+"outgoingEdgeId":"m5iu68c7sefsutmyyshjmezk",
+"content":"👨‍💻 Estou com Problemas Técnicos"
+},
+{
+"id":"c8wv2jk5b7b3ni9u1cxk0pna",
+"outgoingEdgeId":"xw7xobf0kbnxns3mu3m0quwu",
+"content":"🆘 Ajuda para Resolução de Problemas"
+}
+]
+}
+]
+},
+{
+"id":"aug75s7bjv86s8qvvu3blovh",
+"title":"👨‍💻 Problemas Técnicos",
+"graphCoordinates":{
+"x":1539.7,
+"y":790.44
+},
+"blocks":[
+{
+"id":"whpnqktit6ous418pfi2t1zu",
+"type":"text",
+"content":{
+"richText":[
+{
+"type":"p",
+"children":[
+{
+"text":"Ok! Vamos resolver o mais rápido possível."
+}
+]
+}
+]
+}
+},
+{
+"id":"xupns2cyg53cfr0io7e5k44y",
+"type":"text",
+"content":{
+"richText":[
+{
+"type":"p",
+"children":[
+{
+"text":"Descreva em poucas palavras a sua o problema técnico ou dificuldade que você está enfrentando"
+}
+]
+}
+]
+}
+},
+{
+"id":"ivcy2nik1xt0vf1t9krrk26x",
+"type":"text input",
+"options":{
+"labels":{
+"placeholder":"Descreva o problema ",
+"button":"Enviar"
+},
+"variableId":"vkibcnsf1zh8819gelq5jaump",
+"isLong":true
+}
+},
+{
+"id":"tpz07ph5vsqptq1cxwbh7sr5",
+"type":"text",
+"content":{
+"richText":[
+{
+"type":"p",
+"children":[
+{
+"text":"Show, poderia me enviar prints da sua tela como evidência do erro?"
+}
+]
+}
+]
+}
+},
+{
+"id":"h38nriq5ols08sbubjil0erd",
+"type":"file input",
+"options":{
+"variableId":"vgvaz6t15e05c0v2m7l6kcelo",
+"labels":{
+"placeholder":"<strong>\n Clique para fazer upload\n </strong> or arraste e solte o arquivo aqui<br>\n (Limite de Tamanho: 10MB)",
+"clear":"Limpar",
+"skip":"Pular"
+}
+}
+},
+{
+"id":"tjbtx9f7hc9fnhiemazmu4wv",
+"type":"choice input",
+"items":[
+{
+"id":"wvd3glrmdco1kxibweoozvm6",
+"outgoingEdgeId":"b6419lrugwhkqg6itaotjvcf",
+"content":"👤 Falar agora com suporte técnico"
+},
+{
+"id":"q8jhq3tjzr7fbnuqduszfs2s",
+"outgoingEdgeId":"qbq6uma6t2s6z8xbc0qrobq8",
+"content":"✉️ Receber a resposta por e-mail"
+}
+]
+}
+]
+},
+{
+"id":"a1dwnmpzev1s12aabu4bnxz3",
+"title":"✉️ Receber a resposta por e-mail",
+"graphCoordinates":{
+"x":2221.69,
+"y":1669.85
+},
+"blocks":[
+{
+"id":"w4tbkhj0szmxbktnlba9j3e3",
+"type":"text",
+"content":{
+"richText":[
+{
+"type":"p",
+"children":[
+{
+"text":"Ok, vou precisar do seu e-mail"
+}
+]
+}
+]
+}
+},
+{
+"id":"q1mrcvvsprlu8xdw40erz0l4",
+"type":"email input",
+"options":{
+"variableId":"vy0rle862nq5ghg6qv3xvsv7e",
+"labels":{
+"placeholder":"Digite seu e-mail",
+"button":"Enviar"
+},
+"retryMessageContent":"Este e-mail não parece ser válido. Você pode digitá-lo novamente?"
+}
+},
+{
+"id":"qzuath5jis8kg3035zm8xdd8",
+"type":"Email",
+"options":{
+"credentialsId":"default",
+"isCustomBody":true,
+"isBodyCode":false,
+"recipients":[
+"suporte@suaempresa.com.br"
+],
+"subject":"Dúvida - {{Nome da Empresa}}",
+"body":"{{Dúvida}}\n\n{{E-mail}}",
+"replyTo":"suporte@suaempresa.com",
+"cc":[
+"{{E-mail}}"
+]
+}
+},
+{
+"id":"makue9l537qtxe3sp7av549i",
+"type":"text",
+"content":{
+"richText":[
+{
+"type":"p",
+"children":[
+{
+"text":"Ok, te retornaremos em breve!"
+}
+]
+}
+]
+}
+}
+]
+},
+{
+"id":"ced4u086xcl376zjjqenzro5",
+"title":"Falar com atendente",
+"graphCoordinates":{
+"x":2251.44,
+"y":851.3
+},
+"blocks":[
+{
+"id":"ph1z6z1mwhbt450628bh5xsd",
+"type":"Chatwoot"
+},
+{
+"id":"qvlnf3iglhfowmjxadzoag4q",
+"type":"text",
+"content":{
+"richText":[
+{
+"type":"p",
+"children":[
+{
+"text":"Ok, te retornaremos em alguns minutos."
+}
+]
+}
+]
+}
+},
+{
+"id":"b6udbe4b3at689li6od7y7m8",
+"type":"image",
+"content":{
+"url":"https://media0.giphy.com/media/3o7ZetIsjtbkgNE1I4/giphy.gif?cid=9355458dk4b1zp1iboso8eqpahx2xcy14hb2xqfh6g6cpwve&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+}
+}
+]
+},
+{
+"id":"lu51qbd4e1gs7oo76mtpdfpx",
+"title":"🆘 Ajuda para Resolução de Problemas",
+"graphCoordinates":{
+"x":771.43,
+"y":579.79
+},
+"blocks":[
+{
+"id":"cz7jyp8j0degy3m4exgxxnlf",
+"type":"text",
+"content":{
+"richText":[
+{
+"type":"p",
+"children":[
+{
+"text":"Ok, acesse nossa coleção de Artigos de Ajuda para Resolução de Problemas:"
+}
+]
+},
+{
+"type":"p",
+"children":[
+{
+"text":""
+}
+]
+},
+{
+"type":"p",
+"children":[
+{
+"text":""
+},
+{
+"url":"https://docs.toolzz.com.br/pt-BR/collections/3776060-toolzz-lms-solucionando-problemas-e-erros",
+"type":"a",
+"children":[
+{
+"text":"https://docs.toolzz.com.br/pt-BR/collections/3776060-toolzz-lms-solucionando-problemas-e-erros"
+}
+]
+},
+{
+"text":""
+}
+]
+}
+]
+}
+},
+{
+"id":"diyg71w4qlz3dg52id724ra6",
+"type":"choice input",
+"items":[
+{
+"id":"x0j4su3yk0rayofpsvqkh6o2",
+"outgoingEdgeId":"myxcrwvfgxir4oa80b622h8g",
+"content":"👍 Isso resolveu"
+},
+{
+"id":"bm858su5ysddz08ksfjymo8x",
+"outgoingEdgeId":"uetu44n4ybg86gwtpyskg13g",
+"content":"❌ Não resolveu, quero falar com o suporte técnico"
+},
+{
+"id":"mcbrh5krnhbbj1y9aorqkbs5",
+"outgoingEdgeId":"pfl75nfzx3plo2ura0ck8gzo",
+"content":"❌ Não resolveu, quero reportar um bug"
+}
+]
+}
+]
+},
+{
+"id":"knnfp3ut1bqsp83ufte9ftwa",
+"title":"Group #10",
+"graphCoordinates":{
+"x":1166.77,
+"y":426.29
+},
+"blocks":[
+{
+"id":"gjsfh4mhpdzhdiygxk31119n",
+"type":"text",
+"content":{
+"richText":[
+{
+"type":"p",
+"children":[
+{
+"text":"Fico feliz em ter te ajudado! Volte sempre que precisar."
+}
+]
+}
+]
+}
+},
+{
+"id":"wl0io954tdbbfophb00k2foc",
+"type":"image",
+"content":{
+"url":"https://media3.giphy.com/media/26u4lOMA8JKSnL9Uk/giphy.gif?cid=9355458d5tsikp6lsrhl9movvi1knd5sqh9wv7px4fjrqhr7&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+}
+}
+]
+}
+],
+"edges":[
+{
+"id":"b3icjvx8emn9c1e8mf5wd1fi",
+"from":{
+"eventId":"phb6s71snxkajhtd0yur5ll6"
+},
+"to":{
+"groupId":"u1fbedw66m377lej7wj03fgu"
+}
+},
+{
+"id":"kic5a6qs9j3tpl48c37cnzdc",
+"from":{
+"blockId":"f3sh1n5dbp3gpr8tjkbhqota",
+"itemId":"plzmfezrqgnkc700ry4zulr8"
+},
+"to":{
+"groupId":"aug75s7bjv86s8qvvu3blovh"
+}
+},
+{
+"id":"b6419lrugwhkqg6itaotjvcf",
+"from":{
+"blockId":"tjbtx9f7hc9fnhiemazmu4wv",
+"itemId":"wvd3glrmdco1kxibweoozvm6"
+},
+"to":{
+"groupId":"ced4u086xcl376zjjqenzro5",
+"blockId":"ph1z6z1mwhbt450628bh5xsd"
+}
+},
+{
+"id":"qbq6uma6t2s6z8xbc0qrobq8",
+"from":{
+"blockId":"tjbtx9f7hc9fnhiemazmu4wv",
+"itemId":"q8jhq3tjzr7fbnuqduszfs2s"
+},
+"to":{
+"groupId":"a1dwnmpzev1s12aabu4bnxz3"
+}
+},
+{
+"id":"xw7xobf0kbnxns3mu3m0quwu",
+"from":{
+"blockId":"t057pzohbdi0d6nkrebhwtdg",
+"itemId":"c8wv2jk5b7b3ni9u1cxk0pna"
+},
+"to":{
+"groupId":"lu51qbd4e1gs7oo76mtpdfpx"
+}
+},
+{
+"id":"m5iu68c7sefsutmyyshjmezk",
+"from":{
+"blockId":"t057pzohbdi0d6nkrebhwtdg",
+"itemId":"hphje5d48d7us9f2w9vevwm6"
+},
+"to":{
+"groupId":"lu51qbd4e1gs7oo76mtpdfpx"
+}
+},
+{
+"id":"pfl75nfzx3plo2ura0ck8gzo",
+"from":{
+"blockId":"diyg71w4qlz3dg52id724ra6",
+"itemId":"mcbrh5krnhbbj1y9aorqkbs5"
+},
+"to":{
+"groupId":"aug75s7bjv86s8qvvu3blovh",
+"blockId":"xupns2cyg53cfr0io7e5k44y"
+}
+},
+{
+"id":"uetu44n4ybg86gwtpyskg13g",
+"from":{
+"blockId":"diyg71w4qlz3dg52id724ra6",
+"itemId":"bm858su5ysddz08ksfjymo8x"
+},
+"to":{
+"groupId":"aug75s7bjv86s8qvvu3blovh",
+"blockId":"tpz07ph5vsqptq1cxwbh7sr5"
+}
+},
+{
+"id":"myxcrwvfgxir4oa80b622h8g",
+"from":{
+"blockId":"diyg71w4qlz3dg52id724ra6",
+"itemId":"x0j4su3yk0rayofpsvqkh6o2"
+},
+"to":{
+"groupId":"knnfp3ut1bqsp83ufte9ftwa",
+"blockId":"gjsfh4mhpdzhdiygxk31119n"
+}
+}
+],
+"variables":[
+{
+"id":"vdzrx77w6zj9zf5mzv7qcdtyi",
+"name":"Nome da Empresa"
+},
+{
+"id":"vwcf1fvkdmm11d9myovwg82sw",
+"name":"Nome do Bot"
+},
+{
+"id":"vc8yyakg53olhricuumn97bdk",
+"name":"Dúvida"
+},
+{
+"id":"vy0rle862nq5ghg6qv3xvsv7e",
+"name":"E-mail"
+},
+{
+"id":"vxmi79412woun6onlsg3j8wd2",
+"name":"Busca-tutorial"
+},
+{
+"id":"vt4wx1br1fin3np54ti0vlu0t",
+"name":"Whatsapp"
+},
+{
+"id":"vezq7i73c78l3jwq722l4mue2",
+"name":"Data-treinamento"
+},
+{
+"id":"vkibcnsf1zh8819gelq5jaump",
+"name":"Bug-descrição"
+},
+{
+"id":"vgvaz6t15e05c0v2m7l6kcelo",
+"name":"Bug-print"
+}
+],
+"theme":{
+"general":{
+"font":"",
+"background":{
+"type":"Color"
+}
+},
+"chat":{
+"hostAvatar":{
+"isEnabled":true,
+"url":"https://media.discordapp.net/attachments/915691669234548746/1182547715821928578/custom_avatar-1689595567.png?ex=65a0c7e2&is=658e52e2&hm=1ea846a690273a7e1e268701554b495fec04731f08f434251f61f8549f2106b7&=&format=webp&quality=lossless"
+},
+"guestAvatar":{
+"isEnabled":false
+},
+"guestBubbles":{
+"backgroundColor":"#0567C1",
+"color":"#FFFFFF"
+},
+"buttons":{
+"backgroundColor":"#E6F0FE",
+"color":"#04153e"
+}
+}
+},
+"selectedThemeTemplateId":null,
+"settings":{
+"general":{
+"isBrandingEnabled":true,
+"isInputPrefillEnabled":true,
+"rememberUser":{
+"isEnabled":true,
+"storage":"session"
+}
+},
+"typingEmulation":{
+"enabled":true,
+"speed":300
+}
+},
+"createdAt":"2023-12-29T12:42:56.420Z",
+"updatedAt":"2023-12-29T12:58:22.236Z",
+"icon":"🔧",
+"folderId":"clqqaqvpi0001jy08su0jved4",
+"publicId":"suporte-t-cnico-v8rbj4j",
+"customDomain":null,
+"workspaceId":"clqqaifj00000jp08ndmnfqca",
+"resultsTablePreferences":null,
+"isArchived":false,
+"isClosed":false,
+"whatsAppCredentialsId":null,
+"riskLevel":null
 }
