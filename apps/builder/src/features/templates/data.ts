@@ -28,7 +28,7 @@ export const templates: TemplateProps[] = [
   {
     name: "Consultar status de ticket",
     emoji: "🔎",
-    fileName: "status-ticket.json",
+    fileName: "consultar-status-ticket.json",
     category: "atendimento",
     description:
       "Um bot que facilita o cliente a consultar o status de um ticket aberto, reduzindo o número de solicitações deste tipo",

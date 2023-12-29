@@ -23,38 +23,6 @@
 },
 "blocks":[
 {
-"id":"yjcvub30p8l1a3qogkf3anqo",
-"type":"Set variable",
-"options":{
-"variableId":"vdzrx77w6zj9zf5mzv7qcdtyi",
-"expressionToEvaluate":"Toolzz"
-}
-},
-{
-"id":"r2y0fm5kqrxqt4p9b7iaoc86",
-"type":"Set variable",
-"options":{
-"variableId":"vwcf1fvkdmm11d9myovwg82sw",
-"expressionToEvaluate":"Eduardo"
-}
-},
-{
-"id":"wb86yna26ffjibn3zw0gp2su",
-"type":"text",
-"content":{
-"richText":[
-{
-"type":"p",
-"children":[
-{
-"text":"Olá, tudo bem? Eu sou o {{Nome do Bot}}, o assistente virtual da {{Nome da Empresa}}."
-}
-]
-}
-]
-}
-},
-{
 "id":"cwl459xq6eapa7vnuwqo8l1b",
 "type":"text",
 "content":{
