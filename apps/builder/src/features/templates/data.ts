@@ -12,7 +12,7 @@ export const templates: TemplateProps[] = [
   {
     name: "Chatbot no Whatsapp",
     emoji: "📞",
-    fileName: "customer-support.json",
+    fileName: "customer-support-whats.json",
     category: "atendimento",
     description:
       "Um bot no whatsapp cuja função é coletar feedback dos usuários: perguntas, bugs e solicitações de recursos.",
