@@ -61,25 +61,21 @@
 {
 "id":"s9elg5ilcjizxcmer39aeb5w",
 "outgoingEdgeId":"sfq9o2a0d0v0dvc3j99iflot",
-"content":"Detalhes do Curso"
+"content":"📄 Detalhes do Curso"
 },
 {
 "id":"hc65iw4uvo1y31rzrx0l9i08",
 "outgoingEdgeId":"v2xftzdkxp06sivhqvly6hpl",
-"content":"Cronograma de Aulas"
+"content":"🗓️ Cronograma de Aulas"
 },
 {
 "id":"wmsg4k3fx2y108g1hruk2abm",
 "outgoingEdgeId":"u1oj63mjjm468smv3eqoxiga",
-"content":"Aulas e Conteúdos"
+"content":"▶️ Aulas e Conteúdos"
 },
 {
 "id":"ycv14louk9j1c7ekzfzj3sfe",
-"content":"Atividades e Exercícios"
-},
-{
-"id":"swdyo75m1in63n5v0pfkse8m",
-"content":"Click to edit"
+"content":"✍️ Atividades e Exercícios"
 }
 ]
 }
@@ -261,19 +257,19 @@
 "items":[
 {
 "id":"qbiczrnpfm54if80bquosfty",
-"content":"Vídeo 1"
+"content":"📽️ Vídeo 1"
 },
 {
 "id":"goczyl26fneb74u91m51dd6w",
-"content":"Material (PDF)"
+"content":"📒 Material (PDF)"
 },
 {
 "id":"xajnwadw4uhogcipnsefgd25",
-"content":"Infográfico"
+"content":"📊 Infográfico"
 },
 {
 "id":"cls40nmdzneql5erywcunnrz",
-"content":"Podcast"
+"content":"🎧 Podcast"
 }
 ]
 }
