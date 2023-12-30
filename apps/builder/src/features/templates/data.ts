@@ -65,9 +65,44 @@ export const templates: TemplateProps[] = [
       "Um bot cuja função é oferecer atendimento e suporte academico automatizado referente a matrícula, notas, provas, agenda do aluno e mais.",
   },
   {
-    name: "Trilha Personalizada",
-    emoji: "🚩",
+    name: "Curso pelo Whatsapp",
+    emoji: "📱",
+    fileName: "course-whats.json",
+    category: "educação",
+    description:
+      "Este template cria um Curso em formato de chatbot no whatsapp",
+    backgroundColor: "#010000",
+  },
+  {
+    name: "Recomendação de Conteúdos",
+    emoji: "📚",
+    fileName: "content-recommendation.json",
+    category: "educação",
+    description:
+      "Este bot ajuda um aluno a encontrar o curso ou conteúdo certo na hora certa fornecer uma recomendação personalizada.",
+    backgroundColor: "#010000",
+  },
+  {
+    name: "Tutor Virtual 24h",
+    emoji: "🧑‍🏫",
+    category: "educação",
+    description:
+      "Um bot que oferece tutoria personalizada e respostas a perguntas dos alunos.",
+    fileName: "intelligent-tutoring-bot.json",
+  },
+  {
+    name: "Trilha Personalizada por IA",
+    emoji: "✨",
     fileName: "trails-recommendation.json",
+    category: "educação",
+    description:
+      "Este bot cria uma trilha personalizada para cada aluno e fornece uma recomendação personalizada.",
+    backgroundColor: "#010000",
+  },
+  {
+    name: "Aprendizagem Adaptativa com IA",
+    emoji: "🧠",
+    fileName: "adaptative-learning.json",
     category: "educação",
     description:
       "Este bot cria uma trilha personalizada para cada aluno e fornece uma recomendação personalizada.",
@@ -80,23 +115,6 @@ export const templates: TemplateProps[] = [
     description:
       "Um bot que ajuda a criar e gerenciar programas educacionais para funcionários.",
     fileName: "corporate-educational-programs-bot.json",
-  },
-  {
-    name: "Recomendação de Conteúdos",
-    emoji: "📚",
-    fileName: "content-recommendation.json",
-    category: "educação",
-    description:
-      "Este bot ajuda um aluno a encontrar o curso ou conteúdo certo na hora certa fornecer uma recomendação personalizada.",
-    backgroundColor: "#010000",
-  },
-  {
-    name: "Tutoria Inteligente",
-    emoji: "🧑‍🏫",
-    category: "educação",
-    description:
-      "Um bot que oferece tutoria personalizada e respostas a perguntas dos alunos.",
-    fileName: "intelligent-tutoring-bot.json",
   },
   {
     name: "Solicitar Relatórios do LMS",
