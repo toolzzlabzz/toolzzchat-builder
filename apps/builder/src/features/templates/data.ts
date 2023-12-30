@@ -70,8 +70,7 @@ export const templates: TemplateProps[] = [
     fileName: "course-whats.json",
     category: "educação",
     description:
-      "Este template cria um Curso em formato de chatbot no whatsapp",
-    backgroundColor: "#010000",
+      "Este template cria um Curso em formato de chatbot no whatsapp"
   },
   {
     name: "Recomendação de Conteúdos",
@@ -80,7 +79,6 @@ export const templates: TemplateProps[] = [
     category: "educação",
     description:
       "Este bot ajuda um aluno a encontrar o curso ou conteúdo certo na hora certa fornecer uma recomendação personalizada.",
-    backgroundColor: "#010000",
   },
   {
     name: "Tutor Virtual 24h",
@@ -97,7 +95,6 @@ export const templates: TemplateProps[] = [
     category: "educação",
     description:
       "Este bot cria uma trilha personalizada para cada aluno e fornece uma recomendação personalizada.",
-    backgroundColor: "#010000",
   },
   {
     name: "Aprendizagem Adaptativa com IA",
@@ -106,7 +103,6 @@ export const templates: TemplateProps[] = [
     category: "educação",
     description:
       "Este bot cria uma trilha personalizada para cada aluno e fornece uma recomendação personalizada.",
-    backgroundColor: "#010000",
   },
   {
     name: "Treinamento Corporativo",
