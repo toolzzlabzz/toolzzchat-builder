@@ -84,7 +84,7 @@ export const createTypebot = authenticatedProcedure
       data: {
         version: '6',
         workspaceId,
-        name: typebot.name ?? 'My typebot',
+        name: typebot.name ?? 'New Bot',
         icon: typebot.icon,
         selectedThemeTemplateId: typebot.selectedThemeTemplateId,
         groups: (typebot.groups
