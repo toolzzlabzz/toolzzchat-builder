@@ -142,7 +142,7 @@ export const SharePage = () => {
                     limitReachedType={t('billing.limitMessage.customDomain')}
                     excludedPlans={[Plan.STARTER]}
                   >
-                    <Text mr="2">Adicionar meu domínio personalizado</Text>{' '}
+                    <Text mr="2">Adicionar domínio personalizado</Text>{' '}
                     <LockTag plan={Plan.PRO} />
                   </UpgradeButton>
                 )}
