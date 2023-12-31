@@ -71,7 +71,7 @@ export const ChatThemeSettings = ({
         onAvatarChange={updateGuestAvatar}
       />
       <Stack borderWidth={1} rounded="md" p="4" spacing={4}>
-        <Heading fontSize="lg">Bot bubbles</Heading>
+        <Heading fontSize="lg">Bot Messages</Heading>
         <HostBubbles
           hostBubbles={chatTheme?.hostBubbles}
           onHostBubblesChange={updateHostBubbles}
@@ -79,14 +79,14 @@ export const ChatThemeSettings = ({
       </Stack>
 
       <Stack borderWidth={1} rounded="md" p="4" spacing={4}>
-        <Heading fontSize="lg">User bubbles</Heading>
+        <Heading fontSize="lg">User Messages</Heading>
         <GuestBubbles
           guestBubbles={chatTheme?.guestBubbles}
           onGuestBubblesChange={updateGuestBubbles}
         />
       </Stack>
       <Stack borderWidth={1} rounded="md" p="4" spacing={4}>
-        <Heading fontSize="lg">Buttons</Heading>
+        <Heading fontSize="lg">Botões</Heading>
         <ButtonsTheme
           buttons={chatTheme?.buttons}
           onButtonsChange={updateButtons}
@@ -97,7 +97,7 @@ export const ChatThemeSettings = ({
         <InputsTheme inputs={chatTheme?.inputs} onInputsChange={updateInputs} />
       </Stack>
       <Stack borderWidth={1} rounded="md" p="4" spacing={4}>
-        <Heading fontSize="lg">Corners roundness</Heading>
+        <Heading fontSize="lg">Bordas</Heading>
         <RadioButtons
           options={[
             {

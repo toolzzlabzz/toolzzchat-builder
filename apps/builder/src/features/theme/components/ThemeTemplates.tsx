@@ -32,7 +32,7 @@ export const ThemeTemplates = ({
           colorScheme={selectedTab === 'my-templates' ? 'blue' : 'gray'}
           onClick={() => setSelectedTab('my-templates')}
         >
-          Meus templates
+          Meus temas
         </Button>
         <Button
           flex="1"
@@ -40,7 +40,7 @@ export const ThemeTemplates = ({
           colorScheme={selectedTab === 'gallery' ? 'blue' : 'gray'}
           onClick={() => setSelectedTab('gallery')}
         >
-          Marketplace
+          Templates Toolzz
         </Button>
       </HStack>
       <ThemeTemplatesBody
