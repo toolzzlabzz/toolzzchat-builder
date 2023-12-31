@@ -189,7 +189,7 @@
   "editor.sidebarBlock.typebot.label": "Bot",
   "editor.sidebarBlock.video.label": "Vídeo",
   "editor.sidebarBlock.wait.label": "Espera",
-  "editor.sidebarBlock.webhook.label": "Webhook",
+  "editor.sidebarBlock.webhook.label": "HTTP / Webhook",
   "editor.sidebarBlock.website.label": "Website",
   "editor.sidebarBlock.zapier.label": "Zapier",
   "editor.sidebarBlock.zemanticAi.label": "Zemantic AI",
