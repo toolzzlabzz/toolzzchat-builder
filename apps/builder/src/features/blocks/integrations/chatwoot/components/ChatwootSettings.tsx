@@ -53,7 +53,7 @@ export const ChatwootSettings = ({ options, onOptionsChange }: Props) => {
               onChange={(websiteToken) =>
                 onOptionsChange({ ...options, websiteToken })
               }
-              moreInfoTooltip="Pode ser encontrado no Toolzz Bots em Configurações > Caixas de entrada > Configurações > Configuração, no trecho de código."
+              moreInfoTooltip="Pode ser encontrado no Toolzz Chat  em Configurações > Caixas de entrada > Configurações > Configuração, no trecho de código."
             />
             <Accordion allowMultiple>
               <AccordionItem>
