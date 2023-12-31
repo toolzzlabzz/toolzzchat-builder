@@ -67,7 +67,7 @@ export const ThemeSideMenu = () => {
       position="relative"
     >
       <Heading fontSize="xl" textAlign="center">
-        Customize the theme
+        Customize o tema
       </Heading>
       <Accordion allowMultiple>
         {currentUserMode === 'write' && (

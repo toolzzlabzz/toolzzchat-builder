@@ -41,7 +41,7 @@ export const MyTemplates = ({
       {(!selectedTemplate ||
         !areThemesEqual(selectedTemplate?.theme, currentTheme)) && (
         <Button leftIcon={<SaveIcon />} onClick={onOpen} colorScheme="blue">
-          Save current theme
+          Salvar meu tema atual
         </Button>
       )}
       <SaveThemeModal
