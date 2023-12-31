@@ -219,7 +219,7 @@
   "templates.buttons.fromTemplateButton.label": "Comece a partir de um modelo",
   "templates.buttons.heading": "Criar um novo bot",
   "templates.buttons.importFileButton.label": "Importar um ficheiro",
-  "templates.importFromFileButon.toastError.description": "Falha ao analisar o ficheiro. Tem certeza de que é um bot?",
+  "templates.importFromFileButon.toastError.description": "Falha ao analisar o ficheiro. Tem certeza de que é um bot??",
   "templates.modal.menuHeading.marketing": "Marketing",
   "templates.modal.menuHeading.new.tag": "Novo",
   "templates.modal.menuHeading.other": "Outros",
