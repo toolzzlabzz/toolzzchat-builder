@@ -5,9 +5,9 @@ export enum IntegrationBlockType {
   WEBHOOK = 'Webhook',
   EMAIL = 'Email',
   ZAPIER = 'Zapier',
-  MAKE_COM = 'Toolzz Connect',
+  MAKE_COM = 'Make.com',
   PABBLY_CONNECT = 'Pabbly',
-  CHATWOOT = 'Toolzz Chat',
+  CHATWOOT = 'Chatwoot',
   PIXEL = 'Pixel',
   ZEMANTIC_AI = 'Zemantic AI',
 }
