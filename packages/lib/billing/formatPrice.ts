@@ -11,10 +11,9 @@ export const formatPrice = (
     maxFractionDigits: 0,
   }
 ) => {
-  const isEuropean = guessIfUserIsEuropean()
-  const formatter = new Intl.NumberFormat(isEuropean ? 'fr-FR' : 'en-US', {
+  const formatter = new Intl.NumberFormat('pt-BR', {
     style: 'currency',
-    currency: currency?.toUpperCase() ?? (isEuropean ? 'EUR' : 'USD'),
+    currency: currency?.toUpperCase(),
     maximumFractionDigits: maxFractionDigits,
   })
   return formatter.format(price)
