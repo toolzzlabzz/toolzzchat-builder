@@ -36,6 +36,7 @@ const currencySymbols: { [key: string]: string } = {
   THB: '฿',
   UAH: '₴',
   VND: '₫',
+  BRL: 'R$',
 }
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
