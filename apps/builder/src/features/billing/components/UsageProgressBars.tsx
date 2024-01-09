@@ -66,7 +66,7 @@ export const UsageProgressBars = ({ workspace }: Props) => {
               </Tooltip>
             )}
             <Text fontSize="sm" fontStyle="italic" color="gray.500">
-              (Resets on {data?.resetsAt.toLocaleDateString()})
+              (Será reiniciado em {data?.resetsAt.toLocaleDateString()})
             </Text>
           </HStack>
 
