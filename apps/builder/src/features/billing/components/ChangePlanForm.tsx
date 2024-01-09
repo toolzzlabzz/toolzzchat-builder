@@ -82,7 +82,7 @@ export const ChangePlanForm = ({ workspace, excludedPlans }: Props) => {
 
   return (
     <Stack spacing={6}>
-      <HStack maxW="500px">
+      <HStack maxW="500px" display="none">
         <StripeClimateLogo />
         <Text fontSize="xs" color="gray.500">
           {t('billing.contribution.preLink')}{' '}
