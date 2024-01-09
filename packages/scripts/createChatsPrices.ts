@@ -15,7 +15,7 @@ const createChatsPrices = async () => {
   })
 
   await stripe.prices.create({
-    currency: 'usd',
+    currency: 'brl',
     billing_scheme: 'tiered',
     recurring: {
       interval: 'month',
@@ -35,7 +35,7 @@ const createChatsPrices = async () => {
   })
 
   await stripe.prices.create({
-    currency: 'usd',
+    currency: 'brl',
     billing_scheme: 'tiered',
     recurring: {
       interval: 'month',
