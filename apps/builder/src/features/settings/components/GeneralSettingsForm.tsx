@@ -64,7 +64,11 @@ export const GeneralSettingsForm = ({
   return (
     <Stack spacing={6}>
       <SwitchWithLabel
+<<<<<<< HEAD
         label="Prefill inputs"
+=======
+        label="Prefill input"
+>>>>>>> upstream/main
         initialValue={
           generalSettings?.isInputPrefillEnabled ??
           defaultSettings.general.isInputPrefillEnabled
@@ -73,7 +77,11 @@ export const GeneralSettingsForm = ({
         moreInfoContent="Inputs are automatically pre-filled whenever their associated variable has a value"
       />
       <SwitchWithLabel
+<<<<<<< HEAD
         label="Ocultar parâmetros de consulta no início do bot"
+=======
+        label="Hide query params on bot start"
+>>>>>>> upstream/main
         initialValue={
           generalSettings?.isHideQueryParamsEnabled ??
           defaultSettings.general.isHideQueryParamsEnabled

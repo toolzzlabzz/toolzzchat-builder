@@ -56,6 +56,7 @@ export const WhatsAppModal = ({ isOpen, onClose }: ModalProps): JSX.Element => {
 
   const whatsAppSettings = typebot?.settings.whatsApp
 
+<<<<<<< HEAD
   const { data: phoneNumberData } = trpc.whatsApp.getPhoneNumber.useQuery(
     {
       credentialsId: typebot?.whatsAppCredentialsId as string,
@@ -64,6 +65,17 @@ export const WhatsAppModal = ({ isOpen, onClose }: ModalProps): JSX.Element => {
       enabled: !!typebot?.whatsAppCredentialsId,
     }
   )
+=======
+  const { data: phoneNumberData } =
+    trpc.whatsAppInternal.getPhoneNumber.useQuery(
+      {
+        credentialsId: typebot?.whatsAppCredentialsId as string,
+      },
+      {
+        enabled: !!typebot?.whatsAppCredentialsId,
+      }
+    )
+>>>>>>> upstream/main
 
   const toggleEnableWhatsApp = (isChecked: boolean) => {
     if (!phoneNumberData?.id || !typebot) return
@@ -181,7 +193,12 @@ export const WhatsAppModal = ({ isOpen, onClose }: ModalProps): JSX.Element => {
         <ModalBody as={Stack} spacing="6">
           {!hasProPerks(workspace) && (
             <UnlockPlanAlertInfo excludedPlans={['STARTER']}>
+<<<<<<< HEAD
               Atualize seu workspace para o plano <PlanTag plan="PRO" /> para poder ativar a integração com o WhatsApp.
+=======
+              Upgrade your workspace to <PlanTag plan="PRO" /> to be able to
+              enable WhatsApp integration.
+>>>>>>> upstream/main
             </UnlockPlanAlertInfo>
           )}
           {!isPublished && phoneNumberData?.id && (
@@ -233,7 +250,11 @@ export const WhatsAppModal = ({ isOpen, onClose }: ModalProps): JSX.Element => {
                               whatsAppSettings?.sessionExpiryTimeout
                             }
                             placeholder={defaultSessionExpiryTimeout.toString()}
+<<<<<<< HEAD
                             moreInfoTooltip="Um número entre 0 e 48 que representa o tempo em horas após o qual a sessão expirará caso o usuário não interaja com o bot. A conversa será reiniciada se o usuário enviar uma mensagem após esse prazo de expiração."
+=======
+                            moreInfoTooltip="A number between 0 and 48 that represents the time in hours after which the session will expire if the user does not interact with the bot. The conversation restarts if the user sends a message after that expiration time."
+>>>>>>> upstream/main
                             onValueChange={updateSessionExpiryTimeout}
                             withVariableButton={false}
                             suffix="hours"
@@ -252,7 +273,10 @@ export const WhatsAppModal = ({ isOpen, onClose }: ModalProps): JSX.Element => {
                               []
                             }
                             onItemsChange={updateStartConditionComparisons}
+<<<<<<< HEAD
                             Item={WhatsAppComparisonItem}
+=======
+>>>>>>> upstream/main
                             ComponentBetweenItems={() => (
                               <Flex justify="center">
                                 <DropdownList
@@ -269,7 +293,13 @@ export const WhatsAppModal = ({ isOpen, onClose }: ModalProps): JSX.Element => {
                               </Flex>
                             )}
                             addLabel="Add a comparison"
+<<<<<<< HEAD
                           />
+=======
+                          >
+                            {(props) => <WhatsAppComparisonItem {...props} />}
+                          </TableList>
+>>>>>>> upstream/main
                         </SwitchWithRelatedSettings>
                       </AccordionPanel>
                     </AccordionItem>

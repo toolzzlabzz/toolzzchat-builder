@@ -1,7 +1,11 @@
 import { RedirectBlock, SessionState } from '@typebot.io/schemas'
 import { sanitizeUrl } from '@typebot.io/lib'
 import { ExecuteLogicResponse } from '../../../types'
+<<<<<<< HEAD
 import { parseVariables } from '../../../variables/parseVariables'
+=======
+import { parseVariables } from '@typebot.io/variables/parseVariables'
+>>>>>>> upstream/main
 
 export const executeRedirect = (
   state: SessionState,
@@ -13,6 +17,7 @@ export const executeRedirect = (
   return {
     clientSideActions: [
       {
+        type: 'redirect',
         redirect: { url: formattedUrl, isNewTab: block.options.isNewTab },
       },
     ],

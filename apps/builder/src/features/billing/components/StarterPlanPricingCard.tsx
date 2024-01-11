@@ -16,7 +16,11 @@ import { T, useTranslate } from '@tolgee/react'
 
 type Props = {
   currentPlan: Plan
+<<<<<<< HEAD
   currency?: 'brl'
+=======
+  currency?: 'eur' | 'usd'
+>>>>>>> upstream/main
   isLoading?: boolean
   onPayClick: () => void
 }
@@ -82,7 +86,11 @@ export const StarterPlanPricingCard = ({
                 fontSize="sm"
                 color={useColorModeValue('gray.500', 'gray.400')}
               >
+<<<<<<< HEAD
                 Extra chats: R$10 per 500
+=======
+                Extra chats: $10 per 500
+>>>>>>> upstream/main
               </Text>
             </Stack>,
             t('billing.pricingCard.starter.brandingRemoved'),

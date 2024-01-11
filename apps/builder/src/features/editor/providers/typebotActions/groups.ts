@@ -31,9 +31,14 @@ const groupsActions = (setTypebot: SetTypebot): GroupsActions => ({
     id,
     block,
     indices,
+    groupLabel,
     ...graphCoordinates
   }: Coordinates & {
     id: string
+<<<<<<< HEAD
+=======
+    groupLabel?: string
+>>>>>>> upstream/main
     block: BlockV6 | BlockV6['type']
     indices: BlockIndices
   }) =>
@@ -42,7 +47,11 @@ const groupsActions = (setTypebot: SetTypebot): GroupsActions => ({
         const newGroup: GroupV6 = {
           id,
           graphCoordinates,
+<<<<<<< HEAD
           title: `Group #${typebot.groups.length + 1}`,
+=======
+          title: `${groupLabel ?? 'Group'} #${typebot.groups.length + 1}`,
+>>>>>>> upstream/main
           blocks: [],
         }
         typebot.groups.push(newGroup)

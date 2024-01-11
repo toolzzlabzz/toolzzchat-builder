@@ -1,9 +1,16 @@
 import { ContinueChatResponse } from '@typebot.io/schemas'
 import { WhatsAppSendingMessage } from '@typebot.io/schemas/features/whatsapp'
+<<<<<<< HEAD
 import { convertRichTextToWhatsAppText } from './convertRichTextToWhatsAppText'
 import { isSvgSrc } from '@typebot.io/lib/utils'
 import { BubbleBlockType } from '@typebot.io/schemas/features/blocks/bubbles/constants'
 import { VideoBubbleContentType } from '@typebot.io/schemas/features/blocks/bubbles/video/constants'
+=======
+import { isSvgSrc } from '@typebot.io/lib/utils'
+import { BubbleBlockType } from '@typebot.io/schemas/features/blocks/bubbles/constants'
+import { VideoBubbleContentType } from '@typebot.io/schemas/features/blocks/bubbles/video/constants'
+import { convertRichTextToMarkdown } from '@typebot.io/lib/serializer/convertRichTextToMarkdown'
+>>>>>>> upstream/main
 
 const mp4HttpsUrlRegex = /^https:\/\/.*\.mp4$/
 
@@ -17,7 +24,9 @@ export const convertMessageToWhatsAppMessage = (
       return {
         type: 'text',
         text: {
-          body: convertRichTextToWhatsAppText(message.content.richText),
+          body: convertRichTextToMarkdown(message.content.richText, {
+            flavour: 'whatsapp',
+          }),
         },
       }
     }

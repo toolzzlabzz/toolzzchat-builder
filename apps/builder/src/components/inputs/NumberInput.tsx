@@ -11,9 +11,13 @@ import {
   FormLabel,
   Stack,
   Text,
+<<<<<<< HEAD
+=======
+  FormHelperText,
+>>>>>>> upstream/main
 } from '@chakra-ui/react'
 import { Variable, VariableString } from '@typebot.io/schemas'
-import { useEffect, useState } from 'react'
+import { ReactNode, useEffect, useState } from 'react'
 import { useDebouncedCallback } from 'use-debounce'
 import { env } from '@typebot.io/env'
 import { MoreInfoTooltip } from '../MoreInfoTooltip'
@@ -31,6 +35,10 @@ type Props<HasVariable extends boolean> = {
   isRequired?: boolean
   direction?: 'row' | 'column'
   suffix?: string
+<<<<<<< HEAD
+=======
+  helperText?: ReactNode
+>>>>>>> upstream/main
   onValueChange: (value?: Value<HasVariable>) => void
 } & Omit<NumberInputProps, 'defaultValue' | 'value' | 'onChange' | 'isRequired'>
 
@@ -42,8 +50,14 @@ export const NumberInput = <HasVariable extends boolean>({
   label,
   moreInfoTooltip,
   isRequired,
+<<<<<<< HEAD
   direction,
   suffix,
+=======
+  direction = 'column',
+  suffix,
+  helperText,
+>>>>>>> upstream/main
   ...props
 }: Props<HasVariable>) => {
   const [value, setValue] = useState(defaultValue?.toString() ?? '')
@@ -87,7 +101,12 @@ export const NumberInput = <HasVariable extends boolean>({
   }
 
   const Input = (
-    <ChakraNumberInput onChange={handleValueChange} value={value} {...props}>
+    <ChakraNumberInput
+      onChange={handleValueChange}
+      value={value}
+      w="full"
+      {...props}
+    >
       <NumberInputField placeholder={props.placeholder} />
       <NumberInputStepper>
         <NumberIncrementStepper />
@@ -101,20 +120,34 @@ export const NumberInput = <HasVariable extends boolean>({
       as={direction === 'column' ? Stack : HStack}
       isRequired={isRequired}
       justifyContent="space-between"
+<<<<<<< HEAD
       width={label ? 'full' : 'auto'}
       spacing={direction === 'column' ? 2 : 3}
     >
       {label && (
         <FormLabel mb="0" mr="0" flexShrink={0}>
+=======
+      width={label || props.width === 'full' ? 'full' : 'auto'}
+      spacing={direction === 'column' ? 2 : 3}
+    >
+      {label && (
+        <FormLabel display="flex" flexShrink={0} gap="1" mb="0" mr="0">
+>>>>>>> upstream/main
           {label}{' '}
           {moreInfoTooltip && (
             <MoreInfoTooltip>{moreInfoTooltip}</MoreInfoTooltip>
           )}
         </FormLabel>
       )}
+<<<<<<< HEAD
       <HStack>
         {withVariableButton ?? true ? (
           <HStack spacing="0">
+=======
+      <HStack w={direction === 'row' ? undefined : 'full'}>
+        {withVariableButton ?? true ? (
+          <HStack spacing="0" w="full">
+>>>>>>> upstream/main
             {Input}
             <VariablesButton onSelectVariable={handleVariableSelected} />
           </HStack>
@@ -123,6 +156,10 @@ export const NumberInput = <HasVariable extends boolean>({
         )}
         {suffix ? <Text>{suffix}</Text> : null}
       </HStack>
+<<<<<<< HEAD
+=======
+      {helperText ? <FormHelperText mt="0">{helperText}</FormHelperText> : null}
+>>>>>>> upstream/main
     </FormControl>
   )
 }

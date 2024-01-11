@@ -10,7 +10,11 @@ export const receiveMessagePreview = publicProcedure
   .meta({
     openapi: {
       method: 'POST',
+<<<<<<< HEAD
       path: '/whatsapp/preview/webhook',
+=======
+      path: '/v1/whatsapp/preview/webhook',
+>>>>>>> upstream/main
       summary: 'Message webhook',
       tags: ['WhatsApp'],
     },

@@ -24,7 +24,11 @@ export default function Page() {
         justifyContent="center"
         spacing={4}
       >
+<<<<<<< HEAD
         <AlertIcon fontSize="4xl" />
+=======
+        <AlertIcon width="40px" />
+>>>>>>> upstream/main
         <Heading fontSize="2xl">Your workspace has unpaid invoice(s).</Heading>
         <Text>Head over to the billing portal to pay it.</Text>
         {workspace?.id && (

@@ -13,6 +13,10 @@ import { GuestBubbles } from './GuestBubbles'
 import { HostBubbles } from './HostBubbles'
 import { InputsTheme } from './InputsTheme'
 import { defaultTheme } from '@typebot.io/schemas/features/typebot/theme/constants'
+<<<<<<< HEAD
+=======
+import { useTranslate } from '@tolgee/react'
+>>>>>>> upstream/main
 
 type Props = {
   workspaceId: string
@@ -27,6 +31,11 @@ export const ChatThemeSettings = ({
   chatTheme,
   onChatThemeChange,
 }: Props) => {
+<<<<<<< HEAD
+=======
+  const { t } = useTranslate()
+
+>>>>>>> upstream/main
   const updateHostBubbles = (
     hostBubbles: NonNullable<Theme['chat']>['hostBubbles']
   ) => onChatThemeChange({ ...chatTheme, hostBubbles })
@@ -55,7 +64,11 @@ export const ChatThemeSettings = ({
           typebotId,
           fileName: 'hostAvatar',
         }}
+<<<<<<< HEAD
         title="Bot avatar"
+=======
+        title={t('theme.sideMenu.chat.botAvatar')}
+>>>>>>> upstream/main
         avatarProps={chatTheme?.hostAvatar}
         isDefaultCheck
         onAvatarChange={updateHostAvatar}
@@ -66,12 +79,20 @@ export const ChatThemeSettings = ({
           typebotId,
           fileName: 'guestAvatar',
         }}
+<<<<<<< HEAD
         title="User avatar"
+=======
+        title={t('theme.sideMenu.chat.userAvatar')}
+>>>>>>> upstream/main
         avatarProps={chatTheme?.guestAvatar}
         onAvatarChange={updateGuestAvatar}
       />
       <Stack borderWidth={1} rounded="md" p="4" spacing={4}>
+<<<<<<< HEAD
         <Heading fontSize="lg">Bot Messages</Heading>
+=======
+        <Heading fontSize="lg">{t('theme.sideMenu.chat.botBubbles')}</Heading>
+>>>>>>> upstream/main
         <HostBubbles
           hostBubbles={chatTheme?.hostBubbles}
           onHostBubblesChange={updateHostBubbles}
@@ -79,25 +100,43 @@ export const ChatThemeSettings = ({
       </Stack>
 
       <Stack borderWidth={1} rounded="md" p="4" spacing={4}>
+<<<<<<< HEAD
         <Heading fontSize="lg">User Messages</Heading>
+=======
+        <Heading fontSize="lg">{t('theme.sideMenu.chat.userBubbles')}</Heading>
+>>>>>>> upstream/main
         <GuestBubbles
           guestBubbles={chatTheme?.guestBubbles}
           onGuestBubblesChange={updateGuestBubbles}
         />
       </Stack>
       <Stack borderWidth={1} rounded="md" p="4" spacing={4}>
+<<<<<<< HEAD
         <Heading fontSize="lg">Botões</Heading>
+=======
+        <Heading fontSize="lg">{t('theme.sideMenu.chat.buttons')}</Heading>
+>>>>>>> upstream/main
         <ButtonsTheme
           buttons={chatTheme?.buttons}
           onButtonsChange={updateButtons}
         />
       </Stack>
       <Stack borderWidth={1} rounded="md" p="4" spacing={4}>
+<<<<<<< HEAD
         <Heading fontSize="lg">Inputs</Heading>
         <InputsTheme inputs={chatTheme?.inputs} onInputsChange={updateInputs} />
       </Stack>
       <Stack borderWidth={1} rounded="md" p="4" spacing={4}>
         <Heading fontSize="lg">Bordas</Heading>
+=======
+        <Heading fontSize="lg">{t('theme.sideMenu.chat.inputs')}</Heading>
+        <InputsTheme inputs={chatTheme?.inputs} onInputsChange={updateInputs} />
+      </Stack>
+      <Stack borderWidth={1} rounded="md" p="4" spacing={4}>
+        <Heading fontSize="lg">
+          {t('theme.sideMenu.chat.cornersRoundness')}
+        </Heading>
+>>>>>>> upstream/main
         <RadioButtons
           options={[
             {

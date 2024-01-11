@@ -20,7 +20,11 @@ import { injectVariableValuesInButtonsInputBlock } from './blocks/inputs/buttons
 import { injectVariableValuesInPictureChoiceBlock } from './blocks/inputs/pictureChoice/injectVariableValuesInPictureChoiceBlock'
 import { getPrefilledInputValue } from './getPrefilledValue'
 import { parseDateInput } from './blocks/inputs/date/parseDateInput'
+<<<<<<< HEAD
 import { deepParseVariables } from './variables/deepParseVariables'
+=======
+import { deepParseVariables } from '@typebot.io/variables/deepParseVariables'
+>>>>>>> upstream/main
 import {
   BubbleBlockWithDefinedContent,
   parseBubbleBlock,
@@ -30,6 +34,10 @@ import { VisitedEdge } from '@typebot.io/prisma'
 import { env } from '@typebot.io/env'
 import { TRPCError } from '@trpc/server'
 import { ExecuteIntegrationResponse, ExecuteLogicResponse } from './types'
+<<<<<<< HEAD
+=======
+import { createId } from '@paralleldrive/cuid2'
+>>>>>>> upstream/main
 
 type ContextProps = {
   version: 1 | 2
@@ -140,9 +148,26 @@ export const executeGroup = async (
         })),
       ]
       if (
+<<<<<<< HEAD
         executionResponse.clientSideActions?.find(
           (action) => action.expectsDedicatedReply
         )
+=======
+        'customEmbedBubble' in executionResponse &&
+        executionResponse.customEmbedBubble
+      ) {
+        messages.push({
+          id: createId(),
+          ...executionResponse.customEmbedBubble,
+        })
+      }
+      if (
+        executionResponse.clientSideActions?.find(
+          (action) => action.expectsDedicatedReply
+        ) ||
+        ('customEmbedBubble' in executionResponse &&
+          executionResponse.customEmbedBubble)
+>>>>>>> upstream/main
       ) {
         return {
           messages,

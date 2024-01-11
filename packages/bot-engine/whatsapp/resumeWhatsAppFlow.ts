@@ -140,11 +140,23 @@ const getIncomingMessageContent = async ({
     }
     case 'document':
     case 'audio':
+<<<<<<< HEAD
       return
     case 'video':
     case 'image':
       if (!typebotId) return
       const mediaId = 'video' in message ? message.video.id : message.image.id
+=======
+    case 'video':
+    case 'image':
+      if (!typebotId) return
+      let mediaId: string | undefined
+      if (message.type === 'video') mediaId = message.video.id
+      if (message.type === 'image') mediaId = message.image.id
+      if (message.type === 'audio') mediaId = message.audio.id
+      if (message.type === 'document') mediaId = message.document.id
+      if (!mediaId) return
+>>>>>>> upstream/main
       return (
         env.NEXTAUTH_URL +
         `/api/typebots/${typebotId}/whatsapp/media/${mediaId}`

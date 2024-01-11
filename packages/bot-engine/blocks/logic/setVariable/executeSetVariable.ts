@@ -2,9 +2,15 @@ import { SessionState, SetVariableBlock, Variable } from '@typebot.io/schemas'
 import { byId } from '@typebot.io/lib'
 import { ExecuteLogicResponse } from '../../../types'
 import { parseScriptToExecuteClientSideAction } from '../script/executeScript'
+<<<<<<< HEAD
 import { parseGuessedValueType } from '../../../variables/parseGuessedValueType'
 import { parseVariables } from '../../../variables/parseVariables'
 import { updateVariablesInSession } from '../../../variables/updateVariablesInSession'
+=======
+import { parseGuessedValueType } from '@typebot.io/variables/parseGuessedValueType'
+import { parseVariables } from '@typebot.io/variables/parseVariables'
+import { updateVariablesInSession } from '@typebot.io/variables/updateVariablesInSession'
+>>>>>>> upstream/main
 import { createId } from '@paralleldrive/cuid2'
 
 export const executeSetVariable = (
@@ -32,6 +38,7 @@ export const executeSetVariable = (
       outgoingEdgeId: block.outgoingEdgeId,
       clientSideActions: [
         {
+          type: 'setVariable',
           setVariable: {
             scriptToExecute,
           },

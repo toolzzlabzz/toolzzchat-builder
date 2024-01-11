@@ -1,6 +1,10 @@
 import { isNotDefined } from '@typebot.io/lib'
 import { NumberInputBlock, Variable } from '@typebot.io/schemas'
+<<<<<<< HEAD
 import { parseVariables } from '../../../variables/parseVariables'
+=======
+import { parseVariables } from '@typebot.io/variables/parseVariables'
+>>>>>>> upstream/main
 
 export const validateNumber = (
   inputValue: string,

@@ -6,6 +6,10 @@ import {
   Button,
   useDisclosure,
   Text,
+  Input,
+  InputGroup,
+  InputRightElement,
+  FormHelperText,
 } from '@chakra-ui/react'
 import { ConfirmModal } from '@/components/ConfirmModal'
 import React from 'react'
@@ -13,6 +17,10 @@ import { EditableEmojiOrImageIcon } from '@/components/EditableEmojiOrImageIcon'
 import { useWorkspace } from '../WorkspaceProvider'
 import { TextInput } from '@/components/inputs'
 import { useTranslate } from '@tolgee/react'
+<<<<<<< HEAD
+=======
+import { CopyButton } from '@/components/CopyButton'
+>>>>>>> upstream/main
 
 export const WorkspaceSettingsForm = ({ onClose }: { onClose: () => void }) => {
   const { t } = useTranslate()
@@ -50,12 +58,40 @@ export const WorkspaceSettingsForm = ({ onClose }: { onClose: () => void }) => {
         </Flex>
       </FormControl>
       {workspace && (
+<<<<<<< HEAD
         <TextInput
           label={t('workspace.settings.name.label')}
           withVariableButton={false}
           defaultValue={workspace?.name}
           onChange={handleNameChange}
         />
+=======
+        <>
+          <TextInput
+            label={t('workspace.settings.name.label')}
+            withVariableButton={false}
+            defaultValue={workspace?.name}
+            onChange={handleNameChange}
+          />
+          <FormControl>
+            <FormLabel>ID:</FormLabel>
+            <InputGroup>
+              <Input
+                type={'text'}
+                defaultValue={workspace.id}
+                pr="16"
+                readOnly
+              />
+              <InputRightElement width="72px">
+                <CopyButton textToCopy={workspace.id} size="xs" />
+              </InputRightElement>
+            </InputGroup>
+            <FormHelperText>
+              Used when interacting with the Typebot API.
+            </FormHelperText>
+          </FormControl>
+        </>
+>>>>>>> upstream/main
       )}
       {workspace && workspaces && workspaces.length > 1 && (
         <DeleteWorkspaceButton

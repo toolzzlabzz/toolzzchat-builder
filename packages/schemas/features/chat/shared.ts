@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { z } from 'zod'
+=======
+import { z } from '../../zod'
+>>>>>>> upstream/main
 import { publicTypebotSchemaV5, publicTypebotSchemaV6 } from '../publicTypebot'
 import { preprocessTypebot } from '../typebot/helpers/preprocessTypebot'
 

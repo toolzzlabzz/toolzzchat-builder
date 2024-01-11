@@ -5,12 +5,20 @@ import {
   ContinueChatResponse,
   Typebot,
 } from '@typebot.io/schemas'
+<<<<<<< HEAD
 import { deepParseVariables } from './variables/deepParseVariables'
+=======
+import { deepParseVariables } from '@typebot.io/variables/deepParseVariables'
+>>>>>>> upstream/main
 import { isEmpty, isNotEmpty } from '@typebot.io/lib/utils'
 import {
   getVariablesToParseInfoInText,
   parseVariables,
+<<<<<<< HEAD
 } from './variables/parseVariables'
+=======
+} from '@typebot.io/variables/parseVariables'
+>>>>>>> upstream/main
 import { TDescendant, createPlateEditor } from '@udecode/plate-common'
 import {
   createDeserializeMdPlugin,

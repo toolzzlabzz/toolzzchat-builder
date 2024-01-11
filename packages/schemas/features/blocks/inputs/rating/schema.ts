@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { z } from 'zod'
+=======
+import { z } from '../../../../zod'
+>>>>>>> upstream/main
 import { optionBaseSchema, blockBaseSchema } from '../../shared'
 import { InputBlockType } from '../constants'
 
@@ -23,11 +27,25 @@ export const ratingInputOptionsSchema = optionBaseSchema.merge(
   })
 )
 
+<<<<<<< HEAD
 export const ratingInputBlockSchema = blockBaseSchema.merge(
   z.object({
     type: z.literal(InputBlockType.RATING),
     options: ratingInputOptionsSchema.optional(),
   })
 )
+=======
+export const ratingInputBlockSchema = blockBaseSchema
+  .merge(
+    z.object({
+      type: z.literal(InputBlockType.RATING),
+      options: ratingInputOptionsSchema.optional(),
+    })
+  )
+  .openapi({
+    title: 'Rating',
+    ref: 'rating',
+  })
+>>>>>>> upstream/main
 
 export type RatingInputBlock = z.infer<typeof ratingInputBlockSchema>

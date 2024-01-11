@@ -1,20 +1,13 @@
 {
-  "name": "docs",
+  "name": "docs-mint",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "docusaurus": "docusaurus",
-    "start": "docusaurus start --no-open --port 3004",
-    "build": "docusaurus build",
-    "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy",
-    "clear": "docusaurus clear",
-    "serve": "docusaurus serve",
-    "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids",
-    "update-search": "docker run -it --rm --env-file=.env -e \"CONFIG=$(cat docsearch-scrapper-config.json | jq -r tostring)\" algolia/docsearch-scraper",
+    "dev": "mintlify dev --port 3004",
+    "build": "pnpm api:generate && mintlify broken-links",
     "api:generate": "dotenv -e ./.env -e ../../.env -- tsx --tsconfig ../builder/tsconfig.json ../builder/src/helpers/server/generateOpenApi.ts && dotenv -e ./.env -e ../../.env -- tsx --tsconfig ../viewer/openapi.tsconfig.json ../viewer/src/helpers/server/generateOpenApi.ts"
   },
+<<<<<<< HEAD
   "dependencies": {
     "@docsearch/react": "^3.5.2",
     "@docusaurus/core": "2.4.1",
@@ -51,5 +44,10 @@
     "tsx": "3.14.0",
     "typescript": "5.3.2",
     "url": "0.11.1"
+=======
+  "devDependencies": {
+    "mintlify": "4.0.75",
+    "tsx": "^4.6.2"
+>>>>>>> upstream/main
   }
 }

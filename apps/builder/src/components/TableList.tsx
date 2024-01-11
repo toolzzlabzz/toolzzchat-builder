@@ -28,9 +28,13 @@ type Props<T> = {
   addLabel?: string
   newItemDefaultProps?: Partial<T>
   hasDefaultItem?: boolean
+<<<<<<< HEAD
   Item: (props: TableListItemProps<T>) => JSX.Element
+=======
+>>>>>>> upstream/main
   ComponentBetweenItems?: (props: unknown) => JSX.Element
   onItemsChange: (items: ItemWithId<T>[]) => void
+  children: (props: TableListItemProps<T>) => JSX.Element
 }
 
 export const TableList = <T,>({
@@ -39,7 +43,11 @@ export const TableList = <T,>({
   addLabel = 'Add',
   newItemDefaultProps,
   hasDefaultItem,
+<<<<<<< HEAD
   Item,
+=======
+  children,
+>>>>>>> upstream/main
   ComponentBetweenItems,
   onItemsChange,
 }: Props<T>) => {
@@ -107,7 +115,7 @@ export const TableList = <T,>({
             justifyContent="center"
             pb="4"
           >
-            <Item item={item} onItemChange={handleCellChange(itemIndex)} />
+            {children({ item, onItemChange: handleCellChange(itemIndex) })}
             <Fade
               in={showDeleteIndex === itemIndex}
               style={{

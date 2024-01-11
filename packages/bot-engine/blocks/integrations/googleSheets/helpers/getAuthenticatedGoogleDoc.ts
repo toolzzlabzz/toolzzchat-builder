@@ -1,4 +1,5 @@
 import { TRPCError } from '@trpc/server'
+<<<<<<< HEAD
 import { env } from '@typebot.io/env'
 import { encrypt } from '@typebot.io/lib/api/encryption/encrypt'
 import { decrypt } from '@typebot.io/lib/api/encryption/decrypt'
@@ -8,6 +9,10 @@ import { GoogleSpreadsheet } from 'google-spreadsheet'
 import { OAuth2Client, Credentials } from 'google-auth-library'
 import prisma from '@typebot.io/lib/prisma'
 import { GoogleSheetsCredentials } from '@typebot.io/schemas'
+=======
+import { GoogleSpreadsheet } from 'google-spreadsheet'
+import { getAuthenticatedGoogleClient } from '@typebot.io/lib/google'
+>>>>>>> upstream/main
 
 export const getAuthenticatedGoogleDoc = async ({
   credentialsId,
@@ -29,6 +34,7 @@ export const getAuthenticatedGoogleDoc = async ({
     })
   return new GoogleSpreadsheet(spreadsheetId, auth)
 }
+<<<<<<< HEAD
 
 const getAuthenticatedGoogleClient = async (
   credentialsId: string
@@ -74,3 +80,5 @@ const updateTokens =
       data: { data: encryptedData, iv },
     })
   }
+=======
+>>>>>>> upstream/main

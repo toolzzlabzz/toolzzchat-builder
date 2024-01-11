@@ -1,11 +1,18 @@
 import { ButtonItem, ContinueChatResponse } from '@typebot.io/schemas'
 import { WhatsAppSendingMessage } from '@typebot.io/schemas/features/whatsapp'
+<<<<<<< HEAD
 import { convertRichTextToWhatsAppText } from './convertRichTextToWhatsAppText'
+=======
+>>>>>>> upstream/main
 import { isDefined, isEmpty } from '@typebot.io/lib/utils'
 import { BubbleBlockType } from '@typebot.io/schemas/features/blocks/bubbles/constants'
 import { InputBlockType } from '@typebot.io/schemas/features/blocks/inputs/constants'
 import { defaultPictureChoiceOptions } from '@typebot.io/schemas/features/blocks/inputs/pictureChoice/constants'
 import { defaultChoiceInputOptions } from '@typebot.io/schemas/features/blocks/inputs/choice/constants'
+<<<<<<< HEAD
+=======
+import { convertRichTextToMarkdown } from '@typebot.io/lib/serializer/convertRichTextToMarkdown'
+>>>>>>> upstream/main
 
 export const convertInputToWhatsAppMessages = (
   input: NonNullable<ContinueChatResponse['input']>,
@@ -13,7 +20,13 @@ export const convertInputToWhatsAppMessages = (
 ): WhatsAppSendingMessage[] => {
   const lastMessageText =
     lastMessage?.type === BubbleBlockType.TEXT
+<<<<<<< HEAD
       ? convertRichTextToWhatsAppText(lastMessage.content.richText ?? [])
+=======
+      ? convertRichTextToMarkdown(lastMessage.content.richText ?? [], {
+          flavour: 'whatsapp',
+        })
+>>>>>>> upstream/main
       : undefined
   switch (input.type) {
     case InputBlockType.DATE:

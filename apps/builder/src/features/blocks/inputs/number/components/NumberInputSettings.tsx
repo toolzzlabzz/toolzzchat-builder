@@ -1,6 +1,10 @@
 import { TextInput, NumberInput } from '@/components/inputs'
 import { VariableSearchInput } from '@/components/inputs/VariableSearchInput'
 import { FormLabel, Stack } from '@chakra-ui/react'
+<<<<<<< HEAD
+=======
+import { useTranslate } from '@tolgee/react'
+>>>>>>> upstream/main
 import { NumberInputBlock, Variable } from '@typebot.io/schemas'
 import { defaultNumberInputOptions } from '@typebot.io/schemas/features/blocks/inputs/number/constants'
 import React from 'react'
@@ -11,6 +15,7 @@ type Props = {
 }
 
 export const NumberInputSettings = ({ options, onOptionsChange }: Props) => {
+  const { t } = useTranslate()
   const handlePlaceholderChange = (placeholder: string) =>
     onOptionsChange({ ...options, labels: { ...options?.labels, placeholder } })
   const handleButtonLabelChange = (button: string) =>
@@ -31,7 +36,11 @@ export const NumberInputSettings = ({ options, onOptionsChange }: Props) => {
   return (
     <Stack spacing={4}>
       <TextInput
+<<<<<<< HEAD
         label="Placeholder:"
+=======
+        label={t('blocks.inputs.settings.placeholder.label')}
+>>>>>>> upstream/main
         defaultValue={
           options?.labels?.placeholder ??
           defaultNumberInputOptions.labels.placeholder
@@ -39,30 +48,46 @@ export const NumberInputSettings = ({ options, onOptionsChange }: Props) => {
         onChange={handlePlaceholderChange}
       />
       <TextInput
+<<<<<<< HEAD
         label="Button label:"
+=======
+        label={t('blocks.inputs.settings.button.label')}
+>>>>>>> upstream/main
         defaultValue={
           options?.labels?.button ?? defaultNumberInputOptions.labels.button
         }
         onChange={handleButtonLabelChange}
       />
       <NumberInput
+<<<<<<< HEAD
         label="Min:"
+=======
+        label={t('blocks.inputs.settings.min.label')}
+>>>>>>> upstream/main
         defaultValue={options?.min}
         onValueChange={handleMinChange}
       />
       <NumberInput
+<<<<<<< HEAD
         label="Max:"
+=======
+        label={t('blocks.inputs.settings.max.label')}
+>>>>>>> upstream/main
         defaultValue={options?.max}
         onValueChange={handleMaxChange}
       />
       <NumberInput
+<<<<<<< HEAD
         label="Step:"
+=======
+        label={t('blocks.inputs.number.settings.step.label')}
+>>>>>>> upstream/main
         defaultValue={options?.step}
         onValueChange={handleStepChange}
       />
       <Stack>
         <FormLabel mb="0" htmlFor="variable">
-          Save answer in a variable:
+          {t('blocks.inputs.settings.saveAnswer.label')}
         </FormLabel>
         <VariableSearchInput
           initialVariableId={options?.variableId}

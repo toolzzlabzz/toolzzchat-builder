@@ -13,6 +13,10 @@ import { Header } from 'components/common/Header/Header'
 import { SocialMetaTags } from 'components/common/SocialMetaTags'
 import { BackgroundPolygons } from 'components/Homepage/Hero/BackgroundPolygons'
 import { PlanComparisonTables } from 'components/PricingPage/PlanComparisonTables'
+<<<<<<< HEAD
+=======
+import { StripeClimateLogo } from 'assets/logos/StripeClimateLogo'
+>>>>>>> upstream/main
 import { FreePlanCard } from 'components/PricingPage/FreePlanCard'
 import { StarterPlanCard } from 'components/PricingPage/StarterPlanCard'
 import { ProPlanCard } from 'components/PricingPage/ProPlanCard'
@@ -83,6 +87,25 @@ const Pricing = () => {
               w="full"
               maxW="1200px"
             >
+<<<<<<< HEAD
+=======
+              <StripeClimateLogo />
+              <Text fontSize="sm">
+                Typebot is contributing 1% of your subscription to remove CO₂
+                from the atmosphere.{' '}
+                <TextLink href="https://climate.stripe.com/5VCRAq" isExternal>
+                  More info
+                </TextLink>
+              </Text>
+            </HStack>
+            <Stack
+              direction={['column', 'row']}
+              alignItems={['stretch']}
+              spacing={10}
+              w="full"
+              maxW="1200px"
+            >
+>>>>>>> upstream/main
               <FreePlanCard />
               <StarterPlanCard />
               <ProPlanCard onChatsTiersClick={onOpen} />

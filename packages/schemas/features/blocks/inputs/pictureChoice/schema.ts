@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { z } from 'zod'
+=======
+import { z } from '../../../../zod'
+>>>>>>> upstream/main
 import { optionBaseSchema, blockBaseSchema } from '../../shared'
 import { conditionSchema } from '../../logic'
 import { InputBlockType } from '../constants'
@@ -60,10 +64,25 @@ export const pictureChoiceBlockV5Schema = blockBaseSchema.merge(
 )
 
 export const pictureChoiceBlockSchemas = {
+<<<<<<< HEAD
   v5: pictureChoiceBlockV5Schema,
   v6: pictureChoiceBlockV5Schema.extend({
     items: z.array(pictureChoiceItemSchemas.v6),
   }),
+=======
+  v5: pictureChoiceBlockV5Schema.openapi({
+    title: 'Picture choice v5',
+    ref: 'pictureChoiceV5',
+  }),
+  v6: pictureChoiceBlockV5Schema
+    .extend({
+      items: z.array(pictureChoiceItemSchemas.v6),
+    })
+    .openapi({
+      title: 'Picture choice',
+      ref: 'pictureChoice',
+    }),
+>>>>>>> upstream/main
 } as const
 
 export const pictureChoiceBlockSchema = z.union([

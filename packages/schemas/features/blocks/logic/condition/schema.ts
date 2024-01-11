@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { z } from 'zod'
+=======
+import { z } from '../../../../zod'
+>>>>>>> upstream/main
 import { blockBaseSchema } from '../../shared'
 import { LogicBlockType } from '../constants'
 import { ComparisonOperators, LogicalOperator } from './constants'
@@ -39,14 +43,26 @@ export const conditionBlockSchemas = {
     z.object({
       type: z.enum([LogicBlockType.CONDITION]),
       items: z.array(conditionItemSchemas.v5),
+<<<<<<< HEAD
       options: z.undefined(),
+=======
+      options: z.undefined().openapi({
+        type: 'object',
+      }),
+>>>>>>> upstream/main
     })
   ),
   v6: blockBaseSchema.merge(
     z.object({
       type: z.enum([LogicBlockType.CONDITION]),
       items: z.array(conditionItemSchemas.v6),
+<<<<<<< HEAD
       options: z.undefined(),
+=======
+      options: z.undefined().openapi({
+        type: 'object',
+      }),
+>>>>>>> upstream/main
     })
   ),
 }

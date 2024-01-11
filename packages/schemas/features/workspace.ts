@@ -1,4 +1,4 @@
-import { z } from 'zod'
+import { z } from '../zod'
 import {
   Workspace as WorkspacePrisma,
   Plan,
@@ -51,6 +51,10 @@ export const workspaceSchema = z.object({
   isQuarantined: z.boolean(),
   isSuspended: z.boolean(),
   isPastDue: z.boolean(),
+<<<<<<< HEAD
+=======
+  isVerified: z.boolean().nullable(),
+>>>>>>> upstream/main
 }) satisfies z.ZodType<WorkspacePrisma>
 
 export type Workspace = z.infer<typeof workspaceSchema>

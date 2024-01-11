@@ -1,5 +1,9 @@
 import { ThemeTemplate as ThemeTemplatePrisma } from '@typebot.io/prisma'
+<<<<<<< HEAD
 import { z } from 'zod'
+=======
+import { z } from '../../../zod'
+>>>>>>> upstream/main
 import { BackgroundType } from './constants'
 
 const avatarPropsSchema = z.object({
@@ -38,11 +42,24 @@ const generalThemeSchema = z.object({
   background: backgroundSchema.optional(),
 })
 
+<<<<<<< HEAD
 export const themeSchema = z.object({
   general: generalThemeSchema.optional(),
   chat: chatThemeSchema.optional(),
   customCss: z.string().optional(),
 })
+=======
+export const themeSchema = z
+  .object({
+    general: generalThemeSchema.optional(),
+    chat: chatThemeSchema.optional(),
+    customCss: z.string().optional(),
+  })
+  .openapi({
+    title: 'Theme',
+    ref: 'theme',
+  })
+>>>>>>> upstream/main
 
 export const themeTemplateSchema = z.object({
   id: z.string(),

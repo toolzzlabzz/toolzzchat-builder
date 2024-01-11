@@ -1,7 +1,12 @@
 import { getPrefilledInputValue } from '../../../getPrefilledValue'
 import { DateInputBlock, SessionState, Variable } from '@typebot.io/schemas'
+<<<<<<< HEAD
 import { deepParseVariables } from '../../../variables/deepParseVariables'
 import { parseVariables } from '../../../variables/parseVariables'
+=======
+import { deepParseVariables } from '@typebot.io/variables/deepParseVariables'
+import { parseVariables } from '@typebot.io/variables/parseVariables'
+>>>>>>> upstream/main
 
 export const parseDateInput =
   (state: SessionState) => (block: DateInputBlock) => {

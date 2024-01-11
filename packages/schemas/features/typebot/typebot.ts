@@ -1,4 +1,4 @@
-import { z } from 'zod'
+import { z } from '../../zod'
 import { settingsSchema } from './settings'
 import { themeSchema } from './theme'
 import { variableSchema } from './variable'
@@ -31,7 +31,13 @@ export const typebotV5Schema = z.preprocess(
     version: z.enum(['3', '4', '5']),
     id: z.string(),
     name: z.string(),
+<<<<<<< HEAD
     events: z.preprocess((val) => (val === undefined ? null : val), z.null()),
+=======
+    events: z
+      .preprocess((val) => (val === undefined ? null : val), z.null())
+      .openapi({ type: 'array' }),
+>>>>>>> upstream/main
     groups: z.array(groupV5Schema),
     edges: z.array(edgeSchema),
     variables: z.array(variableSchema),
@@ -60,6 +66,7 @@ export const typebotV5Schema = z.preprocess(
 )
 export type TypebotV5 = z.infer<typeof typebotV5Schema>
 
+<<<<<<< HEAD
 export const typebotV6Schema = typebotV5Schema._def.schema.extend({
   version: z.literal('6'),
   groups: z.array(groupV6Schema),
@@ -72,6 +79,30 @@ export const typebotSchema = z.preprocess(
   z.discriminatedUnion('version', [
     typebotV5Schema._def.schema,
     typebotV6Schema,
+=======
+export type TypebotV5 = z.infer<typeof typebotV5Schema>
+
+export const typebotV6Schema = typebotV5Schema._def.schema
+  .extend({
+    version: z.literal('6'),
+    groups: z.array(groupV6Schema),
+    events: z.tuple([startEventSchema]),
+  })
+  .openapi({
+    title: 'Typebot V6',
+    ref: 'typebotV6',
+  })
+export type TypebotV6 = z.infer<typeof typebotV6Schema>
+
+export const typebotSchema = z.preprocess(
+  preprocessTypebot,
+  z.discriminatedUnion('version', [
+    typebotV6Schema,
+    typebotV5Schema._def.schema.openapi({
+      title: 'Typebot V5',
+      ref: 'typebotV5',
+    }),
+>>>>>>> upstream/main
   ])
 )
 export type Typebot = z.infer<typeof typebotSchema>

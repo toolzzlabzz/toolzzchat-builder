@@ -1,4 +1,5 @@
 import React from 'react'
+<<<<<<< HEAD
 import {
   HStack,
   Flex,
@@ -12,6 +13,14 @@ import { useUser } from '@/features/account/hooks/useUser'
 import { isNotDefined } from '@typebot.io/lib'
 import Link from 'next/link'
 // import { EmojiOrImageIcon } from '@/components/EmojiOrImageIcon'
+=======
+import { HStack, Flex, Button, useDisclosure } from '@chakra-ui/react'
+import { HardDriveIcon, SettingsIcon } from '@/components/icons'
+import { useUser } from '@/features/account/hooks/useUser'
+import { isNotDefined } from '@typebot.io/lib'
+import Link from 'next/link'
+import { EmojiOrImageIcon } from '@/components/EmojiOrImageIcon'
+>>>>>>> upstream/main
 import { useTranslate } from '@tolgee/react'
 import { useWorkspace } from '@/features/workspace/WorkspaceProvider'
 import { WorkspaceDropdown } from '@/features/workspace/components/WorkspaceDropdown'

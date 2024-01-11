@@ -53,7 +53,11 @@ export const GeneralSettings = ({
         onClick={isWorkspaceFreePlan ? onOpen : undefined}
       >
         <FormLabel htmlFor="branding" mb="0" cursor="pointer">
+<<<<<<< HEAD
           Exibir logo Toolzz Bots{' '}
+=======
+          {t('theme.sideMenu.global.typebotBrand')}{' '}
+>>>>>>> upstream/main
           {isWorkspaceFreePlan && <LockTag plan={Plan.STARTER} />}
         </FormLabel>
         <Switch

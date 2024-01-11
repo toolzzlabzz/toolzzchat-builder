@@ -42,15 +42,8 @@ export type FilePathUploadProps = z.infer<
 >
 
 export const generateUploadUrl = authenticatedProcedure
-  .meta({
-    openapi: {
-      method: 'POST',
-      path: '/generate-upload-url',
-      summary: 'Generate upload URL',
-      description: 'Generate the needed URL to upload a file from the client',
-    },
-  })
   .input(inputSchema)
+<<<<<<< HEAD
   .output(
     z.object({
       presignedUrl: z.string(),
@@ -58,6 +51,8 @@ export const generateUploadUrl = authenticatedProcedure
       fileUrl: z.string(),
     })
   )
+=======
+>>>>>>> upstream/main
   .mutation(async ({ input: { filePathProps, fileType }, ctx: { user } }) => {
     if (!env.S3_ENDPOINT || !env.S3_ACCESS_KEY || !env.S3_SECRET_KEY)
       throw new TRPCError({

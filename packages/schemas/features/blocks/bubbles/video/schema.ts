@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { z } from 'zod'
+=======
+import { z } from '../../../../zod'
+>>>>>>> upstream/main
 import { blockBaseSchema } from '../../shared'
 import { VideoBubbleContentType } from './constants'
 import { variableStringSchema } from '../../../utils'

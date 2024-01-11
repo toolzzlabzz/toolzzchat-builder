@@ -6,7 +6,7 @@ import {
   groupV5Schema,
   groupV6Schema,
 } from './typebot'
-import { z } from 'zod'
+import { z } from '../zod'
 import { preprocessTypebot } from './typebot/helpers/preprocessTypebot'
 import { edgeSchema } from './typebot/edge'
 import { startEventSchema } from './events'
@@ -20,7 +20,13 @@ export const publicTypebotSchemaV5 = z.preprocess(
     updatedAt: z.date(),
     typebotId: z.string(),
     groups: z.array(groupV5Schema),
+<<<<<<< HEAD
     events: z.null(),
+=======
+    events: z.null().openapi({
+      type: 'array',
+    }),
+>>>>>>> upstream/main
     edges: z.array(edgeSchema),
     variables: z.array(variableSchema),
     theme: themeSchema,
@@ -39,8 +45,19 @@ export type PublicTypebotV6 = z.infer<typeof publicTypebotSchemaV6>
 export const publicTypebotSchema = z.preprocess(
   preprocessTypebot,
   z.discriminatedUnion('version', [
+<<<<<<< HEAD
     publicTypebotSchemaV5._def.schema,
     publicTypebotSchemaV6,
+=======
+    publicTypebotSchemaV6.openapi({
+      ref: 'publicTypebotV6',
+      title: 'Public Typebot V6',
+    }),
+    publicTypebotSchemaV5._def.schema.openapi({
+      ref: 'publicTypebotV5',
+      title: 'Public Typebot V5',
+    }),
+>>>>>>> upstream/main
   ])
 )
 export type PublicTypebot = z.infer<typeof publicTypebotSchema>

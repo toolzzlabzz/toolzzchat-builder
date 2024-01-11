@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Group } from '@typebot.io/schemas'
 import { env } from '@typebot.io/env'
 import { BubbleBlockType } from '@typebot.io/schemas/features/blocks/bubbles/constants'
@@ -54,3 +55,35 @@ const richTextElementContainsKeywords =
       )
     return false
   }
+=======
+import { env } from '@typebot.io/env'
+
+export const computeRiskLevel = (typebot: any) => {
+  const stringifiedTypebot = JSON.stringify(typebot)
+  if (
+    env.RADAR_HIGH_RISK_KEYWORDS?.some((keyword) =>
+      new RegExp(`(?<!https?://[^\\s"]*)\\b${keyword}\\b`, 'gi').test(
+        stringifiedTypebot
+      )
+    )
+  )
+    return 100
+  if (
+    env.RADAR_CUMULATIVE_KEYWORDS?.some((set) =>
+      set.every((keyword) =>
+        new RegExp(`(?<!https?://[^\\s"]*)\\b${keyword}\\b`, 'gi').test(
+          stringifiedTypebot
+        )
+      )
+    )
+  )
+    return 100
+  if (
+    env.RADAR_INTERMEDIATE_RISK_KEYWORDS?.some((keyword) =>
+      stringifiedTypebot.toLowerCase().includes(keyword)
+    )
+  )
+    return 50
+  return 0
+}
+>>>>>>> upstream/main

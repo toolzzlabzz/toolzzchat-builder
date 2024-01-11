@@ -1,6 +1,7 @@
 import { Seo } from '@/components/Seo'
 import { TextLink } from '@/components/TextLink'
 import { T, useTranslate } from '@tolgee/react'
+<<<<<<< HEAD
 import {
   VStack,
   Heading,
@@ -9,6 +10,9 @@ import {
   Box,
   useColorMode,
 } from '@chakra-ui/react'
+=======
+import { VStack, Heading, Text } from '@chakra-ui/react'
+>>>>>>> upstream/main
 import { useRouter } from 'next/router'
 import { SignInForm } from './SignInForm'
 

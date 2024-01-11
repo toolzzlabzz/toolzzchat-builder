@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { z } from 'zod'
+=======
+import { z } from '../../../../zod'
+>>>>>>> upstream/main
 import { variableStringSchema } from '../../../utils'
 import { blockBaseSchema } from '../../shared'
 import { BubbleBlockType } from '../constants'

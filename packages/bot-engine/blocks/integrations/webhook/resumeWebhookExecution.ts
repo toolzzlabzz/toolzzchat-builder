@@ -9,8 +9,13 @@ import {
 } from '@typebot.io/schemas'
 import { SessionState } from '@typebot.io/schemas/features/chat/sessionState'
 import { ExecuteIntegrationResponse } from '../../../types'
+<<<<<<< HEAD
 import { parseVariables } from '../../../variables/parseVariables'
 import { updateVariablesInSession } from '../../../variables/updateVariablesInSession'
+=======
+import { parseVariables } from '@typebot.io/variables/parseVariables'
+import { updateVariablesInSession } from '@typebot.io/variables/updateVariablesInSession'
+>>>>>>> upstream/main
 
 type Props = {
   state: SessionState

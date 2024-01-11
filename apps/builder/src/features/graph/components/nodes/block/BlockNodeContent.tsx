@@ -3,7 +3,6 @@ import { WaitNodeContent } from '@/features/blocks/logic/wait/components/WaitNod
 import { ScriptNodeContent } from '@/features/blocks/logic/script/components/ScriptNodeContent'
 import { ButtonsBlockNode } from '@/features/blocks/inputs/buttons/components/ButtonsBlockNode'
 import { JumpNodeBody } from '@/features/blocks/logic/jump/components/JumpNodeBody'
-import { OpenAINodeBody } from '@/features/blocks/integrations/openai/components/OpenAINodeBody'
 import { AudioBubbleNode } from '@/features/blocks/bubbles/audio/components/AudioBubbleNode'
 import { EmbedBubbleContent } from '@/features/blocks/bubbles/embed/components/EmbedBubbleContent'
 import { ImageBubbleContent } from '@/features/blocks/bubbles/image/components/ImageBubbleContent'
@@ -38,6 +37,11 @@ import { BubbleBlockType } from '@typebot.io/schemas/features/blocks/bubbles/con
 import { InputBlockType } from '@typebot.io/schemas/features/blocks/inputs/constants'
 import { LogicBlockType } from '@typebot.io/schemas/features/blocks/logic/constants'
 import { IntegrationBlockType } from '@typebot.io/schemas/features/blocks/integrations/constants'
+<<<<<<< HEAD
+=======
+import { ForgedBlockNodeContent } from '@/features/forge/components/ForgedBlockNodeContent'
+import { OpenAINodeBody } from '@/features/blocks/integrations/openai/components/OpenAINodeBody'
+>>>>>>> upstream/main
 
 type Props = {
   block: BlockV6
@@ -153,5 +157,11 @@ export const BlockNodeContent = ({
     case IntegrationBlockType.ZEMANTIC_AI: {
       return <ZemanticAiNodeBody options={block.options} />
     }
+<<<<<<< HEAD
+=======
+    default: {
+      return <ForgedBlockNodeContent block={block} />
+    }
+>>>>>>> upstream/main
   }
 }

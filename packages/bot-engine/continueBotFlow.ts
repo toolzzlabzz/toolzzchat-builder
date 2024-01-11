@@ -12,7 +12,10 @@ import { getNextGroup } from './getNextGroup'
 import { validateEmail } from './blocks/inputs/email/validateEmail'
 import { formatPhoneNumber } from './blocks/inputs/phone/formatPhoneNumber'
 import { validateUrl } from './blocks/inputs/url/validateUrl'
+<<<<<<< HEAD
 import { resumeChatCompletion } from './blocks/integrations/openai/resumeChatCompletion'
+=======
+>>>>>>> upstream/main
 import { resumeWebhookExecution } from './blocks/integrations/webhook/resumeWebhookExecution'
 import { upsertAnswer } from './queries/upsertAnswer'
 import { parseButtonsReply } from './blocks/inputs/buttons/parseButtonsReply'
@@ -21,8 +24,13 @@ import { validateNumber } from './blocks/inputs/number/validateNumber'
 import { parseDateReply } from './blocks/inputs/date/parseDateReply'
 import { validateRatingReply } from './blocks/inputs/rating/validateRatingReply'
 import { parsePictureChoicesReply } from './blocks/inputs/pictureChoice/parsePictureChoicesReply'
+<<<<<<< HEAD
 import { parseVariables } from './variables/parseVariables'
 import { updateVariablesInSession } from './variables/updateVariablesInSession'
+=======
+import { parseVariables } from '@typebot.io/variables/parseVariables'
+import { updateVariablesInSession } from '@typebot.io/variables/updateVariablesInSession'
+>>>>>>> upstream/main
 import { startBotFlow } from './startBotFlow'
 import { TRPCError } from '@trpc/server'
 import { parseNumber } from './blocks/inputs/number/parseNumber'
@@ -37,6 +45,12 @@ import { defaultPictureChoiceOptions } from '@typebot.io/schemas/features/blocks
 import { defaultFileInputOptions } from '@typebot.io/schemas/features/blocks/inputs/file/constants'
 import { VisitedEdge } from '@typebot.io/prisma'
 import { getBlockById } from '@typebot.io/lib/getBlockById'
+<<<<<<< HEAD
+=======
+import { ForgedBlock, forgedBlocks } from '@typebot.io/forge-schemas'
+import { enabledBlocks } from '@typebot.io/forge-repository'
+import { resumeChatCompletion } from './blocks/integrations/legacy/openai/resumeChatCompletion'
+>>>>>>> upstream/main
 
 type Params = {
   version: 1 | 2
@@ -80,6 +94,7 @@ export const continueBotFlow = async (
       }
       newSessionState = updateVariablesInSession(state)([newVariable])
     }
+<<<<<<< HEAD
   } else if (reply && block.type === IntegrationBlockType.WEBHOOK) {
     const result = resumeWebhookExecution({
       state,
@@ -88,6 +103,11 @@ export const continueBotFlow = async (
     })
     if (result.newSessionState) newSessionState = result.newSessionState
   } else if (
+=======
+  }
+  // Legacy
+  else if (
+>>>>>>> upstream/main
     block.type === IntegrationBlockType.OPEN_AI &&
     block.options?.task === 'Create chat completion'
   ) {
@@ -99,6 +119,61 @@ export const continueBotFlow = async (
       })(reply)
       newSessionState = result.newSessionState
     }
+<<<<<<< HEAD
+=======
+  } else if (reply && block.type === IntegrationBlockType.WEBHOOK) {
+    const result = resumeWebhookExecution({
+      state,
+      block,
+      response: JSON.parse(reply),
+    })
+    if (result.newSessionState) newSessionState = result.newSessionState
+  } else if (
+    enabledBlocks.includes(block.type as (typeof enabledBlocks)[number])
+  ) {
+    if (reply) {
+      const options = (block as ForgedBlock).options
+      const action = forgedBlocks
+        .find((b) => b.id === block.type)
+        ?.actions.find((a) => a.name === options?.action)
+      if (action) {
+        if (action.run?.stream?.getStreamVariableId) {
+          firstBubbleWasStreamed = true
+          const variableToUpdate =
+            state.typebotsQueue[0].typebot.variables.find(
+              (v) => v.id === action?.run?.stream?.getStreamVariableId(options)
+            )
+          if (variableToUpdate)
+            newSessionState = updateVariablesInSession(state)([
+              {
+                ...variableToUpdate,
+                value: reply,
+              },
+            ])
+        }
+
+        if (
+          action.run?.web?.displayEmbedBubble?.waitForEvent?.getSaveVariableId
+        ) {
+          const variableToUpdate =
+            state.typebotsQueue[0].typebot.variables.find(
+              (v) =>
+                v.id ===
+                action?.run?.web?.displayEmbedBubble?.waitForEvent?.getSaveVariableId?.(
+                  options
+                )
+            )
+          if (variableToUpdate)
+            newSessionState = updateVariablesInSession(state)([
+              {
+                ...variableToUpdate,
+                value: reply,
+              },
+            ])
+        }
+      }
+    }
+>>>>>>> upstream/main
   }
 
   let formattedReply: string | undefined
@@ -396,7 +471,13 @@ const parseReply =
           return block.options?.isRequired ?? defaultFileInputOptions.isRequired
             ? { status: 'fail' }
             : { status: 'skip' }
+<<<<<<< HEAD
         return { status: 'success', reply: inputValue }
+=======
+        const urls = inputValue.split(', ')
+        const status = urls.some((url) => validateUrl(url)) ? 'success' : 'fail'
+        return { status, reply: inputValue }
+>>>>>>> upstream/main
       }
       case InputBlockType.PAYMENT: {
         if (!inputValue) return { status: 'fail' }

@@ -35,6 +35,7 @@ const omittedProps = {
 const importingTypebotSchema = z.preprocess(
   preprocessTypebot,
   z.discriminatedUnion('version', [
+<<<<<<< HEAD
     typebotV5Schema._def.schema.omit(omittedProps).extend({
       resultsTablePreferences: resultsTablePreferencesSchema.nullish(),
       selectedThemeTemplateId: z.string().nullish(),
@@ -43,6 +44,26 @@ const importingTypebotSchema = z.preprocess(
       resultsTablePreferences: resultsTablePreferencesSchema.nullish(),
       selectedThemeTemplateId: z.string().nullish(),
     }),
+=======
+    typebotV6Schema
+      .omit(omittedProps)
+      .extend({
+        resultsTablePreferences: resultsTablePreferencesSchema.nullish(),
+        selectedThemeTemplateId: z.string().nullish(),
+      })
+      .openapi({
+        title: 'Typebot V6',
+      }),
+    typebotV5Schema._def.schema
+      .omit(omittedProps)
+      .extend({
+        resultsTablePreferences: resultsTablePreferencesSchema.nullish(),
+        selectedThemeTemplateId: z.string().nullish(),
+      })
+      .openapi({
+        title: 'Typebot V5',
+      }),
+>>>>>>> upstream/main
   ])
 )
 
@@ -82,7 +103,15 @@ export const importTypebot = authenticatedProcedure
   })
   .input(
     z.object({
+<<<<<<< HEAD
       workspaceId: z.string(),
+=======
+      workspaceId: z
+        .string()
+        .describe(
+          '[Where to find my workspace ID?](../how-to#how-to-find-my-workspaceid)'
+        ),
+>>>>>>> upstream/main
       typebot: importingTypebotSchema,
     })
   )

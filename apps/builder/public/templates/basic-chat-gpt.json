@@ -1,11 +1,19 @@
 {
   "version": "6",
+<<<<<<< HEAD
   "id": "clofz4jhf00071a5pjlh8ruwr",
+=======
+  "id": "clpntkei400011aboogh27ead",
+>>>>>>> upstream/main
   "name": "Basic ChatGPT",
   "events": [
     {
       "id": "ewnfbo0exlu7ihfu2lu2lusm",
+<<<<<<< HEAD
       "outgoingEdgeId": "q25yjqccpjv3i1tclgv1x941",
+=======
+      "outgoingEdgeId": "pn7omb9mx5xxc4mzq028fcmq",
+>>>>>>> upstream/main
       "graphCoordinates": { "x": -228.25, "y": -123.31 },
       "type": "start"
     }
@@ -63,13 +71,19 @@
       "blocks": [
         {
           "id": "ovgk70u0kfxrbtz9dy4e040o",
+<<<<<<< HEAD
           "groupId": "qfrz5nwm63g12dajsjxothb5",
+=======
+>>>>>>> upstream/main
           "type": "text input",
           "options": { "variableId": "vudksu3zyrat6s1bq6qne0rx3" }
         },
         {
           "id": "m4jadtknjb3za3gvxj1xdn1k",
+<<<<<<< HEAD
           "groupId": "qfrz5nwm63g12dajsjxothb5",
+=======
+>>>>>>> upstream/main
           "outgoingEdgeId": "fpj0xacppqd1s5slyljzhzc9",
           "type": "Set variable",
           "options": {
@@ -86,6 +100,7 @@
       "graphCoordinates": { "x": 624.57, "y": 200.09 },
       "blocks": [
         {
+<<<<<<< HEAD
           "id": "xikptnw1lp1qxdqo10qhmwy1",
           "groupId": "a6ymhjwtkqwp8t127plz8qmk",
           "type": "OpenAI",
@@ -98,10 +113,21 @@
                 "role": "Dialogue",
                 "dialogueVariableId": "vabkycu0qqff5d6ar2ama16pf",
                 "startsBy": "user"
+=======
+          "id": "p4q3wbk4wcw818qocrvu7dxs",
+          "type": "openai",
+          "options": {
+            "action": "Create chat completion",
+            "messages": [
+              {
+                "role": "Dialogue",
+                "dialogueVariableId": "vabkycu0qqff5d6ar2ama16pf"
+>>>>>>> upstream/main
               }
             ],
             "responseMapping": [
               {
+<<<<<<< HEAD
                 "id": "p8ksqi2jhyzid2od3dikv299",
                 "valueToExtract": "Message content",
                 "variableId": "vni6kwbch8zlq92dclgcivzyr"
@@ -118,18 +144,42 @@
             "variableId": "vabkycu0qqff5d6ar2ama16pf",
             "type": "Append value(s)",
             "item": "{{Assistant Message}}"
+=======
+                "item": "Message content",
+                "variableId": "vni6kwbch8zlq92dclgcivzyr"
+              }
+            ]
+>>>>>>> upstream/main
           }
         },
         {
           "id": "myldn1l1nfdwwm8qvza71rwv",
+<<<<<<< HEAD
           "groupId": "a6ymhjwtkqwp8t127plz8qmk",
           "outgoingEdgeId": "y8ml9ljnsydol9b42fd9zdve",
+=======
+>>>>>>> upstream/main
           "type": "text",
           "content": {
             "richText": [
               { "type": "p", "children": [{ "text": "{{Assistant Message}}" }] }
             ]
+<<<<<<< HEAD
           }
+=======
+          },
+          "groupId": "a6ymhjwtkqwp8t127plz8qmk"
+        },
+        {
+          "id": "yblc864bzipaqfja7b2o3oo0",
+          "type": "Set variable",
+          "options": {
+            "variableId": "vabkycu0qqff5d6ar2ama16pf",
+            "type": "Append value(s)",
+            "item": "{{Assistant Message}}"
+          },
+          "outgoingEdgeId": "at8takz56suqmaul5teazymb"
+>>>>>>> upstream/main
         }
       ]
     },
@@ -140,7 +190,10 @@
       "blocks": [
         {
           "id": "vzcrfk4vl9gy8igu0ysja5nc",
+<<<<<<< HEAD
           "groupId": "c5f00f3oclwi1srcz10jjt9u",
+=======
+>>>>>>> upstream/main
           "type": "text",
           "content": {
             "richText": [
@@ -150,7 +203,10 @@
         },
         {
           "id": "gphm5wy1md9cunwkdtbzg6nq",
+<<<<<<< HEAD
           "groupId": "c5f00f3oclwi1srcz10jjt9u",
+=======
+>>>>>>> upstream/main
           "outgoingEdgeId": "h5sk58j0ryrxmfv4gmw7r4dw",
           "type": "text",
           "content": {
@@ -165,6 +221,7 @@
   "edges": [
     {
       "id": "h5sk58j0ryrxmfv4gmw7r4dw",
+<<<<<<< HEAD
       "from": {
         "groupId": "c5f00f3oclwi1srcz10jjt9u",
         "blockId": "gphm5wy1md9cunwkdtbzg6nq"
@@ -191,6 +248,28 @@
       "from": { "eventId": "ewnfbo0exlu7ihfu2lu2lusm" },
       "to": { "groupId": "t3tv4dm3khwmiotjle5jb65g" },
       "id": "q25yjqccpjv3i1tclgv1x941"
+=======
+      "from": { "blockId": "gphm5wy1md9cunwkdtbzg6nq" },
+      "to": { "groupId": "qfrz5nwm63g12dajsjxothb5" }
+    },
+    {
+      "id": "fpj0xacppqd1s5slyljzhzc9",
+      "from": { "blockId": "m4jadtknjb3za3gvxj1xdn1k" },
+      "to": { "groupId": "a6ymhjwtkqwp8t127plz8qmk" }
+    },
+    {
+      "id": "pn7omb9mx5xxc4mzq028fcmq",
+      "from": { "eventId": "ewnfbo0exlu7ihfu2lu2lusm" },
+      "to": { "groupId": "t3tv4dm3khwmiotjle5jb65g" }
+    },
+    {
+      "from": {
+        "blockId": "yblc864bzipaqfja7b2o3oo0",
+        "groupId": "a6ymhjwtkqwp8t127plz8qmk"
+      },
+      "to": { "groupId": "qfrz5nwm63g12dajsjxothb5" },
+      "id": "at8takz56suqmaul5teazymb"
+>>>>>>> upstream/main
     }
   ],
   "variables": [
@@ -201,8 +280,13 @@
   "theme": {},
   "selectedThemeTemplateId": null,
   "settings": { "general": {} },
+<<<<<<< HEAD
   "createdAt": "2023-11-01T16:30:13.155Z",
   "updatedAt": "2023-11-01T16:30:13.155Z",
+=======
+  "createdAt": "2023-12-02T08:56:27.244Z",
+  "updatedAt": "2023-12-02T09:00:25.221Z",
+>>>>>>> upstream/main
   "icon": "🤖",
   "folderId": null,
   "publicId": null,

@@ -3,7 +3,10 @@ import { Plan } from '@typebot.io/prisma'
 import { TextLink } from '@/components/TextLink'
 import { useToast } from '@/hooks/useToast'
 import { trpc } from '@/lib/trpc'
+<<<<<<< HEAD
 import { Workspace } from '@typebot.io/schemas'
+=======
+>>>>>>> upstream/main
 import { PreCheckoutModal, PreCheckoutModalProps } from './PreCheckoutModal'
 import { useState } from 'react'
 import { ParentModalProvider } from '@/features/graph/providers/ParentModalProvider'
@@ -12,10 +15,18 @@ import { StarterPlanPricingCard } from './StarterPlanPricingCard'
 import { ProPlanPricingCard } from './ProPlanPricingCard'
 import { useTranslate } from '@tolgee/react'
 import { StripeClimateLogo } from './StripeClimateLogo'
+<<<<<<< HEAD
 // import { guessIfUserIsEuropean } from '@typebot.io/lib/billing/guessIfUserIsEuropean'
 
 type Props = {
   workspace: Workspace
+=======
+import { guessIfUserIsEuropean } from '@typebot.io/lib/billing/guessIfUserIsEuropean'
+import { WorkspaceInApp } from '@/features/workspace/WorkspaceProvider'
+
+type Props = {
+  workspace: WorkspaceInApp
+>>>>>>> upstream/main
   excludedPlans?: ('STARTER' | 'PRO')[]
 }
 
@@ -62,7 +73,13 @@ export const ChangePlanForm = ({ workspace, excludedPlans }: Props) => {
     const newSubscription = {
       plan,
       workspaceId: workspace.id,
+<<<<<<< HEAD
       currency: data?.subscription?.currency ?? 'brl',
+=======
+      currency:
+        data?.subscription?.currency ??
+        (guessIfUserIsEuropean() ? 'eur' : 'usd'),
+>>>>>>> upstream/main
     } as const
     if (workspace.stripeId) {
       updateSubscription({
@@ -86,7 +103,11 @@ export const ChangePlanForm = ({ workspace, excludedPlans }: Props) => {
         <StripeClimateLogo />
         <Text fontSize="xs" color="gray.500">
           {t('billing.contribution.preLink')}{' '}
+<<<<<<< HEAD
           <TextLink href="" isExternal>
+=======
+          <TextLink href="https://climate.stripe.com/5VCRAq" isExternal>
+>>>>>>> upstream/main
             {t('billing.contribution.link')}
           </TextLink>
         </Text>
@@ -127,7 +148,11 @@ export const ChangePlanForm = ({ workspace, excludedPlans }: Props) => {
 
       <Text color="gray.500">
         {t('billing.customLimit.preLink')}{' '}
+<<<<<<< HEAD
         <TextLink href={'https://www.toolzz.com.br/bots'} isExternal>
+=======
+        <TextLink href={'https://typebot.io/enterprise-lead-form'} isExternal>
+>>>>>>> upstream/main
           {t('billing.customLimit.link')}
         </TextLink>
       </Text>

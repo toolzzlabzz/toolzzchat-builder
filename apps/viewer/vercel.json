@@ -8,5 +8,11 @@
       "maxDuration": 150,
       "memory": 500
     }
+<<<<<<< HEAD
+=======
+  },
+  "github": {
+    "silent": true
+>>>>>>> upstream/main
   }
 }

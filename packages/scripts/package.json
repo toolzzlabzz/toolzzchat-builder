@@ -18,7 +18,18 @@
     "createChatsPrices": "tsx createChatsPrices.ts",
     "migrateSubscriptionsToUsageBased": "tsx migrateSubscriptionsToUsageBased.ts",
     "importContactToBrevo": "tsx importContactToBrevo.ts",
+<<<<<<< HEAD
     "getUsage": "tsx getUsage.ts"
+=======
+    "getUsage": "tsx getUsage.ts",
+    "suspendWorkspace": "tsx suspendWorkspace.ts",
+    "destroyUser": "tsx destroyUser.ts",
+    "updateTypebot": "tsx updateTypebot.ts",
+    "updateWorkspace": "tsx updateWorkspace.ts",
+    "inspectTypebot": "tsx inspectTypebot.ts",
+    "inspectWorkspace": "tsx inspectWorkspace.ts",
+    "getCoupon": "tsx getCoupon.ts"
+>>>>>>> upstream/main
   },
   "devDependencies": {
     "@typebot.io/emails": "workspace:*",
@@ -36,6 +47,10 @@
     "zod": "3.22.4"
   },
   "dependencies": {
+<<<<<<< HEAD
+=======
+    "@clack/prompts": "^0.7.0",
+>>>>>>> upstream/main
     "@paralleldrive/cuid2": "2.2.1"
   }
 }

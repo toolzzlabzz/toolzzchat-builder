@@ -16,7 +16,11 @@ export const startWhatsAppPreview = authenticatedProcedure
   .meta({
     openapi: {
       method: 'POST',
+<<<<<<< HEAD
       path: '/typebots/{typebotId}/whatsapp/start-preview',
+=======
+      path: '/v1/typebots/{typebotId}/whatsapp/start-preview',
+>>>>>>> upstream/main
       summary: 'Start preview',
       tags: ['WhatsApp'],
       protect: true,

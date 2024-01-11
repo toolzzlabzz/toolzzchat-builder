@@ -1,23 +1,13 @@
 import { authenticatedProcedure } from '@/helpers/server/trpc'
+<<<<<<< HEAD
 import { z } from 'zod'
+=======
+>>>>>>> upstream/main
 import prisma from '@typebot.io/lib/prisma'
 import { createId } from '@paralleldrive/cuid2'
 
-export const generateVerificationToken = authenticatedProcedure
-  .meta({
-    openapi: {
-      method: 'POST',
-      path: '/verficiationTokens',
-      protect: true,
-    },
-  })
-  .input(z.void())
-  .output(
-    z.object({
-      verificationToken: z.string(),
-    })
-  )
-  .mutation(async () => {
+export const generateVerificationToken = authenticatedProcedure.mutation(
+  async () => {
     const oneHourLater = new Date(Date.now() + 1000 * 60 * 60)
     const verificationToken = await prisma.verificationToken.create({
       data: {
@@ -28,4 +18,5 @@ export const generateVerificationToken = authenticatedProcedure
     })
 
     return { verificationToken: verificationToken.token }
-  })
+  }
+)

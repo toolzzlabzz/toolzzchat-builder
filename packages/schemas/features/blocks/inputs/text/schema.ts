@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { z } from 'zod'
+=======
+import { z } from '../../../../zod'
+>>>>>>> upstream/main
 import { optionBaseSchema, blockBaseSchema } from '../../shared'
 import { InputBlockType } from '../constants'
 
@@ -19,11 +23,25 @@ export const textInputOptionsSchema = textInputOptionsBaseSchema
     })
   )
 
+<<<<<<< HEAD
 export const textInputSchema = blockBaseSchema.merge(
   z.object({
     type: z.enum([InputBlockType.TEXT]),
     options: textInputOptionsSchema.optional(),
   })
 )
+=======
+export const textInputSchema = blockBaseSchema
+  .merge(
+    z.object({
+      type: z.enum([InputBlockType.TEXT]),
+      options: textInputOptionsSchema.optional(),
+    })
+  )
+  .openapi({
+    title: 'Text',
+    ref: 'textInput',
+  })
+>>>>>>> upstream/main
 
 export type TextInputBlock = z.infer<typeof textInputSchema>

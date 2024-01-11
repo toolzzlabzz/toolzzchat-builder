@@ -2,11 +2,27 @@ import { connect } from '@planetscale/database'
 import { env } from '@typebot.io/env'
 import { SessionState } from '@typebot.io/schemas'
 import { StreamingTextResponse } from 'ai'
+<<<<<<< HEAD
 import { getChatCompletionStream } from '@typebot.io/bot-engine/blocks/integrations/openai/getChatCompletionStream'
 import OpenAI from 'openai'
 import { NextResponse } from 'next/dist/server/web/spec-extension/response'
 import { IntegrationBlockType } from '@typebot.io/schemas/features/blocks/integrations/constants'
 import { getBlockById } from '@typebot.io/lib/getBlockById'
+=======
+import OpenAI from 'openai'
+import { NextResponse } from 'next/dist/server/web/spec-extension/response'
+import { getBlockById } from '@typebot.io/lib/getBlockById'
+import { forgedBlocks } from '@typebot.io/forge-schemas'
+import { decryptV2 } from '@typebot.io/lib/api/encryption/decryptV2'
+import { ReadOnlyVariableStore } from '@typebot.io/forge'
+import {
+  ParseVariablesOptions,
+  parseVariables,
+} from '@typebot.io/variables/parseVariables'
+import { IntegrationBlockType } from '@typebot.io/schemas/features/blocks/integrations/constants'
+import { getChatCompletionStream } from '@typebot.io/bot-engine/blocks/integrations/legacy/openai/getChatCompletionStream'
+import { ChatCompletionOpenAIOptions } from '@typebot.io/schemas/features/blocks/integrations/openai/schema'
+>>>>>>> upstream/main
 
 export const runtime = 'edge'
 export const preferredRegion = 'lhr1'
@@ -31,8 +47,13 @@ export async function OPTIONS() {
 
 export async function POST(req: Request) {
   const { sessionId, messages } = (await req.json()) as {
+<<<<<<< HEAD
     sessionId: string
     messages: OpenAI.Chat.ChatCompletionMessage[]
+=======
+    messages: OpenAI.Chat.ChatCompletionMessage[] | undefined
+    sessionId: string
+>>>>>>> upstream/main
   }
 
   if (!sessionId)
@@ -41,12 +62,15 @@ export async function POST(req: Request) {
       { status: 400, headers: responseHeaders }
     )
 
+<<<<<<< HEAD
   if (!messages)
     return NextResponse.json(
       { message: 'No messages provided' },
       { status: 400, headers: responseHeaders }
     )
 
+=======
+>>>>>>> upstream/main
   const conn = connect({ url: env.DATABASE_URL })
 
   const chatSession = await conn.execute(
@@ -73,21 +97,96 @@ export async function POST(req: Request) {
       { status: 400, headers: responseHeaders }
     )
 
+<<<<<<< HEAD
   if (
     block.type !== IntegrationBlockType.OPEN_AI ||
     block.options?.task !== 'Create chat completion'
   )
     return NextResponse.json(
       { message: 'Current block is not an OpenAI block' },
+=======
+  if (!('options' in block))
+    return NextResponse.json(
+      { message: 'Current block does not have options' },
+      { status: 400, headers: responseHeaders }
+    )
+
+  if (block.type === IntegrationBlockType.OPEN_AI && messages) {
+    try {
+      const stream = await getChatCompletionStream(conn)(
+        state,
+        block.options as ChatCompletionOpenAIOptions,
+        messages
+      )
+      if (!stream)
+        return NextResponse.json(
+          { message: 'Could not create stream' },
+          { status: 400, headers: responseHeaders }
+        )
+
+      return new StreamingTextResponse(stream, {
+        headers: responseHeaders,
+      })
+    } catch (error) {
+      if (error instanceof OpenAI.APIError) {
+        const { name, status, message } = error
+        return NextResponse.json(
+          { name, status, message },
+          { status, headers: responseHeaders }
+        )
+      } else {
+        throw error
+      }
+    }
+  }
+  const blockDef = forgedBlocks.find((b) => b.id === block.type)
+  const action = blockDef?.actions.find((a) => a.name === block.options?.action)
+
+  if (!action || !action.run?.stream)
+    return NextResponse.json(
+      { message: 'This action does not have a stream function' },
+>>>>>>> upstream/main
       { status: 400, headers: responseHeaders }
     )
 
   try {
+<<<<<<< HEAD
     const stream = await getChatCompletionStream(conn)(
       state,
       block.options,
       messages
     )
+=======
+    if (!block.options.credentialsId) return
+    const credentials = (
+      await conn.execute('select data, iv from Credentials where id=?', [
+        block.options.credentialsId,
+      ])
+    ).rows.at(0) as { data: string; iv: string } | undefined
+    if (!credentials) {
+      console.error('Could not find credentials in database')
+      return
+    }
+    const decryptedCredentials = await decryptV2(
+      credentials.data,
+      credentials.iv
+    )
+    const variables: ReadOnlyVariableStore = {
+      get: (id: string) => {
+        const variable = state.typebotsQueue[0].typebot.variables.find(
+          (variable) => variable.id === id
+        )
+        return variable?.value
+      },
+      parse: (text: string, params?: ParseVariablesOptions) =>
+        parseVariables(state.typebotsQueue[0].typebot.variables, params)(text),
+    }
+    const stream = await action.run.stream.run({
+      credentials: decryptedCredentials,
+      options: block.options,
+      variables,
+    })
+>>>>>>> upstream/main
     if (!stream)
       return NextResponse.json(
         { message: 'Could not create stream' },

@@ -12,9 +12,12 @@ CREATE TABLE "BannedIp" (
 -- CreateIndex
 CREATE UNIQUE INDEX "BannedIp_ip_key" ON "BannedIp"("ip");
 
+<<<<<<< HEAD
 -- CreateIndex
 CREATE INDEX "Answer_storageUsed_idx" ON "Answer"("storageUsed");
 
+=======
+>>>>>>> upstream/main
 -- AddForeignKey
 ALTER TABLE "BannedIp" ADD CONSTRAINT "BannedIp_responsibleTypebotId_fkey" FOREIGN KEY ("responsibleTypebotId") REFERENCES "Typebot"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
 

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { z } from 'zod'
+=======
+import { z } from '../../zod'
+>>>>>>> upstream/main
 
 export const eventBaseSchema = z.object({
   id: z.string(),

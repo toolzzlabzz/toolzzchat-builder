@@ -5,8 +5,14 @@ import { getSession } from '@typebot.io/bot-engine/queries/getSession'
 import { saveStateToDatabase } from '@typebot.io/bot-engine/saveStateToDatabase'
 import { continueBotFlow } from '@typebot.io/bot-engine/continueBotFlow'
 import { parseDynamicTheme } from '@typebot.io/bot-engine/parseDynamicTheme'
+<<<<<<< HEAD
 import { isDefined } from '@typebot.io/lib/utils'
 import { z } from 'zod'
+=======
+import { isDefined, isNotDefined } from '@typebot.io/lib/utils'
+import { z } from 'zod'
+import { filterPotentiallySensitiveLogs } from '@typebot.io/bot-engine/logs/filterPotentiallySensitiveLogs'
+>>>>>>> upstream/main
 
 export const continueChat = publicProcedure
   .meta({
@@ -14,14 +20,25 @@ export const continueChat = publicProcedure
       method: 'POST',
       path: '/v1/sessions/{sessionId}/continueChat',
       summary: 'Continue chat',
+<<<<<<< HEAD
       description:
         'To initiate a chat, do not provide a `sessionId` nor a `message`.\n\nContinue the conversation by providing the `sessionId` and the `message` that should answer the previous question.\n\nSet the `isPreview` option to `true` to chat with the non-published version of the typebot.',
+=======
+>>>>>>> upstream/main
     },
   })
   .input(
     z.object({
       message: z.string().optional(),
+<<<<<<< HEAD
       sessionId: z.string(),
+=======
+      sessionId: z
+        .string()
+        .describe(
+          'The session ID you got from the [startChat](./start-chat) response.'
+        ),
+>>>>>>> upstream/main
     })
   )
   .output(continueChatResponseSchema)
@@ -72,12 +89,21 @@ export const continueChat = publicProcedure
         visitedEdges,
       })
 
+<<<<<<< HEAD
+=======
+    const isPreview = isNotDefined(session.state.typebotsQueue[0].resultId)
+
+>>>>>>> upstream/main
     return {
       messages,
       input,
       clientSideActions,
       dynamicTheme: parseDynamicTheme(newSessionState),
+<<<<<<< HEAD
       logs,
+=======
+      logs: isPreview ? logs : logs?.filter(filterPotentiallySensitiveLogs),
+>>>>>>> upstream/main
       lastMessageNewFormat,
     }
   })

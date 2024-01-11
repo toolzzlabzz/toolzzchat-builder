@@ -24,8 +24,12 @@ import { useRouter } from 'next/router'
 import { isNotDefined } from '@typebot.io/lib'
 import { ChangePlanModal } from '@/features/billing/components/ChangePlanModal'
 import { isFreePlan } from '@/features/billing/helpers/isFreePlan'
+<<<<<<< HEAD
 import { parseTimeSince } from '@/helpers/parseTimeSince'
 import { useTranslate } from '@tolgee/react'
+=======
+import { T, useTranslate } from '@tolgee/react'
+>>>>>>> upstream/main
 import { trpc } from '@/lib/trpc'
 import { useToast } from '@/hooks/useToast'
 import { parseDefaultPublicId } from '../helpers/parseDefaultPublicId'
@@ -33,6 +37,10 @@ import { InputBlockType } from '@typebot.io/schemas/features/blocks/inputs/const
 import { ConfirmModal } from '@/components/ConfirmModal'
 import { TextLink } from '@/components/TextLink'
 import { useUser } from '@/features/account/hooks/useUser'
+<<<<<<< HEAD
+=======
+import { useTimeSince } from '@/hooks/useTimeSince'
+>>>>>>> upstream/main
 
 type Props = ButtonProps & {
   isMoreMenuDisabled?: boolean
@@ -61,6 +69,9 @@ export const PublishButton = ({
     save,
     publishedTypebotVersion,
   } = useTypebot()
+  const timeSinceLastPublish = useTimeSince(
+    publishedTypebot?.updatedAt.toString()
+  )
   const { showToast } = useToast()
 
   const {
@@ -73,7 +84,7 @@ export const PublishButton = ({
     trpc.typebot.publishTypebot.useMutation({
       onError: (error) => {
         showToast({
-          title: 'Error while publishing typebot',
+          title: t('publish.error.label'),
           description: error.message,
         })
         if (error.data?.httpStatus === 403) logOut()
@@ -91,7 +102,7 @@ export const PublishButton = ({
     trpc.typebot.unpublishTypebot.useMutation({
       onError: (error) =>
         showToast({
-          title: 'Error while unpublishing typebot',
+          title: t('editor.header.unpublishTypebot.error.label'),
           description: error.message,
         }),
       onSuccess: () => {
@@ -149,6 +160,7 @@ export const PublishButton = ({
           onConfirm={handlePublishClick}
           onClose={onNewEngineWarningClose}
           confirmButtonColor="blue"
+<<<<<<< HEAD
           title="⚠️ New engine version"
           message={
             <Stack spacing="3">
@@ -172,12 +184,40 @@ export const PublishButton = ({
             </Stack>
           }
           confirmButtonLabel={'Publish'}
+=======
+          title={t('publish.versionWarning.title.label')}
+          message={
+            <Stack spacing="3">
+              <Text>
+                {t('publish.versionWarning.message.aboutToDeploy.label')}
+              </Text>
+              <Text fontWeight="bold">
+                <T
+                  keyName="publish.versionWarning.checkBreakingChanges"
+                  params={{
+                    link: (
+                      <TextLink
+                        href="https://docs.typebot.io/breaking-changes#typebot-v6"
+                        isExternal
+                      />
+                    ),
+                  }}
+                />
+              </Text>
+              <Text>
+                {t('publish.versionWarning.message.testInPreviewMode.label')}
+              </Text>
+            </Stack>
+          }
+          confirmButtonLabel={t('publishButton.label')}
+>>>>>>> upstream/main
         />
       )}
       <Tooltip
         placement="bottom-end"
         label={
           <Stack>
+<<<<<<< HEAD
             <Text>There are non published changes.</Text>
             <Text fontStyle="italic">
               Published version from{' '}
@@ -185,6 +225,19 @@ export const PublishButton = ({
                 parseTimeSince(publishedTypebot.updatedAt.toString())}{' '}
               ago
             </Text>
+=======
+            <Text>{t('publishButton.tooltip.nonPublishedChanges.label')}</Text>
+            {timeSinceLastPublish ? (
+              <Text fontStyle="italic">
+                <T
+                  keyName="publishButton.tooltip.publishedVersion.from.label"
+                  params={{
+                    timeSince: timeSinceLastPublish,
+                  }}
+                />
+              </Text>
+            ) : null}
+>>>>>>> upstream/main
           </Stack>
         }
         isDisabled={isNotDefined(publishedTypebot) || isPublished}
@@ -205,9 +258,9 @@ export const PublishButton = ({
         >
           {isPublished
             ? typebot?.isClosed
-              ? 'Closed'
-              : 'Published'
-            : 'Publish'}
+              ? t('publishButton.closed.label')
+              : t('publishButton.published.label')
+            : t('publishButton.label')}
         </Button>
       </Tooltip>
 
@@ -218,27 +271,27 @@ export const PublishButton = ({
             colorScheme={'blue'}
             borderLeftRadius={0}
             icon={<ChevronLeftIcon transform="rotate(-90deg)" />}
-            aria-label="Show published typebot menu"
+            aria-label={t('publishButton.dropdown.showMenu.label')}
             size="sm"
             isDisabled={isPublishing || isSavingLoading}
           />
           <MenuList>
             {!isPublished && (
               <MenuItem onClick={restorePublishedTypebot}>
-                Restore published version
+                {t('publishButton.dropdown.restoreVersion.label')}
               </MenuItem>
             )}
             {!typebot?.isClosed ? (
               <MenuItem onClick={closeTypebot} icon={<LockedIcon />}>
-                Close typebot to new responses
+                {t('publishButton.dropdown.close.label')}
               </MenuItem>
             ) : (
               <MenuItem onClick={openTypebot} icon={<UnlockedIcon />}>
-                Reopen typebot to new responses
+                {t('publishButton.dropdown.reopen.label')}
               </MenuItem>
             )}
             <MenuItem onClick={unpublishTypebot} icon={<CloudOffIcon />}>
-              Unpublish typebot
+              {t('publishButton.dropdown.unpublish.label')}
             </MenuItem>
           </MenuList>
         </Menu>

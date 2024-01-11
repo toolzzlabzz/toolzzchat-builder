@@ -92,6 +92,10 @@ export const startWhatsAppSession = async ({
       type: 'live',
       publicId: publicTypebot.typebot.publicId as string,
       isOnlyRegistering: false,
+<<<<<<< HEAD
+=======
+      isStreamEnabled: false,
+>>>>>>> upstream/main
     },
     initialSessionState: {
       whatsApp: {

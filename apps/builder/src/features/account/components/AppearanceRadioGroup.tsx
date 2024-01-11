@@ -5,11 +5,15 @@ import {
   Stack,
   Radio,
   Text,
+  Image,
 } from '@chakra-ui/react'
+<<<<<<< HEAD
 import Image from 'next/image'
 import lightModeIllustration from 'public/images/light-mode.png'
 import darkModeIllustration from 'public/images/dark-mode.png'
 import systemModeIllustration from 'public/images/system-mode.png'
+=======
+>>>>>>> upstream/main
 import { useTranslate } from '@tolgee/react'
 
 type Props = {
@@ -24,17 +28,29 @@ export const AppearanceRadioGroup = ({ defaultValue, onChange }: Props) => {
     {
       value: 'light',
       label: t('account.preferences.appearance.lightLabel'),
+<<<<<<< HEAD
       image: lightModeIllustration,
+=======
+      image: '/images/light-mode.png',
+>>>>>>> upstream/main
     },
     {
       value: 'dark',
       label: t('account.preferences.appearance.darkLabel'),
+<<<<<<< HEAD
       image: darkModeIllustration,
+=======
+      image: '/images/dark-mode.png',
+>>>>>>> upstream/main
     },
     {
       value: 'system',
       label: t('account.preferences.appearance.systemLabel'),
+<<<<<<< HEAD
       image: systemModeIllustration,
+=======
+      image: '/images/system-mode.png',
+>>>>>>> upstream/main
     },
   ]
   return (

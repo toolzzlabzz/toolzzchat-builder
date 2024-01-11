@@ -128,7 +128,11 @@ if (env.CUSTOM_OAUTH_WELL_KNOWN_URL) {
 export const getAuthOptions = ({
   restricted,
 }: {
+<<<<<<< HEAD
   restricted?: 'ip-banned' | 'rate-limited'
+=======
+  restricted?: 'rate-limited'
+>>>>>>> upstream/main
 }): AuthOptions => ({
   adapter: customAdapter(prisma),
   secret: env.ENCRYPTION_SECRET,
@@ -139,6 +143,15 @@ export const getAuthOptions = ({
   pages: {
     signIn: '/signin',
     newUser: env.NEXT_PUBLIC_ONBOARDING_TYPEBOT_ID ? '/onboarding' : undefined,
+    error: '/signin',
+  },
+  events: {
+    signIn({ user }) {
+      Sentry.setUser({ id: user.id })
+    },
+    signOut() {
+      Sentry.setUser(null)
+    },
   },
   events: {
     signIn({ user }) {
@@ -158,7 +171,10 @@ export const getAuthOptions = ({
       }
     },
     signIn: async ({ account, user }) => {
+<<<<<<< HEAD
       if (restricted === 'ip-banned') throw new Error('ip-banned')
+=======
+>>>>>>> upstream/main
       if (restricted === 'rate-limited') throw new Error('rate-limited')
       if (!account) return false
       const isNewUser = !('createdAt' in user && isDefined(user.createdAt))
@@ -195,15 +211,24 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const requestIsFromCompanyFirewall = req.method === 'HEAD'
   if (requestIsFromCompanyFirewall) return res.status(200).end()
 
+<<<<<<< HEAD
   let restricted: 'ip-banned' | 'rate-limited' | undefined
 
   if (
     env.RADAR_HIGH_RISK_KEYWORDS &&
     req.url?.startsWith('/api/auth/signin') &&
+=======
+  let restricted: 'rate-limited' | undefined
+
+  if (
+    rateLimit &&
+    req.url?.startsWith('/api/auth/signin/email') &&
+>>>>>>> upstream/main
     req.method === 'POST'
   ) {
     const ip = getIp(req)
     if (ip) {
+<<<<<<< HEAD
       const isIpBanned = await prisma.bannedIp.findFirst({
         where: {
           ip,
@@ -225,6 +250,13 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     }
   }
 
+=======
+      const { success } = await rateLimit.limit(ip)
+      if (!success) restricted = 'rate-limited'
+    }
+  }
+
+>>>>>>> upstream/main
   return await NextAuth(req, res, getAuthOptions({ restricted }))
 }
 

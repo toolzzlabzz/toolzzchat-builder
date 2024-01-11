@@ -15,7 +15,11 @@ import {
   Variable,
 } from '@typebot.io/schemas'
 import prisma from '@typebot.io/lib/prisma'
+<<<<<<< HEAD
 import { parseVariables } from '@typebot.io/bot-engine/variables/parseVariables'
+=======
+import { parseVariables } from '@typebot.io/variables/parseVariables'
+>>>>>>> upstream/main
 import { defaultPaymentInputOptions } from '@typebot.io/schemas/features/blocks/inputs/payment/constants'
 
 const cors = initMiddleware(Cors())

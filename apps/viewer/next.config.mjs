@@ -44,6 +44,23 @@ const nextConfig = {
   experimental: {
     outputFileTracingRoot: join(__dirname, '../../'),
   },
+<<<<<<< HEAD
+=======
+  webpack: (config, { nextRuntime }) => {
+    if (nextRuntime === 'nodejs') return config
+
+    if (nextRuntime === 'edge') {
+      config.resolve.alias['minio'] = false
+      config.resolve.alias['got'] = false
+      return config
+    }
+    // These packages are imports from the integrations definition files that can be ignored for the client.
+    config.resolve.alias['minio'] = false
+    config.resolve.alias['got'] = false
+    config.resolve.alias['openai'] = false
+    return config
+  },
+>>>>>>> upstream/main
   async redirects() {
     return [
       {

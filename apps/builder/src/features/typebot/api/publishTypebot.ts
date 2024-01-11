@@ -29,7 +29,11 @@ export const publishTypebot = authenticatedProcedure
   })
   .input(
     z.object({
-      typebotId: z.string(),
+      typebotId: z
+        .string()
+        .describe(
+          "[Where to find my bot's ID?](../how-to#how-to-find-my-typebotid)"
+        ),
     })
   )
   .output(
@@ -48,6 +52,10 @@ export const publishTypebot = authenticatedProcedure
         workspace: {
           select: {
             plan: true,
+<<<<<<< HEAD
+=======
+            isVerified: true,
+>>>>>>> upstream/main
             isSuspended: true,
             isPastDue: true,
             members: {
@@ -80,13 +88,25 @@ export const publishTypebot = authenticatedProcedure
         })
     }
 
+<<<<<<< HEAD
     if (existingTypebot.riskLevel && existingTypebot.riskLevel > 80)
+=======
+    const typebotWasVerified =
+      existingTypebot.riskLevel === -1 || existingTypebot.workspace.isVerified
+
+    if (
+      !typebotWasVerified &&
+      existingTypebot.riskLevel &&
+      existingTypebot.riskLevel > 80
+    )
+>>>>>>> upstream/main
       throw new TRPCError({
         code: 'FORBIDDEN',
         message:
           'Radar detected a potential malicious typebot. This bot is being manually reviewed by Fraud Prevention team.',
       })
 
+<<<<<<< HEAD
     const typebotWasVerified = existingTypebot.riskLevel === -1
 
     const riskLevel = typebotWasVerified
@@ -100,6 +120,12 @@ export const publishTypebot = authenticatedProcedure
 
     if (riskLevel > 0 && riskLevel !== existingTypebot.riskLevel) {
       if (env.MESSAGE_WEBHOOK_URL && riskLevel !== 100)
+=======
+    const riskLevel = typebotWasVerified ? 0 : computeRiskLevel(existingTypebot)
+
+    if (riskLevel > 0 && riskLevel !== existingTypebot.riskLevel) {
+      if (env.MESSAGE_WEBHOOK_URL && riskLevel !== 100 && riskLevel > 60)
+>>>>>>> upstream/main
         await fetch(env.MESSAGE_WEBHOOK_URL, {
           method: 'POST',
           body: `⚠️ Suspicious typebot to be reviewed: ${existingTypebot.name} (${env.NEXTAUTH_URL}/typebots/${existingTypebot.id}/edit) (workspace: ${existingTypebot.workspaceId})`,
@@ -122,6 +148,7 @@ export const publishTypebot = authenticatedProcedure
               id: existingTypebot.publishedTypebot.id,
             },
           })
+<<<<<<< HEAD
         if (ip) {
           const isIpAlreadyBanned = await prisma.bannedIp.findFirst({
             where: {
@@ -137,6 +164,8 @@ export const publishTypebot = authenticatedProcedure
               },
             })
         }
+=======
+>>>>>>> upstream/main
         throw new TRPCError({
           code: 'FORBIDDEN',
           message:

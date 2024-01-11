@@ -11,6 +11,10 @@ import { analyticsRouter } from '@/features/analytics/api/router'
 import { collaboratorsRouter } from '@/features/collaboration/api/router'
 import { customDomainsRouter } from '@/features/customDomains/api/router'
 import { processTelemetryEvent } from '@/features/telemetry/api/processTelemetryEvent'
+<<<<<<< HEAD
+=======
+import { publicWhatsAppRouter } from '@/features/whatsapp/router'
+>>>>>>> upstream/main
 
 export const publicRouter = router({
   getLinkedTypebots,
@@ -25,6 +29,10 @@ export const publicRouter = router({
   collaborators: collaboratorsRouter,
   customDomains: customDomainsRouter,
   processTelemetryEvent,
+<<<<<<< HEAD
+=======
+  whatsApp: publicWhatsAppRouter,
+>>>>>>> upstream/main
 })
 
 export type PublicRouter = typeof publicRouter

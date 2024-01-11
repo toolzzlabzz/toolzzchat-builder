@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { z } from 'zod'
+=======
+import { z } from '../../../../zod'
+>>>>>>> upstream/main
 import { blockBaseSchema, credentialsBaseSchema } from '../../shared'
 import { IntegrationBlockType } from '../constants'
 

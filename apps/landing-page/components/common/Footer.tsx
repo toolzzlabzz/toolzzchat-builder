@@ -12,6 +12,7 @@ import {
 import { Logo } from "assets/icons/Logo";
 import { TextLink } from "./TextLink";
 
+<<<<<<< HEAD
 const discordServerUrl = "https://typebot.io/discord";
 const typebotLinkedInUrl = "https://www.linkedin.com/company/typebot";
 const typebotTwitterUrl = "https://twitter.com/Typebot_io";
@@ -21,6 +22,17 @@ export const contactUrl = "https://bot.typebot.io/landing-page-bubble-en";
 export const roadmapLink = "https://toolzz.com.br/bots";
 export const documentationLink = "https://docs.typebot.io";
 export const githubRepoLink = "https://github.com/baptisteArno/typebot.io";
+=======
+const discordServerUrl = 'https://typebot.io/discord'
+const typebotLinkedInUrl = 'https://www.linkedin.com/company/typebot'
+const typebotTwitterUrl = 'https://twitter.com/Typebot_io'
+const baptisteTwitterUrl = 'https://twitter.com/baptisteArno'
+const statusPageUrl = 'https://status.typebot.io'
+export const contactUrl = 'https://bot.typebot.io/landing-page-bubble-en'
+export const roadmapLink = 'https://app.typebot.io/feedback'
+export const documentationLink = 'https://docs.typebot.io'
+export const githubRepoLink = 'https://github.com/baptisteArno/typebot.io'
+>>>>>>> upstream/main
 
 export const Footer = () => {
   return (

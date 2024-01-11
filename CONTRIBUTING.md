@@ -1,5 +1,6 @@
 # Contributing to Typebot
 
+<<<<<<< HEAD
 You are considering contributing to Typebot. I thank you for this 🙏.
 
 Any contributions you make are **greatly appreciated**. It can be anything from typo fixes to new features.
@@ -107,3 +108,6 @@ As soon as you have defined your schema, you can start implementing your block i
 Since the code is strictly typed, you should see exactly where you need to add your integration-specific code.
 
 To sum it up you need to create a folder in [`apps/builder/src/features/blocks/integrations`](apps/builder/src/features/blocks/integrations) and in [`apps/viewer/src/features/blocks/integrations`](apps/viewer/src/features/blocks/integrations)
+=======
+All the content has been moved [here](https://docs.typebot.io/contribute/overview). ❤️
+>>>>>>> upstream/main

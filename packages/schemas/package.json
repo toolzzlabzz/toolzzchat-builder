@@ -10,9 +10,15 @@
   },
   "dependencies": {
     "@udecode/plate-common": "21.1.5",
+<<<<<<< HEAD
     "zod": "3.22.4"
+=======
+    "zod": "3.22.4",
+    "zod-openapi": "^2.11.0"
+>>>>>>> upstream/main
   },
   "devDependencies": {
+    "@typebot.io/forge-repository": "workspace:*",
     "@typebot.io/prisma": "workspace:*",
     "@typebot.io/tsconfig": "workspace:*",
     "typescript": "5.3.2"

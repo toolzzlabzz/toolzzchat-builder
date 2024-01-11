@@ -1,7 +1,12 @@
 import { isNotDefined, isDefined } from '@typebot.io/lib'
 import { Comparison, Condition, Variable } from '@typebot.io/schemas'
+<<<<<<< HEAD
 import { findUniqueVariableValue } from '../../../variables/findUniqueVariableValue'
 import { parseVariables } from '../../../variables/parseVariables'
+=======
+import { findUniqueVariableValue } from '@typebot.io/variables/findUniqueVariableValue'
+import { parseVariables } from '@typebot.io/variables/parseVariables'
+>>>>>>> upstream/main
 import {
   LogicalOperator,
   ComparisonOperators,

@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "i18n-ally.localesPaths": ["apps/builder/public/locales"],
+=======
+  "i18n-ally.localesPaths": ["apps/builder/src/i18n"],
+>>>>>>> upstream/main
   "i18n-ally.keystyle": "flat",
   "i18n-ally.displayLanguage": "en",
   "i18n-ally.enabledFrameworks": ["custom"],

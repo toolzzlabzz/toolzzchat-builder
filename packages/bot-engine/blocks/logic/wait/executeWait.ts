@@ -1,6 +1,10 @@
 import { ExecuteLogicResponse } from '../../../types'
 import { SessionState, WaitBlock } from '@typebot.io/schemas'
+<<<<<<< HEAD
 import { parseVariables } from '../../../variables/parseVariables'
+=======
+import { parseVariables } from '@typebot.io/variables/parseVariables'
+>>>>>>> upstream/main
 import { isNotDefined } from '@typebot.io/lib'
 
 export const executeWait = (
@@ -24,6 +28,10 @@ export const executeWait = (
       parsedSecondsToWaitFor || block.options?.shouldPause
         ? [
             {
+<<<<<<< HEAD
+=======
+              type: 'wait',
+>>>>>>> upstream/main
               wait: { secondsToWaitFor: parsedSecondsToWaitFor ?? 0 },
               expectsDedicatedReply: block.options.shouldPause,
             },
