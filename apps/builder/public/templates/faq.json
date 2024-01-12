@@ -1,842 +1,842 @@
 {
-"version":"6",
-"id":"clqqisdkh0001jt08we8q2jgh",
-"name":"FAQ - Perguntas Frequentes",
-"events":[
-{
-"id":"phb6s71snxkajhtd0yur5ll6",
-"outgoingEdgeId":"b3icjvx8emn9c1e8mf5wd1fi",
-"graphCoordinates":{
-"x":0,
-"y":0
-},
-"type":"start"
-}
-],
-"groups":[
-{
-"id":"u1fbedw66m377lej7wj03fgu",
-"title":"Welcome",
-"graphCoordinates":{
-"x":273,
-"y":22
-},
-"blocks":[
-{
-"id":"legbfyi5n6ojly1fx5whjcc0",
-"type":"text",
-"content":{
-"richText":[
-{
-"type":"p",
-"children":[
-{
-"text":"Olá, eu sou o Eduardo, a Inteligência Artificial da Toolzz. "
-}
-]
-}
-]
-}
-},
-{
-"id":"a9c5rofcra26jzbf3toy492o",
-"type":"text",
-"content":{
-"richText":[
-{
-"type":"p",
-"children":[
-{
-"text":"Escolha uma das perguntas frequentes"
-}
-]
-}
-]
-}
-},
-{
-"id":"t057pzohbdi0d6nkrebhwtdg",
-"type":"choice input",
-"items":[
-{
-"id":"xx50fcn0jh1fzvoc0att6z0o",
-"outgoingEdgeId":"sqvdlxmryhnyr4g0mheefdo4",
-"content":"O que é o Toolzz LMS?"
-},
-{
-"id":"afbf4vx9uw52krz5z761cjs6",
-"outgoingEdgeId":"yy18m47i0vogw138ewbd42cw",
-"content":"O que é o Toolzz Connect?"
-},
-{
-"id":"i45eq7cjl201ppbtxqp337xu",
-"outgoingEdgeId":"ego5sgfook3ej2wt8uohpb8q",
-"content":"O que é o Toolzz Chat?"
-},
-{
-"id":"qebj1c8kpwh2hsyb3e7qncfl",
-"outgoingEdgeId":"ezjrt8q6hcpvrbfl179aoum2",
-"content":"O que é o Toolzz Bots?"
-},
-{
-"id":"n1azugm0jwctahnzct30a9f2",
-"outgoingEdgeId":"xtjncpcis330yt24emje65jc",
-"content":"O que é o Toolzz AI?"
-},
-{
-"id":"r8eg9an4601rrm99le0jrz5l",
-"outgoingEdgeId":"rbco15kdpo8xzbadtdxzvygy",
-"content":"O que é o Toolzz OS?"
-},
-{
-"id":"fzznluj7t9nkuwgnbg7aisvf",
-"outgoingEdgeId":"thcbwsufbh3oybky5t3wkce7",
-"content":"Nenhuma das opções"
-},
-{
-"id":"o4w8lzlcqksrerr58dcb7xpb",
-"outgoingEdgeId":"s56x176lzrptikzsgtidknrv",
-"content":"💬 Falar com uma pessoa"
-}
-]
-}
-]
-},
-{
-"id":"e7pakv9pko7u7tgyoh4jdgdd",
-"title":"💬 Falar com uma pessoa",
-"graphCoordinates":{
-"x":801.14,
-"y":1652.21
-},
-"blocks":[
-{
-"id":"r0f4dmqwgxjmt9txif4a3kmb",
-"outgoingEdgeId":"vgeyq7jczg2j73qzvuc06xpl",
-"type":"text",
-"content":{
-"richText":[
-{
-"type":"p",
-"children":[
-{
-"text":"Ok, vamos resolver isso! "
-}
-]
-},
-{
-"type":"p",
-"children":[
-{
-"text":"Selecione uma das opções: "
-}
-]
-}
-]
-}
-}
-]
-},
-{
-"id":"px3lvew55qpcd6mx1oat4vfe",
-"title":"Falar com atendente",
-"graphCoordinates":{
-"x":1205.77,
-"y":1742.97
-},
-"blocks":[
-{
-"id":"uwdn1qx0yluae8eecqpje9wx",
-"type":"Chatwoot"
-},
-{
-"id":"lamfisfwzdz4rf4vw8yuuq32",
-"type":"text",
-"content":{
-"richText":[
-{
-"type":"p",
-"children":[
-{
-"text":"Ok, te retornaremos em alguns minutos."
-}
-]
-}
-]
-}
-},
-{
-"id":"jm9tevse61c52f1a7agl35ci",
-"type":"image",
-"content":{
-"url":"https://media0.giphy.com/media/3o7ZetIsjtbkgNE1I4/giphy.gif?cid=9355458dk4b1zp1iboso8eqpahx2xcy14hb2xqfh6g6cpwve&ep=v1_gifs_search&rid=giphy.gif&ct=g"
-}
-}
-]
-},
-{
-"id":"ewuksv85asl795ockmch380v",
-"title":"O que é o Toolzz LMS?",
-"graphCoordinates":{
-"x":765.85,
-"y":-916.45
-},
-"blocks":[
-{
-"id":"qa2v5nc3y8kabemd7f0ge0s9",
-"type":"text",
-"content":{
-"richText":[
-{
-"type":"p",
-"children":[
-{
-"text":"O Toolzz LMS é uma Plataforma de EAD e LMS para empresas, escolas, universidades, franquias, consultorias e outros segmentos."
-}
-]
-}
-]
-}
-},
-{
-"id":"hn2bdyxtkm5hyixbtcnr44ps",
-"type":"image",
-"content":{
-"url":"https://media.discordapp.net/attachments/915691669234548746/1190251284461256714/chrome-capture-2023-8-24_1.gif?ex=65a11ee4&is=658ea9e4&hm=da44b0f15b8bce9ae00ddceb9e748ccf680e0355104ab022b1299e0ec8cb6704&="
-}
-},
-{
-"id":"ati0sgns3ydo2h7sjnog93s3",
-"type":"image",
-"content":{
-"url":"https://cdn.greatpages.com.br/www.toolzz.com.br-home/1703071176/imagens/desktop/386227_1_170194858227866289.gif"
-}
-},
-{
-"id":"ftqxhhmtgebtk27xbazimqrm",
-"type":"text",
-"content":{
-"richText":[
-{
-"type":"p",
-"children":[
-{
-"text":"Para mais informações acesse: "
-}
-]
-},
-{
-"type":"p",
-"children":[
-{
-"text":"🔗 "
-},
-{
-"url":"https://www.toolzz.com.br",
-"type":"a",
-"children":[
-{
-"text":"toolzz.com.br"
-}
-]
-},
-{
-"text":""
-}
-]
-}
-]
-}
-}
-]
-},
-{
-"id":"gmffxf6x4l3lhgdu76tn6osb",
-"title":"O que é o Toolzz Connect?",
-"graphCoordinates":{
-"x":1680.74,
-"y":-778.16
-},
-"blocks":[
-{
-"id":"ak67plj9uc4kgoahlurcmryy",
-"type":"text",
-"content":{
-"richText":[
-{
-"type":"p",
-"children":[
-{
-"text":"Toolzz Connect: concorrente do Zapier, permite que o cliente integre o Toolzz LMS com mais de 1500 apps e plataformas. Além de ser uma plataforma no code de automações e criações de fluxos de trabalho. "
-}
-]
-}
-]
-}
-},
-{
-"id":"m0o7a3e90kw06heo4ytshq9s",
-"type":"image",
-"content":{
-"url":"https://media.discordapp.net/attachments/915691669234548746/1190252239915323412/335817_1_16970436536526d4c7f2a1e204685668.gif?ex=65a11fc7&is=658eaac7&hm=1ce1d68e59b23cdb5e733e5ad47d8e79513a4db10b78b246e24671da704f0ff7&=&width=720&height=450"
-}
-},
-{
-"id":"j8fx0ibk6xzspk0quwze6yo4",
-"type":"text",
-"content":{
-"richText":[
-{
-"type":"p",
-"children":[
-{
-"text":"Para mais informações acesse: "
-}
-]
-},
-{
-"type":"p",
-"children":[
-{
-"text":"🔗 "
-},
-{
-"url":"https://www.toolzz.com.br",
-"type":"a",
-"children":[
-{
-"text":"toolzz.com.br"
-}
-]
-},
-{
-"text":""
-}
-]
-}
-]
-}
-}
-]
-},
-{
-"id":"lfkvbh5w6d93m8wshv1488wp",
-"title":"O que é o Toolzz Chat?",
-"graphCoordinates":{
-"x":2204.74,
-"y":-236.45
-},
-"blocks":[
-{
-"id":"nffj2upjrm3oeujsyes4p9jm",
-"type":"text",
-"content":{
-"richText":[
-{
-"type":"p",
-"children":[
-{
-"text":"Toolzz Chat é uma Central de atendimento omnichannel. Atenda seu cliente onde ele estiver integrado com redes sociais."
-}
-]
-}
-]
-}
-},
-{
-"id":"itxw0oge4yo7a5v9bx1fiatx",
-"type":"image",
-"content":{
-"url":"https://cdn.greatpages.com.br/www.toolzz.com.br-home/1703071176/imagens/desktop/386227_1_170145906068462341.svg"
-}
-},
-{
-"id":"hthdyi7f5h9wdj8imamkrsyd",
-"type":"image",
-"content":{
-"url":"https://cdn.greatpages.com.br/www.toolzz.com.br-home/1703071176/imagens/desktop/386227_1_170145862196537712.gif"
-}
-},
-{
-"id":"gqdw6jbnscklvmy8lda7o3zl",
-"type":"text",
-"content":{
-"richText":[
-{
-"type":"p",
-"children":[
-{
-"text":"Para mais informações acesse: "
-}
-]
-},
-{
-"type":"p",
-"children":[
-{
-"text":"🔗 "
-},
-{
-"url":"https://www.toolzz.com.br",
-"type":"a",
-"children":[
-{
-"text":"toolzz.com.br"
-}
-]
-},
-{
-"text":""
-}
-]
-}
-]
-}
-}
-]
-},
-{
-"id":"ady8cv9n8ldo2bmb1p93kfkz",
-"title":"O que é o Toolzz Bots?",
-"graphCoordinates":{
-"x":2804.17,
-"y":618.41
-},
-"blocks":[
-{
-"id":"bnc2pda15x9gxtstl2nj8vrd",
-"type":"text",
-"content":{
-"richText":[
-{
-"type":"p",
-"children":[
-{
-"text":"Resposta 1"
-}
-]
-}
-]
-}
-},
-{
-"id":"z90s8z67x2gjb1zqvv3yop8a",
-"type":"text",
-"content":{
-"richText":[
-{
-"type":"p",
-"children":[
-{
-"text":"Para mais informações acesse: "
-}
-]
-},
-{
-"type":"p",
-"children":[
-{
-"text":"🔗 "
-},
-{
-"url":"https://www.toolzz.com.br",
-"type":"a",
-"children":[
-{
-"text":"toolzz.com.br"
-}
-]
-},
-{
-"text":""
-}
-]
-}
-]
-}
-}
-]
-},
-{
-"id":"i55yite7kpbabmjd1uwynxwn",
-"title":"O que é o Toolzz AI?",
-"graphCoordinates":{
-"x":1747.6,
-"y":773.26
-},
-"blocks":[
-{
-"id":"c23nnmxc0m18sm4l94pao0z7",
-"type":"text",
-"content":{
-"richText":[
-{
-"type":"p",
-"children":[
-{
-"text":"Resposta 1"
-}
-]
-}
-]
-}
-},
-{
-"id":"bv8h0dvwwefr14ipyx7cwyar",
-"type":"text",
-"content":{
-"richText":[
-{
-"type":"p",
-"children":[
-{
-"text":"Para mais informações acesse: "
-}
-]
-},
-{
-"type":"p",
-"children":[
-{
-"text":"🔗 "
-},
-{
-"url":"https://www.toolzz.com.br",
-"type":"a",
-"children":[
-{
-"text":"toolzz.com.br"
-}
-]
-},
-{
-"text":""
-}
-]
-}
-]
-}
-}
-]
-},
-{
-"id":"qjwnwogqlfskc29xh1w9bopp",
-"title":"O que é o Toolzz OS?",
-"graphCoordinates":{
-"x":1527.6,
-"y":1119.84
-},
-"blocks":[
-{
-"id":"ysjkr52000n3ymx1xfoxg8uy",
-"type":"text",
-"content":{
-"richText":[
-{
-"type":"p",
-"children":[
-{
-"text":"Resposta 1"
-}
-]
-}
-]
-}
-},
-{
-"id":"i8mabuo1lcoglpca1pehkd20",
-"type":"text",
-"content":{
-"richText":[
-{
-"type":"p",
-"children":[
-{
-"text":"Para mais informações acesse: "
-}
-]
-},
-{
-"type":"p",
-"children":[
-{
-"text":"🔗 "
-},
-{
-"url":"https://www.toolzz.com.br",
-"type":"a",
-"children":[
-{
-"text":"toolzz.com.br"
-}
-]
-},
-{
-"text":""
-}
-]
-}
-]
-}
-}
-]
-},
-{
-"id":"jpj6r4zd8yayew1pcloo3mn5",
-"title":"Nenhuma das opções",
-"graphCoordinates":{
-"x":1294.74,
-"y":1454.69
-},
-"blocks":[
-{
-"id":"u4pf8zqj0r951m0mv2jypl0q",
-"type":"text",
-"content":{
-"richText":[
-{
-"type":"p",
-"children":[
-{
-"text":"Resposta 1"
-}
-]
-}
-]
-}
-},
-{
-"id":"vfcazuueyc30nadgmty7jhd1",
-"type":"text",
-"content":{
-"richText":[
-{
-"type":"p",
-"children":[
-{
-"text":"Para mais informações acesse: "
-}
-]
-},
-{
-"type":"p",
-"children":[
-{
-"text":"🔗 "
-},
-{
-"url":"https://www.toolzz.com.br",
-"type":"a",
-"children":[
-{
-"text":"toolzz.com.br"
-}
-]
-},
-{
-"text":""
-}
-]
-}
-]
-}
-}
-]
-}
-],
-"edges":[
-{
-"id":"b3icjvx8emn9c1e8mf5wd1fi",
-"from":{
-"eventId":"phb6s71snxkajhtd0yur5ll6"
-},
-"to":{
-"groupId":"u1fbedw66m377lej7wj03fgu"
-}
-},
-{
-"id":"s56x176lzrptikzsgtidknrv",
-"from":{
-"blockId":"t057pzohbdi0d6nkrebhwtdg",
-"itemId":"o4w8lzlcqksrerr58dcb7xpb"
-},
-"to":{
-"groupId":"e7pakv9pko7u7tgyoh4jdgdd"
-}
-},
-{
-"id":"vgeyq7jczg2j73qzvuc06xpl",
-"from":{
-"blockId":"r0f4dmqwgxjmt9txif4a3kmb"
-},
-"to":{
-"groupId":"px3lvew55qpcd6mx1oat4vfe"
-}
-},
-{
-"id":"sqvdlxmryhnyr4g0mheefdo4",
-"from":{
-"blockId":"t057pzohbdi0d6nkrebhwtdg",
-"itemId":"xx50fcn0jh1fzvoc0att6z0o"
-},
-"to":{
-"groupId":"ewuksv85asl795ockmch380v"
-}
-},
-{
-"id":"ego5sgfook3ej2wt8uohpb8q",
-"from":{
-"blockId":"t057pzohbdi0d6nkrebhwtdg",
-"itemId":"i45eq7cjl201ppbtxqp337xu"
-},
-"to":{
-"groupId":"lfkvbh5w6d93m8wshv1488wp",
-"blockId":"nffj2upjrm3oeujsyes4p9jm"
-}
-},
-{
-"id":"ezjrt8q6hcpvrbfl179aoum2",
-"from":{
-"blockId":"t057pzohbdi0d6nkrebhwtdg",
-"itemId":"qebj1c8kpwh2hsyb3e7qncfl"
-},
-"to":{
-"groupId":"ady8cv9n8ldo2bmb1p93kfkz",
-"blockId":"bnc2pda15x9gxtstl2nj8vrd"
-}
-},
-{
-"id":"xtjncpcis330yt24emje65jc",
-"from":{
-"blockId":"t057pzohbdi0d6nkrebhwtdg",
-"itemId":"n1azugm0jwctahnzct30a9f2"
-},
-"to":{
-"groupId":"i55yite7kpbabmjd1uwynxwn",
-"blockId":"c23nnmxc0m18sm4l94pao0z7"
-}
-},
-{
-"id":"rbco15kdpo8xzbadtdxzvygy",
-"from":{
-"blockId":"t057pzohbdi0d6nkrebhwtdg",
-"itemId":"r8eg9an4601rrm99le0jrz5l"
-},
-"to":{
-"groupId":"qjwnwogqlfskc29xh1w9bopp",
-"blockId":"ysjkr52000n3ymx1xfoxg8uy"
-}
-},
-{
-"id":"thcbwsufbh3oybky5t3wkce7",
-"from":{
-"blockId":"t057pzohbdi0d6nkrebhwtdg",
-"itemId":"fzznluj7t9nkuwgnbg7aisvf"
-},
-"to":{
-"groupId":"jpj6r4zd8yayew1pcloo3mn5"
-}
-},
-{
-"id":"yy18m47i0vogw138ewbd42cw",
-"from":{
-"blockId":"t057pzohbdi0d6nkrebhwtdg",
-"itemId":"afbf4vx9uw52krz5z761cjs6"
-},
-"to":{
-"groupId":"gmffxf6x4l3lhgdu76tn6osb",
-"blockId":"ak67plj9uc4kgoahlurcmryy"
-}
-}
-],
-"variables":[
-{
-"id":"vdzrx77w6zj9zf5mzv7qcdtyi",
-"name":"Nome da Empresa"
-},
-{
-"id":"vwcf1fvkdmm11d9myovwg82sw",
-"name":"Nome do Bot"
-},
-{
-"id":"vc8yyakg53olhricuumn97bdk",
-"name":"Dúvida"
-},
-{
-"id":"vy0rle862nq5ghg6qv3xvsv7e",
-"name":"E-mail"
-},
-{
-"id":"vxmi79412woun6onlsg3j8wd2",
-"name":"Busca-tutorial"
-},
-{
-"id":"vt4wx1br1fin3np54ti0vlu0t",
-"name":"Whatsapp"
-},
-{
-"id":"vezq7i73c78l3jwq722l4mue2",
-"name":"Data-treinamento"
-},
-{
-"id":"vkibcnsf1zh8819gelq5jaump",
-"name":"Bug-descrição"
-},
-{
-"id":"vgvaz6t15e05c0v2m7l6kcelo",
-"name":"Bug-print"
-}
-],
-"theme":{
-"general":{
-"font":"",
-"background":{
-"type":"Color"
-}
-},
-"chat":{
-"hostAvatar":{
-"isEnabled":true,
-"url":"https://media.discordapp.net/attachments/915691669234548746/1190559870991208458/Frame_3266_3.png"
-},
-"guestAvatar":{
-"isEnabled":false
-},
-"guestBubbles":{
-"backgroundColor":"#0567C1",
-"color":"#FFFFFF"
-},
-"buttons":{
-"backgroundColor":"#E6F0FE",
-"color":"#04153e"
-}
-}
-},
-"selectedThemeTemplateId":null,
-"settings":{
-"general":{
-"isBrandingEnabled":true,
-"isInputPrefillEnabled":true,
-"rememberUser":{
-"isEnabled":true,
-"storage":"session"
-}
-},
-"typingEmulation":{
-"enabled":true,
-"speed":300
-}
-},
-"createdAt":"2023-12-29T10:57:44.369Z",
-"updatedAt":"2023-12-29T11:23:57.184Z",
-"icon":"📖",
-"folderId":"clqqaqvpi0001jy08su0jved4",
-"publicId":"faq-perguntas-frequentes-e8q2jgh",
-"customDomain":null,
-"workspaceId":"clqqaifj00000jp08ndmnfqca",
-"resultsTablePreferences":null,
-"isArchived":false,
-"isClosed":false,
-"whatsAppCredentialsId":null,
-"riskLevel":null
+  "version": "6",
+  "id": "clqqisdkh0001jt08we8q2jgh",
+  "name": "FAQ - Perguntas Frequentes",
+  "events": [
+    {
+      "id": "phb6s71snxkajhtd0yur5ll6",
+      "outgoingEdgeId": "b3icjvx8emn9c1e8mf5wd1fi",
+      "graphCoordinates": {
+        "x": 0,
+        "y": 0
+      },
+      "type": "start"
+    }
+  ],
+  "groups": [
+    {
+      "id": "u1fbedw66m377lej7wj03fgu",
+      "title": "Welcome",
+      "graphCoordinates": {
+        "x": 273,
+        "y": 22
+      },
+      "blocks": [
+        {
+          "id": "legbfyi5n6ojly1fx5whjcc0",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Olá, eu sou o Eduardo, a Inteligência Artificial da Toolzz. "
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "a9c5rofcra26jzbf3toy492o",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Escolha uma das perguntas frequentes"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "t057pzohbdi0d6nkrebhwtdg",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "xx50fcn0jh1fzvoc0att6z0o",
+              "outgoingEdgeId": "sqvdlxmryhnyr4g0mheefdo4",
+              "content": "O que é o Toolzz LMS?"
+            },
+            {
+              "id": "afbf4vx9uw52krz5z761cjs6",
+              "outgoingEdgeId": "yy18m47i0vogw138ewbd42cw",
+              "content": "O que é o Toolzz Connect?"
+            },
+            {
+              "id": "i45eq7cjl201ppbtxqp337xu",
+              "outgoingEdgeId": "ego5sgfook3ej2wt8uohpb8q",
+              "content": "O que é o Toolzz Chat?"
+            },
+            {
+              "id": "qebj1c8kpwh2hsyb3e7qncfl",
+              "outgoingEdgeId": "ezjrt8q6hcpvrbfl179aoum2",
+              "content": "O que é o Toolzz Bots?"
+            },
+            {
+              "id": "n1azugm0jwctahnzct30a9f2",
+              "outgoingEdgeId": "xtjncpcis330yt24emje65jc",
+              "content": "O que é o Toolzz AI?"
+            },
+            {
+              "id": "r8eg9an4601rrm99le0jrz5l",
+              "outgoingEdgeId": "rbco15kdpo8xzbadtdxzvygy",
+              "content": "O que é o Toolzz OS?"
+            },
+            {
+              "id": "fzznluj7t9nkuwgnbg7aisvf",
+              "outgoingEdgeId": "thcbwsufbh3oybky5t3wkce7",
+              "content": "Nenhuma das opções"
+            },
+            {
+              "id": "o4w8lzlcqksrerr58dcb7xpb",
+              "outgoingEdgeId": "s56x176lzrptikzsgtidknrv",
+              "content": "💬 Falar com uma pessoa"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e7pakv9pko7u7tgyoh4jdgdd",
+      "title": "💬 Falar com uma pessoa",
+      "graphCoordinates": {
+        "x": 801.14,
+        "y": 1652.21
+      },
+      "blocks": [
+        {
+          "id": "r0f4dmqwgxjmt9txif4a3kmb",
+          "outgoingEdgeId": "vgeyq7jczg2j73qzvuc06xpl",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Ok, vamos resolver isso! "
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Selecione uma das opções: "
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "px3lvew55qpcd6mx1oat4vfe",
+      "title": "Falar com atendente",
+      "graphCoordinates": {
+        "x": 1205.77,
+        "y": 1742.97
+      },
+      "blocks": [
+        {
+          "id": "uwdn1qx0yluae8eecqpje9wx",
+          "type": "Chatwoot"
+        },
+        {
+          "id": "lamfisfwzdz4rf4vw8yuuq32",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Ok, te retornaremos em alguns minutos."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "jm9tevse61c52f1a7agl35ci",
+          "type": "image",
+          "content": {
+            "url": "https://media0.giphy.com/media/3o7ZetIsjtbkgNE1I4/giphy.gif?cid=9355458dk4b1zp1iboso8eqpahx2xcy14hb2xqfh6g6cpwve&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ewuksv85asl795ockmch380v",
+      "title": "O que é o Toolzz LMS?",
+      "graphCoordinates": {
+        "x": 765.85,
+        "y": -916.45
+      },
+      "blocks": [
+        {
+          "id": "qa2v5nc3y8kabemd7f0ge0s9",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "O Toolzz LMS é uma Plataforma de EAD e LMS para empresas, escolas, universidades, franquias, consultorias e outros segmentos."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "hn2bdyxtkm5hyixbtcnr44ps",
+          "type": "image",
+          "content": {
+            "url": "https://media.discordapp.net/attachments/915691669234548746/1190251284461256714/chrome-capture-2023-8-24_1.gif?ex=65a11ee4&is=658ea9e4&hm=da44b0f15b8bce9ae00ddceb9e748ccf680e0355104ab022b1299e0ec8cb6704&="
+          }
+        },
+        {
+          "id": "ati0sgns3ydo2h7sjnog93s3",
+          "type": "image",
+          "content": {
+            "url": "https://cdn.greatpages.com.br/www.toolzz.com.br-home/1703071176/imagens/desktop/386227_1_170194858227866289.gif"
+          }
+        },
+        {
+          "id": "ftqxhhmtgebtk27xbazimqrm",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Para mais informações acesse: "
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "🔗 "
+                  },
+                  {
+                    "url": "https://www.toolzz.com.br",
+                    "type": "a",
+                    "children": [
+                      {
+                        "text": "toolzz.com.br"
+                      }
+                    ]
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gmffxf6x4l3lhgdu76tn6osb",
+      "title": "O que é o Toolzz Connect?",
+      "graphCoordinates": {
+        "x": 1680.74,
+        "y": -778.16
+      },
+      "blocks": [
+        {
+          "id": "ak67plj9uc4kgoahlurcmryy",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Toolzz Connect: concorrente do Zapier, permite que o cliente integre o Toolzz LMS com mais de 1500 apps e plataformas. Além de ser uma plataforma no code de automações e criações de fluxos de trabalho. "
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m0o7a3e90kw06heo4ytshq9s",
+          "type": "image",
+          "content": {
+            "url": "https://media.discordapp.net/attachments/915691669234548746/1190252239915323412/335817_1_16970436536526d4c7f2a1e204685668.gif?ex=65a11fc7&is=658eaac7&hm=1ce1d68e59b23cdb5e733e5ad47d8e79513a4db10b78b246e24671da704f0ff7&=&width=720&height=450"
+          }
+        },
+        {
+          "id": "j8fx0ibk6xzspk0quwze6yo4",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Para mais informações acesse: "
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "🔗 "
+                  },
+                  {
+                    "url": "https://www.toolzz.com.br",
+                    "type": "a",
+                    "children": [
+                      {
+                        "text": "toolzz.com.br"
+                      }
+                    ]
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "lfkvbh5w6d93m8wshv1488wp",
+      "title": "O que é o Toolzz Chat?",
+      "graphCoordinates": {
+        "x": 2204.74,
+        "y": -236.45
+      },
+      "blocks": [
+        {
+          "id": "nffj2upjrm3oeujsyes4p9jm",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Toolzz Chat é uma Central de atendimento omnichannel. Atenda seu cliente onde ele estiver integrado com redes sociais."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "itxw0oge4yo7a5v9bx1fiatx",
+          "type": "image",
+          "content": {
+            "url": "https://cdn.greatpages.com.br/www.toolzz.com.br-home/1703071176/imagens/desktop/386227_1_170145906068462341.svg"
+          }
+        },
+        {
+          "id": "hthdyi7f5h9wdj8imamkrsyd",
+          "type": "image",
+          "content": {
+            "url": "https://cdn.greatpages.com.br/www.toolzz.com.br-home/1703071176/imagens/desktop/386227_1_170145862196537712.gif"
+          }
+        },
+        {
+          "id": "gqdw6jbnscklvmy8lda7o3zl",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Para mais informações acesse: "
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "🔗 "
+                  },
+                  {
+                    "url": "https://www.toolzz.com.br",
+                    "type": "a",
+                    "children": [
+                      {
+                        "text": "toolzz.com.br"
+                      }
+                    ]
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ady8cv9n8ldo2bmb1p93kfkz",
+      "title": "O que é o Toolzz Bots?",
+      "graphCoordinates": {
+        "x": 2804.17,
+        "y": 618.41
+      },
+      "blocks": [
+        {
+          "id": "bnc2pda15x9gxtstl2nj8vrd",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Resposta 1"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "z90s8z67x2gjb1zqvv3yop8a",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Para mais informações acesse: "
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "🔗 "
+                  },
+                  {
+                    "url": "https://www.toolzz.com.br",
+                    "type": "a",
+                    "children": [
+                      {
+                        "text": "toolzz.com.br"
+                      }
+                    ]
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "i55yite7kpbabmjd1uwynxwn",
+      "title": "O que é o Toolzz AI?",
+      "graphCoordinates": {
+        "x": 1747.6,
+        "y": 773.26
+      },
+      "blocks": [
+        {
+          "id": "c23nnmxc0m18sm4l94pao0z7",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Resposta 1"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "bv8h0dvwwefr14ipyx7cwyar",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Para mais informações acesse: "
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "🔗 "
+                  },
+                  {
+                    "url": "https://www.toolzz.com.br",
+                    "type": "a",
+                    "children": [
+                      {
+                        "text": "toolzz.com.br"
+                      }
+                    ]
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "qjwnwogqlfskc29xh1w9bopp",
+      "title": "O que é o Toolzz OS?",
+      "graphCoordinates": {
+        "x": 1527.6,
+        "y": 1119.84
+      },
+      "blocks": [
+        {
+          "id": "ysjkr52000n3ymx1xfoxg8uy",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Resposta 1"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "i8mabuo1lcoglpca1pehkd20",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Para mais informações acesse: "
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "🔗 "
+                  },
+                  {
+                    "url": "https://www.toolzz.com.br",
+                    "type": "a",
+                    "children": [
+                      {
+                        "text": "toolzz.com.br"
+                      }
+                    ]
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "jpj6r4zd8yayew1pcloo3mn5",
+      "title": "Nenhuma das opções",
+      "graphCoordinates": {
+        "x": 1294.74,
+        "y": 1454.69
+      },
+      "blocks": [
+        {
+          "id": "u4pf8zqj0r951m0mv2jypl0q",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Resposta 1"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "vfcazuueyc30nadgmty7jhd1",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Para mais informações acesse: "
+                  }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "🔗 "
+                  },
+                  {
+                    "url": "https://www.toolzz.com.br",
+                    "type": "a",
+                    "children": [
+                      {
+                        "text": "toolzz.com.br"
+                      }
+                    ]
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "b3icjvx8emn9c1e8mf5wd1fi",
+      "from": {
+        "eventId": "phb6s71snxkajhtd0yur5ll6"
+      },
+      "to": {
+        "groupId": "u1fbedw66m377lej7wj03fgu"
+      }
+    },
+    {
+      "id": "s56x176lzrptikzsgtidknrv",
+      "from": {
+        "blockId": "t057pzohbdi0d6nkrebhwtdg",
+        "itemId": "o4w8lzlcqksrerr58dcb7xpb"
+      },
+      "to": {
+        "groupId": "e7pakv9pko7u7tgyoh4jdgdd"
+      }
+    },
+    {
+      "id": "vgeyq7jczg2j73qzvuc06xpl",
+      "from": {
+        "blockId": "r0f4dmqwgxjmt9txif4a3kmb"
+      },
+      "to": {
+        "groupId": "px3lvew55qpcd6mx1oat4vfe"
+      }
+    },
+    {
+      "id": "sqvdlxmryhnyr4g0mheefdo4",
+      "from": {
+        "blockId": "t057pzohbdi0d6nkrebhwtdg",
+        "itemId": "xx50fcn0jh1fzvoc0att6z0o"
+      },
+      "to": {
+        "groupId": "ewuksv85asl795ockmch380v"
+      }
+    },
+    {
+      "id": "ego5sgfook3ej2wt8uohpb8q",
+      "from": {
+        "blockId": "t057pzohbdi0d6nkrebhwtdg",
+        "itemId": "i45eq7cjl201ppbtxqp337xu"
+      },
+      "to": {
+        "groupId": "lfkvbh5w6d93m8wshv1488wp",
+        "blockId": "nffj2upjrm3oeujsyes4p9jm"
+      }
+    },
+    {
+      "id": "ezjrt8q6hcpvrbfl179aoum2",
+      "from": {
+        "blockId": "t057pzohbdi0d6nkrebhwtdg",
+        "itemId": "qebj1c8kpwh2hsyb3e7qncfl"
+      },
+      "to": {
+        "groupId": "ady8cv9n8ldo2bmb1p93kfkz",
+        "blockId": "bnc2pda15x9gxtstl2nj8vrd"
+      }
+    },
+    {
+      "id": "xtjncpcis330yt24emje65jc",
+      "from": {
+        "blockId": "t057pzohbdi0d6nkrebhwtdg",
+        "itemId": "n1azugm0jwctahnzct30a9f2"
+      },
+      "to": {
+        "groupId": "i55yite7kpbabmjd1uwynxwn",
+        "blockId": "c23nnmxc0m18sm4l94pao0z7"
+      }
+    },
+    {
+      "id": "rbco15kdpo8xzbadtdxzvygy",
+      "from": {
+        "blockId": "t057pzohbdi0d6nkrebhwtdg",
+        "itemId": "r8eg9an4601rrm99le0jrz5l"
+      },
+      "to": {
+        "groupId": "qjwnwogqlfskc29xh1w9bopp",
+        "blockId": "ysjkr52000n3ymx1xfoxg8uy"
+      }
+    },
+    {
+      "id": "thcbwsufbh3oybky5t3wkce7",
+      "from": {
+        "blockId": "t057pzohbdi0d6nkrebhwtdg",
+        "itemId": "fzznluj7t9nkuwgnbg7aisvf"
+      },
+      "to": {
+        "groupId": "jpj6r4zd8yayew1pcloo3mn5"
+      }
+    },
+    {
+      "id": "yy18m47i0vogw138ewbd42cw",
+      "from": {
+        "blockId": "t057pzohbdi0d6nkrebhwtdg",
+        "itemId": "afbf4vx9uw52krz5z761cjs6"
+      },
+      "to": {
+        "groupId": "gmffxf6x4l3lhgdu76tn6osb",
+        "blockId": "ak67plj9uc4kgoahlurcmryy"
+      }
+    }
+  ],
+  "variables": [
+    {
+      "id": "vdzrx77w6zj9zf5mzv7qcdtyi",
+      "name": "Nome da Empresa"
+    },
+    {
+      "id": "vwcf1fvkdmm11d9myovwg82sw",
+      "name": "Nome do Bot"
+    },
+    {
+      "id": "vc8yyakg53olhricuumn97bdk",
+      "name": "Dúvida"
+    },
+    {
+      "id": "vy0rle862nq5ghg6qv3xvsv7e",
+      "name": "E-mail"
+    },
+    {
+      "id": "vxmi79412woun6onlsg3j8wd2",
+      "name": "Busca-tutorial"
+    },
+    {
+      "id": "vt4wx1br1fin3np54ti0vlu0t",
+      "name": "Whatsapp"
+    },
+    {
+      "id": "vezq7i73c78l3jwq722l4mue2",
+      "name": "Data-treinamento"
+    },
+    {
+      "id": "vkibcnsf1zh8819gelq5jaump",
+      "name": "Bug-descrição"
+    },
+    {
+      "id": "vgvaz6t15e05c0v2m7l6kcelo",
+      "name": "Bug-print"
+    }
+  ],
+  "theme": {
+    "general": {
+      "font": "",
+      "background": {
+        "type": "Color"
+      }
+    },
+    "chat": {
+      "hostAvatar": {
+        "isEnabled": true,
+        "url": "https://media.discordapp.net/attachments/915691669234548746/1190559870991208458/Frame_3266_3.png"
+      },
+      "guestAvatar": {
+        "isEnabled": false
+      },
+      "guestBubbles": {
+        "backgroundColor": "#0567C1",
+        "color": "#FFFFFF"
+      },
+      "buttons": {
+        "backgroundColor": "#E6F0FE",
+        "color": "#04153e"
+      }
+    }
+  },
+  "selectedThemeTemplateId": null,
+  "settings": {
+    "general": {
+      "isBrandingEnabled": true,
+      "isInputPrefillEnabled": true,
+      "rememberUser": {
+        "isEnabled": true,
+        "storage": "session"
+      }
+    },
+    "typingEmulation": {
+      "enabled": true,
+      "speed": 300
+    }
+  },
+  "createdAt": "2023-12-29T10:57:44.369Z",
+  "updatedAt": "2023-12-29T11:23:57.184Z",
+  "icon": "📖",
+  "folderId": "clqqaqvpi0001jy08su0jved4",
+  "publicId": "faq-perguntas-frequentes-e8q2jgh",
+  "customDomain": null,
+  "workspaceId": "clqqaifj00000jp08ndmnfqca",
+  "resultsTablePreferences": null,
+  "isArchived": false,
+  "isClosed": false,
+  "whatsAppCredentialsId": null,
+  "riskLevel": null
 }

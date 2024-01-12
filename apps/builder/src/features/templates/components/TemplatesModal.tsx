@@ -15,7 +15,7 @@ import {
 import { Standard } from '@typebot.io/nextjs'
 import { Typebot } from '@typebot.io/schemas'
 import React, { useCallback, useEffect, useState } from 'react'
-import { templates } from '../data'
+import { useTemplates } from '../hooks/useTemplates'
 import { TemplateProps } from '../types'
 import { useToast } from '@/hooks/useToast'
 import { sendRequest } from '@typebot.io/lib'
@@ -37,6 +37,7 @@ export const TemplatesModal = ({
   const { t } = useTranslate()
   const templateCardBackgroundColor = useColorModeValue('white', 'gray.800')
   const [typebot, setTypebot] = useState<Typebot>()
+  const templates = useTemplates()
   const [selectedTemplate, setSelectedTemplate] = useState<TemplateProps>(
     templates[0]
   )
@@ -50,51 +51,20 @@ export const TemplatesModal = ({
       )
       if (error)
         return showToast({ title: error.name, description: error.message })
-      setTypebot(data as Typebot)
+      setTypebot({ ...(data as Typebot), name: template.name })
     },
     [showToast]
   )
 
   useEffect(() => {
+    if (typebot) return
     fetchTemplate(templates[0])
-  }, [fetchTemplate])
+  }, [fetchTemplate, typebot, templates])
 
   const onUseThisTemplateClick = async () => {
     if (!typebot) return
     onTypebotChoose(typebot)
   }
-
-  const renderCategory = (categoryName: string) => (
-    <Stack spacing={2}>
-      <Text fontSize="xs" fontWeight="semibold" pl="1" color="gray.500">
-        {t(`templates.modal.menuHeading.${categoryName}`)}
-      </Text>
-      {templates
-        .filter((template) => template.category === categoryName)
-        .map((template) => (
-          <Button
-            size="sm"
-            key={template.name}
-            onClick={() => fetchTemplate(template)}
-            w="full"
-            variant={
-              selectedTemplate.name === template.name ? 'solid' : 'ghost'
-            }
-            isDisabled={template.isComingSoon}
-          >
-            <HStack overflow="hidden" fontSize="sm" w="full">
-              <Text>{template.emoji}</Text>
-              <Text>{template.name}</Text>
-              {template.isNew && (
-                <Tag colorScheme="orange" size="sm" flexShrink={0}>
-                  {t('templates.modal.menuHeading.new.tag')}
-                </Tag>
-              )}
-            </HStack>
-          </Button>
-        ))}
-    </Stack>
-  )
 
   return (
     <Modal
@@ -118,27 +88,114 @@ export const TemplatesModal = ({
             className="hide-scrollbar"
           >
             <Stack spacing={5}>
-              
-              {renderCategory('atendimento')}
-              {renderCategory('educação')}
-              {renderCategory('financeiro')}
-              {renderCategory('rh')}
-              {renderCategory('jurídico')}
-              {renderCategory('vendas')}
-              {renderCategory('customer-success')}
-              {renderCategory('customer-experience')}
-              {renderCategory('marketing')}
-              {renderCategory('product')}
-              {renderCategory('gestão-projetos')}
-              {renderCategory('produtividade')}
-              {renderCategory('tecnologia')}
-              {renderCategory('relatórios')}
-              {renderCategory('recomendação')}
-              {renderCategory('negócios')}
-              {renderCategory('populares')}
-              {renderCategory('saúde')}
-              {renderCategory('outros')}
-             
+              <Stack spacing={2}>
+                <Text
+                  fontSize="xs"
+                  fontWeight="semibold"
+                  pl="1"
+                  color="gray.500"
+                >
+                  {t('templates.modal.menuHeading.marketing')}
+                </Text>
+                {templates
+                  .filter((template) => template.category === 'marketing')
+                  .map((template) => (
+                    <Button
+                      size="sm"
+                      key={template.name}
+                      onClick={() => fetchTemplate(template)}
+                      w="full"
+                      variant={
+                        selectedTemplate.name === template.name
+                          ? 'solid'
+                          : 'ghost'
+                      }
+                      isDisabled={template.isComingSoon}
+                    >
+                      <HStack overflow="hidden" fontSize="sm" w="full">
+                        <Text>{template.emoji}</Text>
+                        <Text>{template.name}</Text>
+                        {template.isNew && (
+                          <Tag colorScheme="orange" size="sm" flexShrink={0}>
+                            {t('templates.modal.menuHeading.new.tag')}
+                          </Tag>
+                        )}
+                      </HStack>
+                    </Button>
+                  ))}
+              </Stack>
+              <Stack spacing={2}>
+                <Text
+                  fontSize="xs"
+                  fontWeight="semibold"
+                  pl="1"
+                  color="gray.500"
+                >
+                  {t('templates.modal.menuHeading.product')}
+                </Text>
+                {templates
+                  .filter((template) => template.category === 'product')
+                  .map((template) => (
+                    <Button
+                      size="sm"
+                      key={template.name}
+                      onClick={() => fetchTemplate(template)}
+                      w="full"
+                      variant={
+                        selectedTemplate.name === template.name
+                          ? 'solid'
+                          : 'ghost'
+                      }
+                      isDisabled={template.isComingSoon}
+                    >
+                      <HStack overflow="hidden" fontSize="sm" w="full">
+                        <Text>{template.emoji}</Text>
+                        <Text>{template.name}</Text>
+                        {template.isNew && (
+                          <Tag colorScheme="orange" size="sm" flexShrink={0}>
+                            {t('templates.modal.menuHeading.new.tag')}
+                          </Tag>
+                        )}
+                      </HStack>
+                    </Button>
+                  ))}
+              </Stack>
+              <Stack spacing={2}>
+                <Text
+                  fontSize="xs"
+                  fontWeight="semibold"
+                  pl="1"
+                  color="gray.500"
+                >
+                  {t('templates.modal.menuHeading.other')}
+                </Text>
+                {templates
+                  .filter((template) => template.category === undefined)
+                  .map((template) => (
+                    <Button
+                      size="sm"
+                      key={template.name}
+                      onClick={() => fetchTemplate(template)}
+                      w="full"
+                      variant={
+                        selectedTemplate.name === template.name
+                          ? 'solid'
+                          : 'ghost'
+                      }
+                      isDisabled={template.isComingSoon}
+                    >
+                      <HStack overflow="hidden" fontSize="sm" w="full">
+                        <Text>{template.emoji}</Text>
+                        <Text>{template.name}</Text>
+                        {template.isNew && (
+                          <Tag colorScheme="orange" size="sm" flexShrink={0}>
+                            {t('templates.modal.menuHeading.new.tag')}
+                          </Tag>
+                        )}
+                      </HStack>
+                    </Button>
+                  ))}
+              </Stack>
             </Stack>
           </Stack>
           <Stack
