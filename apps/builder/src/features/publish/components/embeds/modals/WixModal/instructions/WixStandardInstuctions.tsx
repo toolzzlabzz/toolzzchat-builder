@@ -5,15 +5,15 @@ export const WixStandardInstructions = () => {
   return (
     <OrderedList spacing={4} pl={5}>
       <ListItem>
-        In the Wix Website Editor:
+        No Editor de Sites Wix:
         <Code>
-          Add {'>'} Embed Code {'>'} Embed HTML
+          Adicionar {'>'} código incorporado {'>'} HTML de incorporação
         </Code>
       </ListItem>
       <ListItem>
         <Stack spacing={4}>
           <Text>
-            Click on <Code>Enter code</Code> and paste this code:
+            Clique em <Code>Enter code</Code> e cole este código:
           </Text>
           <JavascriptStandardSnippet widthLabel="100%" heightLabel="100%" />
         </Stack>

@@ -96,7 +96,7 @@ export const OpenAISettings = ({
             <AccordionItem>
               <AccordionButton>
                 <Text w="full" textAlign="left">
-                  Customize provider
+                  Customizar provider
                 </Text>
                 <AccordionIcon />
               </AccordionButton>

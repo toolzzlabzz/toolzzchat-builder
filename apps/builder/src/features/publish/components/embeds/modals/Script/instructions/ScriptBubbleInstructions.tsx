@@ -50,7 +50,7 @@ ${parseInitBubbleCode({
         onThemeChange={setTheme}
         onPreviewMessageChange={setPreviewMessage}
       />
-      <Text>Run this script to initialize the typebot:</Text>
+      <Text>Execute este script para inicializar o Bot:</Text>
       <CodeEditor isReadOnly value={scriptSnippet} lang="javascript" />
     </Stack>
   )

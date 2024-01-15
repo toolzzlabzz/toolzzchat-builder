@@ -111,10 +111,7 @@ export const SignInForm = ({
     return (
       <Text>
         {t('auth.noProvider.preLink')}{' '}
-        <TextLink
-          href="https://docs.typebot.io/self-hosting/configuration"
-          isExternal
-        >
+        <TextLink href="" isExternal>
           {t('auth.noProvider.link')}
         </TextLink>
       </Text>

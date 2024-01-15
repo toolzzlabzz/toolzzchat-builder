@@ -17,13 +17,14 @@ export const GtmBubbleInstructions = () => {
   return (
     <OrderedList spacing={4} pl={5}>
       <ListItem>
-        On your GTM account dashboard, click on <Code>Add a new tag</Code>
+        No painel da sua conta GTM, Clique em
+        <Code>Adicionar uma nova TAG</Code>
       </ListItem>
       <ListItem>
-        Choose <Code>Custom HTML</Code> tag type
+        Escolha <Code>Custom HTML tag</Code>
       </ListItem>
       <ListItem>
-        Check <Code>Support document.write</Code>
+        Selecione <Code>Support document.write</Code>
       </ListItem>
       <ListItem>
         <Stack spacing={4}>
@@ -36,7 +37,7 @@ export const GtmBubbleInstructions = () => {
             onThemeChange={setTheme}
             onPreviewMessageChange={setPreviewMessage}
           />
-          <Text>Paste the code below:</Text>
+          <Text>Cole o código abaixo:</Text>
           <JavascriptBubbleSnippet
             theme={theme}
             previewMessage={previewMessage}

@@ -181,16 +181,19 @@ export const WhatsAppModal = ({ isOpen, onClose }: ModalProps): JSX.Element => {
         <ModalBody as={Stack} spacing="6">
           {!hasProPerks(workspace) && (
             <UnlockPlanAlertInfo excludedPlans={['STARTER']}>
-              Atualize seu workspace para o plano <PlanTag plan="PRO" /> para poder ativar a integração com o WhatsApp.
+              Atualize seu workspace para o plano <PlanTag plan="PRO" /> para
+              poder ativar a integração com o WhatsApp.
             </UnlockPlanAlertInfo>
           )}
           {!isPublished && phoneNumberData?.id && (
-            <AlertInfo>Você tem modificações que podem ser publicadas.</AlertInfo>
+            <AlertInfo>
+              Você tem modificações que podem ser publicadas.
+            </AlertInfo>
           )}
           <OrderedList spacing={4} pl="4">
             <ListItem>
               <HStack>
-                <Text>Select a phone number:</Text>
+                <Text>Selecione um número de telefone:</Text>
                 {workspace && (
                   <>
                     <WhatsAppCredentialsModal
@@ -206,7 +209,7 @@ export const WhatsAppModal = ({ isOpen, onClose }: ModalProps): JSX.Element => {
                       }
                       onCredentialsSelect={updateCredentialsId}
                       onCreateNewClick={onOpen}
-                      credentialsName="WA phone number"
+                      credentialsName="Numero do WA"
                       size="sm"
                     />
                   </>
@@ -219,7 +222,7 @@ export const WhatsAppModal = ({ isOpen, onClose }: ModalProps): JSX.Element => {
                   <Accordion allowToggle>
                     <AccordionItem>
                       <AccordionButton justifyContent="space-between">
-                        Configure integration
+                        Configure a integração
                         <AccordionIcon />
                       </AccordionButton>
                       <AccordionPanel as={Stack} spacing="4" pt="4">
@@ -228,7 +231,7 @@ export const WhatsAppModal = ({ isOpen, onClose }: ModalProps): JSX.Element => {
                             max={48}
                             min={0}
                             width="100px"
-                            label="Session expire timeout:"
+                            label="Tempo limite para a sessão expirar:"
                             defaultValue={
                               whatsAppSettings?.sessionExpiryTimeout
                             }
@@ -240,7 +243,7 @@ export const WhatsAppModal = ({ isOpen, onClose }: ModalProps): JSX.Element => {
                           />
                         </HStack>
                         <SwitchWithRelatedSettings
-                          label={'Start bot condition'}
+                          label={'Condição para iniciar o bot'}
                           initialValue={isDefined(
                             whatsAppSettings?.startCondition
                           )}
@@ -279,7 +282,7 @@ export const WhatsAppModal = ({ isOpen, onClose }: ModalProps): JSX.Element => {
                 <ListItem>
                   <SwitchWithLabel
                     isDisabled={!hasProPerks(workspace)}
-                    label="Enable WhatsApp integration"
+                    label="Habilite a integração do WhatsApp"
                     initialValue={
                       typebot?.settings.whatsApp?.isEnabled ?? false
                     }
@@ -289,7 +292,7 @@ export const WhatsAppModal = ({ isOpen, onClose }: ModalProps): JSX.Element => {
                 </ListItem>
                 <ListItem>
                   <HStack>
-                    <Text>Publish your bot:</Text>
+                    <Text>Publique seu bot:</Text>
                     <PublishButton size="sm" isMoreMenuDisabled />
                   </HStack>
                 </ListItem>
@@ -299,7 +302,7 @@ export const WhatsAppModal = ({ isOpen, onClose }: ModalProps): JSX.Element => {
                       href={`https://wa.me/${phoneNumberData.name}?text=Start`}
                       isExternal
                     >
-                      Try it out
+                      Experimente agora
                     </TextLink>
                   </ListItem>
                 )}

@@ -77,12 +77,7 @@ export const WhatsAppPreviewInstructions = (props: StackProps) => {
     >
       <HStack justifyContent="flex-end">
         <Text fontSize="sm">Need help?</Text>
-        <Button
-          as={Link}
-          href="https://docs.typebot.io/embed/whatsapp"
-          leftIcon={<BuoyIcon />}
-          size="sm"
-        >
+        <Button as={Link} href="" leftIcon={<BuoyIcon />} size="sm">
           Check the docs
         </Button>
       </HStack>

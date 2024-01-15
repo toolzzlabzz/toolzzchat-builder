@@ -118,7 +118,7 @@ export const WebhookAdvancedConfigForm = ({
   return (
     <>
       <SwitchWithRelatedSettings
-        label="Advanced configuration"
+        label="Configurações avançadas"
         initialValue={
           options?.isAdvancedConfig ??
           defaultWebhookBlockOptions.isAdvancedConfig
@@ -126,8 +126,8 @@ export const WebhookAdvancedConfigForm = ({
         onCheckChange={updateAdvancedConfig}
       >
         <SwitchWithLabel
-          label="Execute on client"
-          moreInfoContent="If enabled, the webhook will be executed on the client. It means it will be executed in the browser of your visitor. Make sure to enable CORS and do not expose sensitive data."
+          label="Exectuar no client"
+          moreInfoContent="Se ativado, o webhook será executado no cliente. Isso significa que ele será executado no navegador do seu visitante. Certifique-se de habilitar o CORS e não expor dados sensíveis."
           initialValue={
             options?.isExecutedOnClient ??
             defaultWebhookBlockOptions.isExecutedOnClient
@@ -155,7 +155,7 @@ export const WebhookAdvancedConfigForm = ({
                 initialItems={webhook?.queryParams}
                 onItemsChange={updateQueryParams}
                 Item={QueryParamsInputs}
-                addLabel="Add a param"
+                addLabel="Adicione uma parametro"
               />
             </AccordionPanel>
           </AccordionItem>
@@ -169,7 +169,7 @@ export const WebhookAdvancedConfigForm = ({
                 initialItems={webhook?.headers}
                 onItemsChange={updateHeaders}
                 Item={HeadersInputs}
-                addLabel="Add a value"
+                addLabel="Adicione um valor"
               />
             </AccordionPanel>
           </AccordionItem>
@@ -196,7 +196,7 @@ export const WebhookAdvancedConfigForm = ({
           </AccordionItem>
           <AccordionItem>
             <AccordionButton justifyContent="space-between">
-              Variable values for test
+              Valores de variaveis para testes
               <AccordionIcon />
             </AccordionButton>
             <AccordionPanel pt="4">
@@ -204,7 +204,7 @@ export const WebhookAdvancedConfigForm = ({
                 initialItems={options?.variablesForTest}
                 onItemsChange={updateVariablesForTest}
                 Item={VariableForTestInputs}
-                addLabel="Add an entry"
+                addLabel="Adicione uma entrada"
               />
             </AccordionPanel>
           </AccordionItem>
@@ -216,7 +216,7 @@ export const WebhookAdvancedConfigForm = ({
           colorScheme="blue"
           isLoading={isTestResponseLoading}
         >
-          Test the request
+          Testar requisição
         </Button>
       )}
       {testResponse && (
@@ -236,7 +236,7 @@ export const WebhookAdvancedConfigForm = ({
                 initialItems={options?.responseVariableMapping}
                 onItemsChange={updateResponseVariableMapping}
                 Item={ResponseMappingInputs}
-                addLabel="Add an entry"
+                addLabel="Adicione uma entrada"
               />
             </AccordionPanel>
           </AccordionItem>

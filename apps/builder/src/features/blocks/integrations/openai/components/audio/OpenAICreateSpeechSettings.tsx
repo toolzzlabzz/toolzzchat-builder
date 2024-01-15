@@ -53,11 +53,11 @@ export const OpenAICreateSpeechSettings = ({
   return (
     <Stack spacing={4} pt="2">
       <Text fontSize="sm" color="gray.500">
-        Read the{' '}
+        Leia a{' '}
         <TextLink href={apiReferenceUrl} isExternal>
-          API reference
+          Documentação da API
         </TextLink>{' '}
-        to better understand the available options.
+        para entender melhor as opções disponiveis.
       </Text>
       {options.credentialsId && (
         <>
@@ -80,12 +80,12 @@ export const OpenAICreateSpeechSettings = ({
               currentItem={options.voice}
               onItemSelect={updateVoice}
               items={openAIVoices}
-              placeholder="Select a voice"
+              placeholder="Selecionar uma voz"
               w="full"
             />
           </FormControl>
           <FormControl>
-            <FormLabel>Save URL:</FormLabel>
+            <FormLabel>Salvar URL:</FormLabel>
             <VariableSearchInput
               initialVariableId={options.saveUrlInVariableId}
               onSelectVariable={updateSaveUrlInVariableId}

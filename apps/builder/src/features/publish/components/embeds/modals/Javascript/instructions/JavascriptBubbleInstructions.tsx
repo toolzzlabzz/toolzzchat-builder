@@ -30,7 +30,7 @@ export const JavascriptBubbleInstructions = () => {
         onPreviewMessageChange={setPreviewMessage}
       />
       <Text>
-        Paste this anywhere in the <Code>{'<body>'}</Code>:
+        Cole isso em qualquer lugar de seu código: <Code>{'<body>'}</Code>:
       </Text>
       <JavascriptBubbleSnippet theme={theme} previewMessage={previewMessage} />
     </Stack>

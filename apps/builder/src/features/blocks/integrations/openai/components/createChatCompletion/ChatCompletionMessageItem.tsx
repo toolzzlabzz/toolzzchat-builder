@@ -88,7 +88,7 @@ const ChatCompletionMessageItemContent = ({
         <Textarea
           defaultValue={item.content}
           onChange={onChangeSingleMessageContent}
-          placeholder="Content"
+          placeholder="Conteudo"
           minH="150px"
         />
       )
@@ -98,7 +98,7 @@ const ChatCompletionMessageItemContent = ({
           <VariableSearchInput
             initialVariableId={item.dialogueVariableId}
             onSelectVariable={onChangeDialogueVariableId}
-            placeholder="Dialogue variable"
+            placeholder="Variavel de dialogo"
           />
           <HStack>
             <Text>starts by</Text>

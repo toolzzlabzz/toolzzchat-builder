@@ -165,7 +165,9 @@ export const Bubble = (props: BubbleProps) => {
           transition:
             'transform 200ms cubic-bezier(0, 1.2, 1, 1), opacity 150ms ease-out',
           'transform-origin':
-            props.theme?.placement === 'left' ? 'bottom left' : 'bottom right',
+            props.theme?.placement === 'esquerda'
+              ? 'bottom left'
+              : 'bottom right',
           transform: isBotOpened() ? 'scale3d(1, 1, 1)' : 'scale3d(0, 0, 1)',
           'box-shadow': 'rgb(0 0 0 / 16%) 0px 5px 40px',
           'background-color': bubbleProps.theme?.chatWindow?.backgroundColor,
@@ -177,7 +179,7 @@ export const Bubble = (props: BubbleProps) => {
           (props.theme?.button?.size === 'large'
             ? ' bottom-24'
             : ' bottom-20') +
-          (props.theme?.placement === 'left' ? ' sm:left-5' : ' sm:right-5')
+          (props.theme?.placement === 'esquerda' ? ' sm:left-5' : ' sm:right-5')
         }
       >
         <Show when={isBotStarted()}>

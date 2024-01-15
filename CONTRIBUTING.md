@@ -38,7 +38,7 @@ These apps are built with awesome web technologies including [Typescript](https:
 
    Copy [`.env.dev.example`](./.env.dev.example) to `.env`
 
-   Check out the [Configuration guide](https://docs.typebot.io/self-hosting/configuration) if you want to enable more options
+   Check out the [Configuration guide](''/self-hosting/configuration) if you want to enable more options
 
 3. Make sure you have [Docker](https://docs.docker.com/compose/install/) running
 
@@ -56,7 +56,7 @@ These apps are built with awesome web technologies including [Typescript](https:
 
    Database inspector is available at [`http://localhost:5555`](http://localhost:5555)
 
-   By default, you can easily authenticate in the builder using the "Github Sign In" button. For other options, check out the [Configuration guide](https://docs.typebot.io/self-hosting/configuration)
+   By default, you can easily authenticate in the builder using the "Github Sign In" button. For other options, check out the [Configuration guide](''/self-hosting/configuration)
 
 6. (Optionnal) Start the landing page
 

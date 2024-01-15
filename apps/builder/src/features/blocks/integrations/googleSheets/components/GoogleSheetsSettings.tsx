@@ -122,7 +122,7 @@ export const GoogleSheetsSettings = ({
             currentItem={'action' in options ? options.action : undefined}
             onItemSelect={handleActionChange}
             items={Object.values(GoogleSheetsAction)}
-            placeholder="Select an operation"
+            placeholder="Seleciona uma operação"
           />
         )}
       {options?.action && (
@@ -237,7 +237,7 @@ const ActionOptions = ({
                 initialItems={options.cellsToUpsert}
                 onItemsChange={handleUpsertColumnsChange}
                 Item={UpdatingCellItem}
-                addLabel="Add a value"
+                addLabel="Adicione um valor"
               />
             </AccordionPanel>
           </AccordionItem>
@@ -287,7 +287,7 @@ const ActionOptions = ({
                   initialItems={options.cellsToExtract}
                   onItemsChange={handleExtractingCellsChange}
                   Item={ExtractingCellItem}
-                  addLabel="Add a value"
+                  addLabel="Adicione um valor"
                   hasDefaultItem
                 />
               </AccordionPanel>

@@ -96,9 +96,9 @@ export const OpenAICredentialsModal = ({
               label="API key"
               helperText={
                 <>
-                  You can generate an API key{' '}
+                  Voce pode gerar uma chave de API{' '}
                   <TextLink href={openAITokensPage} isExternal>
-                    here
+                    aqui
                   </TextLink>
                   .
                 </>
@@ -110,8 +110,8 @@ export const OpenAICredentialsModal = ({
             />
             <Alert status="warning">
               <AlertIcon />
-              Make sure to add a payment method to your OpenAI account.
-              Otherwise, it will not work after a few messages.
+              Certifique-se de adicionar um método de pagamento à sua conta do
+              OpenAI. Caso contrário, não funcionará após algumas mensagens.
             </Alert>
           </ModalBody>
 
@@ -122,7 +122,7 @@ export const OpenAICredentialsModal = ({
               isDisabled={apiKey === '' || name === ''}
               colorScheme="blue"
             >
-              Create
+              Criar
             </Button>
           </ModalFooter>
         </form>

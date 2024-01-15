@@ -25,7 +25,7 @@ export const VariableForTestInputs = ({
         />
       </FormControl>
       <TextInput
-        label="Test value:"
+        label="Testar valor:"
         defaultValue={item.value ?? ''}
         onChange={handleValueChange}
       />

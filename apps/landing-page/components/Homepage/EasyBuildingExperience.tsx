@@ -29,25 +29,26 @@ export const EasyBuildingExperience = () => {
       >
         <Stack spacing="6" maxW="300px" minW={[0, '300px']}>
           <Heading as="h1" data-aos="fade">
-            Easy building experience
+            Experiencia facil de construção
           </Heading>
           <Text
             color="gray.400"
             fontSize={{ base: 'lg', xl: 'xl' }}
             data-aos="fade"
           >
-            All you have to do is drag and drop blocks to create your app. Even
-            if you have custom needs, you can always add custom code.
+            Tudo o que você precisa fazer é arrastar e soltar blocos para criar
+            seu aplicativo. Mesmo se você tiver necessidades personalizadas,
+            você sempre pode adicionar código personalizado.
           </Text>
           <Flex>
             <Button
               as={Link}
               rightIcon={<ArrowRight />}
-              href={`https://app.typebot.io/register`}
+              href={`https://chatbuilder.toolzz.ai/register`}
               variant="ghost"
               data-aos="fade"
             >
-              Try it now
+              Experimente agora
             </Button>
           </Flex>
         </Stack>

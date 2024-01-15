@@ -60,23 +60,23 @@ export const ThemeSettings = ({
       <AccordionItem>
         <AccordionButton px="0">
           <HStack flex="1">
-            <Text>Theme</Text>
+            <Text>Tema</Text>
           </HStack>
           <AccordionIcon />
         </AccordionButton>
         <AccordionPanel as={Stack} pb={4} spacing={4} px="0">
           <HStack justify="space-between">
-            <Text>Placement</Text>
+            <Text>Local de Exibição</Text>
             <Menu>
               <MenuButton as={Button} size="sm" rightIcon={<ChevronDownIcon />}>
-                {theme?.placement ?? 'right'}
+                {theme?.placement ?? 'direita'}
               </MenuButton>
               <MenuList>
-                <MenuItem onClick={() => updatePlacement('right')}>
-                  right
+                <MenuItem onClick={() => updatePlacement('direita')}>
+                  direita
                 </MenuItem>
-                <MenuItem onClick={() => updatePlacement('left')}>
-                  left
+                <MenuItem onClick={() => updatePlacement('esquerda')}>
+                  esquerda
                 </MenuItem>
               </MenuList>
             </Menu>

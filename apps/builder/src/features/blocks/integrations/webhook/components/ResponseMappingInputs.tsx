@@ -22,7 +22,7 @@ export const DataVariableInputs = ({
           items={dataItems}
           defaultValue={item.bodyPath}
           onChange={handleBodyPathChange}
-          placeholder="Select the data"
+          placeholder="Selecione os dados"
           withVariableButton
         />
       </FormControl>
@@ -30,7 +30,7 @@ export const DataVariableInputs = ({
         <FormLabel htmlFor="value">Set variable:</FormLabel>
         <VariableSearchInput
           onSelectVariable={handleVariableChange}
-          placeholder="Search for a variable"
+          placeholder="Procurar por uma variavel"
           initialVariableId={item.variableId}
         />
       </FormControl>

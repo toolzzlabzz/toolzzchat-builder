@@ -34,20 +34,20 @@ export const RowsFilterComparisonItem = ({
         currentItem={item.column}
         onItemSelect={handleColumnSelect}
         items={columns}
-        placeholder="Select a column"
+        placeholder="Selecione uma coluna"
       />
       <DropdownList
         currentItem={item.comparisonOperator}
         onItemSelect={handleSelectComparisonOperator}
         items={Object.values(ComparisonOperators)}
-        placeholder="Select an operator"
+        placeholder="Selecione um operador"
       />
       {item.comparisonOperator !== ComparisonOperators.IS_SET &&
         item.comparisonOperator !== ComparisonOperators.IS_EMPTY && (
           <TextInput
             defaultValue={item.value ?? ''}
             onChange={handleChangeValue}
-            placeholder="Type a value..."
+            placeholder="Insira um valor..."
           />
         )}
     </Stack>

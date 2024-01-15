@@ -30,14 +30,14 @@ export const ShopifyStandardInstructions = ({ publicId }: Props) => {
   return (
     <OrderedList spacing={4} pl={5}>
       <ListItem>
-        On your shop dashboard in the <Code>Themes</Code> page, click on{' '}
+        No painel da sua loja na pagina de <Code>Themes</Code>, clique em{' '}
         <Code>Actions {'>'} Edit code</Code>
       </ListItem>
       <ListItem>
         <Stack spacing={4}>
           <Text>
-            In <Code>Layout {'>'} theme.liquid</Code> file, paste this code just
-            before the closing <Code>{'<head>'}</Code> tag:
+            Em <Code>Layout {'>'} theme.liquid</Code> arquivo, cole este código
+            antes do fechamento da tag <Code>{'<head>'}</Code>
           </Text>
 
           <CodeEditor value={headCode} lang="html" isReadOnly />

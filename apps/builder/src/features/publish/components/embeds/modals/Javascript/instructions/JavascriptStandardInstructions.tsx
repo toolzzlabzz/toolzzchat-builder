@@ -18,7 +18,7 @@ export const JavascriptStandardInstructions = () => {
         onUpdateWindowSettings={(settings) => setInputValues({ ...settings })}
       />
       <Text>
-        Paste this anywhere in the <Code>{'<body>'}</Code>:
+        Cole isso em qualquer lugar de seu código: <Code>{'<body>'}</Code>:
       </Text>
       <JavascriptStandardSnippet {...inputValues} />
     </Stack>

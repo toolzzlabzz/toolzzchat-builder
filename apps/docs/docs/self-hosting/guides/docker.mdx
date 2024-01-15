@@ -36,7 +36,7 @@ On your server, download the latest `docker-compose.yml` and the starter `.env` 
    ```
 
 2. Fill the `.env` file with your values.
-3. Configure at least one authentication provider (Email, Google, GitHub, Facebook or GitLab). More info here: [Configuration](https://docs.typebot.io/self-hosting/configuration).
+3. Configure at least one authentication provider (Email, Google, GitHub, Facebook or GitLab). More info here: [Configuration](''/self-hosting/configuration).
 
 By default the compose file will pull the latest stable Typebot images: `baptistearno/typebot-builder:latest` and `baptistearno/typebot-viewer:latest`. You can decide to replace `latest` with a specific version. You can find all the existing tags [here](https://hub.docker.com/r/baptistearno/typebot-builder/tags)
 
@@ -278,7 +278,7 @@ services:
       - typebot-db
     extra_hosts:
       - 'host.docker.internal:host-gateway'
-    # See https://docs.typebot.io/self-hosting/configuration for more configuration options
+    # See ''/self-hosting/configuration for more configuration options
     env_file:
       - .env
   typebot-viewer:
@@ -288,7 +288,7 @@ services:
       virtual.tls-email: 'admin@example.com' # change to your email
     image: baptistearno/typebot-viewer:latest
     restart: always
-    # See https://docs.typebot.io/self-hosting/configuration for more configuration options
+    # See ''/self-hosting/configuration for more configuration options
     env_file:
       - .env
   mail:

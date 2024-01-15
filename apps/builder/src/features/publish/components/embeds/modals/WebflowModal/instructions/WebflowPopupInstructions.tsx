@@ -11,7 +11,8 @@ export const WebflowPopupInstructions = () => {
     <>
       <OrderedList spacing={4} pl={5}>
         <ListItem>
-          Press <Code>A</Code> to open the <Code>Add elements</Code> panel
+          Pressione <Code>A</Code> para abrir o painel
+          <Code>Adicionar elementos</Code>
         </ListItem>
         <ListItem>
           <Stack spacing={4}>
@@ -21,19 +22,19 @@ export const WebflowPopupInstructions = () => {
               }
             />
             <Text>
-              Add an <Code>Embed</Code> element from the <Code>components</Code>{' '}
-              section and paste this code:
+              Adicione um elemento <Code>Embed</Code> da seção{' '}
+              <Code>components</Code> e cole este código:
             </Text>
             <JavascriptPopupSnippet autoShowDelay={inputValue} />
           </Stack>
         </ListItem>
       </OrderedList>
       <Text fontSize="sm" colorScheme="gray" pl="5">
-        Check out the{' '}
-        <TextLink href="https://docs.typebot.io/embed/webflow#popup" isExternal>
-          Webflow embed documentation
+        Verifique a{' '}
+        <TextLink href="" isExternal>
+          documentação de integração do Webflow
         </TextLink>{' '}
-        for more options.
+        para mais opções.
       </Text>
     </>
   )

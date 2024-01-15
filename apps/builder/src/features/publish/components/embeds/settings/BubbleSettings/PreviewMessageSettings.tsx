@@ -67,7 +67,7 @@ export const PreviewMessageSettings = ({ defaultAvatar, onChange }: Props) => {
     <Stack spacing={4}>
       <HStack justifyContent="space-between">
         <FormLabel htmlFor="preview" mb="0">
-          Preview message
+          Visualizar mensagem
         </FormLabel>
         <Switch
           id="preview"
@@ -78,7 +78,7 @@ export const PreviewMessageSettings = ({ defaultAvatar, onChange }: Props) => {
       {isPreviewMessageEnabled && (
         <Stack pl="4" spacing={4}>
           <HStack justify="space-between">
-            <Text>Avatar URL</Text>
+            <Text>URL do Avatar </Text>
             <Input
               onChange={(e) => updateAvatarUrl(e.target.value)}
               value={previewMessage?.avatarUrl}
@@ -86,14 +86,14 @@ export const PreviewMessageSettings = ({ defaultAvatar, onChange }: Props) => {
             />
           </HStack>
           <HStack justify="space-between">
-            <Text>Message</Text>
+            <Text>Mensagem</Text>
             <Input
               onChange={(e) => updateMessage(e.target.value)}
               value={previewMessage?.message}
             />
           </HStack>
           <HStack>
-            <Text>Auto show</Text>
+            <Text>Exibir Automaticamente</Text>
             <Switch
               isChecked={isAutoShowEnabled}
               onChange={(e) => updateAutoShowDelayCheck(e.target.checked)}

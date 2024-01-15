@@ -51,8 +51,7 @@ export const BoardMenuButton = (props: FlexProps) => {
     setIsDownloading(false)
   }
 
-  const redirectToDocumentation = () =>
-    window.open('https://docs.typebot.io/get-started/overview', '_blank')
+  const redirectToDocumentation = () => window.open('', '_blank')
 
   return (
     <Flex

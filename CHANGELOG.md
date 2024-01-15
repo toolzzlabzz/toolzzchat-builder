@@ -1,6 +1,7 @@
 # Changelog
 
 <a name="2.20.0"></a>
+
 ## 2.20.0 (2023-12-04)
 
 ### Added
@@ -42,8 +43,8 @@
 - 🛂 (billing) Add isPastDue field in workspace ([#1046](https://github.com/baptisteArno/typebot.io/issues/1046)) [[ca79934](https://github.com/baptisteArno/typebot.io/commit/ca79934ef5c86feaa60cde4d4bc42171149a1f15)]
 - 🌐 Add es and ro support [[f6ac389](https://github.com/baptisteArno/typebot.io/commit/f6ac3891f8d11089d81a3cb7be6c715460570f28)]
 
-
 <a name="2.19.1"></a>
+
 ## 2.19.1 (2023-11-17)
 
 ### Added
@@ -97,13 +98,13 @@
 - 🧑‍💻 (chat) Introduce startChat and continueChat endpoints [[084588a](https://github.com/baptisteArno/typebot.io/commit/084588a086c22029e53ffdef7ae1fe81d7e413b7)]
 - 🛂 Reduce sendMessage serverless function max memory [[bac2393](https://github.com/baptisteArno/typebot.io/commit/bac2393b5d7d14eb871945e84f260dcca72d3f65)]
 - 📝 Add breaking changes and OpenAI block improvements docs [[df57841](https://github.com/baptisteArno/typebot.io/commit/df578417aa6a261e878f62d0c4865ef7d58f77c0)]
--  fix: whole page overflowing on the x axis and displaying a horizontal scrollbar ([#1011](https://github.com/baptisteArno/typebot.io/issues/1011)) [[68e4fc7](https://github.com/baptisteArno/typebot.io/commit/68e4fc71fbee9f45e2869912798304493c75b1b0)]
+- fix: whole page overflowing on the x axis and displaying a horizontal scrollbar ([#1011](https://github.com/baptisteArno/typebot.io/issues/1011)) [[68e4fc7](https://github.com/baptisteArno/typebot.io/commit/68e4fc71fbee9f45e2869912798304493c75b1b0)]
 - 🛂 Update Cache-Control header in generatePresignedPostPolicy [[027c6ff](https://github.com/baptisteArno/typebot.io/commit/027c6ffcef30ff9f091bf9100e584efcc490976b)]
 - 📦 Add strict package versioning to avoid incompatibility in workspace [[0c22d85](https://github.com/baptisteArno/typebot.io/commit/0c22d858b749c0f39eb595ad6e8f74a497abc198)]
 - 📝 Add UTM params forwarding video tutorial [[57e4540](https://github.com/baptisteArno/typebot.io/commit/57e454008e85c197ad25c78f069d4a4b97d43c6a)]
 
-
 <a name="2.19.0"></a>
+
 ## 2.19.0 (2023-11-02)
 
 ### Changed
@@ -129,8 +130,8 @@
 - 🧑‍💻 Migrate to Tolgee ([#976](https://github.com/baptisteArno/typebot.io/issues/976)) [[bed8b42](https://github.com/baptisteArno/typebot.io/commit/bed8b42a2eb10bd81909ac38a6b3b51a423789c2)]
 - 🧑‍💻 Fix type resolution for @typebot.io/react and nextjs [[31b3fc3](https://github.com/baptisteArno/typebot.io/commit/31b3fc311ede7885ff89ee41467308e718c92d4d)]
 
-
 <a name="2.18.4"></a>
+
 ## 2.18.4 (2023-10-25)
 
 ### Fixed
@@ -142,7 +143,6 @@
 ### Miscellaneous
 
 - 🧑‍💻 (whatsapp) Improve whatsapp start log [[c2a08c4](https://github.com/baptisteArno/typebot.io/commit/c2a08c482efc30322b308880bb377e276f9cedfb)]
-
 
 <a name="2.18.3"></a>
 
@@ -384,7 +384,7 @@ If your viewer app do not have the required `NEXTAUTH_URL` env variable, you nee
 
 ## What's new?
 
-WhatsApp integration is now available 🥳. If you are self-hosting Typebot, refer to the configuration doc (https://docs.typebot.io/self-hosting/configuration#whatsapp-preview)
+WhatsApp integration is now available 🥳. If you are self-hosting Typebot, refer to the configuration doc (''/self-hosting/configuration#whatsapp-preview)
 
 Typebot validation has been improved. We make sure that your typebot is valid before storing it in the database, it allows us to avoid unexpected errors.
 
