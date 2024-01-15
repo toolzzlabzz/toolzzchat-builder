@@ -4052,6 +4052,10 @@
                           "type": "string",
                           "nullable": true
                         },
+                        "customChatsLimit": {
+                          "type": "number",
+                          "nullable": true
+                        },
                         "customSeatsLimit": {
                           "type": "number",
                           "nullable": true
@@ -4075,6 +4079,7 @@
                         "icon",
                         "plan",
                         "stripeId",
+                        "customChatsLimit",
                         "customSeatsLimit",
                         "isSuspended",
                         "isPastDue",
@@ -16840,8 +16845,7 @@
                   "currency": {
                     "type": "string",
                     "enum": [
-                      "usd",
-                      "eur"
+                      "brl"
                     ]
                   },
                   "plan": {
@@ -17135,8 +17139,7 @@
                   "currency": {
                     "type": "string",
                     "enum": [
-                      "usd",
-                      "eur"
+                      "brl"
                     ]
                   }
                 },
@@ -17573,8 +17576,7 @@
                             "currency": {
                               "type": "string",
                               "enum": [
-                                "eur",
-                                "usd"
+                                "brl"
                               ]
                             },
                             "cancelDate": {
