@@ -11,6 +11,7 @@ import { StarterPlanPricingCard } from './StarterPlanPricingCard'
 import { ProPlanPricingCard } from './ProPlanPricingCard'
 import { useTranslate } from '@tolgee/react'
 import { StripeClimateLogo } from './StripeClimateLogo'
+import { guessIfUserIsEuropean } from '@typebot.io/lib/billing/guessIfUserIsEuropean'
 import { WorkspaceInApp } from '@/features/workspace/WorkspaceProvider'
 
 type Props = {
@@ -62,6 +63,9 @@ export const ChangePlanForm = ({ workspace, excludedPlans }: Props) => {
       plan,
       workspaceId: workspace.id,
       currency: data?.subscription?.currency ?? 'brl',
+      currency:
+        data?.subscription?.currency ??
+        (guessIfUserIsEuropean() ? 'eur' : 'usd'),
     } as const
     if (workspace.stripeId) {
       updateSubscription({
