@@ -25,14 +25,9 @@ test.describe.parallel('Theme page', () => {
       await page.getByRole('button', { name: 'Global' }).click()
       await expect(
         page.locator('a:has-text("Made with Toolzz Bots")')
-      ).toHaveAttribute(
-        'href',
-        'https://www.toolzz.com.br/bots/?utm_source=litebadge'
-      )
+      ).toHaveAttribute('href', 'https://www.toolzz.com.br/bots/?utm_source=litebadge')
       await page.click('text="Show Typebot brand"')
-      await expect(
-        page.locator('a:has-text("Made with Toolzz Bots")')
-      ).toBeHidden()
+      await expect(page.locator('a:has-text("Made with Toolzz Bots")')).toBeHidden()
 
       // Font
       await page.getByRole('textbox').fill('Roboto Slab')

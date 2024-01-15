@@ -1,1631 +1,1645 @@
 {
-  "version": "6",
-  "id": "cloo046v300051aorhtv76f0i",
-  "name": "Customer Support",
-  "events": [
-    {
-      "id": "uG1tt8JdDyu2nju3oJ4wc1",
-      "outgoingEdgeId": "2dzxChB1qm9WGfzNF91tfg",
-      "graphCoordinates": { "x": -281, "y": -89 },
-      "type": "start"
-    }
-  ],
-  "groups": [
-    {
-      "id": "u1fbedw66m377lej7wj03fgu",
-      "title": "Welcome",
-      "graphCoordinates": { "x": -28.4, "y": -88.19 },
-      "blocks": [
-        {
-          "id": "yjcvub30p8l1a3qogkf3anqo",
-          "type": "Set variable",
-          "options": {
-            "variableId": "vdzrx77w6zj9zf5mzv7qcdtyi",
-            "expressionToEvaluate": "Toolzz"
-          }
-        },
-        {
-          "id": "r2y0fm5kqrxqt4p9b7iaoc86",
-          "type": "Set variable",
-          "options": {
-            "variableId": "vwcf1fvkdmm11d9myovwg82sw",
-            "expressionToEvaluate": "Eduardo"
-          }
-        },
-        {
-          "id": "wb86yna26ffjibn3zw0gp2su",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Olá, tudo bem? Eu sou o {{Nome do Bot}}, o assistente virtual da {{Nome da Empresa}}."
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "cwl459xq6eapa7vnuwqo8l1b",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Como posso te ajudar hoje? "
-                  }
-                ]
-              },
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": ""
-                  }
-                ]
-              },
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Selecione uma das opções:"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "t057pzohbdi0d6nkrebhwtdg",
-          "type": "choice input",
-          "items": [
-            {
-              "id": "teq2gg43iyhgyrzyoxauj2md",
-              "outgoingEdgeId": "y0yee07vgt2eb2u5gjjgynql",
-              "content": "🤔 Preciso de ajuda "
-            },
-            {
-              "id": "hphje5d48d7us9f2w9vevwm6",
-              "outgoingEdgeId": "r0ox13peie0zflvk7cg86j8z",
-              "content": "👨‍💻 Problemas Técnicos"
-            },
-            {
-              "id": "o4w8lzlcqksrerr58dcb7xpb",
-              "outgoingEdgeId": "s56x176lzrptikzsgtidknrv",
-              "content": "💬 Falar com uma pessoa"
-            },
-            {
-              "id": "xx50fcn0jh1fzvoc0att6z0o",
-              "outgoingEdgeId": "p0ul430eew335njlg6ny302e",
-              "content": "🔎 Consultar um Ticket"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "uvn27r0scu0qfvs59ni78vxq",
-      "title": "🤔 Preciso de ajuda ",
-      "graphCoordinates": {
-        "x": 800.5,
-        "y": -320.5
-      },
-      "blocks": [
-        {
-          "id": "n9q7nk8sfk2idthzmpg2038j",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Ok! Vamos te ajudar!"
-                  }
-                ]
-              },
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Selecione uma das opções: "
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "f3sh1n5dbp3gpr8tjkbhqota",
-          "type": "choice input",
-          "items": [
-            {
-              "id": "d3zj2ucgo018ruya4k8afm6k",
-              "outgoingEdgeId": "crm7eykepwcisofiyk3aqzba",
-              "content": "⁉️ Estou com uma dúvida",
-              "displayCondition": {
-                "isEnabled": false
-              }
-            },
-            {
-              "id": "mkc15zfpubx1lz7xhe2jqucz",
-              "outgoingEdgeId": "mb8ofp0i38xjc7evlqtz3aex",
-              "content": "📖 Encontrar um tutorial"
-            },
-            {
-              "id": "ddwzkqtxsbrkavzat2diabvr",
-              "outgoingEdgeId": "n396m4sa43plgqsxrae09i12",
-              "content": "🧑‍🏫 Preciso de um treinamento"
-            },
-            {
-              "id": "plzmfezrqgnkc700ry4zulr8",
-              "outgoingEdgeId": "kic5a6qs9j3tpl48c37cnzdc",
-              "content": "👨‍💻 Problemas Técnicos"
-            },
-            {
-              "id": "it59830m1esbs5fx2lxcqdfc",
-              "outgoingEdgeId": "n5lk6f0yfnzoija4chfndip7",
-              "content": "🏠 Voltar para Home"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "az0l90ttqo1bd2vb9ffuie2v",
-      "title": "🔎 Consultar um Ticket",
-      "graphCoordinates": {
-        "x": 708.46,
-        "y": 1312.21
-      },
-      "blocks": [
-        {
-          "id": "z0v28hegk163fmkj6808fyx0",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Ok, pra consultar o status de uma tarefa, vou precisar do ID do protocolo. Você tem o ID em mãos?"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "zt6fwltjk3cj0j5ywe6r482f",
-          "type": "choice input",
-          "items": [
-            {
-              "id": "ca31q29ugxgql3tis9sudven",
-              "outgoingEdgeId": "zo03epwd779u8350h30z18ph",
-              "content": "👍 Sim, tenho o ID"
-            },
-            {
-              "id": "ikf3klzhcvtloec0b65vygjk",
-              "outgoingEdgeId": "lzj1mn3ke9d82mwu6gmujqkl",
-              "content": "🔎 Não, favor localizar todos meus tickets"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "e7pakv9pko7u7tgyoh4jdgdd",
-      "title": "💬 Falar com uma pessoa",
-      "graphCoordinates": {
-        "x": 800.14,
-        "y": 640.21
-      },
-      "blocks": [
-        {
-          "id": "r0f4dmqwgxjmt9txif4a3kmb",
-          "outgoingEdgeId": "vgeyq7jczg2j73qzvuc06xpl",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Ok, vamos resolver isso! "
-                  }
-                ]
-              },
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Selecione uma das opções: "
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "yaq75snnditgwm49s9bi4ak9",
-      "title": "⁉️ Estou com uma dúvida",
-      "graphCoordinates": {
-        "x": 1247.3,
-        "y": -1206.37
-      },
-      "blocks": [
-        {
-          "id": "q17xqph3ll06oz3e6bqiehlw",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Ok! Vamos resolver sua dúvida!"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "eh5rtrp6fesgpoj2pbumulg7",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Descreva em poucas palavras a sua dúvida ou como podemos te ajudar."
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "s3w9oq0ovzlcwxem5yjoloq0",
-          "outgoingEdgeId": "ewjbhl2u6ximbu8epsm245r3",
-          "type": "text input",
-          "options": {
-            "labels": {
-              "placeholder": "Digite aqui sua dúvida...",
-              "button": "Enviar"
-            },
-            "variableId": "vc8yyakg53olhricuumn97bdk",
-            "isLong": true
-          }
-        }
-      ]
-    },
-    {
-      "id": "zadqxhlez1vi6ijayog9vnfl",
-      "title": "📖 Encontrar um tutorial",
-      "graphCoordinates": {
-        "x": 1358.97,
-        "y": -683.88
-      },
-      "blocks": [
-        {
-          "id": "mgqglxsumq5xg1z9gpo8y5vo",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Ok! Vou te ajudar!"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "mp96wr4skmefijpa5b1jlgro",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Acesse nossa central de tutoriais e artigos:"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "u6hzuwm3mzjn4d457e5bgzj2",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": ""
-                  },
-                  {
-                    "url": "https://docs.toolzz.com.br",
-                    "type": "a",
-                    "children": [
-                      {
-                        "text": "https://docs.toolzz.com.br"
-                      }
-                    ]
-                  },
-                  {
-                    "text": ""
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "u5q7lxhgzi15vlybwxaizupr",
-          "type": "image",
-          "content": {
-            "url": "https://media3.giphy.com/media/WoWm8YzFQJg5i/giphy.gif?cid=9355458dufqmett9o7bqw74r4eccnd35azbmlrb8oqzodwd0&ep=v1_gifs_search&rid=giphy.gif&ct=g"
-          }
-        }
-      ]
-    },
-    {
-      "id": "m7knsjeezkrlg6fyypfc64bq",
-      "title": "🧑‍🏫 Preciso de um treinamento",
-      "graphCoordinates": {
-        "x": 1602.71,
-        "y": -150.54
-      },
-      "blocks": [
-        {
-          "id": "w5uym6mo5zatko36gflqpxiz",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Ok! Como você prefere o treinamento?"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "rfyuaajvqygd1ikowx3g5zph",
-          "type": "choice input",
-          "items": [
-            {
-              "id": "kn83j6ka7l4342jl9p7agugv",
-              "outgoingEdgeId": "wzbh3n6na2ppdozgia6wd9k6",
-              "content": "📽️ Treinamento Gravado"
-            },
-            {
-              "id": "n1ozguwaw0s67bastnhvik3g",
-              "outgoingEdgeId": "y7kxxdbphfnvky9pgfeem082",
-              "content": "🧑‍🏫 Treinamento com Especialista"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "aug75s7bjv86s8qvvu3blovh",
-      "title": "👨‍💻 Problemas Técnicos",
-      "graphCoordinates": {
-        "x": 1635.05,
-        "y": 400.79
-      },
-      "blocks": [
-        {
-          "id": "whpnqktit6ous418pfi2t1zu",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Ok! Vamos resolver o mais rápido possível."
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "xupns2cyg53cfr0io7e5k44y",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Descreva em poucas palavras a sua o problema técnico ou dificuldade que você está enfrentando"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "ivcy2nik1xt0vf1t9krrk26x",
-          "type": "text input",
-          "options": {
-            "labels": {
-              "placeholder": "Descreva o problema ",
-              "button": "Enviar"
-            },
-            "variableId": "vkibcnsf1zh8819gelq5jaump",
-            "isLong": true
-          }
-        },
-        {
-          "id": "tpz07ph5vsqptq1cxwbh7sr5",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Show, poderia me enviar prints da sua tela como evidência do erro?"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "h38nriq5ols08sbubjil0erd",
-          "type": "file input",
-          "options": {
-            "variableId": "vgvaz6t15e05c0v2m7l6kcelo",
-            "labels": {
-              "placeholder": "<strong>\n Clique para fazer upload\n </strong> or arraste e solte o arquivo aqui<br>\n (Limite de Tamanho: 10MB)",
-              "clear": "Limpar",
-              "skip": "Pular"
-            }
-          }
-        },
-        {
-          "id": "tjbtx9f7hc9fnhiemazmu4wv",
-          "type": "choice input",
-          "items": [
-            {
-              "id": "wvd3glrmdco1kxibweoozvm6",
-              "outgoingEdgeId": "b6419lrugwhkqg6itaotjvcf",
-              "content": "👤 Falar agora com suporte técnico"
-            },
-            {
-              "id": "q8jhq3tjzr7fbnuqduszfs2s",
-              "outgoingEdgeId": "qbq6uma6t2s6z8xbc0qrobq8",
-              "content": "✉️ Receber a resposta por e-mail"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "a1uvlf7qqslgpgsk2ixbnel9",
-      "title": "Resolution Bot - Toolzz AI",
-      "graphCoordinates": {
-        "x": 1843.96,
-        "y": -1092.21
-      },
-      "blocks": [
-        {
-          "id": "bcs6q6g0x7ko8iaol1bl6eyt",
-          "type": "Webhook",
-          "options": {
-            "isAdvancedConfig": true,
-            "isCustomBody": true,
-            "webhook": {
-              "method": "POST",
-              "url": "platform.toolzz.ai",
-              "body": "{{Dúvida}}"
-            }
-          }
-        },
-        {
-          "id": "qb5hmuxbhyiihkkcxkjd422u",
-          "type": "choice input",
-          "items": [
-            {
-              "id": "xgs2qnc8szfh6jfbprt9nr77",
-              "outgoingEdgeId": "h91o6hq6iy385oa16fgrzkym",
-              "content": "👍 Isso resolveu?"
-            },
-            {
-              "id": "qgmsw0815ax6bs38v30s9ej9",
-              "outgoingEdgeId": "k38iz186birf4tq5y694rxqw",
-              "content": "❌ Não resolveu"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "aa59uhj0sqxisx7eql4hz869",
-      "title": "👍 Isso resolveu?",
-      "graphCoordinates": {
-        "x": 2451.05,
-        "y": -1384.71
-      },
-      "blocks": [
-        {
-          "id": "rb1rg2bs70ca2fxab1jws9jp",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Show! Fico feliz que tenha te ajudado. Volte sempre que precisar!"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "e45qfg1nc7iv9iik0afgd6yg",
-          "outgoingEdgeId": "gey1l932vvpi5uj2k427anhl",
-          "type": "image",
-          "content": {
-            "url": "https://media3.giphy.com/media/mGK1g88HZRa2FlKGbz/giphy-downsized.gif?cid=9355458dmb6vhiafojrrd9idumael5xtqaqaxogd77sb2j17&ep=v1_gifs_search&rid=giphy-downsized.gif&ct=g"
-          }
-        }
-      ]
-    },
-    {
-      "id": "bdhqr3lgq3avq9zch1m6ebu2",
-      "title": "❌ Não resolveu",
-      "graphCoordinates": {
-        "x": 2468.55,
-        "y": -880.54
-      },
-      "blocks": [
-        {
-          "id": "nenevo68liwurxpt52m9n4n5",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Hmm parece que nossa IA não conseguiu resolver sua dúvida."
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "vbgkclcacota3obpcqlg5xvw",
-          "type": "choice input",
-          "items": [
-            {
-              "id": "a0svjt4wkmeb6832ji14ew2s",
-              "outgoingEdgeId": "x7jc1msral73yyiu45gfr4nt",
-              "content": "👤 Falar agora com uma pessoa "
-            },
-            {
-              "id": "guzofi5tfj4j53svbq18a943",
-              "outgoingEdgeId": "vg6a0x9aqtnne952b633u15d",
-              "content": "✉️ Receber a resposta por e-mail"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "rbeqtug0wqwkla1cnqvvq9k3",
-      "title": "✉️ Receber a resposta por e-mail",
-      "graphCoordinates": {
-        "x": 2998.55,
-        "y": -303.29
-      },
-      "blocks": [
-        {
-          "id": "rmh7xxksi510k0ve9edzk0k1",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Ok, vou precisar do seu e-mail"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "xmt0cdiac8sg394m2dt5ihrb",
-          "type": "email input",
-          "options": {
-            "variableId": "vy0rle862nq5ghg6qv3xvsv7e",
-            "labels": {
-              "placeholder": "Digite seu e-mail",
-              "button": "Enviar"
-            },
-            "retryMessageContent": "Este e-mail não parece ser válido. Você pode digitá-lo novamente?"
-          }
-        },
-        {
-          "id": "woxcnnkjg28h3x5b0gqkhk2j",
-          "type": "Email",
-          "options": {
-            "credentialsId": "default",
-            "isCustomBody": true,
-            "isBodyCode": false,
-            "recipients": ["suporte@suaempresa.com.br"],
-            "subject": "Dúvida - {{Nome da Empresa}}",
-            "body": "{{Dúvida}}\n\n{{E-mail}}",
-            "replyTo": "suporte@suaempresa.com",
-            "cc": ["{{E-mail}}"]
-          }
-        },
-        {
-          "id": "gilsdeox5d4yhpivfhoptmoq",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Ok, te retornaremos em breve!"
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "a1dwnmpzev1s12aabu4bnxz3",
-      "title": "✉️ Receber a resposta por e-mail",
-      "graphCoordinates": {
-        "x": 2092.55,
-        "y": 1472.71
-      },
-      "blocks": [
-        {
-          "id": "w4tbkhj0szmxbktnlba9j3e3",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Ok, vou precisar do seu e-mail"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "q1mrcvvsprlu8xdw40erz0l4",
-          "type": "email input",
-          "options": {
-            "variableId": "vy0rle862nq5ghg6qv3xvsv7e",
-            "labels": {
-              "placeholder": "Digite seu e-mail",
-              "button": "Enviar"
-            },
-            "retryMessageContent": "Este e-mail não parece ser válido. Você pode digitá-lo novamente?"
-          }
-        },
-        {
-          "id": "qzuath5jis8kg3035zm8xdd8",
-          "type": "Email",
-          "options": {
-            "credentialsId": "default",
-            "isCustomBody": true,
-            "isBodyCode": false,
-            "recipients": ["suporte@suaempresa.com.br"],
-            "subject": "Dúvida - {{Nome da Empresa}}",
-            "body": "{{Dúvida}}\n\n{{E-mail}}",
-            "replyTo": "suporte@suaempresa.com",
-            "cc": ["{{E-mail}}"]
-          }
-        },
-        {
-          "id": "makue9l537qtxe3sp7av549i",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Ok, te retornaremos em breve!"
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "x18furhqhiz7ln2nqwb3pskn",
-      "title": "Passar para Atendente",
-      "graphCoordinates": {
-        "x": 2990.63,
-        "y": -803.04
-      },
-      "blocks": [
-        {
-          "id": "acvtb7ha3hdn8f3s4qgqhf5p",
-          "type": "Chatwoot",
-          "options": {
-            "task": "Show widget"
-          }
-        },
-        {
-          "id": "m1ap8guxygjpvullyvgvdg4e",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Ok, te retornaremos em alguns minutos."
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "ejv1k2xun04ajh4pbakoebap",
-          "type": "image",
-          "content": {
-            "url": "https://media0.giphy.com/media/3o7ZetIsjtbkgNE1I4/giphy.gif?cid=9355458dk4b1zp1iboso8eqpahx2xcy14hb2xqfh6g6cpwve&ep=v1_gifs_search&rid=giphy.gif&ct=g"
-          }
-        }
-      ]
-    },
-    {
-      "id": "kl8xqldodnt5u0c76eljpwwp",
-      "title": "Voltar",
-      "graphCoordinates": {
-        "x": 1010.67,
-        "y": 325.86
-      },
-      "blocks": [
-        {
-          "id": "my2zysnwb88u0twofb9825rd",
-          "type": "Jump",
-          "options": {
-            "groupId": "u1fbedw66m377lej7wj03fgu",
-            "blockId": "cwl459xq6eapa7vnuwqo8l1b"
-          }
-        }
-      ]
-    },
-    {
-      "id": "lfp9ehso5qx7xbwli0zd26jw",
-      "title": "Voltar",
-      "graphCoordinates": {
-        "x": 3045.34,
-        "y": -1309.8
-      },
-      "blocks": [
-        {
-          "id": "jhfeqcv16pvjtrrzc85qp5l6",
-          "type": "Jump",
-          "options": {
-            "groupId": "u1fbedw66m377lej7wj03fgu",
-            "blockId": "cwl459xq6eapa7vnuwqo8l1b"
-          }
-        }
-      ]
-    },
-    {
-      "id": "ld31s7yuj3pju5a3vx0pbb23",
-      "title": "📽️ Treinamento Gravado",
-      "graphCoordinates": {
-        "x": 2084.44,
-        "y": -260.36
-      },
-      "blocks": [
-        {
-          "id": "owivwmdvkcuqydvtu52kk5s7",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Show! Segue o Treinamento Gravado:"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "ulifjdgytnufcuzoshih4siq",
-          "type": "video",
-          "content": {
-            "url": "vimeo.com/774246650",
-            "id": "774246650",
-            "type": "vimeo",
-            "aspectRatio": "16/9",
-            "maxWidth": "100%"
-          }
-        },
-        {
-          "id": "vb4v7br7mbox9ahdq1prhf0g",
-          "type": "Wait",
-          "options": {
-            "secondsToWaitFor": "1",
-            "shouldPause": false
-          }
-        },
-        {
-          "id": "n4cr716kye4wcjbyobrj26yl",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Para mais informações, acesse nossa central de tutoriais e artigos:"
-                  }
-                ]
-              },
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": ""
-                  }
-                ]
-              },
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": ""
-                  },
-                  {
-                    "url": "https://docs.toolzz.com.br",
-                    "type": "a",
-                    "children": [
-                      {
-                        "text": "https://docs.toolzz.com.br"
-                      }
-                    ]
-                  },
-                  {
-                    "text": ""
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "btiprbzx9j7j0p7xb5raijxt",
-      "title": "🧑‍🏫 Treinamento com Especialista",
-      "graphCoordinates": {
-        "x": 2075.56,
-        "y": 300.75
-      },
-      "blocks": [
-        {
-          "id": "ivb8oxcrntw8ohvmjc8eh7uw",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Show, nos envie uma sugestão de data para o treinamento"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "d13fvnwuf72hovnu4r0w630s",
-          "type": "date input",
-          "options": {
-            "variableId": "vezq7i73c78l3jwq722l4mue2",
-            "labels": {
-              "button": "Agendar"
-            },
-            "isRange": false
-          }
-        },
-        {
-          "id": "hauywaufqwhc3pdxpufhn3l8",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Ok! Agora vou precisar que confirme seu e-mail e número do Whatsapp:"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "wyb97ttc8fsb49d5u514ygv0",
-          "type": "email input",
-          "options": {
-            "variableId": "vy0rle862nq5ghg6qv3xvsv7e",
-            "labels": {
-              "placeholder": "Digite aqui o seu e-mail..",
-              "button": "Enviar"
-            },
-            "retryMessageContent": "Este e-mail não parece ser válido. Você pode digitá-lo novamente?"
-          }
-        },
-        {
-          "id": "gkrmagg3iwwggid6fihx3qe0",
-          "type": "phone number input",
-          "options": {
-            "variableId": "vt4wx1br1fin3np54ti0vlu0t",
-            "labels": {
-              "placeholder": "Digite aqui seu whatsapp",
-              "button": "Enviar"
-            },
-            "retryMessageContent": "Este e-mail não parece ser válido. Você pode digitá-lo novamente?",
-            "defaultCountryCode": "BR"
-          }
-        },
-        {
-          "id": "llk7yue7zm54cgtowl018tjk",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Ok, te retornaremos em breve!"
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "ced4u086xcl376zjjqenzro5",
-      "title": "Falar com atendente",
-      "graphCoordinates": {
-        "x": 2082.44,
-        "y": 956.3
-      },
-      "blocks": [
-        {
-          "id": "ph1z6z1mwhbt450628bh5xsd",
-          "type": "Chatwoot"
-        },
-        {
-          "id": "qvlnf3iglhfowmjxadzoag4q",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Ok, te retornaremos em alguns minutos."
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "b6udbe4b3at689li6od7y7m8",
-          "type": "image",
-          "content": {
-            "url": "https://media0.giphy.com/media/3o7ZetIsjtbkgNE1I4/giphy.gif?cid=9355458dk4b1zp1iboso8eqpahx2xcy14hb2xqfh6g6cpwve&ep=v1_gifs_search&rid=giphy.gif&ct=g"
-          }
-        }
-      ]
-    },
-    {
-      "id": "px3lvew55qpcd6mx1oat4vfe",
-      "title": "Falar com atendente",
-      "graphCoordinates": {
-        "x": 1240.44,
-        "y": 730.3
-      },
-      "blocks": [
-        {
-          "id": "uwdn1qx0yluae8eecqpje9wx",
-          "type": "Chatwoot"
-        },
-        {
-          "id": "lamfisfwzdz4rf4vw8yuuq32",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": "Ok, te retornaremos em alguns minutos."
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "jm9tevse61c52f1a7agl35ci",
-          "type": "image",
-          "content": {
-            "url": "https://media0.giphy.com/media/3o7ZetIsjtbkgNE1I4/giphy.gif?cid=9355458dk4b1zp1iboso8eqpahx2xcy14hb2xqfh6g6cpwve&ep=v1_gifs_search&rid=giphy.gif&ct=g"
-          }
-        }
-      ]
-    },
-    {
-      "id": "e4dum2zv2vpxlv41ha84jcyz",
-      "title": "Localizar por ID",
-      "graphCoordinates": {
-        "x": 1131.87,
-        "y": 1170.73
-      },
-      "blocks": [
-        {
-          "id": "vhxthmo6195z52doty25x4c1",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": ""
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "yl6yhxzr6ijhfacr5yypbil9",
-          "type": "number input",
-          "options": {
-            "labels": {
-              "placeholder": "Digite aqui o número do protocolo",
-              "button": "Localizar 🔎"
-            }
-          }
-        },
-        {
-          "id": "ha9wvy3bwg1pgk0w3bvdbenx",
-          "type": "image",
-          "content": {
-            "url": "https://media1.giphy.com/media/xT9IgFLfWUZigjoem4/giphy.gif?cid=9355458dhfnaqpahgi8uzy6n2jo8qoe72wrif8t5vwdc6k3g&ep=v1_gifs_search&rid=giphy.gif&ct=g"
-          }
-        },
-        {
-          "id": "cbg2q0pv56tl8nrhoa1j70wm",
-          "type": "Webhook"
-        },
-        {
-          "id": "ao9wcd3u93xfbtkyeepo6l5i",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": ""
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "vjplf9i1vz4kqfa4ngjdsdm3",
-      "title": "Consultar Tickets do Cliente",
-      "graphCoordinates": {
-        "x": 1127.39,
-        "y": 1795.6
-      },
-      "blocks": [
-        {
-          "id": "iusaq8xc7z4i4zdj31l2wp5f",
-          "type": "Webhook"
-        },
-        {
-          "id": "hd01uvlb1my0czr916w5b07z",
-          "type": "choice input",
-          "items": [
-            {
-              "id": "g9tgbcl75p4u12n0khwz2lqv",
-              "outgoingEdgeId": "ded4lhp78y0y2qp49ptuqtzj",
-              "content": "{{ticketAberto_1}}",
-              "displayCondition": {
-                "isEnabled": true
-              }
-            },
-            {
-              "id": "bgn0x9xhm93t23w59rj090e5",
-              "outgoingEdgeId": "yiv10tjwqtrfo3dgt6f042bf",
-              "content": "{{ticketAberto_2}}",
-              "displayCondition": {
-                "isEnabled": true,
-                "condition": {
-                  "logicalOperator": "AND",
-                  "comparisons": [
-                    {
-                      "id": "j3xk46riboh87nkokwjn1wl7"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "id": "bqd4f2rrz9qcw1ke2dk8k9cz",
-              "outgoingEdgeId": "clmzbpij5y9s56ns0xtdqms1",
-              "content": "{{ticketAberto_3}}"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "pff396yvpo30f4weicz7zzn0",
-      "title": "Group #23",
-      "graphCoordinates": {
-        "x": 1568.22,
-        "y": 1974.27
-      },
-      "blocks": [
-        {
-          "id": "rzxr9zn8sfia9jv3kmsh4538",
-          "type": "image",
-          "content": {
-            "url": "https://media1.giphy.com/media/xT9IgFLfWUZigjoem4/giphy.gif?cid=9355458dhfnaqpahgi8uzy6n2jo8qoe72wrif8t5vwdc6k3g&ep=v1_gifs_search&rid=giphy.gif&ct=g"
-          }
-        },
-        {
-          "id": "nc9afzpbaxa78peq9cr4lf0d",
-          "type": "Webhook"
-        },
-        {
-          "id": "joz0ds6mgxpzvyzbtt88k6z8",
-          "type": "text",
-          "content": {
-            "richText": [
-              {
-                "type": "p",
-                "children": [
-                  {
-                    "text": ""
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      ]
-    }
-  ],
-  "edges": [
-    {
-      "id": "b3icjvx8emn9c1e8mf5wd1fi",
-      "from": {
-        "eventId": "phb6s71snxkajhtd0yur5ll6"
-      },
-      "to": {
-        "groupId": "u1fbedw66m377lej7wj03fgu"
-      }
-    },
-    {
-      "id": "y0yee07vgt2eb2u5gjjgynql",
-      "from": {
-        "blockId": "t057pzohbdi0d6nkrebhwtdg",
-        "itemId": "teq2gg43iyhgyrzyoxauj2md"
-      },
-      "to": {
-        "groupId": "uvn27r0scu0qfvs59ni78vxq"
-      }
-    },
-    {
-      "id": "p0ul430eew335njlg6ny302e",
-      "from": {
-        "blockId": "t057pzohbdi0d6nkrebhwtdg",
-        "itemId": "xx50fcn0jh1fzvoc0att6z0o"
-      },
-      "to": {
-        "groupId": "az0l90ttqo1bd2vb9ffuie2v"
-      }
-    },
-    {
-      "id": "s56x176lzrptikzsgtidknrv",
-      "from": {
-        "blockId": "t057pzohbdi0d6nkrebhwtdg",
-        "itemId": "o4w8lzlcqksrerr58dcb7xpb"
-      },
-      "to": {
-        "groupId": "e7pakv9pko7u7tgyoh4jdgdd"
-      }
-    },
-    {
-      "id": "crm7eykepwcisofiyk3aqzba",
-      "from": {
-        "blockId": "f3sh1n5dbp3gpr8tjkbhqota",
-        "itemId": "d3zj2ucgo018ruya4k8afm6k"
-      },
-      "to": {
-        "groupId": "yaq75snnditgwm49s9bi4ak9"
-      }
-    },
-    {
-      "id": "namzcwq3xmlv1ufytufbhp8u",
-      "from": {
-        "blockId": "axgqzi72ls4l0st0ir0oxof9"
-      },
-      "to": {
-        "groupId": "a1uvlf7qqslgpgsk2ixbnel9"
-      }
-    },
-    {
-      "id": "ewjbhl2u6ximbu8epsm245r3",
-      "from": {
-        "blockId": "s3w9oq0ovzlcwxem5yjoloq0"
-      },
-      "to": {
-        "groupId": "a1uvlf7qqslgpgsk2ixbnel9",
-        "blockId": "qb5hmuxbhyiihkkcxkjd422u"
-      }
-    },
-    {
-      "id": "h91o6hq6iy385oa16fgrzkym",
-      "from": {
-        "blockId": "qb5hmuxbhyiihkkcxkjd422u",
-        "itemId": "xgs2qnc8szfh6jfbprt9nr77"
-      },
-      "to": {
-        "groupId": "aa59uhj0sqxisx7eql4hz869"
-      }
-    },
-    {
-      "id": "k38iz186birf4tq5y694rxqw",
-      "from": {
-        "blockId": "qb5hmuxbhyiihkkcxkjd422u",
-        "itemId": "qgmsw0815ax6bs38v30s9ej9"
-      },
-      "to": {
-        "groupId": "bdhqr3lgq3avq9zch1m6ebu2",
-        "blockId": "nenevo68liwurxpt52m9n4n5"
-      }
-    },
-    {
-      "id": "vg6a0x9aqtnne952b633u15d",
-      "from": {
-        "blockId": "vbgkclcacota3obpcqlg5xvw",
-        "itemId": "guzofi5tfj4j53svbq18a943"
-      },
-      "to": {
-        "groupId": "rbeqtug0wqwkla1cnqvvq9k3"
-      }
-    },
-    {
-      "id": "x7jc1msral73yyiu45gfr4nt",
-      "from": {
-        "blockId": "vbgkclcacota3obpcqlg5xvw",
-        "itemId": "a0svjt4wkmeb6832ji14ew2s"
-      },
-      "to": {
-        "groupId": "x18furhqhiz7ln2nqwb3pskn",
-        "blockId": "acvtb7ha3hdn8f3s4qgqhf5p"
-      }
-    },
-    {
-      "id": "mb8ofp0i38xjc7evlqtz3aex",
-      "from": {
-        "blockId": "f3sh1n5dbp3gpr8tjkbhqota",
-        "itemId": "mkc15zfpubx1lz7xhe2jqucz"
-      },
-      "to": {
-        "groupId": "zadqxhlez1vi6ijayog9vnfl",
-        "blockId": "mgqglxsumq5xg1z9gpo8y5vo"
-      }
-    },
-    {
-      "id": "n5lk6f0yfnzoija4chfndip7",
-      "from": {
-        "blockId": "f3sh1n5dbp3gpr8tjkbhqota",
-        "itemId": "it59830m1esbs5fx2lxcqdfc"
-      },
-      "to": {
-        "groupId": "kl8xqldodnt5u0c76eljpwwp"
-      }
-    },
-    {
-      "id": "n396m4sa43plgqsxrae09i12",
-      "from": {
-        "blockId": "f3sh1n5dbp3gpr8tjkbhqota",
-        "itemId": "ddwzkqtxsbrkavzat2diabvr"
-      },
-      "to": {
-        "groupId": "m7knsjeezkrlg6fyypfc64bq",
-        "blockId": "w5uym6mo5zatko36gflqpxiz"
-      }
-    },
-    {
-      "id": "gey1l932vvpi5uj2k427anhl",
-      "from": {
-        "blockId": "e45qfg1nc7iv9iik0afgd6yg"
-      },
-      "to": {
-        "groupId": "lfp9ehso5qx7xbwli0zd26jw",
-        "blockId": "jhfeqcv16pvjtrrzc85qp5l6"
-      }
-    },
-    {
-      "id": "wzbh3n6na2ppdozgia6wd9k6",
-      "from": {
-        "blockId": "rfyuaajvqygd1ikowx3g5zph",
-        "itemId": "kn83j6ka7l4342jl9p7agugv"
-      },
-      "to": {
-        "groupId": "ld31s7yuj3pju5a3vx0pbb23"
-      }
-    },
-    {
-      "id": "y7kxxdbphfnvky9pgfeem082",
-      "from": {
-        "blockId": "rfyuaajvqygd1ikowx3g5zph",
-        "itemId": "n1ozguwaw0s67bastnhvik3g"
-      },
-      "to": {
-        "groupId": "btiprbzx9j7j0p7xb5raijxt",
-        "blockId": "ivb8oxcrntw8ohvmjc8eh7uw"
-      }
-    },
-    {
-      "id": "kic5a6qs9j3tpl48c37cnzdc",
-      "from": {
-        "blockId": "f3sh1n5dbp3gpr8tjkbhqota",
-        "itemId": "plzmfezrqgnkc700ry4zulr8"
-      },
-      "to": {
-        "groupId": "aug75s7bjv86s8qvvu3blovh"
-      }
-    },
-    {
-      "id": "r0ox13peie0zflvk7cg86j8z",
-      "from": {
-        "blockId": "t057pzohbdi0d6nkrebhwtdg",
-        "itemId": "hphje5d48d7us9f2w9vevwm6"
-      },
-      "to": {
-        "groupId": "aug75s7bjv86s8qvvu3blovh",
-        "blockId": "xupns2cyg53cfr0io7e5k44y"
-      }
-    },
-    {
-      "id": "b6419lrugwhkqg6itaotjvcf",
-      "from": {
-        "blockId": "tjbtx9f7hc9fnhiemazmu4wv",
-        "itemId": "wvd3glrmdco1kxibweoozvm6"
-      },
-      "to": {
-        "groupId": "ced4u086xcl376zjjqenzro5",
-        "blockId": "ph1z6z1mwhbt450628bh5xsd"
-      }
-    },
-    {
-      "id": "qbq6uma6t2s6z8xbc0qrobq8",
-      "from": {
-        "blockId": "tjbtx9f7hc9fnhiemazmu4wv",
-        "itemId": "q8jhq3tjzr7fbnuqduszfs2s"
-      },
-      "to": {
-        "groupId": "a1dwnmpzev1s12aabu4bnxz3"
-      }
-    },
-    {
-      "id": "vgeyq7jczg2j73qzvuc06xpl",
-      "from": {
-        "blockId": "r0f4dmqwgxjmt9txif4a3kmb"
-      },
-      "to": {
-        "groupId": "px3lvew55qpcd6mx1oat4vfe"
-      }
-    },
-    {
-      "id": "zo03epwd779u8350h30z18ph",
-      "from": {
-        "blockId": "zt6fwltjk3cj0j5ywe6r482f",
-        "itemId": "ca31q29ugxgql3tis9sudven"
-      },
-      "to": {
-        "groupId": "e4dum2zv2vpxlv41ha84jcyz"
-      }
-    },
-    {
-      "id": "lzj1mn3ke9d82mwu6gmujqkl",
-      "from": {
-        "blockId": "zt6fwltjk3cj0j5ywe6r482f",
-        "itemId": "ikf3klzhcvtloec0b65vygjk"
-      },
-      "to": {
-        "groupId": "vjplf9i1vz4kqfa4ngjdsdm3",
-        "blockId": "iusaq8xc7z4i4zdj31l2wp5f"
-      }
-    },
-    {
-      "id": "clmzbpij5y9s56ns0xtdqms1",
-      "from": {
-        "blockId": "hd01uvlb1my0czr916w5b07z",
-        "itemId": "bqd4f2rrz9qcw1ke2dk8k9cz"
-      },
-      "to": {
-        "groupId": "pff396yvpo30f4weicz7zzn0",
-        "blockId": "rzxr9zn8sfia9jv3kmsh4538"
-      }
-    },
-    {
-      "id": "ded4lhp78y0y2qp49ptuqtzj",
-      "from": {
-        "blockId": "hd01uvlb1my0czr916w5b07z",
-        "itemId": "g9tgbcl75p4u12n0khwz2lqv"
-      },
-      "to": {
-        "groupId": "pff396yvpo30f4weicz7zzn0"
-      }
-    },
-    {
-      "id": "yiv10tjwqtrfo3dgt6f042bf",
-      "from": {
-        "blockId": "hd01uvlb1my0czr916w5b07z",
-        "itemId": "bgn0x9xhm93t23w59rj090e5"
-      },
-      "to": {
-        "groupId": "pff396yvpo30f4weicz7zzn0",
-        "blockId": "rzxr9zn8sfia9jv3kmsh4538"
-      }
-    }
-  ],
-  "variables": [
-    {
-      "id": "vdzrx77w6zj9zf5mzv7qcdtyi",
-      "name": "Nome da Empresa"
-    },
-    {
-      "id": "vwcf1fvkdmm11d9myovwg82sw",
-      "name": "Nome do Bot"
-    },
-    {
-      "id": "vc8yyakg53olhricuumn97bdk",
-      "name": "Dúvida"
-    },
-    {
-      "id": "vy0rle862nq5ghg6qv3xvsv7e",
-      "name": "E-mail"
-    },
-    {
-      "id": "vxmi79412woun6onlsg3j8wd2",
-      "name": "Busca-tutorial"
-    },
-    {
-      "id": "vt4wx1br1fin3np54ti0vlu0t",
-      "name": "Whatsapp"
-    },
-    {
-      "id": "vezq7i73c78l3jwq722l4mue2",
-      "name": "Data-treinamento"
-    },
-    {
-      "id": "vkibcnsf1zh8819gelq5jaump",
-      "name": "Bug-descrição"
-    },
-    {
-      "id": "vgvaz6t15e05c0v2m7l6kcelo",
-      "name": "Bug-print"
-    }
-  ],
-  "theme": {
-    "general": {
-      "font": "",
-      "background": {
-        "type": "Color"
-      }
-    },
-    "chat": {
-      "hostAvatar": {
-        "isEnabled": true,
-        "url": "https://media.discordapp.net/attachments/915691669234548746/1182547715821928578/custom_avatar-1689595567.png?ex=65a0c7e2&is=658e52e2&hm=1ea846a690273a7e1e268701554b495fec04731f08f434251f61f8549f2106b7&=&format=webp&quality=lossless"
-      },
-      "guestAvatar": {
-        "isEnabled": false
-      },
-      "guestBubbles": {
-        "backgroundColor": "#0567C1",
-        "color": "#FFFFFF"
-      },
-      "buttons": {
-        "backgroundColor": "#E6F0FE",
-        "color": "#04153e"
-      }
-    }
+  "version":"6",
+  "id":"clqqb56hz0001jt08ilrokfzy",
+  "name":"Customer Support",
+  "events":[
+  {
+  "id":"phb6s71snxkajhtd0yur5ll6",
+  "outgoingEdgeId":"b3icjvx8emn9c1e8mf5wd1fi",
+  "graphCoordinates":{
+  "x":0,
+  "y":0
   },
-  "selectedThemeTemplateId": null,
-  "settings": {
-    "general": {
-      "isBrandingEnabled": true,
-      "isInputPrefillEnabled": true,
-      "rememberUser": {
-        "isEnabled": true,
-        "storage": "session"
-      }
-    },
-    "typingEmulation": {
-      "enabled": true,
-      "speed": 300
-    }
+  "type":"start"
+  }
+  ],
+  "groups":[
+  {
+  "id":"u1fbedw66m377lej7wj03fgu",
+  "title":"Welcome",
+  "graphCoordinates":{
+  "x":273,
+  "y":22
   },
-  "createdAt": "2023-12-29T07:23:44.807Z",
-  "updatedAt": "2023-12-29T09:28:56.365Z",
-  "icon": "📞",
-  "folderId": "clqqaqvpi0001jy08su0jved4",
-  "publicId": "customer-support-lrokfzy",
-  "customDomain": null,
-  "workspaceId": "clqqaifj00000jp08ndmnfqca",
-  "resultsTablePreferences": null,
-  "isArchived": false,
-  "isClosed": false,
-  "whatsAppCredentialsId": null,
-  "riskLevel": null
-}
+  "blocks":[
+  {
+  "id":"yjcvub30p8l1a3qogkf3anqo",
+  "type":"Set variable",
+  "options":{
+  "variableId":"vdzrx77w6zj9zf5mzv7qcdtyi",
+  "expressionToEvaluate":"Toolzz"
+  }
+  },
+  {
+  "id":"r2y0fm5kqrxqt4p9b7iaoc86",
+  "type":"Set variable",
+  "options":{
+  "variableId":"vwcf1fvkdmm11d9myovwg82sw",
+  "expressionToEvaluate":"Eduardo"
+  }
+  },
+  {
+  "id":"wb86yna26ffjibn3zw0gp2su",
+  "type":"text",
+  "content":{
+  "richText":[
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":"Olá, tudo bem? Eu sou o {{Nome do Bot}}, o assistente virtual da {{Nome da Empresa}}."
+  }
+  ]
+  }
+  ]
+  }
+  },
+  {
+  "id":"cwl459xq6eapa7vnuwqo8l1b",
+  "type":"text",
+  "content":{
+  "richText":[
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":"Como posso te ajudar hoje? "
+  }
+  ]
+  },
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":""
+  }
+  ]
+  },
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":"Selecione uma das opções:"
+  }
+  ]
+  }
+  ]
+  }
+  },
+  {
+  "id":"t057pzohbdi0d6nkrebhwtdg",
+  "type":"choice input",
+  "items":[
+  {
+  "id":"teq2gg43iyhgyrzyoxauj2md",
+  "outgoingEdgeId":"y0yee07vgt2eb2u5gjjgynql",
+  "content":"🤔 Preciso de ajuda "
+  },
+  {
+  "id":"hphje5d48d7us9f2w9vevwm6",
+  "outgoingEdgeId":"r0ox13peie0zflvk7cg86j8z",
+  "content":"👨‍💻 Problemas Técnicos"
+  },
+  {
+  "id":"o4w8lzlcqksrerr58dcb7xpb",
+  "outgoingEdgeId":"s56x176lzrptikzsgtidknrv",
+  "content":"💬 Falar com uma pessoa"
+  },
+  {
+  "id":"xx50fcn0jh1fzvoc0att6z0o",
+  "outgoingEdgeId":"p0ul430eew335njlg6ny302e",
+  "content":"🔎 Consultar um Ticket"
+  }
+  ]
+  }
+  ]
+  },
+  {
+  "id":"uvn27r0scu0qfvs59ni78vxq",
+  "title":"🤔 Preciso de ajuda ",
+  "graphCoordinates":{
+  "x":800.5,
+  "y":-320.5
+  },
+  "blocks":[
+  {
+  "id":"n9q7nk8sfk2idthzmpg2038j",
+  "type":"text",
+  "content":{
+  "richText":[
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":"Ok! Vamos te ajudar!"
+  }
+  ]
+  },
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":"Selecione uma das opções: "
+  }
+  ]
+  }
+  ]
+  }
+  },
+  {
+  "id":"f3sh1n5dbp3gpr8tjkbhqota",
+  "type":"choice input",
+  "items":[
+  {
+  "id":"d3zj2ucgo018ruya4k8afm6k",
+  "outgoingEdgeId":"crm7eykepwcisofiyk3aqzba",
+  "content":"⁉️ Estou com uma dúvida",
+  "displayCondition":{
+  "isEnabled":false
+  }
+  },
+  {
+  "id":"mkc15zfpubx1lz7xhe2jqucz",
+  "outgoingEdgeId":"mb8ofp0i38xjc7evlqtz3aex",
+  "content":"📖 Encontrar um tutorial"
+  },
+  {
+  "id":"ddwzkqtxsbrkavzat2diabvr",
+  "outgoingEdgeId":"n396m4sa43plgqsxrae09i12",
+  "content":"🧑‍🏫 Preciso de um treinamento"
+  },
+  {
+  "id":"plzmfezrqgnkc700ry4zulr8",
+  "outgoingEdgeId":"kic5a6qs9j3tpl48c37cnzdc",
+  "content":"👨‍💻 Problemas Técnicos"
+  },
+  {
+  "id":"it59830m1esbs5fx2lxcqdfc",
+  "outgoingEdgeId":"n5lk6f0yfnzoija4chfndip7",
+  "content":"🏠 Voltar para Home"
+  }
+  ]
+  }
+  ]
+  },
+  {
+  "id":"az0l90ttqo1bd2vb9ffuie2v",
+  "title":"🔎 Consultar um Ticket",
+  "graphCoordinates":{
+  "x":708.46,
+  "y":1312.21
+  },
+  "blocks":[
+  {
+  "id":"z0v28hegk163fmkj6808fyx0",
+  "type":"text",
+  "content":{
+  "richText":[
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":"Ok, pra consultar o status de uma tarefa, vou precisar do ID do protocolo. Você tem o ID em mãos?"
+  }
+  ]
+  }
+  ]
+  }
+  },
+  {
+  "id":"zt6fwltjk3cj0j5ywe6r482f",
+  "type":"choice input",
+  "items":[
+  {
+  "id":"ca31q29ugxgql3tis9sudven",
+  "outgoingEdgeId":"zo03epwd779u8350h30z18ph",
+  "content":"👍 Sim, tenho o ID"
+  },
+  {
+  "id":"ikf3klzhcvtloec0b65vygjk",
+  "outgoingEdgeId":"lzj1mn3ke9d82mwu6gmujqkl",
+  "content":"🔎 Não, favor localizar todos meus tickets"
+  }
+  ]
+  }
+  ]
+  },
+  {
+  "id":"e7pakv9pko7u7tgyoh4jdgdd",
+  "title":"💬 Falar com uma pessoa",
+  "graphCoordinates":{
+  "x":800.14,
+  "y":640.21
+  },
+  "blocks":[
+  {
+  "id":"r0f4dmqwgxjmt9txif4a3kmb",
+  "outgoingEdgeId":"vgeyq7jczg2j73qzvuc06xpl",
+  "type":"text",
+  "content":{
+  "richText":[
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":"Ok, vamos resolver isso! "
+  }
+  ]
+  },
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":"Selecione uma das opções: "
+  }
+  ]
+  }
+  ]
+  }
+  }
+  ]
+  },
+  {
+  "id":"yaq75snnditgwm49s9bi4ak9",
+  "title":"⁉️ Estou com uma dúvida",
+  "graphCoordinates":{
+  "x":1247.3,
+  "y":-1206.37
+  },
+  "blocks":[
+  {
+  "id":"q17xqph3ll06oz3e6bqiehlw",
+  "type":"text",
+  "content":{
+  "richText":[
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":"Ok! Vamos resolver sua dúvida!"
+  }
+  ]
+  }
+  ]
+  }
+  },
+  {
+  "id":"eh5rtrp6fesgpoj2pbumulg7",
+  "type":"text",
+  "content":{
+  "richText":[
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":"Descreva em poucas palavras a sua dúvida ou como podemos te ajudar."
+  }
+  ]
+  }
+  ]
+  }
+  },
+  {
+  "id":"s3w9oq0ovzlcwxem5yjoloq0",
+  "outgoingEdgeId":"ewjbhl2u6ximbu8epsm245r3",
+  "type":"text input",
+  "options":{
+  "labels":{
+  "placeholder":"Digite aqui sua dúvida...",
+  "button":"Enviar"
+  },
+  "variableId":"vc8yyakg53olhricuumn97bdk",
+  "isLong":true
+  }
+  }
+  ]
+  },
+  {
+  "id":"zadqxhlez1vi6ijayog9vnfl",
+  "title":"📖 Encontrar um tutorial",
+  "graphCoordinates":{
+  "x":1358.97,
+  "y":-683.88
+  },
+  "blocks":[
+  {
+  "id":"mgqglxsumq5xg1z9gpo8y5vo",
+  "type":"text",
+  "content":{
+  "richText":[
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":"Ok! Vou te ajudar!"
+  }
+  ]
+  }
+  ]
+  }
+  },
+  {
+  "id":"mp96wr4skmefijpa5b1jlgro",
+  "type":"text",
+  "content":{
+  "richText":[
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":"Acesse nossa central de tutoriais e artigos:"
+  }
+  ]
+  }
+  ]
+  }
+  },
+  {
+  "id":"u6hzuwm3mzjn4d457e5bgzj2",
+  "type":"text",
+  "content":{
+  "richText":[
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":""
+  },
+  {
+  "url":"https://docs.toolzz.com.br",
+  "type":"a",
+  "children":[
+  {
+  "text":"https://docs.toolzz.com.br"
+  }
+  ]
+  },
+  {
+  "text":""
+  }
+  ]
+  }
+  ]
+  }
+  },
+  {
+  "id":"u5q7lxhgzi15vlybwxaizupr",
+  "type":"image",
+  "content":{
+  "url":"https://media3.giphy.com/media/WoWm8YzFQJg5i/giphy.gif?cid=9355458dufqmett9o7bqw74r4eccnd35azbmlrb8oqzodwd0&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+  }
+  }
+  ]
+  },
+  {
+  "id":"m7knsjeezkrlg6fyypfc64bq",
+  "title":"🧑‍🏫 Preciso de um treinamento",
+  "graphCoordinates":{
+  "x":1602.71,
+  "y":-150.54
+  },
+  "blocks":[
+  {
+  "id":"w5uym6mo5zatko36gflqpxiz",
+  "type":"text",
+  "content":{
+  "richText":[
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":"Ok! Como você prefere o treinamento?"
+  }
+  ]
+  }
+  ]
+  }
+  },
+  {
+  "id":"rfyuaajvqygd1ikowx3g5zph",
+  "type":"choice input",
+  "items":[
+  {
+  "id":"kn83j6ka7l4342jl9p7agugv",
+  "outgoingEdgeId":"wzbh3n6na2ppdozgia6wd9k6",
+  "content":"📽️ Treinamento Gravado"
+  },
+  {
+  "id":"n1ozguwaw0s67bastnhvik3g",
+  "outgoingEdgeId":"y7kxxdbphfnvky9pgfeem082",
+  "content":"🧑‍🏫 Treinamento com Especialista"
+  }
+  ]
+  }
+  ]
+  },
+  {
+  "id":"aug75s7bjv86s8qvvu3blovh",
+  "title":"👨‍💻 Problemas Técnicos",
+  "graphCoordinates":{
+  "x":1635.05,
+  "y":400.79
+  },
+  "blocks":[
+  {
+  "id":"whpnqktit6ous418pfi2t1zu",
+  "type":"text",
+  "content":{
+  "richText":[
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":"Ok! Vamos resolver o mais rápido possível."
+  }
+  ]
+  }
+  ]
+  }
+  },
+  {
+  "id":"xupns2cyg53cfr0io7e5k44y",
+  "type":"text",
+  "content":{
+  "richText":[
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":"Descreva em poucas palavras a sua o problema técnico ou dificuldade que você está enfrentando"
+  }
+  ]
+  }
+  ]
+  }
+  },
+  {
+  "id":"ivcy2nik1xt0vf1t9krrk26x",
+  "type":"text input",
+  "options":{
+  "labels":{
+  "placeholder":"Descreva o problema ",
+  "button":"Enviar"
+  },
+  "variableId":"vkibcnsf1zh8819gelq5jaump",
+  "isLong":true
+  }
+  },
+  {
+  "id":"tpz07ph5vsqptq1cxwbh7sr5",
+  "type":"text",
+  "content":{
+  "richText":[
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":"Show, poderia me enviar prints da sua tela como evidência do erro?"
+  }
+  ]
+  }
+  ]
+  }
+  },
+  {
+  "id":"h38nriq5ols08sbubjil0erd",
+  "type":"file input",
+  "options":{
+  "variableId":"vgvaz6t15e05c0v2m7l6kcelo",
+  "labels":{
+  "placeholder":"<strong>\n Clique para fazer upload\n </strong> or arraste e solte o arquivo aqui<br>\n (Limite de Tamanho: 10MB)",
+  "clear":"Limpar",
+  "skip":"Pular"
+  }
+  }
+  },
+  {
+  "id":"tjbtx9f7hc9fnhiemazmu4wv",
+  "type":"choice input",
+  "items":[
+  {
+  "id":"wvd3glrmdco1kxibweoozvm6",
+  "outgoingEdgeId":"b6419lrugwhkqg6itaotjvcf",
+  "content":"👤 Falar agora com suporte técnico"
+  },
+  {
+  "id":"q8jhq3tjzr7fbnuqduszfs2s",
+  "outgoingEdgeId":"qbq6uma6t2s6z8xbc0qrobq8",
+  "content":"✉️ Receber a resposta por e-mail"
+  }
+  ]
+  }
+  ]
+  },
+  {
+  "id":"a1uvlf7qqslgpgsk2ixbnel9",
+  "title":"Resolution Bot - Toolzz AI",
+  "graphCoordinates":{
+  "x":1843.96,
+  "y":-1092.21
+  },
+  "blocks":[
+  {
+  "id":"bcs6q6g0x7ko8iaol1bl6eyt",
+  "type":"Webhook",
+  "options":{
+  "isAdvancedConfig":true,
+  "isCustomBody":true,
+  "webhook":{
+  "method":"POST",
+  "url":"platform.toolzz.ai",
+  "body":"{{Dúvida}}"
+  }
+  }
+  },
+  {
+  "id":"qb5hmuxbhyiihkkcxkjd422u",
+  "type":"choice input",
+  "items":[
+  {
+  "id":"xgs2qnc8szfh6jfbprt9nr77",
+  "outgoingEdgeId":"h91o6hq6iy385oa16fgrzkym",
+  "content":"👍 Isso resolveu?"
+  },
+  {
+  "id":"qgmsw0815ax6bs38v30s9ej9",
+  "outgoingEdgeId":"k38iz186birf4tq5y694rxqw",
+  "content":"❌ Não resolveu"
+  }
+  ]
+  }
+  ]
+  },
+  {
+  "id":"aa59uhj0sqxisx7eql4hz869",
+  "title":"👍 Isso resolveu?",
+  "graphCoordinates":{
+  "x":2451.05,
+  "y":-1384.71
+  },
+  "blocks":[
+  {
+  "id":"rb1rg2bs70ca2fxab1jws9jp",
+  "type":"text",
+  "content":{
+  "richText":[
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":"Show! Fico feliz que tenha te ajudado. Volte sempre que precisar!"
+  }
+  ]
+  }
+  ]
+  }
+  },
+  {
+  "id":"e45qfg1nc7iv9iik0afgd6yg",
+  "outgoingEdgeId":"gey1l932vvpi5uj2k427anhl",
+  "type":"image",
+  "content":{
+  "url":"https://media3.giphy.com/media/mGK1g88HZRa2FlKGbz/giphy-downsized.gif?cid=9355458dmb6vhiafojrrd9idumael5xtqaqaxogd77sb2j17&ep=v1_gifs_search&rid=giphy-downsized.gif&ct=g"
+  }
+  }
+  ]
+  },
+  {
+  "id":"bdhqr3lgq3avq9zch1m6ebu2",
+  "title":"❌ Não resolveu",
+  "graphCoordinates":{
+  "x":2468.55,
+  "y":-880.54
+  },
+  "blocks":[
+  {
+  "id":"nenevo68liwurxpt52m9n4n5",
+  "type":"text",
+  "content":{
+  "richText":[
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":"Hmm parece que nossa IA não conseguiu resolver sua dúvida."
+  }
+  ]
+  }
+  ]
+  }
+  },
+  {
+  "id":"vbgkclcacota3obpcqlg5xvw",
+  "type":"choice input",
+  "items":[
+  {
+  "id":"a0svjt4wkmeb6832ji14ew2s",
+  "outgoingEdgeId":"x7jc1msral73yyiu45gfr4nt",
+  "content":"👤 Falar agora com uma pessoa "
+  },
+  {
+  "id":"guzofi5tfj4j53svbq18a943",
+  "outgoingEdgeId":"vg6a0x9aqtnne952b633u15d",
+  "content":"✉️ Receber a resposta por e-mail"
+  }
+  ]
+  }
+  ]
+  },
+  {
+  "id":"rbeqtug0wqwkla1cnqvvq9k3",
+  "title":"✉️ Receber a resposta por e-mail",
+  "graphCoordinates":{
+  "x":2998.55,
+  "y":-303.29
+  },
+  "blocks":[
+  {
+  "id":"rmh7xxksi510k0ve9edzk0k1",
+  "type":"text",
+  "content":{
+  "richText":[
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":"Ok, vou precisar do seu e-mail"
+  }
+  ]
+  }
+  ]
+  }
+  },
+  {
+  "id":"xmt0cdiac8sg394m2dt5ihrb",
+  "type":"email input",
+  "options":{
+  "variableId":"vy0rle862nq5ghg6qv3xvsv7e",
+  "labels":{
+  "placeholder":"Digite seu e-mail",
+  "button":"Enviar"
+  },
+  "retryMessageContent":"Este e-mail não parece ser válido. Você pode digitá-lo novamente?"
+  }
+  },
+  {
+  "id":"woxcnnkjg28h3x5b0gqkhk2j",
+  "type":"Email",
+  "options":{
+  "credentialsId":"default",
+  "isCustomBody":true,
+  "isBodyCode":false,
+  "recipients":[
+  "suporte@suaempresa.com.br"
+  ],
+  "subject":"Dúvida - {{Nome da Empresa}}",
+  "body":"{{Dúvida}}\n\n{{E-mail}}",
+  "replyTo":"suporte@suaempresa.com",
+  "cc":[
+  "{{E-mail}}"
+  ]
+  }
+  },
+  {
+  "id":"gilsdeox5d4yhpivfhoptmoq",
+  "type":"text",
+  "content":{
+  "richText":[
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":"Ok, te retornaremos em breve!"
+  }
+  ]
+  }
+  ]
+  }
+  }
+  ]
+  },
+  {
+  "id":"a1dwnmpzev1s12aabu4bnxz3",
+  "title":"✉️ Receber a resposta por e-mail",
+  "graphCoordinates":{
+  "x":2092.55,
+  "y":1472.71
+  },
+  "blocks":[
+  {
+  "id":"w4tbkhj0szmxbktnlba9j3e3",
+  "type":"text",
+  "content":{
+  "richText":[
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":"Ok, vou precisar do seu e-mail"
+  }
+  ]
+  }
+  ]
+  }
+  },
+  {
+  "id":"q1mrcvvsprlu8xdw40erz0l4",
+  "type":"email input",
+  "options":{
+  "variableId":"vy0rle862nq5ghg6qv3xvsv7e",
+  "labels":{
+  "placeholder":"Digite seu e-mail",
+  "button":"Enviar"
+  },
+  "retryMessageContent":"Este e-mail não parece ser válido. Você pode digitá-lo novamente?"
+  }
+  },
+  {
+  "id":"qzuath5jis8kg3035zm8xdd8",
+  "type":"Email",
+  "options":{
+  "credentialsId":"default",
+  "isCustomBody":true,
+  "isBodyCode":false,
+  "recipients":[
+  "suporte@suaempresa.com.br"
+  ],
+  "subject":"Dúvida - {{Nome da Empresa}}",
+  "body":"{{Dúvida}}\n\n{{E-mail}}",
+  "replyTo":"suporte@suaempresa.com",
+  "cc":[
+  "{{E-mail}}"
+  ]
+  }
+  },
+  {
+  "id":"makue9l537qtxe3sp7av549i",
+  "type":"text",
+  "content":{
+  "richText":[
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":"Ok, te retornaremos em breve!"
+  }
+  ]
+  }
+  ]
+  }
+  }
+  ]
+  },
+  {
+  "id":"x18furhqhiz7ln2nqwb3pskn",
+  "title":"Passar para Atendente",
+  "graphCoordinates":{
+  "x":2990.63,
+  "y":-803.04
+  },
+  "blocks":[
+  {
+  "id":"acvtb7ha3hdn8f3s4qgqhf5p",
+  "type":"Chatwoot",
+  "options":{
+  "task":"Show widget"
+  }
+  },
+  {
+  "id":"m1ap8guxygjpvullyvgvdg4e",
+  "type":"text",
+  "content":{
+  "richText":[
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":"Ok, te retornaremos em alguns minutos."
+  }
+  ]
+  }
+  ]
+  }
+  },
+  {
+  "id":"ejv1k2xun04ajh4pbakoebap",
+  "type":"image",
+  "content":{
+  "url":"https://media0.giphy.com/media/3o7ZetIsjtbkgNE1I4/giphy.gif?cid=9355458dk4b1zp1iboso8eqpahx2xcy14hb2xqfh6g6cpwve&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+  }
+  }
+  ]
+  },
+  {
+  "id":"kl8xqldodnt5u0c76eljpwwp",
+  "title":"Voltar",
+  "graphCoordinates":{
+  "x":1010.67,
+  "y":325.86
+  },
+  "blocks":[
+  {
+  "id":"my2zysnwb88u0twofb9825rd",
+  "type":"Jump",
+  "options":{
+  "groupId":"u1fbedw66m377lej7wj03fgu",
+  "blockId":"cwl459xq6eapa7vnuwqo8l1b"
+  }
+  }
+  ]
+  },
+  {
+  "id":"lfp9ehso5qx7xbwli0zd26jw",
+  "title":"Voltar",
+  "graphCoordinates":{
+  "x":3045.34,
+  "y":-1309.8
+  },
+  "blocks":[
+  {
+  "id":"jhfeqcv16pvjtrrzc85qp5l6",
+  "type":"Jump",
+  "options":{
+  "groupId":"u1fbedw66m377lej7wj03fgu",
+  "blockId":"cwl459xq6eapa7vnuwqo8l1b"
+  }
+  }
+  ]
+  },
+  {
+  "id":"ld31s7yuj3pju5a3vx0pbb23",
+  "title":"📽️ Treinamento Gravado",
+  "graphCoordinates":{
+  "x":2084.44,
+  "y":-260.36
+  },
+  "blocks":[
+  {
+  "id":"owivwmdvkcuqydvtu52kk5s7",
+  "type":"text",
+  "content":{
+  "richText":[
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":"Show! Segue o Treinamento Gravado:"
+  }
+  ]
+  }
+  ]
+  }
+  },
+  {
+  "id":"ulifjdgytnufcuzoshih4siq",
+  "type":"video",
+  "content":{
+  "url":"vimeo.com/774246650",
+  "id":"774246650",
+  "type":"vimeo",
+  "aspectRatio":"16/9",
+  "maxWidth":"100%"
+  }
+  },
+  {
+  "id":"vb4v7br7mbox9ahdq1prhf0g",
+  "type":"Wait",
+  "options":{
+  "secondsToWaitFor":"1",
+  "shouldPause":false
+  }
+  },
+  {
+  "id":"n4cr716kye4wcjbyobrj26yl",
+  "type":"text",
+  "content":{
+  "richText":[
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":"Para mais informações, acesse nossa central de tutoriais e artigos:"
+  }
+  ]
+  },
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":""
+  }
+  ]
+  },
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":""
+  },
+  {
+  "url":"https://docs.toolzz.com.br",
+  "type":"a",
+  "children":[
+  {
+  "text":"https://docs.toolzz.com.br"
+  }
+  ]
+  },
+  {
+  "text":""
+  }
+  ]
+  }
+  ]
+  }
+  }
+  ]
+  },
+  {
+  "id":"btiprbzx9j7j0p7xb5raijxt",
+  "title":"🧑‍🏫 Treinamento com Especialista",
+  "graphCoordinates":{
+  "x":2075.56,
+  "y":300.75
+  },
+  "blocks":[
+  {
+  "id":"ivb8oxcrntw8ohvmjc8eh7uw",
+  "type":"text",
+  "content":{
+  "richText":[
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":"Show, nos envie uma sugestão de data para o treinamento"
+  }
+  ]
+  }
+  ]
+  }
+  },
+  {
+  "id":"d13fvnwuf72hovnu4r0w630s",
+  "type":"date input",
+  "options":{
+  "variableId":"vezq7i73c78l3jwq722l4mue2",
+  "labels":{
+  "button":"Agendar"
+  },
+  "isRange":false
+  }
+  },
+  {
+  "id":"hauywaufqwhc3pdxpufhn3l8",
+  "type":"text",
+  "content":{
+  "richText":[
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":"Ok! Agora vou precisar que confirme seu e-mail e número do Whatsapp:"
+  }
+  ]
+  }
+  ]
+  }
+  },
+  {
+  "id":"wyb97ttc8fsb49d5u514ygv0",
+  "type":"email input",
+  "options":{
+  "variableId":"vy0rle862nq5ghg6qv3xvsv7e",
+  "labels":{
+  "placeholder":"Digite aqui o seu e-mail..",
+  "button":"Enviar"
+  },
+  "retryMessageContent":"Este e-mail não parece ser válido. Você pode digitá-lo novamente?"
+  }
+  },
+  {
+  "id":"gkrmagg3iwwggid6fihx3qe0",
+  "type":"phone number input",
+  "options":{
+  "variableId":"vt4wx1br1fin3np54ti0vlu0t",
+  "labels":{
+  "placeholder":"Digite aqui seu whatsapp",
+  "button":"Enviar"
+  },
+  "retryMessageContent":"Este e-mail não parece ser válido. Você pode digitá-lo novamente?",
+  "defaultCountryCode":"BR"
+  }
+  },
+  {
+  "id":"llk7yue7zm54cgtowl018tjk",
+  "type":"text",
+  "content":{
+  "richText":[
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":"Ok, te retornaremos em breve!"
+  }
+  ]
+  }
+  ]
+  }
+  }
+  ]
+  },
+  {
+  "id":"ced4u086xcl376zjjqenzro5",
+  "title":"Falar com atendente",
+  "graphCoordinates":{
+  "x":2082.44,
+  "y":956.3
+  },
+  "blocks":[
+  {
+  "id":"ph1z6z1mwhbt450628bh5xsd",
+  "type":"Chatwoot"
+  },
+  {
+  "id":"qvlnf3iglhfowmjxadzoag4q",
+  "type":"text",
+  "content":{
+  "richText":[
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":"Ok, te retornaremos em alguns minutos."
+  }
+  ]
+  }
+  ]
+  }
+  },
+  {
+  "id":"b6udbe4b3at689li6od7y7m8",
+  "type":"image",
+  "content":{
+  "url":"https://media0.giphy.com/media/3o7ZetIsjtbkgNE1I4/giphy.gif?cid=9355458dk4b1zp1iboso8eqpahx2xcy14hb2xqfh6g6cpwve&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+  }
+  }
+  ]
+  },
+  {
+  "id":"px3lvew55qpcd6mx1oat4vfe",
+  "title":"Falar com atendente",
+  "graphCoordinates":{
+  "x":1240.44,
+  "y":730.3
+  },
+  "blocks":[
+  {
+  "id":"uwdn1qx0yluae8eecqpje9wx",
+  "type":"Chatwoot"
+  },
+  {
+  "id":"lamfisfwzdz4rf4vw8yuuq32",
+  "type":"text",
+  "content":{
+  "richText":[
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":"Ok, te retornaremos em alguns minutos."
+  }
+  ]
+  }
+  ]
+  }
+  },
+  {
+  "id":"jm9tevse61c52f1a7agl35ci",
+  "type":"image",
+  "content":{
+  "url":"https://media0.giphy.com/media/3o7ZetIsjtbkgNE1I4/giphy.gif?cid=9355458dk4b1zp1iboso8eqpahx2xcy14hb2xqfh6g6cpwve&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+  }
+  }
+  ]
+  },
+  {
+  "id":"e4dum2zv2vpxlv41ha84jcyz",
+  "title":"Localizar por ID",
+  "graphCoordinates":{
+  "x":1131.87,
+  "y":1170.73
+  },
+  "blocks":[
+  {
+  "id":"vhxthmo6195z52doty25x4c1",
+  "type":"text",
+  "content":{
+  "richText":[
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":""
+  }
+  ]
+  }
+  ]
+  }
+  },
+  {
+  "id":"yl6yhxzr6ijhfacr5yypbil9",
+  "type":"number input",
+  "options":{
+  "labels":{
+  "placeholder":"Digite aqui o número do protocolo",
+  "button":"Localizar 🔎"
+  }
+  }
+  },
+  {
+  "id":"ha9wvy3bwg1pgk0w3bvdbenx",
+  "type":"image",
+  "content":{
+  "url":"https://media1.giphy.com/media/xT9IgFLfWUZigjoem4/giphy.gif?cid=9355458dhfnaqpahgi8uzy6n2jo8qoe72wrif8t5vwdc6k3g&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+  }
+  },
+  {
+  "id":"cbg2q0pv56tl8nrhoa1j70wm",
+  "type":"Webhook"
+  },
+  {
+  "id":"ao9wcd3u93xfbtkyeepo6l5i",
+  "type":"text",
+  "content":{
+  "richText":[
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":""
+  }
+  ]
+  }
+  ]
+  }
+  }
+  ]
+  },
+  {
+  "id":"vjplf9i1vz4kqfa4ngjdsdm3",
+  "title":"Consultar Tickets do Cliente",
+  "graphCoordinates":{
+  "x":1127.39,
+  "y":1795.6
+  },
+  "blocks":[
+  {
+  "id":"iusaq8xc7z4i4zdj31l2wp5f",
+  "type":"Webhook"
+  },
+  {
+  "id":"hd01uvlb1my0czr916w5b07z",
+  "type":"choice input",
+  "items":[
+  {
+  "id":"g9tgbcl75p4u12n0khwz2lqv",
+  "outgoingEdgeId":"ded4lhp78y0y2qp49ptuqtzj",
+  "content":"{{ticketAberto_1}}",
+  "displayCondition":{
+  "isEnabled":true
+  }
+  },
+  {
+  "id":"bgn0x9xhm93t23w59rj090e5",
+  "outgoingEdgeId":"yiv10tjwqtrfo3dgt6f042bf",
+  "content":"{{ticketAberto_2}}",
+  "displayCondition":{
+  "isEnabled":true,
+  "condition":{
+  "logicalOperator":"AND",
+  "comparisons":[
+  {
+  "id":"j3xk46riboh87nkokwjn1wl7"
+  }
+  ]
+  }
+  }
+  },
+  {
+  "id":"bqd4f2rrz9qcw1ke2dk8k9cz",
+  "outgoingEdgeId":"clmzbpij5y9s56ns0xtdqms1",
+  "content":"{{ticketAberto_3}}"
+  }
+  ]
+  }
+  ]
+  },
+  {
+  "id":"pff396yvpo30f4weicz7zzn0",
+  "title":"Group #23",
+  "graphCoordinates":{
+  "x":1568.22,
+  "y":1974.27
+  },
+  "blocks":[
+  {
+  "id":"rzxr9zn8sfia9jv3kmsh4538",
+  "type":"image",
+  "content":{
+  "url":"https://media1.giphy.com/media/xT9IgFLfWUZigjoem4/giphy.gif?cid=9355458dhfnaqpahgi8uzy6n2jo8qoe72wrif8t5vwdc6k3g&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+  }
+  },
+  {
+  "id":"nc9afzpbaxa78peq9cr4lf0d",
+  "type":"Webhook"
+  },
+  {
+  "id":"joz0ds6mgxpzvyzbtt88k6z8",
+  "type":"text",
+  "content":{
+  "richText":[
+  {
+  "type":"p",
+  "children":[
+  {
+  "text":""
+  }
+  ]
+  }
+  ]
+  }
+  }
+  ]
+  }
+  ],
+  "edges":[
+  {
+  "id":"b3icjvx8emn9c1e8mf5wd1fi",
+  "from":{
+  "eventId":"phb6s71snxkajhtd0yur5ll6"
+  },
+  "to":{
+  "groupId":"u1fbedw66m377lej7wj03fgu"
+  }
+  },
+  {
+  "id":"y0yee07vgt2eb2u5gjjgynql",
+  "from":{
+  "blockId":"t057pzohbdi0d6nkrebhwtdg",
+  "itemId":"teq2gg43iyhgyrzyoxauj2md"
+  },
+  "to":{
+  "groupId":"uvn27r0scu0qfvs59ni78vxq"
+  }
+  },
+  {
+  "id":"p0ul430eew335njlg6ny302e",
+  "from":{
+  "blockId":"t057pzohbdi0d6nkrebhwtdg",
+  "itemId":"xx50fcn0jh1fzvoc0att6z0o"
+  },
+  "to":{
+  "groupId":"az0l90ttqo1bd2vb9ffuie2v"
+  }
+  },
+  {
+  "id":"s56x176lzrptikzsgtidknrv",
+  "from":{
+  "blockId":"t057pzohbdi0d6nkrebhwtdg",
+  "itemId":"o4w8lzlcqksrerr58dcb7xpb"
+  },
+  "to":{
+  "groupId":"e7pakv9pko7u7tgyoh4jdgdd"
+  }
+  },
+  {
+  "id":"crm7eykepwcisofiyk3aqzba",
+  "from":{
+  "blockId":"f3sh1n5dbp3gpr8tjkbhqota",
+  "itemId":"d3zj2ucgo018ruya4k8afm6k"
+  },
+  "to":{
+  "groupId":"yaq75snnditgwm49s9bi4ak9"
+  }
+  },
+  {
+  "id":"namzcwq3xmlv1ufytufbhp8u",
+  "from":{
+  "blockId":"axgqzi72ls4l0st0ir0oxof9"
+  },
+  "to":{
+  "groupId":"a1uvlf7qqslgpgsk2ixbnel9"
+  }
+  },
+  {
+  "id":"ewjbhl2u6ximbu8epsm245r3",
+  "from":{
+  "blockId":"s3w9oq0ovzlcwxem5yjoloq0"
+  },
+  "to":{
+  "groupId":"a1uvlf7qqslgpgsk2ixbnel9",
+  "blockId":"qb5hmuxbhyiihkkcxkjd422u"
+  }
+  },
+  {
+  "id":"h91o6hq6iy385oa16fgrzkym",
+  "from":{
+  "blockId":"qb5hmuxbhyiihkkcxkjd422u",
+  "itemId":"xgs2qnc8szfh6jfbprt9nr77"
+  },
+  "to":{
+  "groupId":"aa59uhj0sqxisx7eql4hz869"
+  }
+  },
+  {
+  "id":"k38iz186birf4tq5y694rxqw",
+  "from":{
+  "blockId":"qb5hmuxbhyiihkkcxkjd422u",
+  "itemId":"qgmsw0815ax6bs38v30s9ej9"
+  },
+  "to":{
+  "groupId":"bdhqr3lgq3avq9zch1m6ebu2",
+  "blockId":"nenevo68liwurxpt52m9n4n5"
+  }
+  },
+  {
+  "id":"vg6a0x9aqtnne952b633u15d",
+  "from":{
+  "blockId":"vbgkclcacota3obpcqlg5xvw",
+  "itemId":"guzofi5tfj4j53svbq18a943"
+  },
+  "to":{
+  "groupId":"rbeqtug0wqwkla1cnqvvq9k3"
+  }
+  },
+  {
+  "id":"x7jc1msral73yyiu45gfr4nt",
+  "from":{
+  "blockId":"vbgkclcacota3obpcqlg5xvw",
+  "itemId":"a0svjt4wkmeb6832ji14ew2s"
+  },
+  "to":{
+  "groupId":"x18furhqhiz7ln2nqwb3pskn",
+  "blockId":"acvtb7ha3hdn8f3s4qgqhf5p"
+  }
+  },
+  {
+  "id":"mb8ofp0i38xjc7evlqtz3aex",
+  "from":{
+  "blockId":"f3sh1n5dbp3gpr8tjkbhqota",
+  "itemId":"mkc15zfpubx1lz7xhe2jqucz"
+  },
+  "to":{
+  "groupId":"zadqxhlez1vi6ijayog9vnfl",
+  "blockId":"mgqglxsumq5xg1z9gpo8y5vo"
+  }
+  },
+  {
+  "id":"n5lk6f0yfnzoija4chfndip7",
+  "from":{
+  "blockId":"f3sh1n5dbp3gpr8tjkbhqota",
+  "itemId":"it59830m1esbs5fx2lxcqdfc"
+  },
+  "to":{
+  "groupId":"kl8xqldodnt5u0c76eljpwwp"
+  }
+  },
+  {
+  "id":"n396m4sa43plgqsxrae09i12",
+  "from":{
+  "blockId":"f3sh1n5dbp3gpr8tjkbhqota",
+  "itemId":"ddwzkqtxsbrkavzat2diabvr"
+  },
+  "to":{
+  "groupId":"m7knsjeezkrlg6fyypfc64bq",
+  "blockId":"w5uym6mo5zatko36gflqpxiz"
+  }
+  },
+  {
+  "id":"gey1l932vvpi5uj2k427anhl",
+  "from":{
+  "blockId":"e45qfg1nc7iv9iik0afgd6yg"
+  },
+  "to":{
+  "groupId":"lfp9ehso5qx7xbwli0zd26jw",
+  "blockId":"jhfeqcv16pvjtrrzc85qp5l6"
+  }
+  },
+  {
+  "id":"wzbh3n6na2ppdozgia6wd9k6",
+  "from":{
+  "blockId":"rfyuaajvqygd1ikowx3g5zph",
+  "itemId":"kn83j6ka7l4342jl9p7agugv"
+  },
+  "to":{
+  "groupId":"ld31s7yuj3pju5a3vx0pbb23"
+  }
+  },
+  {
+  "id":"y7kxxdbphfnvky9pgfeem082",
+  "from":{
+  "blockId":"rfyuaajvqygd1ikowx3g5zph",
+  "itemId":"n1ozguwaw0s67bastnhvik3g"
+  },
+  "to":{
+  "groupId":"btiprbzx9j7j0p7xb5raijxt",
+  "blockId":"ivb8oxcrntw8ohvmjc8eh7uw"
+  }
+  },
+  {
+  "id":"kic5a6qs9j3tpl48c37cnzdc",
+  "from":{
+  "blockId":"f3sh1n5dbp3gpr8tjkbhqota",
+  "itemId":"plzmfezrqgnkc700ry4zulr8"
+  },
+  "to":{
+  "groupId":"aug75s7bjv86s8qvvu3blovh"
+  }
+  },
+  {
+  "id":"r0ox13peie0zflvk7cg86j8z",
+  "from":{
+  "blockId":"t057pzohbdi0d6nkrebhwtdg",
+  "itemId":"hphje5d48d7us9f2w9vevwm6"
+  },
+  "to":{
+  "groupId":"aug75s7bjv86s8qvvu3blovh",
+  "blockId":"xupns2cyg53cfr0io7e5k44y"
+  }
+  },
+  {
+  "id":"b6419lrugwhkqg6itaotjvcf",
+  "from":{
+  "blockId":"tjbtx9f7hc9fnhiemazmu4wv",
+  "itemId":"wvd3glrmdco1kxibweoozvm6"
+  },
+  "to":{
+  "groupId":"ced4u086xcl376zjjqenzro5",
+  "blockId":"ph1z6z1mwhbt450628bh5xsd"
+  }
+  },
+  {
+  "id":"qbq6uma6t2s6z8xbc0qrobq8",
+  "from":{
+  "blockId":"tjbtx9f7hc9fnhiemazmu4wv",
+  "itemId":"q8jhq3tjzr7fbnuqduszfs2s"
+  },
+  "to":{
+  "groupId":"a1dwnmpzev1s12aabu4bnxz3"
+  }
+  },
+  {
+  "id":"vgeyq7jczg2j73qzvuc06xpl",
+  "from":{
+  "blockId":"r0f4dmqwgxjmt9txif4a3kmb"
+  },
+  "to":{
+  "groupId":"px3lvew55qpcd6mx1oat4vfe"
+  }
+  },
+  {
+  "id":"zo03epwd779u8350h30z18ph",
+  "from":{
+  "blockId":"zt6fwltjk3cj0j5ywe6r482f",
+  "itemId":"ca31q29ugxgql3tis9sudven"
+  },
+  "to":{
+  "groupId":"e4dum2zv2vpxlv41ha84jcyz"
+  }
+  },
+  {
+  "id":"lzj1mn3ke9d82mwu6gmujqkl",
+  "from":{
+  "blockId":"zt6fwltjk3cj0j5ywe6r482f",
+  "itemId":"ikf3klzhcvtloec0b65vygjk"
+  },
+  "to":{
+  "groupId":"vjplf9i1vz4kqfa4ngjdsdm3",
+  "blockId":"iusaq8xc7z4i4zdj31l2wp5f"
+  }
+  },
+  {
+  "id":"clmzbpij5y9s56ns0xtdqms1",
+  "from":{
+  "blockId":"hd01uvlb1my0czr916w5b07z",
+  "itemId":"bqd4f2rrz9qcw1ke2dk8k9cz"
+  },
+  "to":{
+  "groupId":"pff396yvpo30f4weicz7zzn0",
+  "blockId":"rzxr9zn8sfia9jv3kmsh4538"
+  }
+  },
+  {
+  "id":"ded4lhp78y0y2qp49ptuqtzj",
+  "from":{
+  "blockId":"hd01uvlb1my0czr916w5b07z",
+  "itemId":"g9tgbcl75p4u12n0khwz2lqv"
+  },
+  "to":{
+  "groupId":"pff396yvpo30f4weicz7zzn0"
+  }
+  },
+  {
+  "id":"yiv10tjwqtrfo3dgt6f042bf",
+  "from":{
+  "blockId":"hd01uvlb1my0czr916w5b07z",
+  "itemId":"bgn0x9xhm93t23w59rj090e5"
+  },
+  "to":{
+  "groupId":"pff396yvpo30f4weicz7zzn0",
+  "blockId":"rzxr9zn8sfia9jv3kmsh4538"
+  }
+  }
+  ],
+  "variables":[
+  {
+  "id":"vdzrx77w6zj9zf5mzv7qcdtyi",
+  "name":"Nome da Empresa"
+  },
+  {
+  "id":"vwcf1fvkdmm11d9myovwg82sw",
+  "name":"Nome do Bot"
+  },
+  {
+  "id":"vc8yyakg53olhricuumn97bdk",
+  "name":"Dúvida"
+  },
+  {
+  "id":"vy0rle862nq5ghg6qv3xvsv7e",
+  "name":"E-mail"
+  },
+  {
+  "id":"vxmi79412woun6onlsg3j8wd2",
+  "name":"Busca-tutorial"
+  },
+  {
+  "id":"vt4wx1br1fin3np54ti0vlu0t",
+  "name":"Whatsapp"
+  },
+  {
+  "id":"vezq7i73c78l3jwq722l4mue2",
+  "name":"Data-treinamento"
+  },
+  {
+  "id":"vkibcnsf1zh8819gelq5jaump",
+  "name":"Bug-descrição"
+  },
+  {
+  "id":"vgvaz6t15e05c0v2m7l6kcelo",
+  "name":"Bug-print"
+  }
+  ],
+  "theme":{
+  "general":{
+  "font":"",
+  "background":{
+  "type":"Color"
+  }
+  },
+  "chat":{
+  "hostAvatar":{
+  "isEnabled":true,
+  "url":"https://media.discordapp.net/attachments/915691669234548746/1182547715821928578/custom_avatar-1689595567.png?ex=65a0c7e2&is=658e52e2&hm=1ea846a690273a7e1e268701554b495fec04731f08f434251f61f8549f2106b7&=&format=webp&quality=lossless"
+  },
+  "guestAvatar":{
+  "isEnabled":false
+  },
+  "guestBubbles":{
+  "backgroundColor":"#0567C1",
+  "color":"#FFFFFF"
+  },
+  "buttons":{
+  "backgroundColor":"#E6F0FE",
+  "color":"#04153e"
+  }
+  }
+  },
+  "selectedThemeTemplateId":null,
+  "settings":{
+  "general":{
+  "isBrandingEnabled":true,
+  "isInputPrefillEnabled":true,
+  "rememberUser":{
+  "isEnabled":true,
+  "storage":"session"
+  }
+  },
+  "typingEmulation":{
+  "enabled":true,
+  "speed":300
+  }
+  },
+  "createdAt":"2023-12-29T07:23:44.807Z",
+  "updatedAt":"2023-12-29T09:28:56.365Z",
+  "icon":"📞",
+  "folderId":"clqqaqvpi0001jy08su0jved4",
+  "publicId":"customer-support-lrokfzy",
+  "customDomain":null,
+  "workspaceId":"clqqaifj00000jp08ndmnfqca",
+  "resultsTablePreferences":null,
+  "isArchived":false,
+  "isClosed":false,
+  "whatsAppCredentialsId":null,
+  "riskLevel":null
+  }

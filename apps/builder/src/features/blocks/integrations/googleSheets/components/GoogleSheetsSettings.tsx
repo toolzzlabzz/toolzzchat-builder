@@ -22,10 +22,11 @@ import {
 import React, { useMemo } from 'react'
 import { isDefined } from '@typebot.io/lib'
 import { SheetsDropdown } from './SheetsDropdown'
+import { SpreadsheetsDropdown } from './SpreadsheetDropdown'
 import { CellWithValueStack } from './CellWithValueStack'
 import { CellWithVariableIdStack } from './CellWithVariableIdStack'
 import { GoogleSheetConnectModal } from './GoogleSheetsConnectModal'
-import { TableList } from '@/components/TableList'
+import { TableListItemProps, TableList } from '@/components/TableList'
 import { CredentialsDropdown } from '@/features/credentials/components/CredentialsDropdown'
 import { RowsFilterTableList } from './RowsFilterTableList'
 import { useWorkspace } from '@/features/workspace/WorkspaceProvider'
@@ -36,7 +37,6 @@ import {
   defaultGoogleSheetsOptions,
   totalRowsToExtractOptions,
 } from '@typebot.io/schemas/features/blocks/integrations/googleSheets/constants'
-import { GoogleSpreadsheetPicker } from './GoogleSpreadsheetPicker'
 
 type Props = {
   options: GoogleSheetsBlock['options']
@@ -50,7 +50,6 @@ export const GoogleSheetsSettings = ({
   blockId,
 }: Props) => {
   const { workspace } = useWorkspace()
-  const { typebot } = useTypebot()
   const { save } = useTypebot()
   const { sheets, isLoading } = useSheets({
     credentialsId: options?.credentialsId,
@@ -96,20 +95,16 @@ export const GoogleSheetsSettings = ({
           credentialsName="Sheets account"
         />
       )}
-      {typebot && (
-        <GoogleSheetConnectModal
-          typebotId={typebot.id}
-          blockId={blockId}
-          isOpen={isOpen}
-          onClose={onClose}
-        />
-      )}
-      {options?.credentialsId && workspace && (
-        <GoogleSpreadsheetPicker
-          spreadsheetId={options.spreadsheetId}
-          workspaceId={workspace.id}
+      <GoogleSheetConnectModal
+        blockId={blockId}
+        isOpen={isOpen}
+        onClose={onClose}
+      />
+      {options?.credentialsId && (
+        <SpreadsheetsDropdown
           credentialsId={options.credentialsId}
-          onSpreadsheetIdSelect={handleSpreadsheetIdChange}
+          spreadsheetId={options.spreadsheetId}
+          onSelectSpreadsheetId={handleSpreadsheetIdChange}
         />
       )}
       {options?.spreadsheetId && options.credentialsId && (
@@ -182,22 +177,33 @@ const ActionOptions = ({
       totalRowsToExtract,
     } as GoogleSheetsBlock['options'])
 
+  const UpdatingCellItem = useMemo(
+    () =>
+      function Component(props: TableListItemProps<Cell>) {
+        return <CellWithValueStack {...props} columns={sheet?.columns ?? []} />
+      },
+    [sheet?.columns]
+  )
+
+  const ExtractingCellItem = useMemo(
+    () =>
+      function Component(props: TableListItemProps<ExtractingCell>) {
+        return (
+          <CellWithVariableIdStack {...props} columns={sheet?.columns ?? []} />
+        )
+      },
+    [sheet?.columns]
+  )
+
   switch (options.action) {
     case GoogleSheetsAction.INSERT_ROW:
       return (
         <TableList<Cell>
           initialItems={options.cellsToInsert}
           onItemsChange={handleInsertColumnsChange}
+          Item={UpdatingCellItem}
           addLabel="Add a value"
-        >
-          {({ item, onItemChange }) => (
-            <CellWithValueStack
-              item={item}
-              onItemChange={onItemChange}
-              columns={sheet?.columns ?? []}
-            />
-          )}
-        </TableList>
+        />
       )
     case GoogleSheetsAction.UPDATE_ROW:
       return (
@@ -230,16 +236,9 @@ const ActionOptions = ({
               <TableList<Cell>
                 initialItems={options.cellsToUpsert}
                 onItemsChange={handleUpsertColumnsChange}
+                Item={UpdatingCellItem}
                 addLabel="Add a value"
-              >
-                {({ item, onItemChange }) => (
-                  <CellWithValueStack
-                    item={item}
-                    onItemChange={onItemChange}
-                    columns={sheet?.columns ?? []}
-                  />
-                )}
-              </TableList>
+              />
             </AccordionPanel>
           </AccordionItem>
         </Accordion>
@@ -287,17 +286,10 @@ const ActionOptions = ({
                 <TableList<ExtractingCell>
                   initialItems={options.cellsToExtract}
                   onItemsChange={handleExtractingCellsChange}
+                  Item={ExtractingCellItem}
                   addLabel="Add a value"
                   hasDefaultItem
-                >
-                  {({ item, onItemChange }) => (
-                    <CellWithVariableIdStack
-                      item={item}
-                      onItemChange={onItemChange}
-                      columns={sheet?.columns ?? []}
-                    />
-                  )}
-                </TableList>
+                />
               </AccordionPanel>
             </AccordionItem>
           </Stack>

@@ -1,6 +1,6 @@
 import { DropdownList } from '@/components/DropdownList'
 import { SwitchWithRelatedSettings } from '@/components/SwitchWithRelatedSettings'
-import { TableList } from '@/components/TableList'
+import { TableList, TableListItemProps } from '@/components/TableList'
 import { TextLink } from '@/components/TextLink'
 import { TextInput } from '@/components/inputs'
 import { CodeEditor } from '@/components/inputs/CodeEditor'
@@ -14,7 +14,7 @@ import {
   pixelEventTypes,
   pixelObjectProperties,
 } from '@typebot.io/schemas/features/blocks/integrations/pixel/constants'
-import React from 'react'
+import React, { useMemo } from 'react'
 
 const pixelReferenceUrl =
   'https://developers.facebook.com/docs/meta-pixel/reference#standard-events'
@@ -69,6 +69,14 @@ export const PixelSettings = ({ options, onOptionsChange }: Props) => {
     })
   }
 
+  const Item = useMemo(
+    () =>
+      function Component(props: TableListItemProps<Item>) {
+        return <ParamItem {...props} eventType={options?.eventType} />
+      },
+    [options?.eventType]
+  )
+
   return (
     <Stack spacing={4}>
       <TextInput
@@ -115,13 +123,10 @@ export const PixelSettings = ({ options, onOptionsChange }: Props) => {
             ).length > 0) && (
             <TableList
               initialItems={options?.params ?? []}
+              Item={Item}
               onItemsChange={updateParams}
               addLabel="Add parameter"
-            >
-              {(props) => (
-                <ParamItem {...props} eventType={options?.eventType} />
-              )}
-            </TableList>
+            />
           )}
       </SwitchWithRelatedSettings>
     </Stack>

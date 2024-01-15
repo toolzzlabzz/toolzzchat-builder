@@ -19,7 +19,7 @@ export const Seo = ({
   currentUrl?: string
   imagePreviewUrl?: string
 }) => {
-  const formattedTitle = `${title} | Toolzz Bots`
+  const formattedTitle = `${title} | Typebot`
 
   return (
     <Head>

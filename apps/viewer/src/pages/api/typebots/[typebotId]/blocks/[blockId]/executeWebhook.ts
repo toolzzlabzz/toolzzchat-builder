@@ -1,4 +1,5 @@
 import {
+  KeyValue,
   PublicTypebot,
   ResultValues,
   Typebot,
@@ -9,13 +10,7 @@ import {
 } from '@typebot.io/schemas'
 import { NextApiRequest, NextApiResponse } from 'next'
 import got, { Method, Headers, HTTPError } from 'got'
-import {
-  byId,
-  isEmpty,
-  isNotDefined,
-  isWebhookBlock,
-  omit,
-} from '@typebot.io/lib'
+import { byId, isEmpty, isWebhookBlock, omit } from '@typebot.io/lib'
 import { parseAnswers } from '@typebot.io/lib/results'
 import { initMiddleware, methodNotAllowed, notFound } from '@typebot.io/lib/api'
 import { stringify } from 'qs'
@@ -23,22 +18,15 @@ import Cors from 'cors'
 import prisma from '@typebot.io/lib/prisma'
 import { fetchLinkedTypebots } from '@typebot.io/bot-engine/blocks/logic/typebotLink/fetchLinkedTypebots'
 import { getPreviouslyLinkedTypebots } from '@typebot.io/bot-engine/blocks/logic/typebotLink/getPreviouslyLinkedTypebots'
-import { parseVariables } from '@typebot.io/variables/parseVariables'
+import { parseVariables } from '@typebot.io/bot-engine/variables/parseVariables'
 import { saveErrorLog } from '@typebot.io/bot-engine/logs/saveErrorLog'
 import { saveSuccessLog } from '@typebot.io/bot-engine/logs/saveSuccessLog'
 import { parseSampleResult } from '@typebot.io/bot-engine/blocks/integrations/webhook/parseSampleResult'
 import {
   HttpMethod,
-  defaultTimeout,
   defaultWebhookAttributes,
-  maxTimeout,
 } from '@typebot.io/schemas/features/blocks/integrations/webhook/constants'
 import { getBlockById } from '@typebot.io/lib/getBlockById'
-import {
-  convertKeyValueTableToObject,
-  longReqTimeoutWhitelist,
-} from '@typebot.io/bot-engine/blocks/integrations/webhook/executeWebhookBlock'
-import { env } from '@typebot.io/env'
 
 const cors = initMiddleware(Cors())
 
@@ -85,7 +73,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       resultId,
       parentTypebotIds,
       isCustomBody: block.options?.isCustomBody,
-      timeout: block.options?.timeout,
     })
     return res.status(200).send(result)
   }
@@ -104,7 +91,6 @@ export const executeWebhook =
     resultId,
     parentTypebotIds = [],
     isCustomBody,
-    timeout,
   }: {
     webhook: Webhook
     variables: Variable[]
@@ -113,7 +99,6 @@ export const executeWebhook =
     resultId?: string
     parentTypebotIds: string[]
     isCustomBody?: boolean
-    timeout?: number
   }): Promise<WebhookResponse> => {
     if (!webhook.url)
       return {
@@ -171,16 +156,10 @@ export const executeWebhook =
           )
         : { data: undefined, isJson: false }
 
-    const url = parseVariables(variables)(
-      webhook.url + (queryParams !== '' ? `?${queryParams}` : '')
-    )
-
-    const isLongRequest = longReqTimeoutWhitelist.some((whiteListedUrl) =>
-      url?.includes(whiteListedUrl)
-    )
-
     const request = {
-      url,
+      url: parseVariables(variables)(
+        webhook.url + (queryParams !== '' ? `?${queryParams}` : '')
+      ),
       method: (webhook.method ?? defaultWebhookAttributes.method) as Method,
       headers: headers ?? {},
       ...basicAuth,
@@ -193,15 +172,6 @@ export const executeWebhook =
           ? body
           : undefined,
       body: body && !isJson ? body : undefined,
-      timeout: {
-        response: isNotDefined(env.CHAT_API_TIMEOUT)
-          ? undefined
-          : timeout && timeout !== defaultTimeout
-          ? Math.min(timeout, maxTimeout) * 1000
-          : isLongRequest
-          ? maxTimeout * 1000
-          : defaultTimeout * 1000,
-      },
     }
     try {
       const response = await got(request.url, omit(request, 'url'))
@@ -295,6 +265,20 @@ const getBodyContent =
         )
       : body ?? undefined
   }
+
+const convertKeyValueTableToObject = (
+  keyValues: KeyValue[] | undefined,
+  variables: Variable[]
+) => {
+  if (!keyValues) return
+  return keyValues.reduce((object, item) => {
+    if (!item.key) return {}
+    return {
+      ...object,
+      [item.key]: parseVariables(variables)(item.value ?? ''),
+    }
+  }, {})
+}
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const safeJsonParse = (json: string): { data: any; isJson: boolean } => {

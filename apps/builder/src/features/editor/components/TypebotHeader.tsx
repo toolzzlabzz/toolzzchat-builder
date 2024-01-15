@@ -116,7 +116,7 @@ export const TypebotHeader = () => {
           variant={router.pathname.includes('/edit') ? 'outline' : 'ghost'}
           size="sm"
         >
-          {t('editor.header.flowButton.label')}
+          {t('editor.headers.flowButton.label')}
         </Button>
         <Button
           as={Link}
@@ -125,7 +125,7 @@ export const TypebotHeader = () => {
           variant={router.pathname.endsWith('theme') ? 'outline' : 'ghost'}
           size="sm"
         >
-          {t('editor.header.themeButton.label')}
+          {t('editor.headers.themeButton.label')}
         </Button>
         <Button
           as={Link}
@@ -134,7 +134,7 @@ export const TypebotHeader = () => {
           variant={router.pathname.endsWith('settings') ? 'outline' : 'ghost'}
           size="sm"
         >
-          {t('editor.header.settingsButton.label')}
+          {t('editor.headers.settingsButton.label')}
         </Button>
         <Button
           as={Link}
@@ -143,7 +143,7 @@ export const TypebotHeader = () => {
           variant={router.pathname.endsWith('share') ? 'outline' : 'ghost'}
           size="sm"
         >
-          {t('share.button.label')}
+          {t('editor.headers.shareButton.label')}
         </Button>
         {isDefined(publishedTypebot) && (
           <Button
@@ -153,7 +153,7 @@ export const TypebotHeader = () => {
             variant={router.pathname.includes('results') ? 'outline' : 'ghost'}
             size="sm"
           >
-            {t('editor.header.resultsButton.label')}
+            {t('editor.headers.resultsButton.label')}
           </Button>
         )}
       </HStack>
@@ -211,11 +211,7 @@ export const TypebotHeader = () => {
           {currentUserMode === 'write' && (
             <HStack>
               <Tooltip
-                label={
-                  isUndoShortcutTooltipOpen
-                    ? t('editor.header.undo.tooltip.label')
-                    : t('editor.header.undoButton.label')
-                }
+                label={isUndoShortcutTooltipOpen ? 'Changes reverted!' : 'Undo'}
                 isOpen={isUndoShortcutTooltipOpen ? true : undefined}
                 hasArrow={isUndoShortcutTooltipOpen}
               >
@@ -223,18 +219,18 @@ export const TypebotHeader = () => {
                   display={['none', 'flex']}
                   icon={<UndoIcon />}
                   size="sm"
-                  aria-label={t('editor.header.undoButton.label')}
+                  aria-label="Undo"
                   onClick={undo}
                   isDisabled={!canUndo}
                 />
               </Tooltip>
 
-              <Tooltip label={t('editor.header.redoButton.label')}>
+              <Tooltip label="Redo">
                 <IconButton
                   display={['none', 'flex']}
                   icon={<RedoIcon />}
                   size="sm"
-                  aria-label={t('editor.header.redoButton.label')}
+                  aria-label="Redo"
                   onClick={redo}
                   isDisabled={!canRedo}
                 />
@@ -242,14 +238,14 @@ export const TypebotHeader = () => {
             </HStack>
           )}
           <Button leftIcon={<BuoyIcon />} onClick={handleHelpClick} size="sm">
-            {t('editor.header.helpButton.label')}
+            {t('editor.headers.helpButton.label')}
           </Button>
         </HStack>
         {isSavingLoading && (
           <HStack>
             <Spinner speed="0.7s" size="sm" color="gray.400" />
             <Text fontSize="sm" color="gray.400">
-              {t('editor.header.savingSpinner.label')}
+              {t('editor.headers.savingSpinner.label')}
             </Text>
           </HStack>
         )}
@@ -267,7 +263,7 @@ export const TypebotHeader = () => {
             leftIcon={<PlayIcon />}
             size="sm"
           >
-            {t('editor.header.previewButton.label')}
+            {t('editor.headers.previewButton.label')}
           </Button>
         )}
         {currentUserMode === 'write' && <PublishButton size="sm" />}

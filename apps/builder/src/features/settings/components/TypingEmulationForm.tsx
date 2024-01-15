@@ -46,7 +46,6 @@ export const TypingEmulationForm = ({ typingEmulation, onUpdate }: Props) => {
             withVariableButton={false}
             maxW="100px"
             step={30}
-            direction="row"
           />
           <NumberInput
             label="Max delay (in seconds):"
@@ -59,7 +58,6 @@ export const TypingEmulationForm = ({ typingEmulation, onUpdate }: Props) => {
             withVariableButton={false}
             maxW="100px"
             step={0.1}
-            direction="row"
           />
         </Stack>
       )}

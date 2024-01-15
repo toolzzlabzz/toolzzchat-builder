@@ -14,15 +14,12 @@ import { byId, isDefined, isEmpty, isNotDefined, omit } from '@typebot.io/lib'
 import { getDefinedVariables, parseAnswers } from '@typebot.io/lib/results'
 import { decrypt } from '@typebot.io/lib/api/encryption/decrypt'
 import { defaultFrom, defaultTransportOptions } from './constants'
-import { findUniqueVariableValue } from '@typebot.io/variables/findUniqueVariableValue'
+import { findUniqueVariableValue } from '../../../variables/findUniqueVariableValue'
 import { env } from '@typebot.io/env'
 import { ExecuteIntegrationResponse } from '../../../types'
 import prisma from '@typebot.io/lib/prisma'
-import { parseVariables } from '@typebot.io/variables/parseVariables'
+import { parseVariables } from '../../../variables/parseVariables'
 import { defaultSendEmailOptions } from '@typebot.io/schemas/features/blocks/integrations/sendEmail/constants'
-
-export const sendEmailSuccessDescription = 'Email successfully sent'
-export const sendEmailErrorDescription = 'Email not sent'
 
 export const executeSendEmailBlock = async (
   state: SessionState,
@@ -146,7 +143,7 @@ const sendEmail = async ({
   if (!emailBody) {
     logs.push({
       status: 'error',
-      description: sendEmailErrorDescription,
+      description: 'Email not sent',
       details: {
         error: 'No email body found',
         transportConfig,
@@ -180,7 +177,7 @@ const sendEmail = async ({
     await transporter.sendMail(email)
     logs.push({
       status: 'success',
-      description: sendEmailSuccessDescription,
+      description: 'Email successfully sent',
       details: {
         transportConfig: {
           ...transportConfig,
@@ -192,7 +189,7 @@ const sendEmail = async ({
   } catch (err) {
     logs.push({
       status: 'error',
-      description: sendEmailErrorDescription,
+      description: 'Email not sent',
       details: {
         error: err instanceof Error ? err.toString() : err,
         transportConfig: {

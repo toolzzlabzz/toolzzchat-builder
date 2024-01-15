@@ -2,8 +2,8 @@ import { byId, isNotEmpty } from '@typebot.io/lib'
 import { Variable, VariableWithValue } from '@typebot.io/schemas'
 import { ChatCompletionOpenAIOptions } from '@typebot.io/schemas/features/blocks/integrations/openai'
 import type { OpenAI } from 'openai'
-import { parseVariables } from '@typebot.io/variables/parseVariables'
-import { transformVariablesToList } from '@typebot.io/variables/transformVariablesToList'
+import { parseVariables } from '../../../variables/parseVariables'
+import { transformStringVariablesToList } from '../../../variables/transformVariablesToList'
 
 export const parseChatCompletionMessages =
   (variables: Variable[]) =>
@@ -24,7 +24,7 @@ export const parseChatCompletionMessages =
           )
             return
           variablesTransformedToList.push(
-            ...transformVariablesToList(variables)([
+            ...transformStringVariablesToList(variables)([
               message.content.assistantMessagesVariableId,
               message.content.userMessagesVariableId,
             ])

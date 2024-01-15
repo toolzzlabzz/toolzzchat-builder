@@ -8,7 +8,6 @@ import '@/assets/styles/routerProgressBar.css'
 import '@/assets/styles/plate.css'
 import '@/assets/styles/resultsTable.css'
 import '@/assets/styles/custom.css'
-import '@/assets/styles/md.css'
 import { UserProvider } from '@/features/account/UserProvider'
 import { useRouter } from 'next/router'
 import { SupportBubble } from '@/components/SupportBubble'
@@ -28,26 +27,22 @@ initPostHogIfEnabled()
 const { ToastContainer, toast } = createStandaloneToast(customTheme)
 
 const App = ({ Component, pageProps }: AppProps) => {
-  const router = useRouter()
-  const ssrTolgee = useTolgeeSSR(tolgee, router.locale)
-
   useRouterProgressBar()
+  const { query, pathname, locale } = useRouter()
+  const ssrTolgee = useTolgeeSSR(tolgee, locale)
 
   useEffect(() => {
-    if (
-      router.pathname.endsWith('/edit') ||
-      router.pathname.endsWith('/analytics')
-    ) {
+    if (pathname.endsWith('/edit') || pathname.endsWith('/analytics')) {
       document.body.style.overflow = 'hidden'
       document.body.classList.add('disable-scroll-x-behavior')
     } else {
       document.body.style.overflow = 'auto'
       document.body.classList.remove('disable-scroll-x-behavior')
     }
-  }, [router.pathname])
+  }, [pathname])
 
   useEffect(() => {
-    const newPlan = router.query.stripe?.toString()
+    const newPlan = query.stripe?.toString()
     if (newPlan === Plan.STARTER || newPlan === Plan.PRO)
       toast({
         position: 'top-right',
@@ -55,29 +50,31 @@ const App = ({ Component, pageProps }: AppProps) => {
         title: 'Upgrade success!',
         description: `Workspace upgraded to ${toTitleCase(newPlan)} 🎉`,
       })
-  }, [router.query.stripe])
+  }, [query.stripe])
 
-  const typebotId = router.query.typebotId?.toString()
+  const typebotId = query.typebotId?.toString()
 
   return (
-    <TolgeeProvider tolgee={ssrTolgee}>
+    <>
       <ToastContainer />
-      <ChakraProvider theme={customTheme}>
-        <SessionProvider session={pageProps.session}>
-          <UserProvider>
-            <TypebotProvider typebotId={typebotId}>
-              <WorkspaceProvider typebotId={typebotId}>
-                <Component {...pageProps} />
-                {!router.pathname.endsWith('edit') && isCloudProdInstance() && (
-                  <SupportBubble />
-                )}
-                <NewVersionPopup />
-              </WorkspaceProvider>
-            </TypebotProvider>
-          </UserProvider>
-        </SessionProvider>
-      </ChakraProvider>
-    </TolgeeProvider>
+      <TolgeeProvider tolgee={ssrTolgee}>
+        <ChakraProvider theme={customTheme}>
+          <SessionProvider session={pageProps.session}>
+            <UserProvider>
+              <TypebotProvider typebotId={typebotId}>
+                <WorkspaceProvider typebotId={typebotId}>
+                  <Component {...pageProps} />
+                  {!pathname.endsWith('edit') && isCloudProdInstance() && (
+                    <SupportBubble />
+                  )}
+                  <NewVersionPopup />
+                </WorkspaceProvider>
+              </TypebotProvider>
+            </UserProvider>
+          </SessionProvider>
+        </ChakraProvider>
+      </TolgeeProvider>
+    </>
   )
 }
 
