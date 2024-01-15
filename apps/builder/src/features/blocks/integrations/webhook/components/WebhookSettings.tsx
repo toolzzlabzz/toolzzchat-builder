@@ -24,7 +24,7 @@ export const WebhookSettings = ({
   return (
     <Stack spacing={4}>
       <TextInput
-        placeholder="Paste webhook URL..."
+        placeholder="Cole a URL do webhook..."
         defaultValue={options?.webhook?.url}
         onChange={updateUrl}
       />

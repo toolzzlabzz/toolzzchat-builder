@@ -25,11 +25,7 @@ export type StartElementId = z.infer<typeof startElementIdSchema>
 
 const startParamsSchema = z
   .object({
-    typebot: startTypebotSchema
-      .or(z.string())
-      .describe(
-        'Either a Typebot ID or a Typebot object. If you provide a Typebot object, it will be executed in preview mode. ([How can I find my typebot ID?](https://docs.typebot.io/api#how-to-find-my-typebotid)).'
-      ),
+    typebot: startTypebotSchema.or(z.string()),
     isPreview: z
       .boolean()
       .optional()
@@ -41,12 +37,7 @@ const startParamsSchema = z
       .optional()
       .describe("Provide it if you'd like to overwrite an existing result."),
 
-    prefilledVariables: z
-      .record(z.unknown())
-      .optional()
-      .describe(
-        '[More info about prefilled variables.](https://docs.typebot.io/editor/variables#prefilled-variables)'
-      ),
+    prefilledVariables: z.record(z.unknown()).optional(),
     isStreamEnabled: z
       .boolean()
       .optional()

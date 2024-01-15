@@ -27,10 +27,10 @@ export const MakeComSettings = ({
       <Alert status={url ? 'success' : 'info'} rounded="md">
         <AlertIcon />
         {url ? (
-          <>Your scenario is correctly configured 🚀</>
+          <>Seu cenário está configurado corretamente 🚀</>
         ) : (
           <Stack>
-            <Text>Head up to Toolzz Connect to configure this block:</Text>
+            <Text>Dirija-se ao Toolzz Connect para configurar este bloco:</Text>
             <Button
               as={Link}
               href="https://www.make.com/en/integrations/typebot"

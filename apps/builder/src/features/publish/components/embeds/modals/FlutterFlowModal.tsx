@@ -37,17 +37,15 @@ export const FlutterFlowModal = ({
         <ModalCloseButton />
         <ModalBody>
           {!isPublished && (
-            <AlertInfo mb="4">You need to publish your bot first.</AlertInfo>
+            <AlertInfo mb="4">Você precisa publicar seu bot primeiro</AlertInfo>
           )}
           <OrderedList spacing={4}>
             <ListItem>
-              Insert a <Code>WebView</Code> element
+              Insira um elemento <Code>WebView</Code>
             </ListItem>
             <ListItem>
               <Stack>
-                <Text>
-                  As the <Code>Webview URL</Code>, paste your typebot URL
-                </Text>
+                <Text>Como URL do Webview, cole o seu URL do Bot</Text>
                 <InputGroup size="sm">
                   <Input
                     type={'text'}

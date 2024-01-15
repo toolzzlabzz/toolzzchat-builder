@@ -28,7 +28,7 @@ export const PreviewMessage = (props: PreviewMessageProps) => {
       class={
         'fixed max-w-[256px] rounded-md duration-200 flex items-center gap-4 shadow-md animate-fade-in cursor-pointer hover:shadow-lg p-4' +
         (props.buttonSize === 'large' ? ' bottom-24' : ' bottom-20') +
-        (props.placement === 'left' ? ' left-5' : ' right-5')
+        (props.placement === 'esquerda' ? ' left-5' : ' right-5')
       }
       style={{
         'background-color':

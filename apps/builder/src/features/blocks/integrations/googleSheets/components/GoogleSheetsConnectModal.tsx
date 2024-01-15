@@ -39,13 +39,13 @@ export const GoogleSheetConnectModal = ({
         <ModalCloseButton />
         <ModalBody as={Stack} spacing="6">
           <AlertInfo>
-            Typebot needs access to Google Drive in order to list all your
-            spreadsheets. It also needs access to your spreadsheets in order to
-            fetch or inject data in it.
+            Toolz Bots precisa de acesso ao Google Drive para listar todas as
+            suas planilhas. Também precisa de acesso às suas planilhas para
+            buscar ou inserir dados nelas.
           </AlertInfo>
           <Text>
-            Make sure to check all the permissions so that the integration works
-            as expected:
+            Certifique-se de marcar todas as permissões para que a integração
+            funcione como esperado:
           </Text>
           <Image
             src="/images/google-spreadsheets-scopes.jpeg"
@@ -66,7 +66,7 @@ export const GoogleSheetConnectModal = ({
               )}
               mx="auto"
             >
-              Continue with Google
+              Continuar com Google
             </Button>
           </Flex>
         </ModalBody>

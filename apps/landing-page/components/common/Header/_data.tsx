@@ -18,7 +18,7 @@ export const links = [
         label: 'Documentation',
         description:
           "Everything you need to know about how to use Typebot's builder",
-        href: 'https://docs.typebot.io',
+        href: '',
         icon: <DocIcon />,
       },
       {

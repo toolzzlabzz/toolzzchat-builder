@@ -13,7 +13,7 @@ export const defaultSettings = {
   typingEmulation: { enabled: true, speed: 300, maxDelay: 1.5 },
   metadata: {
     description:
-      'Build beautiful conversational forms and embed them directly in your applications without a line of code. Triple your response rate and collect answers that has more value compared to a traditional form.',
+      'Crie formulários de conversação bonitos e incorpore-os diretamente em suas aplicações sem escrever uma linha de código. Triplique sua taxa de resposta e colete respostas que têm mais valor em comparação com um formulário tradicional.',
     favIconUrl: (viewerBaseUrl: string) => viewerBaseUrl + '/favicon.png',
     imageUrl: (viewerBaseUrl: string) => viewerBaseUrl + '/site-preview.png',
   },

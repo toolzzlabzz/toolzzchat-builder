@@ -17,7 +17,7 @@ Typebot is an open-source chatbot builder. It allows you to create advanced chat
 <a href="https://github.com/baptistearno/typebot.io/stargazers"><img src="https://img.shields.io/github/stars/baptistearno/typebot.io" alt="Github Stars"></a>
 </a>
 <a href="https://github.com/baptistearno/typebot.io/pulse"><img src="https://img.shields.io/github/commit-activity/m/baptistearno/typebot.io" alt="Commits per month"></a>
-<a href="https://docs.typebot.io/self-hosting/guides/docker">
+<a href="''/self-hosting/guides/docker">
 <img src="https://img.shields.io/docker/pulls/baptistearno/typebot-builder">
 </a>
 <a href="https://github.com/baptistearno/typebot.io/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-AGPLv3-purple" alt="License">
@@ -32,7 +32,7 @@ Typebot is an open-source chatbot builder. It allows you to create advanced chat
 <h3 align="center">
   <b><a href="https://app.typebot.io/register">Try Typebot</a></b>
   •
-  <b><a href="https://docs.typebot.io/">Docs</a></b>
+  <b><a href="''/">Docs</a></b>
 
 ---
 
@@ -72,7 +72,7 @@ Collect your **Results** and get insights:
 Built for **developers**:
 
 - 🔓 No vendor-locking. Features built with flexibility in mind.
-- 💻 Easy-to-use [APIs](https://docs.typebot.io/api).
+- 💻 Easy-to-use [APIs](''/api).
 
 ## Getting started with Typebot
 
@@ -83,14 +83,14 @@ So you’ll be supporting open source software and getting a great service! 💙
 
 ## Support & Community
 
-You'll find a lot of resources to help you get started with Typebot in the [documentation](https://docs.typebot.io/).
+You'll find a lot of resources to help you get started with Typebot in the [documentation](''/).
 
 - Have a question? Join the [Discord server](https://typebot.io/discord) and get instant help.
 - Found a bug? [Create an issue](https://github.com/baptisteArno/typebot.io/issues/new)
 
 ## Self-hosting
 
-Interested in self-hosting Typebot on your server? Take a look at the [self-hosting installation instructions](https://docs.typebot.io/self-hosting).
+Interested in self-hosting Typebot on your server? Take a look at the [self-hosting installation instructions](''/self-hosting).
 
 ## How to Contribute
 
@@ -119,4 +119,4 @@ Made with [contrib.rocks](https://contrib.rocks).
 
 ## License
 
-Typebot is open-source under the GNU Affero General Public License Version 3 (AGPLv3). You will find more information about the license and how to comply with it [here](https://docs.typebot.io/self-hosting#license-requirements).
+Typebot is open-source under the GNU Affero General Public License Version 3 (AGPLv3). You will find more information about the license and how to comply with it [here](''/self-hosting#license-requirements).

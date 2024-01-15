@@ -158,10 +158,7 @@ export const PublishButton = ({
               </Text>
               <Text fontWeight="bold">
                 Make sure to check out all the{' '}
-                <TextLink
-                  href="https://docs.typebot.io/breaking-changes#typebot-v6"
-                  isExternal
-                >
+                <TextLink href="" isExternal>
                   associated breaking changes
                 </TextLink>
               </Text>
@@ -171,7 +168,7 @@ export const PublishButton = ({
               </Text>
             </Stack>
           }
-          confirmButtonLabel={'Publish'}
+          confirmButtonLabel={'Publicar'}
         />
       )}
       <Tooltip
@@ -206,8 +203,8 @@ export const PublishButton = ({
           {isPublished
             ? typebot?.isClosed
               ? 'Closed'
-              : 'Published'
-            : 'Publish'}
+              : 'Publicado'
+            : 'Publicar'}
         </Button>
       </Tooltip>
 

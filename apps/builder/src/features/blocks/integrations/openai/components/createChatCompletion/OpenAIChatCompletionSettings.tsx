@@ -68,9 +68,9 @@ export const OpenAIChatCompletionSettings = ({
       <Text fontSize="sm" color="gray.500">
         Read the{' '}
         <TextLink href={apiReferenceUrl} isExternal>
-          API reference
+          Referencia da API
         </TextLink>{' '}
-        to better understand the available options.
+        Para entender melhor as opções disponiveis
       </Text>
       {options.credentialsId && (
         <>
@@ -86,7 +86,7 @@ export const OpenAIChatCompletionSettings = ({
             <AccordionItem>
               <AccordionButton>
                 <Text w="full" textAlign="left">
-                  Messages
+                  Mensagens
                 </Text>
                 <AccordionIcon />
               </AccordionButton>
@@ -98,7 +98,7 @@ export const OpenAIChatCompletionSettings = ({
                   onItemsChange={updateMessages}
                   isOrdered
                   hasDefaultItem
-                  addLabel="Add message"
+                  addLabel="Adicionar mensagem"
                 />
               </AccordionPanel>
             </AccordionItem>

@@ -29,26 +29,26 @@ export const EasyEmbed = () => {
       >
         <Stack spacing="6" maxW="300px" minW={[0, '300px']}>
           <Heading as="h1" data-aos="fade">
-            Embed it in a click
+            Integre com apenas um clique
           </Heading>
           <Text
             color="gray.400"
             fontSize={{ base: 'lg', xl: 'xl' }}
             data-aos="fade"
           >
-            Embedding your typebot in your applications is a walk in the park.
-            Typebot gives you several step-by-step platform-specific
-            instructions. Your typebot will always feel &quot;native&quot;.
+            Incorporar seu bot em suas aplicações é moleza. O Toolz Bots fornece
+            instruções passo a passo específicas para cada plataforma. Seu
+            typebot sempre terá uma sensação &quot;nativa&quot;.
           </Text>
           <Flex data-aos="fade">
             <Button
               as={Link}
               rightIcon={<ArrowRight />}
-              href={`https://app.typebot.io/register`}
+              href={`https://chatbuilder.toolzz.ai/register`}
               variant="ghost"
               colorScheme="orange"
             >
-              Try it now
+              Experimente agora.
             </Button>
           </Flex>
         </Stack>

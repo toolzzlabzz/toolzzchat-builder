@@ -14,6 +14,7 @@ import {
 
 export const ApiPreviewInstructions = (props: StackProps) => {
   const { typebot } = useTypebot()
+  const toolz = typebot
   const { startPreviewAtGroup } = useEditor()
 
   const startParamsBody = startPreviewAtGroup
@@ -36,22 +37,19 @@ export const ApiPreviewInstructions = (props: StackProps) => {
     >
       <OrderedList spacing={6} px="1">
         <ListItem>
-          All your requests need to be authenticated with an API token.{' '}
-          <TextLink href="https://docs.typebot.io/api/builder/authenticate">
-            See instructions
-          </TextLink>
-          .
+          Todas as suas requisições precisam ser autenticadas com um token de
+          API. <TextLink href="">Veja as instruções</TextLink>.
         </ListItem>
         <ListItem>
           <Stack>
             <Text>
-              To start the chat, send a <Code>POST</Code> request to
+              Para iniciar o chat, envie uma requisição <Code>POST</Code> para
             </Text>
             <CodeEditor
               isReadOnly
               lang={'shell'}
-              value={`${parseApiHost(typebot?.customDomain)}/api/v1/typebots/${
-                typebot?.id
+              value={`${parseApiHost(toolz?.customDomain)}/api/v1/typebots/${
+                toolz?.id
               }/preview/startChat`}
             />
             {startPreviewAtGroup && (
@@ -63,39 +61,36 @@ export const ApiPreviewInstructions = (props: StackProps) => {
           </Stack>
         </ListItem>
         <ListItem>
-          The first response will contain a <Code>sessionId</Code> that you will
-          need for subsequent requests.
+          A primeira resposta conterá um <Code>sessionId</Code> que você
+          precisará para solicitações subsequentes.
         </ListItem>
         <ListItem>
           <Stack>
             <Text>
-              To send replies, send <Code>POST</Code> requests to
+              Para enviar respostas, envie requisições <Code>POST</Code> para
             </Text>
             <CodeEditor
               isReadOnly
               lang={'shell'}
               value={`${parseApiHost(
-                typebot?.customDomain
+                toolz?.customDomain
               )}/api/v1/sessions/<ID_FROM_FIRST_RESPONSE>/continueChat`}
             />
-            <Text>With the following JSON body:</Text>
+            <Text>Com o seguinte corpo JSON:</Text>
             <CodeEditor isReadOnly lang={'json'} value={replyBody} />
             <Text>
-              Replace <Code>{'<ID_FROM_FIRST_RESPONSE>'}</Code> with{' '}
+              Substitua <Code>{'<ID_FROM_FIRST_RESPONSE>'}</Code> por{' '}
               <Code>sessionId</Code>.
             </Text>
           </Stack>
         </ListItem>
       </OrderedList>
       <Text fontSize="sm" pl="1">
-        Check out the{' '}
-        <TextLink
-          href="https://docs.typebot.io/api/start-preview-chat"
-          isExternal
-        >
-          API reference
+        Confira a{' '}
+        <TextLink href="" isExternal>
+          referência da API
         </TextLink>{' '}
-        for more information
+        para mais informações
       </Text>
     </Stack>
   )

@@ -22,8 +22,9 @@ export const SheetsDropdown = ({
       <HStack>
         <Input value="No sheets found" isDisabled />
         <MoreInfoTooltip>
-          Make sure your spreadsheet contains at least a sheet with a header
-          row. Also make sure your header row does not contain duplicates.
+          Certifique-se de que sua planilha contenha pelo menos uma aba com uma
+          linha de cabeçalho. Além disso, verifique se sua linha de cabeçalho
+          não contém duplicatas.
         </MoreInfoTooltip>
       </HStack>
     )

@@ -55,7 +55,7 @@ export const GoogleAnalyticsSettings = ({
       <TextInput
         label="Event action:"
         defaultValue={options?.action}
-        placeholder="Example: conversion"
+        placeholder="Exemplo: conversão"
         onChange={updateAction}
       />
       <Accordion allowToggle>
@@ -63,7 +63,7 @@ export const GoogleAnalyticsSettings = ({
           <h2>
             <AccordionButton>
               <Box flex="1" textAlign="left">
-                Advanced
+                Avançado
               </Box>
               <AccordionIcon />
             </AccordionButton>
@@ -72,27 +72,27 @@ export const GoogleAnalyticsSettings = ({
             <TextInput
               label="Event category:"
               defaultValue={options?.category}
-              placeholder="Example: Typebot"
+              placeholder="Exemplo: Bot"
               onChange={updateCategory}
             />
             <TextInput
               label="Event label:"
               defaultValue={options?.label}
-              placeholder="Example: Campaign Z"
+              placeholder="Exemplo: Campanha Z"
               onChange={updateLabel}
             />
             <NumberInput
               direction="column"
               label="Event value:"
               defaultValue={options?.value}
-              placeholder="Example: 0"
+              placeholder="Exemplo: 0"
               onValueChange={updateValue}
             />
             <TextInput
               label="Send to:"
               moreInfoTooltip="Useful to send a conversion event to Google Ads"
               defaultValue={options?.sendTo?.toString()}
-              placeholder="Example: AW-123456789"
+              placeholder="Exemplo: AW-123456789"
               onChange={updateSendTo}
             />
           </AccordionPanel>

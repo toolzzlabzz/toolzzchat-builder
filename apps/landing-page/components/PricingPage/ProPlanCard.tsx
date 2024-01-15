@@ -50,7 +50,7 @@ independant of the number of messages he sends and receives."
               colorScheme="gray"
               onClick={onChatsTiersClick}
             >
-              See tiers
+              Veja os tipos de assinatura
             </Button>
           </Text>
         </Stack>,
@@ -64,14 +64,14 @@ independant of the number of messages he sends and receives."
     button={
       <Button
         as={Link}
-        href={`https://app.typebot.io/register?subscribePlan=${Plan.PRO}`}
+        href={`https://chatbuilder.toolzz.ai/register?subscribePlan=${Plan.PRO}`}
         colorScheme="blue"
         size="lg"
         w="full"
         fontWeight="extrabold"
         py={{ md: '8' }}
       >
-        Subscribe now
+        Contrate agora
       </Button>
     }
   />
