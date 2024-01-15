@@ -1,5 +1,5 @@
-import { Icon, IconProps } from "@chakra-ui/react";
-import React from "react";
+import { Icon, IconProps } from '@chakra-ui/react'
+import React from 'react'
 
 export const DefaultAvatar = (props: IconProps) => {
   return (
@@ -17,5 +17,5 @@ export const DefaultAvatar = (props: IconProps) => {
         height="100%"
       />
     </Icon>
-  );
-};
+  )
+}

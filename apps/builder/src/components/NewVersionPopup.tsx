@@ -66,7 +66,8 @@ export const NewVersionPopup = () => {
                 </HStack>
 
                 <Text fontSize="sm" color="gray.100">
-                Uma versão melhorada do Toolzz Bots está disponível. Por favor, recarregue agora para atualizar.
+                  Uma versão melhorada do Toolzz Bots está disponível. Por
+                  favor, recarregue agora para atualizar.
                 </Text>
               </Stack>
               <Flex justifyContent="flex-end">

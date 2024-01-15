@@ -4,7 +4,7 @@
   "createdAt": "2023-02-27T11:53:48.217Z",
   "updatedAt": "2023-02-27T11:53:48.217Z",
   "icon": null,
-  "name": "New Bot",
+  "name": "My typebot",
   "folderId": null,
   "groups": [
     {
@@ -124,7 +124,7 @@
       "isNewResultOnRefreshEnabled": true
     },
     "metadata": {
-      "description": "Crie lindos formulários de conversação e incorpore-os diretamente em seus aplicativos, sem uma linha de código. Triplique sua taxa de resposta e colete respostas que tenham mais valor em comparação com um formulário tradicional."
+      "description": "Build beautiful conversational forms and embed them directly in your applications without a line of code. Triple your response rate and collect answers that has more value compared to a traditional form."
     },
     "typingEmulation": { "speed": 300, "enabled": true, "maxDelay": 1.5 }
   },
