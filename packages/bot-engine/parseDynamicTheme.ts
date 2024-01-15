@@ -1,5 +1,5 @@
 import { SessionState, ContinueChatResponse } from '@typebot.io/schemas'
-import { parseVariables } from '@typebot.io/variables/parseVariables'
+import { parseVariables } from './variables/parseVariables'
 
 export const parseDynamicTheme = (
   state: SessionState | undefined

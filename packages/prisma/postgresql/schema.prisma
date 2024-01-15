@@ -93,7 +93,6 @@ model Workspace {
   isQuarantined                 Boolean               @default(false)
   isSuspended                   Boolean               @default(false)
   isPastDue                     Boolean               @default(false)
-  isVerified                    Boolean?
   themeTemplates                ThemeTemplate[]
 }
 

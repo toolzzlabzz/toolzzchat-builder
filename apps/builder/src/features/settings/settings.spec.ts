@@ -37,10 +37,7 @@ test.describe.parallel('Settings page', () => {
       await page.goto(`/typebots/${typebotId}/settings`)
       await expect(
         page.locator('a:has-text("Made with Toolzz Bots")')
-      ).toHaveAttribute(
-        'href',
-        'https://www.toolzz.com.br/bots/?utm_source=litebadge'
-      )
+      ).toHaveAttribute('href', 'https://www.toolzz.com.br/bots/?utm_source=litebadge')
       await page.click('button:has-text("Typing emulation")')
       await page.fill('[data-testid="speed"] input', '350')
       await page.fill('[data-testid="max-delay"] input', '1.5')

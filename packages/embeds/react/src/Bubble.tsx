@@ -26,7 +26,7 @@ export const Bubble = (props: Props) => {
     ) as BubbleElement
     bubbleElement.current = newBubbleElement
     injectPropsToElement(bubbleElement.current, props)
-    document.body.prepend(bubbleElement.current)
+    document.body.append(bubbleElement.current)
   }, [])
 
   useEffect(() => {

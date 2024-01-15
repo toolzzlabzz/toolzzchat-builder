@@ -21,9 +21,7 @@ export const StreamingBubble = (props: Props) => {
   createEffect(() => {
     if (streamingMessage()?.id === props.streamingMessageId)
       setContent(
-        domPurify.sanitize(marked.parse(streamingMessage()?.content ?? ''), {
-          ADD_ATTR: ['target'],
-        })
+        domPurify.sanitize(marked.parse(streamingMessage()?.content ?? ''))
       )
   })
 

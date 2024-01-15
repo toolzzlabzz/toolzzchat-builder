@@ -18,11 +18,8 @@ import { ChatThemeSettings } from './chat/ChatThemeSettings'
 import { GeneralSettings } from './general/GeneralSettings'
 import { ThemeTemplates } from './ThemeTemplates'
 import { defaultSettings } from '@typebot.io/schemas/features/typebot/settings/constants'
-import { useTranslate } from '@tolgee/react'
 
 export const ThemeSideMenu = () => {
-  const { t } = useTranslate()
-
   const { typebot, updateTypebot, currentUserMode } = useTypebot()
 
   const updateChatTheme = (chat: ChatTheme) =>
@@ -70,7 +67,7 @@ export const ThemeSideMenu = () => {
       position="relative"
     >
       <Heading fontSize="xl" textAlign="center">
-        {t('theme.sideMenu.title')}
+        Customize o tema
       </Heading>
       <Accordion allowMultiple>
         {currentUserMode === 'write' && (
@@ -78,7 +75,7 @@ export const ThemeSideMenu = () => {
             <AccordionButton py={6}>
               <HStack flex="1" pl={2}>
                 <TableIcon />
-                <Heading fontSize="lg">{t('theme.sideMenu.template')}</Heading>
+                <Heading fontSize="lg">Temas</Heading>
               </HStack>
               <AccordionIcon />
             </AccordionButton>
@@ -100,7 +97,7 @@ export const ThemeSideMenu = () => {
           <AccordionButton py={6}>
             <HStack flex="1" pl={2}>
               <DropletIcon />
-              <Heading fontSize="lg">{t('theme.sideMenu.global')}</Heading>
+              <Heading fontSize="lg">Visual</Heading>
             </HStack>
             <AccordionIcon />
           </AccordionButton>
@@ -122,7 +119,7 @@ export const ThemeSideMenu = () => {
           <AccordionButton py={6}>
             <HStack flex="1" pl={2}>
               <ChatIcon />
-              <Heading fontSize="lg">{t('theme.sideMenu.chat')}</Heading>
+              <Heading fontSize="lg">Chat</Heading>
             </HStack>
             <AccordionIcon />
           </AccordionButton>
@@ -141,7 +138,7 @@ export const ThemeSideMenu = () => {
           <AccordionButton py={6}>
             <HStack flex="1" pl={2}>
               <CodeIcon />
-              <Heading fontSize="lg">{t('theme.sideMenu.customCSS')}</Heading>
+              <Heading fontSize="lg">Custom CSS</Heading>
             </HStack>
             <AccordionIcon />
           </AccordionButton>

@@ -24,13 +24,13 @@ import { findTypebot } from './queries/findTypebot'
 import { findPublicTypebot } from './queries/findPublicTypebot'
 import { findResult } from './queries/findResult'
 import { startBotFlow } from './startBotFlow'
-import { prefillVariables } from '@typebot.io/variables/prefillVariables'
-import { deepParseVariables } from '@typebot.io/variables/deepParseVariables'
-import { injectVariablesFromExistingResult } from '@typebot.io/variables/injectVariablesFromExistingResult'
+import { prefillVariables } from './variables/prefillVariables'
+import { deepParseVariables } from './variables/deepParseVariables'
+import { injectVariablesFromExistingResult } from './variables/injectVariablesFromExistingResult'
 import { getNextGroup } from './getNextGroup'
 import { upsertResult } from './queries/upsertResult'
 import { continueBotFlow } from './continueBotFlow'
-import { parseVariables } from '@typebot.io/variables/parseVariables'
+import { parseVariables } from './variables/parseVariables'
 import { defaultSettings } from '@typebot.io/schemas/features/typebot/settings/constants'
 import { IntegrationBlockType } from '@typebot.io/schemas/features/blocks/integrations/constants'
 import { defaultTheme } from '@typebot.io/schemas/features/typebot/theme/constants'
@@ -59,7 +59,7 @@ export const startSession = async ({
   startParams,
   initialSessionState,
 }: Props): Promise<
-  Omit<StartChatResponse, 'resultId' | 'isStreamEnabled' | 'sessionId'> & {
+  Omit<StartChatResponse, 'resultId'> & {
     newSessionState: SessionState
     visitedEdges: VisitedEdge[]
     resultId?: string
@@ -425,7 +425,9 @@ const parseStartClientSideAction = (
   )
     return
 
-  return { type: 'startPropsToInject', startPropsToInject }
+  return {
+    startPropsToInject,
+  }
 }
 
 const sanitizeAndParseTheme = (

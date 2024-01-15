@@ -31,7 +31,6 @@ import {
 } from '@/utils/formattedMessagesSignal'
 import { InputBlockType } from '@typebot.io/schemas/features/blocks/inputs/constants'
 import { saveClientLogsQuery } from '@/queries/saveClientLogsQuery'
-import { HTTPError } from 'ky'
 
 const parseDynamicTheme = (
   initialTheme: Theme,
@@ -174,13 +173,7 @@ export const ConversationContainer = (props: Props) => {
       const errorLogs = [
         {
           description: 'Failed to send the reply',
-          details:
-            error instanceof HTTPError
-              ? {
-                  status: error.response.status,
-                  body: await error.response.json(),
-                }
-              : error,
+          details: error,
           status: 'error',
         },
       ]

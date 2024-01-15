@@ -32,12 +32,9 @@ import { VariableForTestInputs } from './VariableForTestInputs'
 import { SwitchWithRelatedSettings } from '@/components/SwitchWithRelatedSettings'
 import {
   HttpMethod,
-  defaultTimeout,
   defaultWebhookAttributes,
   defaultWebhookBlockOptions,
-  maxTimeout,
 } from '@typebot.io/schemas/features/blocks/integrations/webhook/constants'
-import { NumberInput } from '@/components/inputs'
 
 type Props = {
   blockId: string
@@ -83,9 +80,6 @@ export const WebhookAdvancedConfigForm = ({
 
   const updateIsCustomBody = (isCustomBody: boolean) =>
     onOptionsChange({ ...options, isCustomBody })
-
-  const updateTimeout = (timeout: number | undefined) =>
-    onOptionsChange({ ...options, timeout })
 
   const executeTestRequest = async () => {
     if (!typebot) return
@@ -160,10 +154,9 @@ export const WebhookAdvancedConfigForm = ({
               <TableList<KeyValue>
                 initialItems={webhook?.queryParams}
                 onItemsChange={updateQueryParams}
+                Item={QueryParamsInputs}
                 addLabel="Add a param"
-              >
-                {(props) => <QueryParamsInputs {...props} />}
-              </TableList>
+              />
             </AccordionPanel>
           </AccordionItem>
           <AccordionItem>
@@ -175,10 +168,9 @@ export const WebhookAdvancedConfigForm = ({
               <TableList<KeyValue>
                 initialItems={webhook?.headers}
                 onItemsChange={updateHeaders}
+                Item={HeadersInputs}
                 addLabel="Add a value"
-              >
-                {(props) => <HeadersInputs {...props} />}
-              </TableList>
+              />
             </AccordionPanel>
           </AccordionItem>
           <AccordionItem>
@@ -204,22 +196,6 @@ export const WebhookAdvancedConfigForm = ({
           </AccordionItem>
           <AccordionItem>
             <AccordionButton justifyContent="space-between">
-              Advanced parameters
-              <AccordionIcon />
-            </AccordionButton>
-            <AccordionPanel pt="4">
-              <NumberInput
-                label="Timeout (s)"
-                defaultValue={options?.timeout ?? defaultTimeout}
-                min={1}
-                max={maxTimeout}
-                onValueChange={updateTimeout}
-                withVariableButton={false}
-              />
-            </AccordionPanel>
-          </AccordionItem>
-          <AccordionItem>
-            <AccordionButton justifyContent="space-between">
               Variable values for test
               <AccordionIcon />
             </AccordionButton>
@@ -227,10 +203,9 @@ export const WebhookAdvancedConfigForm = ({
               <TableList<VariableForTest>
                 initialItems={options?.variablesForTest}
                 onItemsChange={updateVariablesForTest}
+                Item={VariableForTestInputs}
                 addLabel="Add an entry"
-              >
-                {(props) => <VariableForTestInputs {...props} />}
-              </TableList>
+              />
             </AccordionPanel>
           </AccordionItem>
         </Accordion>
@@ -260,10 +235,9 @@ export const WebhookAdvancedConfigForm = ({
               <TableList<ResponseVariableMapping>
                 initialItems={options?.responseVariableMapping}
                 onItemsChange={updateResponseVariableMapping}
+                Item={ResponseMappingInputs}
                 addLabel="Add an entry"
-              >
-                {(props) => <ResponseMappingInputs {...props} />}
-              </TableList>
+              />
             </AccordionPanel>
           </AccordionItem>
         </Accordion>

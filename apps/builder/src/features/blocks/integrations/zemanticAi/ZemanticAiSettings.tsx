@@ -171,11 +171,10 @@ export const ZemanticAiSettings = ({
               <AccordionPanel pt="4">
                 <TableList
                   initialItems={options.responseMapping ?? []}
+                  Item={SearchResponseItem}
                   onItemsChange={updateResponseMapping}
                   newItemDefaultProps={{ valueToExtract: 'Summary' }}
-                >
-                  {(props) => <SearchResponseItem {...props} />}
-                </TableList>
+                />
               </AccordionPanel>
             </AccordionItem>
           </Accordion>

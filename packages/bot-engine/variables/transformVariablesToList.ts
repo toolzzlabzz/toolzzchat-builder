@@ -1,7 +1,7 @@
 import { isNotDefined } from '@typebot.io/lib/utils'
 import { Variable, VariableWithValue } from '@typebot.io/schemas'
 
-export const transformVariablesToList =
+export const transformStringVariablesToList =
   (variables: Variable[]) =>
   (variableIds: string[]): VariableWithValue[] => {
     const newVariables = variables.reduce<VariableWithValue[]>(

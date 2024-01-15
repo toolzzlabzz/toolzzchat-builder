@@ -1,4 +1,4 @@
-import { z } from '../../zod'
+import { z } from 'zod'
 import { answerSchema } from '../answer'
 import { resultSchema } from '../result'
 import { typebotInSessionStateSchema, dynamicThemeSchema } from './shared'
@@ -29,9 +29,7 @@ const resultInSessionStateSchema = resultSchema
   )
 
 const sessionStateSchemaV1 = z.object({
-  version: z.undefined().openapi({
-    type: 'string',
-  }),
+  version: z.undefined(),
   typebot: typebotInSessionStateSchema,
   dynamicTheme: dynamicThemeSchema.optional(),
   linkedTypebots: z.object({

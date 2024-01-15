@@ -2,7 +2,7 @@ import { byId, isDefined } from '@typebot.io/lib'
 import { ContinueChatResponse, SessionState } from '@typebot.io/schemas'
 import { ChatCompletionOpenAIOptions } from '@typebot.io/schemas/features/blocks/integrations/openai'
 import { VariableWithUnknowValue } from '@typebot.io/schemas/features/typebot/variable'
-import { updateVariablesInSession } from '@typebot.io/variables/updateVariablesInSession'
+import { updateVariablesInSession } from '../../../variables/updateVariablesInSession'
 
 export const resumeChatCompletion =
   (
