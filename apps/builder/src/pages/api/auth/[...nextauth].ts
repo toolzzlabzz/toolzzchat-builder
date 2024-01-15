@@ -149,14 +149,6 @@ export const getAuthOptions = ({
       Sentry.setUser(null)
     },
   },
-  events: {
-    signIn({ user }) {
-      Sentry.setUser({ id: user.id })
-    },
-    signOut() {
-      Sentry.setUser(null)
-    },
-  },
   callbacks: {
     session: async ({ session, user }) => {
       const userFromDb = user as User
