@@ -127,7 +127,7 @@ export const GettingStartedModal = () => {
               {t('editor.gettingStartedModal.seeAction.label')} ({`<`}{' '}
               {t('editor.gettingStartedModal.seeAction.time')})
             </Heading>
-            <iframe
+            {/* <iframe
               width="100%"
               height="315"
               src="https://www.youtube.com/embed/jp3ggg_42-M"
@@ -135,7 +135,7 @@ export const GettingStartedModal = () => {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               style={{ borderRadius: '0.5rem', border: 'none' }}
-            />
+            /> */}
             <Accordion allowToggle>
               <AccordionItem>
                 <AccordionButton>
@@ -145,7 +145,7 @@ export const GettingStartedModal = () => {
                   <AccordionIcon />
                 </AccordionButton>
                 <AccordionPanel py={10} as={Stack} spacing="10">
-                  <iframe
+                  {/* <iframe
                     width="100%"
                     height="315"
                     src="https://www.youtube.com/embed/6BudIC4GYNk"
@@ -153,8 +153,8 @@ export const GettingStartedModal = () => {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                     style={{ borderRadius: '0.5rem', border: 'none' }}
-                  />
-                  <iframe
+                  /> */}
+                  {/* <iframe
                     width="100%"
                     height="315"
                     src="https://www.youtube.com/embed/ZuyDwFLRbfQ"
@@ -162,7 +162,7 @@ export const GettingStartedModal = () => {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                     style={{ borderRadius: '0.5rem', border: 'none' }}
-                  />
+                  /> */}
                 </AccordionPanel>
               </AccordionItem>
             </Accordion>
