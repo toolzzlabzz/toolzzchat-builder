@@ -48,7 +48,7 @@ export const ApiPreviewInstructions = (props: StackProps) => {
             <CodeEditor
               isReadOnly
               lang={'shell'}
-              value={`${parseApiHost(toolz?.customDomain)}/api/v1/typebots/${
+              value={`${parseApiHost(toolz?.customDomain)}/api/v1/toolzz/${
                 toolz?.id
               }/preview/startChat`}
             />

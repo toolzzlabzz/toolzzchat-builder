@@ -20104,7 +20104,7 @@
         "deprecated": true
       }
     },
-    "/v1/typebots/{publicId}/startChat": {
+    "/v1/toolzz/{publicId}/startChat": {
       "post": {
         "operationId": "startChat",
         "summary": "Start chat",
@@ -25465,7 +25465,7 @@
         }
       }
     },
-    "/v1/typebots/{typebotId}/preview/startChat": {
+    "/v1/toolzz/{typebotId}/preview/startChat": {
       "post": {
         "operationId": "startChatPreview",
         "summary": "Start preview chat",
@@ -35130,7 +35130,7 @@
         }
       }
     },
-    "/v1/typebots/{typebotId}/blocks/{blockId}/storage/upload-url": {
+    "/v1/toolzz/{typebotId}/blocks/{blockId}/storage/upload-url": {
       "get": {
         "operationId": "getUploadUrl",
         "summary": "Get upload URL for a file",

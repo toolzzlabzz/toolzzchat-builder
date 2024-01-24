@@ -20,7 +20,7 @@ export const BackButton = ({ id }: { id: string | null }) => {
   return (
     <Button
       as={Link}
-      href={id ? `/typebots/folders/${id}` : '/typebots'}
+      href={id ? `/toolzz/folders/${id}` : '/toolzz'}
       leftIcon={<ChevronLeftIcon />}
       variant={'outline'}
       colorScheme={isTypebotOver ? 'blue' : 'gray'}

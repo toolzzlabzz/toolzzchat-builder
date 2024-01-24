@@ -37,7 +37,7 @@ export const DashboardHeader = () => {
         maxW="1000px"
         flex="1"
       >
-        <Link href="/typebots" data-testid="typebot-logo">
+        <Link href="/toolzz" data-testid="typebot-logo">
           <Image
             pointerEvents="none"
             src={

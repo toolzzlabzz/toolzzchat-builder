@@ -73,7 +73,7 @@ export async function startChatQuery({
       method: 'POST',
       url: `${
         isNotEmpty(apiHost) ? apiHost : guessApiHost()
-      }/api/v1/typebots/${typebotId}/preview/startChat`,
+      }/api/v1/toolzz/${typebotId}/preview/startChat`,
       body: {
         isStreamEnabled: true,
         startFrom,
@@ -91,7 +91,7 @@ export async function startChatQuery({
     method: 'POST',
     url: `${
       isNotEmpty(apiHost) ? apiHost : guessApiHost()
-    }/api/v1/typebots/${typebotId}/startChat`,
+    }/api/v1/toolzz/${typebotId}/startChat`,
     body: {
       isStreamEnabled: true,
       prefilledVariables,

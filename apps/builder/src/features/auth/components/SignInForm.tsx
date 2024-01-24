@@ -55,7 +55,7 @@ export const SignInForm = ({
 
   useEffect(() => {
     if (status === 'authenticated') {
-      router.replace(router.query.redirectPath?.toString() ?? '/typebots')
+      router.replace(router.query.redirectPath?.toString() ?? '/toolzz')
       return
     }
     ;(async () => {

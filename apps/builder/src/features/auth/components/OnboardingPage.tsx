@@ -38,7 +38,7 @@ export const OnboardingPage = () => {
   useEffect(() => {
     if (!user?.createdAt) return
     if (isNewUser === false || !env.NEXT_PUBLIC_ONBOARDING_TYPEBOT_ID)
-      replace({ pathname: '/typebots', query })
+      replace({ pathname: '/toolzz', query })
   }, [isNewUser, query, replace, user?.createdAt])
 
   const initConfettis = () => {
@@ -83,7 +83,7 @@ export const OnboardingPage = () => {
         right="5"
         variant="ghost"
         size="sm"
-        onClick={() => replace({ pathname: '/typebots', query })}
+        onClick={() => replace({ pathname: '/toolzz', query })}
       >
         {t('skip')}
       </Button>
@@ -96,7 +96,7 @@ export const OnboardingPage = () => {
           onEnd={() => {
             setTimeout(() => {
               replace({
-                pathname: '/typebots',
+                pathname: '/toolzz',
                 query: { ...query, isFirstBot: true },
               })
             }, 2000)

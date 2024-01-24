@@ -76,7 +76,7 @@ export const generateUploadUrl = publicProcedure
           message: "Can't find workspaceId",
         })
 
-      const filePath = `public/workspaces/${workspaceId}/typebots/${filePathProps.typebotId}/results/${filePathProps.resultId}/${filePathProps.fileName}`
+      const filePath = `public/workspaces/${workspaceId}/toolzz/${filePathProps.typebotId}/results/${filePathProps.resultId}/${filePathProps.fileName}`
 
       const fileUploadBlock = parseGroups(publicTypebot.groups, {
         typebotVersion: publicTypebot.version,
@@ -142,7 +142,7 @@ export const generateUploadUrl = publicProcedure
 
     const resultId = session.state.typebotsQueue[0].resultId
 
-    const filePath = `public/workspaces/${workspaceId}/typebots/${typebotId}/results/${resultId}/${filePathProps.fileName}`
+    const filePath = `public/workspaces/${workspaceId}/toolzz/${typebotId}/results/${resultId}/${filePathProps.fileName}`
 
     if (session.state.currentBlockId === undefined)
       throw new TRPCError({

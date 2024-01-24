@@ -8,7 +8,7 @@ export const executeWebhook = (
   { blockId }: { blockId: string }
 ) =>
   sendRequest<WebhookResponse>({
-    url: `${env.NEXT_PUBLIC_VIEWER_URL[0]}/api/typebots/${typebotId}/blocks/${blockId}/executeWebhook`,
+    url: `${env.NEXT_PUBLIC_VIEWER_URL[0]}/api/toolzz/${typebotId}/blocks/${blockId}/executeWebhook`,
     method: 'POST',
     body: {
       variables,

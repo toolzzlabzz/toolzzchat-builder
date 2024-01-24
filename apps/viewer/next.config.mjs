@@ -70,8 +70,8 @@ const nextConfig = {
             }))
             .concat(
               landingPagePaths.map((path) => ({
-                source: '/typebots/:typebot*',
-                destination: `${process.env.LANDING_PAGE_URL}/typebots/:typebot*`,
+                source: '/toolzz/:typebot*',
+                destination: `${process.env.LANDING_PAGE_URL}/toolzz/:typebot*`,
                 has: [
                   {
                     type: 'header',
@@ -110,10 +110,9 @@ const nextConfig = {
       )
         .concat([
           {
-            source:
-              '/api/typebots/:typebotId/blocks/:blockId/storage/upload-url',
+            source: '/api/toolzz/:typebotId/blocks/:blockId/storage/upload-url',
             destination:
-              '/api/v1/typebots/:typebotId/blocks/:blockId/storage/upload-url',
+              '/api/v1/toolzz/:typebotId/blocks/:blockId/storage/upload-url',
           },
         ])
         .concat(
@@ -121,33 +120,32 @@ const nextConfig = {
             ? [
                 {
                   source:
-                    '/api/typebots/:typebotId/blocks/:blockId/steps/:stepId/sampleResult',
-                  destination: `${process.env.NEXTAUTH_URL}/api/v1/typebots/:typebotId/webhookBlocks/:blockId/getResultExample`,
+                    '/api/toolzz/:typebotId/blocks/:blockId/steps/:stepId/sampleResult',
+                  destination: `${process.env.NEXTAUTH_URL}/api/v1/toolzz/:typebotId/webhookBlocks/:blockId/getResultExample`,
+                },
+                {
+                  source: '/api/toolzz/:typebotId/blocks/:blockId/sampleResult',
+                  destination: `${process.env.NEXTAUTH_URL}/api/v1/toolzz/:typebotId/webhookBlocks/:blockId/getResultExample`,
                 },
                 {
                   source:
-                    '/api/typebots/:typebotId/blocks/:blockId/sampleResult',
-                  destination: `${process.env.NEXTAUTH_URL}/api/v1/typebots/:typebotId/webhookBlocks/:blockId/getResultExample`,
+                    '/api/toolzz/:typebotId/blocks/:blockId/steps/:stepId/unsubscribeWebhook',
+                  destination: `${process.env.NEXTAUTH_URL}/api/v1/toolzz/:typebotId/webhookBlocks/:blockId/unsubscribe`,
                 },
                 {
                   source:
-                    '/api/typebots/:typebotId/blocks/:blockId/steps/:stepId/unsubscribeWebhook',
-                  destination: `${process.env.NEXTAUTH_URL}/api/v1/typebots/:typebotId/webhookBlocks/:blockId/unsubscribe`,
+                    '/api/toolzz/:typebotId/blocks/:blockId/unsubscribeWebhook',
+                  destination: `${process.env.NEXTAUTH_URL}/api/v1/toolzz/:typebotId/webhookBlocks/:blockId/unsubscribe`,
                 },
                 {
                   source:
-                    '/api/typebots/:typebotId/blocks/:blockId/unsubscribeWebhook',
-                  destination: `${process.env.NEXTAUTH_URL}/api/v1/typebots/:typebotId/webhookBlocks/:blockId/unsubscribe`,
+                    '/api/toolzz/:typebotId/blocks/:blockId/steps/:stepId/subscribeWebhook',
+                  destination: `${process.env.NEXTAUTH_URL}/api/v1/toolzz/:typebotId/webhookBlocks/:blockId/subscribe`,
                 },
                 {
                   source:
-                    '/api/typebots/:typebotId/blocks/:blockId/steps/:stepId/subscribeWebhook',
-                  destination: `${process.env.NEXTAUTH_URL}/api/v1/typebots/:typebotId/webhookBlocks/:blockId/subscribe`,
-                },
-                {
-                  source:
-                    '/api/typebots/:typebotId/blocks/:blockId/subscribeWebhook',
-                  destination: `${process.env.NEXTAUTH_URL}/api/v1/typebots/:typebotId/webhookBlocks/:blockId/subscribe`,
+                    '/api/toolzz/:typebotId/blocks/:blockId/subscribeWebhook',
+                  destination: `${process.env.NEXTAUTH_URL}/api/v1/toolzz/:typebotId/webhookBlocks/:blockId/subscribe`,
                 },
               ]
             : []

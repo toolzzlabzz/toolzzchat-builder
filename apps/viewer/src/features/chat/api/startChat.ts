@@ -11,7 +11,7 @@ export const startChat = publicProcedure
   .meta({
     openapi: {
       method: 'POST',
-      path: '/v1/typebots/{publicId}/startChat',
+      path: '/v1/toolzz/{publicId}/startChat',
       summary: 'Start chat',
     },
   })

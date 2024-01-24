@@ -18,16 +18,21 @@ test.describe.parallel('Theme page', () => {
       await importTypebotInDatabase(getTestAsset('typebots/theme.json'), {
         id: typebotId,
       })
-      await page.goto(`/typebots/${typebotId}/theme`)
+      await page.goto(`/toolzz/${typebotId}/theme`)
       await expect(page.getByRole('button', { name: 'Go' })).toBeVisible()
 
       // Branding
       await page.getByRole('button', { name: 'Global' }).click()
       await expect(
         page.locator('a:has-text("Made with Toolzz Bots")')
-      ).toHaveAttribute('href', 'https://www.toolzz.com.br/bots/?utm_source=litebadge')
+      ).toHaveAttribute(
+        'href',
+        'https://www.toolzz.com.br/bots/?utm_source=litebadge'
+      )
       await page.click('text="Show Typebot brand"')
-      await expect(page.locator('a:has-text("Made with Toolzz Bots")')).toBeHidden()
+      await expect(
+        page.locator('a:has-text("Made with Toolzz Bots")')
+      ).toBeHidden()
 
       // Font
       await page.getByRole('textbox').fill('Roboto Slab')
@@ -77,7 +82,7 @@ test.describe.parallel('Theme page', () => {
         /* empty */
       }
 
-      await page.goto(`/typebots/${typebotId}/theme`)
+      await page.goto(`/toolzz/${typebotId}/theme`)
       await expect(page.getByRole('button', { name: 'Go' })).toBeVisible()
       await page.click('button:has-text("Chat")')
 
@@ -211,7 +216,7 @@ test.describe.parallel('Theme page', () => {
       await importTypebotInDatabase(getTestAsset('typebots/theme.json'), {
         id: typebotId,
       })
-      await page.goto(`/typebots/${typebotId}/theme`)
+      await page.goto(`/toolzz/${typebotId}/theme`)
       await expect(page.getByRole('button', { name: 'Go' })).toBeVisible()
       await page.click('button:has-text("Custom CSS")')
       await page.fill(
@@ -231,7 +236,7 @@ test.describe.parallel('Theme page', () => {
       await importTypebotInDatabase(getTestAsset('typebots/theme.json'), {
         id: typebotId,
       })
-      await page.goto(`/typebots/${typebotId}/theme`)
+      await page.goto(`/toolzz/${typebotId}/theme`)
       await expect(page.getByRole('button', { name: 'Go' })).toBeVisible()
       await page.getByRole('button', { name: 'Templates' }).click()
       await page.getByRole('button', { name: 'Save current theme' }).click()
@@ -270,7 +275,7 @@ test.describe('Free workspace', () => {
       id: typebotId,
       workspaceId: freeWorkspaceId,
     })
-    await page.goto(`/typebots/${typebotId}/theme`)
+    await page.goto(`/toolzz/${typebotId}/theme`)
     await expect(page.locator('text="What\'s your name?"')).toBeVisible()
     await page.getByRole('button', { name: 'Global' }).click()
     await expect(page.locator('[data-testid="starter-lock-tag"]')).toBeVisible()

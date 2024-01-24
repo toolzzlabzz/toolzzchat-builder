@@ -11,7 +11,7 @@ test.describe.parallel('Settings page', () => {
       await importTypebotInDatabase(getTestAsset('typebots/settings.json'), {
         id: typebotId,
       })
-      await page.goto(`/typebots/${typebotId}/settings`)
+      await page.goto(`/toolzz/${typebotId}/settings`)
 
       await page.click('text="Lembrar usuário"')
 
@@ -34,10 +34,13 @@ test.describe.parallel('Settings page', () => {
       await importTypebotInDatabase(getTestAsset('typebots/settings.json'), {
         id: typebotId,
       })
-      await page.goto(`/typebots/${typebotId}/settings`)
+      await page.goto(`/toolzz/${typebotId}/settings`)
       await expect(
         page.locator('a:has-text("Made with Toolzz Bots")')
-      ).toHaveAttribute('href', 'https://www.toolzz.com.br/bots/?utm_source=litebadge')
+      ).toHaveAttribute(
+        'href',
+        'https://www.toolzz.com.br/bots/?utm_source=litebadge'
+      )
       await page.click('button:has-text("Typing emulation")')
       await page.fill('[data-testid="speed"] input', '350')
       await page.fill('[data-testid="max-delay"] input', '1.5')
@@ -55,7 +58,7 @@ test.describe.parallel('Settings page', () => {
       await importTypebotInDatabase(getTestAsset('typebots/settings.json'), {
         id: typebotId,
       })
-      await page.goto(`/typebots/${typebotId}/settings`)
+      await page.goto(`/toolzz/${typebotId}/settings`)
       await expect(
         page.locator(
           `input[placeholder="${defaultTextInputOptions.labels.placeholder}"]`

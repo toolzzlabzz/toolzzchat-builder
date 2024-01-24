@@ -16,7 +16,7 @@ test.describe('Text bubble block', () => {
       },
     ])
 
-    await page.goto(`/typebots/${typebotId}/edit`)
+    await page.goto(`/toolzz/${typebotId}/edit`)
 
     await page.click('[data-testid="bold-button"]')
     await page.type('div[role="textbox"]', 'Bold text')
