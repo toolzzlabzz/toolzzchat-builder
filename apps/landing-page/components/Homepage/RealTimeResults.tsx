@@ -15,9 +15,7 @@ export const RealTimeResults = () => {
   const [typebot, setTypebot] = useState<PublicTypebot>()
 
   const fetchTemplate = async () => {
-    const { data, error } = await sendRequest(
-      `/typebots/realtime-airtable.json`
-    )
+    const { data, error } = await sendRequest(`/toolzz/realtime-airtable.json`)
     if (error) return
     const typebot = data as Typebot
     setTypebot({ ...typebot, typebotId: typebot.id } as PublicTypebot)

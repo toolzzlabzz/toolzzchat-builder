@@ -15,7 +15,7 @@ export const CreateBotButton = ({
 
   const handleClick = () =>
     router.push(
-      `/typebots/create?${stringify({
+      `/toolzz/create?${stringify({
         isFirstBot: !isFirstBot ? undefined : isFirstBot,
         folderId,
       })}`

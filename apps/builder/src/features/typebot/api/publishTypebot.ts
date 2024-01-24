@@ -21,7 +21,7 @@ export const publishTypebot = authenticatedProcedure
   .meta({
     openapi: {
       method: 'POST',
-      path: '/v1/typebots/{typebotId}/publish',
+      path: '/v1/toolzz/{typebotId}/publish',
       protect: true,
       summary: 'Publish a typebot',
       tags: ['Typebot'],
@@ -102,7 +102,7 @@ export const publishTypebot = authenticatedProcedure
       if (env.MESSAGE_WEBHOOK_URL && riskLevel !== 100)
         await fetch(env.MESSAGE_WEBHOOK_URL, {
           method: 'POST',
-          body: `⚠️ Suspicious typebot to be reviewed: ${existingTypebot.name} (${env.NEXTAUTH_URL}/typebots/${existingTypebot.id}/edit) (workspace: ${existingTypebot.workspaceId})`,
+          body: `⚠️ Suspicious typebot to be reviewed: ${existingTypebot.name} (${env.NEXTAUTH_URL}/toolzz/${existingTypebot.id}/edit) (workspace: ${existingTypebot.workspaceId})`,
         }).catch((err) => {
           console.error('Failed to send message', err)
         })

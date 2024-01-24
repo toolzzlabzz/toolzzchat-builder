@@ -57,7 +57,7 @@ export const TypebotButton = ({
       showToast({ description: error.message })
     },
     onSuccess: ({ typebot }) => {
-      router.push(`/typebots/${typebot.id}/edit`)
+      router.push(`/toolzz/${typebot.id}/edit`)
     },
   })
 
@@ -83,9 +83,7 @@ export const TypebotButton = ({
   const handleTypebotClick = () => {
     if (draggedTypebotDebounced) return
     router.push(
-      isMobile
-        ? `/typebots/${typebot.id}/results`
-        : `/typebots/${typebot.id}/edit`
+      isMobile ? `/toolzz/${typebot.id}/results` : `/toolzz/${typebot.id}/edit`
     )
   }
 

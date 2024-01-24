@@ -133,7 +133,7 @@ const fixTypebots = async () => {
     },
   })
 
-  writeFileSync('logs/typebots.json', JSON.stringify(typebots))
+  writeFileSync('logs/toolzz.json', JSON.stringify(typebots))
 
   const total = typebots.length
   let totalFixed = 0

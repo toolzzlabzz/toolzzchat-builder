@@ -100,7 +100,7 @@ const inspectUser = async () => {
       )
       console.log(
         '        URL:',
-        `https://app.typebot.io/typebots/${typebot.id}/edit`
+        `https://app.typebot.io/toolzz/${typebot.id}/edit`
       )
 
       if (!typebot.publishedTypebot) continue

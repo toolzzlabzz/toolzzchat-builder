@@ -9,7 +9,7 @@ export const getCollaborators = authenticatedProcedure
   .meta({
     openapi: {
       method: 'GET',
-      path: '/v1/typebots/{typebotId}/collaborators',
+      path: '/v1/toolzz/{typebotId}/collaborators',
       protect: true,
       summary: 'Get collaborators',
       tags: ['Collaborators'],

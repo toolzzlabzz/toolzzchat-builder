@@ -146,8 +146,7 @@ const getIncomingMessageContent = async ({
       if (!typebotId) return
       const mediaId = 'video' in message ? message.video.id : message.image.id
       return (
-        env.NEXTAUTH_URL +
-        `/api/typebots/${typebotId}/whatsapp/media/${mediaId}`
+        env.NEXTAUTH_URL + `/api/toolzz/${typebotId}/whatsapp/media/${mediaId}`
       )
   }
 }

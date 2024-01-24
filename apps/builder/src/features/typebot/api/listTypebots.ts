@@ -11,7 +11,7 @@ export const listTypebots = authenticatedProcedure
   .meta({
     openapi: {
       method: 'GET',
-      path: '/v1/typebots',
+      path: '/v1/toolzz',
       protect: true,
       summary: 'List typebots',
       tags: ['Typebot'],

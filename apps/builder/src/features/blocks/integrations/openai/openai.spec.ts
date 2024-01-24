@@ -15,7 +15,7 @@ test('should be configurable', async ({ page }) => {
       }),
     },
   ])
-  await page.goto(`/typebots/${typebotId}/edit`)
+  await page.goto(`/toolzz/${typebotId}/edit`)
   await page.getByText('Configure...').click()
   await page.getByRole('button', { name: 'Add OpenAI account' }).click()
   await expect(page.getByRole('button', { name: 'Create' })).toBeDisabled()

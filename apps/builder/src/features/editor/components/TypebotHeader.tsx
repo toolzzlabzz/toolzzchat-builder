@@ -109,7 +109,7 @@ export const TypebotHeader = () => {
       >
         <Button
           as={Link}
-          href={`/typebots/${typebot?.id}/edit`}
+          href={`/toolzz/${typebot?.id}/edit`}
           colorScheme={router.pathname.includes('/edit') ? 'blue' : 'gray'}
           variant={router.pathname.includes('/edit') ? 'outline' : 'ghost'}
           size="sm"
@@ -118,7 +118,7 @@ export const TypebotHeader = () => {
         </Button>
         <Button
           as={Link}
-          href={`/typebots/${typebot?.id}/theme`}
+          href={`/toolzz/${typebot?.id}/theme`}
           colorScheme={router.pathname.endsWith('theme') ? 'blue' : 'gray'}
           variant={router.pathname.endsWith('theme') ? 'outline' : 'ghost'}
           size="sm"
@@ -127,7 +127,7 @@ export const TypebotHeader = () => {
         </Button>
         <Button
           as={Link}
-          href={`/typebots/${typebot?.id}/settings`}
+          href={`/toolzz/${typebot?.id}/settings`}
           colorScheme={router.pathname.endsWith('settings') ? 'blue' : 'gray'}
           variant={router.pathname.endsWith('settings') ? 'outline' : 'ghost'}
           size="sm"
@@ -136,7 +136,7 @@ export const TypebotHeader = () => {
         </Button>
         <Button
           as={Link}
-          href={`/typebots/${typebot?.id}/share`}
+          href={`/toolzz/${typebot?.id}/share`}
           colorScheme={router.pathname.endsWith('share') ? 'blue' : 'gray'}
           variant={router.pathname.endsWith('share') ? 'outline' : 'ghost'}
           size="sm"
@@ -146,7 +146,7 @@ export const TypebotHeader = () => {
         {isDefined(publishedTypebot) && (
           <Button
             as={Link}
-            href={`/typebots/${typebot?.id}/results`}
+            href={`/toolzz/${typebot?.id}/results`}
             colorScheme={router.pathname.includes('results') ? 'blue' : 'gray'}
             variant={router.pathname.includes('results') ? 'outline' : 'ghost'}
             size="sm"
@@ -169,10 +169,10 @@ export const TypebotHeader = () => {
             icon={<ChevronLeftIcon fontSize={25} />}
             href={{
               pathname: router.query.parentId
-                ? '/typebots/[typebotId]/edit'
+                ? '/toolzz/[typebotId]/edit'
                 : typebot?.folderId
-                ? '/typebots/folders/[folderId]'
-                : '/typebots',
+                ? '/toolzz/folders/[folderId]'
+                : '/toolzz',
               query: {
                 folderId: typebot?.folderId ?? [],
                 parentId: Array.isArray(router.query.parentId)

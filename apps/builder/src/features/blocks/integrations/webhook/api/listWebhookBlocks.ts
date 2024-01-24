@@ -12,7 +12,7 @@ export const listWebhookBlocks = authenticatedProcedure
   .meta({
     openapi: {
       method: 'GET',
-      path: '/v1/typebots/{typebotId}/webhookBlocks',
+      path: '/v1/toolzz/{typebotId}/webhookBlocks',
       protect: true,
       summary: 'List webhook blocks',
       description:

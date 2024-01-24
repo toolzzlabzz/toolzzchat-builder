@@ -8,7 +8,7 @@ import { useTypebot } from '@/features/editor/providers/TypebotProvider'
 export const SharePopoverContent = () => {
   const { typebot, updateTypebot } = useTypebot()
 
-  const currentUrl = `${window.location.origin}/typebots/${typebot?.id}/edit`
+  const currentUrl = `${window.location.origin}/toolzz/${typebot?.id}/edit`
 
   const updateIsPublicShareEnabled = async (isEnabled: boolean) => {
     await updateTypebot({

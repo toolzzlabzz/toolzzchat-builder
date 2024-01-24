@@ -70,7 +70,7 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
     if (!router.isReady) return
     if (status === 'loading') return
     const isSignInPath = ['/signin', '/register'].includes(router.pathname)
-    const isPathPublicFriendly = /\/typebots\/.+\/(edit|theme|settings)/.test(
+    const isPathPublicFriendly = /\/toolzz\/.+\/(edit|theme|settings)/.test(
       router.pathname
     )
     if (isSignInPath || isPathPublicFriendly) return
