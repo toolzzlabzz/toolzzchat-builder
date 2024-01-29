@@ -18,7 +18,7 @@ export const ShareTypebotButton = ({ isLoading }: { isLoading: boolean }) => {
           aria-label="Open share popover"
           size="sm"
         >
-          Share
+          Compartilhar
         </Button>
       </PopoverTrigger>
       <PopoverContent

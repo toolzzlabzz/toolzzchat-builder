@@ -98,12 +98,12 @@ export const GeneralSettingsForm = ({
             <MoreInfoTooltip>
               <Stack>
                 <Text>
-                  Choose <Tag size="sm">session</Tag> to remember the user as
-                  long as he does not closes the tab or the browser.
+                  Escolha <Tag size="sm">sessão</Tag> para lembrar o usuário
+                  enquanto ele não fechar a aba ou o navegador.
                 </Text>
                 <Text>
-                  Choose <Tag size="sm">local</Tag> to remember the user
-                  forever.
+                  Escolha <Tag size="sm">local</Tag> para lembrar o usuário
+                  permanentemente.
                 </Text>
               </Stack>
             </MoreInfoTooltip>

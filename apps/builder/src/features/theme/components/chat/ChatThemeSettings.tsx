@@ -55,7 +55,7 @@ export const ChatThemeSettings = ({
           typebotId,
           fileName: 'hostAvatar',
         }}
-        title="Bot avatar"
+        title="Avatar do Bot"
         avatarProps={chatTheme?.hostAvatar}
         isDefaultCheck
         onAvatarChange={updateHostAvatar}
@@ -66,12 +66,12 @@ export const ChatThemeSettings = ({
           typebotId,
           fileName: 'guestAvatar',
         }}
-        title="User avatar"
+        title="Avatar do usuario"
         avatarProps={chatTheme?.guestAvatar}
         onAvatarChange={updateGuestAvatar}
       />
       <Stack borderWidth={1} rounded="md" p="4" spacing={4}>
-        <Heading fontSize="lg">Bot Messages</Heading>
+        <Heading fontSize="lg">Mensagens do bot</Heading>
         <HostBubbles
           hostBubbles={chatTheme?.hostBubbles}
           onHostBubblesChange={updateHostBubbles}
@@ -79,7 +79,7 @@ export const ChatThemeSettings = ({
       </Stack>
 
       <Stack borderWidth={1} rounded="md" p="4" spacing={4}>
-        <Heading fontSize="lg">User Messages</Heading>
+        <Heading fontSize="lg">Mensagens do usuário</Heading>
         <GuestBubbles
           guestBubbles={chatTheme?.guestBubbles}
           onGuestBubblesChange={updateGuestBubbles}

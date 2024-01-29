@@ -30,7 +30,7 @@ export const SharePopoverContent = () => {
       <CollaborationList />
       <Stack p="4" borderTopWidth={1}>
         <SwitchWithRelatedSettings
-          label={'Make the flow publicly available'}
+          label={'Tornar o fluxo disponível publicamente'}
           initialValue={typebot?.settings.publicShare?.isEnabled ?? false}
           onCheckChange={updateIsPublicShareEnabled}
         >

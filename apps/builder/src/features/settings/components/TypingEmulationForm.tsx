@@ -30,14 +30,14 @@ export const TypingEmulationForm = ({ typingEmulation, onUpdate }: Props) => {
   return (
     <Stack spacing={6}>
       <SwitchWithLabel
-        label={'Typing emulation'}
+        label={'Emulação de digitação'}
         initialValue={isEnabled}
         onCheckChange={updateIsEnabled}
       />
       {isEnabled && (
         <Stack pl={10}>
           <NumberInput
-            label="Words per minutes:"
+            label="Palavras por minuto:"
             data-testid="speed"
             defaultValue={
               typingEmulation?.speed ?? defaultSettings.typingEmulation.speed
@@ -48,7 +48,7 @@ export const TypingEmulationForm = ({ typingEmulation, onUpdate }: Props) => {
             step={30}
           />
           <NumberInput
-            label="Max delay (in seconds):"
+            label="Atraso maximo (em segundos):"
             data-testid="max-delay"
             defaultValue={
               typingEmulation?.maxDelay ??
