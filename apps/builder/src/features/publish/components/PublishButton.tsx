@@ -227,15 +227,15 @@ export const PublishButton = ({
             )}
             {!typebot?.isClosed ? (
               <MenuItem onClick={closeTypebot} icon={<LockedIcon />}>
-                Close typebot to new responses
+                Impedir bot de receber novas respostas
               </MenuItem>
             ) : (
               <MenuItem onClick={openTypebot} icon={<UnlockedIcon />}>
-                Reopen typebot to new responses
+                Permitir bot para receber novas respostas
               </MenuItem>
             )}
             <MenuItem onClick={unpublishTypebot} icon={<CloudOffIcon />}>
-              Unpublish typebot
+              Despublicar Bot
             </MenuItem>
           </MenuList>
         </Menu>

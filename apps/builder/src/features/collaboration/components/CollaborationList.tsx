@@ -163,7 +163,7 @@ export const CollaborationList = () => {
           type="submit"
           isDisabled={!hasFullAccess}
         >
-          Invite
+          Convidar
         </Button>
       </HStack>
       {workspace && (
@@ -171,7 +171,7 @@ export const CollaborationList = () => {
           <HStack minW={0} spacing={3}>
             <EmojiOrImageIcon icon={workspace.icon} boxSize="32px" />
             <Text fontSize="15px" noOfLines={1}>
-              Everyone at {workspace.name}
+              Todos no {workspace.name}
             </Text>
           </HStack>
           <Tag flexShrink={0}>
