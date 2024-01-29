@@ -33,11 +33,11 @@ export const MakeComSettings = ({
             <Text>Dirija-se ao Toolzz Connect para configurar este bloco:</Text>
             <Button
               as={Link}
-              href="https://www.make.com/en/integrations/typebot"
+              href="https://toolzz.com.br"
               isExternal
               colorScheme="blue"
             >
-              <Text mr="2">Make.com</Text> <ExternalLinkIcon />
+              <Text mr="2">Toolz Connect</Text> <ExternalLinkIcon />
             </Button>
           </Stack>
         )}

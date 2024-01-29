@@ -39,7 +39,7 @@ export const NumberInputSettings = ({ options, onOptionsChange }: Props) => {
         onChange={handlePlaceholderChange}
       />
       <TextInput
-        label="Button label:"
+        label="Texto do botão:"
         defaultValue={
           options?.labels?.button ?? defaultNumberInputOptions.labels.button
         }
@@ -56,13 +56,13 @@ export const NumberInputSettings = ({ options, onOptionsChange }: Props) => {
         onValueChange={handleMaxChange}
       />
       <NumberInput
-        label="Step:"
+        label="Passo:"
         defaultValue={options?.step}
         onValueChange={handleStepChange}
       />
       <Stack>
         <FormLabel mb="0" htmlFor="variable">
-          Save answer in a variable:
+          Salvar resposta em uma variavel:
         </FormLabel>
         <VariableSearchInput
           initialVariableId={options?.variableId}

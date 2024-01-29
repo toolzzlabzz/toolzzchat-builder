@@ -24,7 +24,7 @@ export const TextInputSettings = ({ options, onOptionsChange }: Props) => {
   return (
     <Stack spacing={4}>
       <SwitchWithLabel
-        label="Long text?"
+        label="Texto longo?"
         initialValue={options?.isLong ?? defaultTextInputOptions.isLong}
         onCheckChange={handleLongChange}
       />
@@ -37,7 +37,7 @@ export const TextInputSettings = ({ options, onOptionsChange }: Props) => {
         onChange={handlePlaceholderChange}
       />
       <TextInput
-        label="Button label:"
+        label="Texto do botão:"
         defaultValue={
           options?.labels?.button ?? defaultTextInputOptions.labels.button
         }
@@ -45,7 +45,7 @@ export const TextInputSettings = ({ options, onOptionsChange }: Props) => {
       />
       <Stack>
         <FormLabel mb="0" htmlFor="variable">
-          Save answer in a variable:
+          Salve a resposta em uma variavel:
         </FormLabel>
         <VariableSearchInput
           initialVariableId={options?.variableId}

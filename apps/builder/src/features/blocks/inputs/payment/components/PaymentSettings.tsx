@@ -126,7 +126,7 @@ export const PaymentSettings = ({ options, onOptionsChange }: Props) => {
       </Stack>
       <HStack>
         <TextInput
-          label="Price amount:"
+          label="Valor:"
           onChange={updateAmount}
           defaultValue={options?.amount}
           placeholder="30.00"
@@ -134,7 +134,7 @@ export const PaymentSettings = ({ options, onOptionsChange }: Props) => {
         <Stack>
           <Text>Currency:</Text>
           <Select
-            placeholder="Select option"
+            placeholder="Selecione uma opção"
             value={options?.currency ?? defaultPaymentInputOptions.currency}
             onChange={updateCurrency}
           >
@@ -147,14 +147,14 @@ export const PaymentSettings = ({ options, onOptionsChange }: Props) => {
         </Stack>
       </HStack>
       <TextInput
-        label="Button label:"
+        label="Texto do botão:"
         onChange={updateButtonLabel}
         defaultValue={
           options?.labels?.button ?? defaultPaymentInputOptions.labels.button
         }
       />
       <TextInput
-        label="Success message:"
+        label="Mensagem de sucesso:"
         onChange={updateSuccessLabel}
         defaultValue={
           options?.labels?.success ?? defaultPaymentInputOptions.labels.success
@@ -163,18 +163,18 @@ export const PaymentSettings = ({ options, onOptionsChange }: Props) => {
       <Accordion allowToggle>
         <AccordionItem>
           <AccordionButton justifyContent="space-between">
-            Additional information
+            Informação adicional
             <AccordionIcon />
           </AccordionButton>
           <AccordionPanel py={4} as={Stack} spacing="6">
             <TextInput
-              label="Description:"
+              label="Descrição:"
               defaultValue={options?.additionalInformation?.description}
               onChange={updateDescription}
               placeholder="A digital product"
             />
             <TextInput
-              label="Name:"
+              label="Nome:"
               defaultValue={options?.additionalInformation?.name}
               onChange={updateName}
               placeholder="John Smith"
@@ -186,10 +186,10 @@ export const PaymentSettings = ({ options, onOptionsChange }: Props) => {
               placeholder="john@gmail.com"
             />
             <TextInput
-              label="Phone number:"
+              label="Numero do telefone:"
               defaultValue={options?.additionalInformation?.phoneNumber}
               onChange={updatePhoneNumber}
-              placeholder="+33XXXXXXXXX"
+              placeholder="+55XXXXXXXXX"
             />
             <PaymentAddressSettings
               address={options?.additionalInformation?.address}
