@@ -129,9 +129,9 @@ export const leadGenerationTypebot: StartTypebot = {
           content: {
             html: '<div>What&#x27;s your name?</div>',
             richText: [
-              { type: 'p', children: [{ text: "What's your name?" }] },
+              { type: 'p', children: [{ text: 'Qual é o seu nome?' }] },
             ],
-            plainText: "What's your name?",
+            plainText: 'Qual é o seu nome?',
           },
         },
         {
@@ -140,8 +140,8 @@ export const leadGenerationTypebot: StartTypebot = {
           options: {
             isLong: false,
             labels: {
-              button: 'Send',
-              placeholder: 'Type your answer...',
+              button: 'Enviar',
+              placeholder: 'Digite sua resposta...',
             },
             variableId: 'giiLFGw5xXBCHzvp1qAbdX',
           },

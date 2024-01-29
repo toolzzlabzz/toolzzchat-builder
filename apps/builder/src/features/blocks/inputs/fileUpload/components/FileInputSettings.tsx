@@ -37,12 +37,12 @@ export const FileInputSettings = ({ options, onOptionsChange }: Props) => {
   return (
     <Stack spacing={4}>
       <SwitchWithLabel
-        label="Required?"
+        label="Obrigatório?"
         initialValue={options?.isRequired ?? defaultFileInputOptions.isRequired}
         onCheckChange={handleRequiredChange}
       />
       <SwitchWithLabel
-        label="Allow multiple files?"
+        label="Permitir multiplos arquivos?"
         initialValue={
           options?.isMultipleAllowed ??
           defaultFileInputOptions.isMultipleAllowed
@@ -63,7 +63,7 @@ export const FileInputSettings = ({ options, onOptionsChange }: Props) => {
         />
       </Stack>
       <TextInput
-        label="Button label:"
+        label="Texto do botão:"
         defaultValue={
           options?.labels?.button ?? defaultFileInputOptions.labels.button
         }
@@ -71,7 +71,7 @@ export const FileInputSettings = ({ options, onOptionsChange }: Props) => {
         withVariableButton={false}
       />
       <TextInput
-        label="Clear button label:"
+        label="Limpar texto do botão:"
         defaultValue={
           options?.labels?.clear ?? defaultFileInputOptions.labels.clear
         }
@@ -79,7 +79,7 @@ export const FileInputSettings = ({ options, onOptionsChange }: Props) => {
         withVariableButton={false}
       />
       <TextInput
-        label="Skip button label:"
+        label="Pular texto do botão:"
         defaultValue={
           options?.labels?.skip ?? defaultFileInputOptions.labels.skip
         }
@@ -88,7 +88,8 @@ export const FileInputSettings = ({ options, onOptionsChange }: Props) => {
       />
       <Stack>
         <FormLabel mb="0" htmlFor="variable">
-          Save upload URL{options?.isMultipleAllowed ? 's' : ''} in a variable:
+          Salvar URL de Upload{options?.isMultipleAllowed ? 's' : ''} em uma
+          variavel:
         </FormLabel>
         <VariableSearchInput
           initialVariableId={options?.variableId}

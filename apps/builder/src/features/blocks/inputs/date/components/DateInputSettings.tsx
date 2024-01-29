@@ -46,14 +46,14 @@ export const DateInputSettings = ({ options, onOptionsChange }: Props) => {
         onCheckChange={updateIsRange}
       >
         <TextInput
-          label="From label:"
+          label="Rótulo de:"
           defaultValue={
             options?.labels?.from ?? defaultDateInputOptions.labels.from
           }
           onChange={updateFromLabel}
         />
         <TextInput
-          label="To label:"
+          label="Rótulo para:"
           defaultValue={
             options?.labels?.to ?? defaultDateInputOptions.labels.to
           }
@@ -61,12 +61,12 @@ export const DateInputSettings = ({ options, onOptionsChange }: Props) => {
         />
       </SwitchWithRelatedSettings>
       <SwitchWithLabel
-        label="With time?"
+        label="Com tempo?"
         initialValue={options?.hasTime ?? defaultDateInputOptions.hasTime}
         onCheckChange={updateHasTime}
       />
       <TextInput
-        label="Button label:"
+        label="Texto do botão:"
         defaultValue={
           options?.labels?.button ?? defaultDateInputOptions.labels.button
         }
@@ -85,7 +85,7 @@ export const DateInputSettings = ({ options, onOptionsChange }: Props) => {
         onChange={updateMax}
       />
       <TextInput
-        label="Format:"
+        label="Formato:"
         defaultValue={
           options?.format ??
           (options?.hasTime
@@ -98,7 +98,7 @@ export const DateInputSettings = ({ options, onOptionsChange }: Props) => {
       />
       <Stack>
         <FormLabel mb="0" htmlFor="variable">
-          Save answer in a variable:
+          Salvar resposta em uma variavel:
         </FormLabel>
         <VariableSearchInput
           initialVariableId={options?.variableId}

@@ -31,14 +31,14 @@ export const EmailInputSettings = ({ options, onOptionsChange }: Props) => {
         onChange={handlePlaceholderChange}
       />
       <TextInput
-        label="Button label:"
+        label="Texto do botão:"
         defaultValue={
           options?.labels?.button ?? defaultEmailInputOptions.labels.button
         }
         onChange={handleButtonLabelChange}
       />
       <TextInput
-        label="Retry message:"
+        label="Mensagem de nova tentativa:"
         defaultValue={
           options?.retryMessageContent ??
           defaultEmailInputOptions.retryMessageContent
@@ -47,7 +47,7 @@ export const EmailInputSettings = ({ options, onOptionsChange }: Props) => {
       />
       <Stack>
         <FormLabel mb="0" htmlFor="variable">
-          Save answer in a variable:
+          Salvar mensagem em uma nova variavel:
         </FormLabel>
         <VariableSearchInput
           initialVariableId={options?.variableId}

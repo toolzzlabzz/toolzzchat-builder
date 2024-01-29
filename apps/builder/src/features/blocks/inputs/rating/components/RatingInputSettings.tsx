@@ -105,14 +105,14 @@ export const RatingInputSettings = ({ options, onOptionsChange }: Props) => {
         placeholder="Extremely likely"
       />
       <SwitchWithLabel
-        label="One click submit"
-        moreInfoContent='If enabled, the answer will be submitted as soon as the user clicks on a rating instead of showing the "Send" button.'
+        label="Enviar com um clique"
+        moreInfoContent='Se ativado, a resposta será enviada assim que o usuário clicar em uma classificação, em vez de mostrar o botão "Enviar".'
         initialValue={isOneClickSubmitEnabled}
         onCheckChange={handleOneClickSubmitChange}
       />
       {!isOneClickSubmitEnabled && (
         <TextInput
-          label="Button label:"
+          label="Texto do botão:"
           defaultValue={
             options?.labels?.button ?? defaultRatingInputOptions.labels.button
           }
@@ -121,7 +121,7 @@ export const RatingInputSettings = ({ options, onOptionsChange }: Props) => {
       )}
       <Stack>
         <FormLabel mb="0" htmlFor="variable">
-          Save answer in a variable:
+          Salvar resposta em uma variavel:
         </FormLabel>
         <VariableSearchInput
           initialVariableId={options?.variableId}
