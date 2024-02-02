@@ -26,8 +26,8 @@ export const StarterPlanCard = () => {
               <Tooltip
                 hasArrow
                 placement="top"
-                label="A chat is counted whenever a user starts a discussion. It is
-    independant of the number of messages he sends and receives."
+                label="Um chat é contado sempre que um usuário inicia uma discussão. Isso é
+                independente do número de mensagens que ele envia e recebe."
               >
                 <chakra.span cursor="pointer" h="7">
                   <HelpCircleIcon />
@@ -35,12 +35,12 @@ export const StarterPlanCard = () => {
               </Tooltip>
             </HStack>
             <Text fontSize="sm" color="gray.400">
-              Extra chats: R$10 per 500
+              Chats extra: R$10 por 500
             </Text>
           </Stack>,
-          'Branding removed',
-          'Collect files from users',
-          'Create folders',
+          // 'Branding removed',
+          'Colete arquivos dos usuários',
+          'Crie pastas',
         ],
       }}
       borderWidth="1px"
@@ -56,7 +56,7 @@ export const StarterPlanCard = () => {
           py={{ md: '8' }}
           variant="outline"
         >
-          Subscribe now
+          Assine Agora
         </Button>
       }
     />

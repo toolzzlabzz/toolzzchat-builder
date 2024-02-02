@@ -68,7 +68,7 @@ export const UnsplashPicker = ({ imageSize, onImageSelect }: Props) => {
     } catch (err) {
       if (err && typeof err === 'object' && 'message' in err)
         setError(err.message as string)
-      setError('Something went wrong')
+      setError('Algo deu errado')
     }
     setIsFetching(false)
   }, [])
@@ -108,7 +108,7 @@ export const UnsplashPicker = ({ imageSize, onImageSelect }: Props) => {
     } catch (err) {
       if (err && typeof err === 'object' && 'message' in err)
         setError(err.message as string)
-      setError('Something went wrong')
+      setError('Algo deu errado')
     }
     setIsFetching(false)
   }
@@ -135,7 +135,7 @@ export const UnsplashPicker = ({ imageSize, onImageSelect }: Props) => {
       <HStack align="center">
         <TextInput
           autoFocus
-          placeholder="Search..."
+          placeholder="Buscar..."
           onChange={(query) => {
             setSearchQuery(query)
             fetchNewImages(query, 0)

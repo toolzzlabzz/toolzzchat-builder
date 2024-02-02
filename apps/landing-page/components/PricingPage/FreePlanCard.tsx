@@ -21,8 +21,8 @@ export const FreePlanCard = () => (
           <Tooltip
             hasArrow
             placement="top"
-            label="A chat is counted whenever a user starts a discussion. It is
-  independant of the number of messages he sends and receives."
+            label="Um bate-papo é contado sempre que um usuário inicia uma discussão. Isso é
+            independente do número de mensagens que ele envia e recebe."
           >
             <chakra.span cursor="pointer" h="7">
               <HelpCircleIcon />
@@ -45,7 +45,7 @@ export const FreePlanCard = () => (
         fontWeight="extrabold"
         py={{ md: '8' }}
       >
-        Get started
+        iniciar
       </Button>
     }
   />

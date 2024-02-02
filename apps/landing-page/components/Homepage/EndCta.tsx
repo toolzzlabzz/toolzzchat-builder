@@ -1,4 +1,4 @@
-import { Heading, Button, Text, Flex, VStack } from '@chakra-ui/react'
+import { Heading, Button, Flex, VStack } from '@chakra-ui/react'
 import Link from 'next/link'
 import React from 'react'
 import { BackgroundPolygons } from './Hero/BackgroundPolygons'
@@ -27,25 +27,21 @@ export const EndCta = () => {
           letterSpacing="tight"
           data-aos="fade-up"
         >
-          Take your forms to the next level
+          Leve seus formulários para o próximo nível
         </Heading>
         <Flex>
           <Button
             as={Link}
-            href="https://app.typebot.io/register"
+            href="https://chatbuilder.toolzz.ai/register"
             size="lg"
             colorScheme="orange"
             height="4rem"
             data-aos="fade-up"
             data-aos-delay="300"
           >
-            Create a typebot
+            Crie um bot
           </Button>
         </Flex>
-
-        <Text color="gray.400" data-aos="fade-up" data-aos-delay="400">
-          No trial. Generous, unlimited <strong>free</strong> plan.
-        </Text>
       </VStack>
     </VStack>
   )

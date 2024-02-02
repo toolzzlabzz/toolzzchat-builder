@@ -19,7 +19,7 @@ export const sendMessageV2 = publicProcedure
       path: '/v2/sendMessage',
       summary: 'Send a message',
       description:
-        'To initiate a chat, do not provide a `sessionId` nor a `message`.\n\nContinue the conversation by providing the `sessionId` and the `message` that should answer the previous question.\n\nSet the `isPreview` option to `true` to chat with the non-published version of the typebot.',
+        'To initiate a chat, do not provide a `sessionId` nor a `message`.\n\nContinue the conversation by providing the `sessionId` and the `message` that should answer the previous question.\n\nSet the `isPreview` option to `true` to chat with the non-published version of the bot.',
       tags: ['Deprecated'],
       deprecated: true,
     },

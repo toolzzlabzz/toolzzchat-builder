@@ -1,12 +1,12 @@
 import {
   Stack,
   Heading,
-  Button,
+  // Button,
   List,
   ListItem,
   ListIcon,
   Text,
-  Link,
+  // Link,
 } from '@chakra-ui/react'
 import { CheckCircleIcon } from 'assets/icons'
 
@@ -23,10 +23,10 @@ export const EnterprisePlanCard = () => (
     <Stack maxW="300px" spacing={4}>
       <Heading fontSize="xl">Enterprise</Heading>
       <Text>
-        Ideal for large companies looking to generate leads and automate
-        customer support at scale
+        Ideal para grandes empresas que buscam gerar leads e automatizar suporte
+        ao cliente em escala
       </Text>
-      <Text fontSize="lg">
+      {/* <Text fontSize="lg">
         <Button
           as={Link}
           href="https://typebot.io/enterprise-lead-form"
@@ -35,21 +35,21 @@ export const EnterprisePlanCard = () => (
         >
           Get a quote
         </Button>
-      </Text>
+      </Text> */}
     </Stack>
     <Stack flex="1">
       <List spacing="4">
         <ListItem fontWeight="medium" display="flex" alignItems="center">
           <ListIcon fontSize="xl" as={CheckCircleIcon} marginEnd={2} />
-          Custom chats limits & seats for all your team
+          Limites de bate-papo e assentos personalizados para toda a sua equipe
         </ListItem>
         <ListItem fontWeight="medium" display="flex" alignItems="center">
           <ListIcon fontSize="xl" as={CheckCircleIcon} marginEnd={2} />
-          SSO & Granular access rights
+          Direitos de acesso SSO e granular
         </ListItem>
         <ListItem fontWeight="medium" display="flex" alignItems="center">
           <ListIcon fontSize="xl" as={CheckCircleIcon} marginEnd={2} />
-          Yearly contract with dedicated support representative
+          Contrato anual com representante de suporte dedicado
         </ListItem>
       </List>
     </Stack>

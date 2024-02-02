@@ -28,7 +28,7 @@ export const GiphyPicker = ({ onSubmit }: GiphySearchFormProps) => {
       <Flex align="center">
         <TextInput
           autoFocus
-          placeholder="Search..."
+          placeholder="Buscar..."
           onChange={setInputValue}
           withVariableButton={false}
         />

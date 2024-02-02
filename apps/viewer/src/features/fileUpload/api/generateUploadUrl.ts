@@ -14,8 +14,9 @@ export const generateUploadUrl = publicProcedure
     openapi: {
       method: 'POST',
       path: '/v1/generate-upload-url',
-      summary: 'Generate upload URL',
-      description: 'Used to upload anything from the client to S3 bucket',
+      summary: 'Gerar URL de upload',
+      description:
+        'Usado para fazer upload de qualquer coisa do cliente para o bucket S3',
     },
   })
   .input(
@@ -48,7 +49,7 @@ export const generateUploadUrl = publicProcedure
       throw new TRPCError({
         code: 'INTERNAL_SERVER_ERROR',
         message:
-          'S3 not properly configured. Missing one of those variables: S3_ENDPOINT, S3_ACCESS_KEY, S3_SECRET_KEY',
+          'S3 não configurado corretamente. Faltando uma dessas variáveis: S3_ENDPOINT, S3_ACCESS_KEY, S3_SECRET_KEY',
       })
 
     // TODO: Remove (deprecated)

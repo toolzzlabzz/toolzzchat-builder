@@ -153,18 +153,19 @@ export const PublishButton = ({
           message={
             <Stack spacing="3">
               <Text>
-                You are about to a deploy a version of your bot with an updated
-                engine. (Typebot V6).
+                Você esta prestas a publicar uma versão do seu bot com uma
+                versão atualizada. (Toolzz V6).
               </Text>
               <Text fontWeight="bold">
-                Make sure to check out all the{' '}
+                Preste atenção para marcar todos{' '}
                 <TextLink href="" isExternal>
-                  associated breaking changes
+                  associados com toda grande atualização.
                 </TextLink>
               </Text>
               <Text>
                 {' '}
-                Then test, the bot thoroughly in preview mode before publishing.
+                Em seguida, teste o bot completamente no modo de visualização
+                antes de publicar.
               </Text>
             </Stack>
           }
@@ -175,12 +176,12 @@ export const PublishButton = ({
         placement="bottom-end"
         label={
           <Stack>
-            <Text>There are non published changes.</Text>
+            <Text>Existem alterações não publicadas.</Text>
             <Text fontStyle="italic">
-              Published version from{' '}
+              Versão publica a{' '}
               {publishedTypebot &&
                 parseTimeSince(publishedTypebot.updatedAt.toString())}{' '}
-              ago
+              atras
             </Text>
           </Stack>
         }
@@ -222,7 +223,7 @@ export const PublishButton = ({
           <MenuList>
             {!isPublished && (
               <MenuItem onClick={restorePublishedTypebot}>
-                Restore published version
+                Restaurar versão publicada
               </MenuItem>
             )}
             {!typebot?.isClosed ? (

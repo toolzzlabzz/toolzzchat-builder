@@ -34,8 +34,8 @@ export const ProPlanCard = ({ onChatsTiersClick }: Props) => (
             <Tooltip
               hasArrow
               placement="top"
-              label="A chat is counted whenever a user starts a discussion. It is
-independant of the number of messages he sends and receives."
+              label="Um chat é contado sempre que um usuário inicia uma discussão. Isso é
+              independente do número de mensagens que ele envia e recebe."
             >
               <chakra.span cursor="pointer" h="7">
                 <HelpCircleIcon />
@@ -54,9 +54,9 @@ independant of the number of messages he sends and receives."
             </Button>
           </Text>
         </Stack>,
-        'WhatsApp integration',
-        'Custom domains',
-        'In-depth analytics',
+        'Integração com WhatsApp ',
+        'Dominios personalizados',
+        'Análise aprofundada',
       ],
     }}
     borderWidth="3px"

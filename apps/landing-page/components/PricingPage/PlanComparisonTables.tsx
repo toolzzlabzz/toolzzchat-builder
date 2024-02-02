@@ -38,7 +38,7 @@ export const PlanComparisonTables = ({ onChatsTiersClick }: Props) => (
         <Thead>
           <Tr>
             <Th fontWeight="bold" color="white" w="400px">
-              Usage
+              Uso
             </Th>
             <Th>Free</Th>
             <Th color="orange.200">Starter</Th>
@@ -48,20 +48,20 @@ export const PlanComparisonTables = ({ onChatsTiersClick }: Props) => (
         <Tbody>
           <Tr>
             <Td>Total bots</Td>
-            <Td>Unlimited</Td>
-            <Td>Unlimited</Td>
-            <Td>Unlimited</Td>
+            <Td>Ilimitado</Td>
+            <Td>Ilimitado</Td>
+            <Td>Ilimitado</Td>
           </Tr>
           <Tr>
             <Td>Chats</Td>
-            <Td>{chatsLimits.FREE} / month</Td>
-            <Td>{parseNumberWithCommas(chatsLimits.STARTER)} / month</Td>
-            <Td>{parseNumberWithCommas(chatsLimits.PRO)} / month</Td>
+            <Td>{chatsLimits.FREE} / mês</Td>
+            <Td>{parseNumberWithCommas(chatsLimits.STARTER)} / mês</Td>
+            <Td>{parseNumberWithCommas(chatsLimits.PRO)} / mês</Td>
           </Tr>
           <Tr>
-            <Td>Additional Chats</Td>
+            <Td>Chats adicionais</Td>
             <Td />
-            <Td>{formatPrice(10)} per 500 chats</Td>
+            <Td>{formatPrice(10)} por 500 chats</Td>
             <Td>
               <Button
                 variant="outline"
@@ -69,27 +69,27 @@ export const PlanComparisonTables = ({ onChatsTiersClick }: Props) => (
                 onClick={onChatsTiersClick}
                 colorScheme="gray"
               >
-                See tiers
+                Veja planos
               </Button>
             </Td>
           </Tr>
           <Tr>
-            <Td>Storage</Td>
+            <Td>Armazenamento</Td>
             <Td />
             <Td>2 GB</Td>
             <Td>10 GB</Td>
           </Tr>
           <Tr>
-            <Td>Members</Td>
-            <Td>Just you</Td>
-            <Td>{seatsLimits.STARTER} seats</Td>
-            <Td>{seatsLimits.PRO} seats</Td>
+            <Td>Membros</Td>
+            <Td>Apenas você</Td>
+            <Td>{seatsLimits.STARTER} vagas</Td>
+            <Td>{seatsLimits.PRO} vagas</Td>
           </Tr>
           <Tr>
-            <Td>Guests</Td>
-            <Td>Unlimited</Td>
-            <Td>Unlimited</Td>
-            <Td>Unlimited</Td>
+            <Td>Convidados</Td>
+            <Td>Ilimitado</Td>
+            <Td>Ilimitado</Td>
+            <Td>Ilimitado</Td>
           </Tr>
         </Tbody>
       </Table>
@@ -99,9 +99,9 @@ export const PlanComparisonTables = ({ onChatsTiersClick }: Props) => (
         <Thead>
           <Tr>
             <Th fontWeight="bold" color="white" w="400px">
-              Features
+              Funcionalidades
             </Th>
-            <Th>Free</Th>
+            <Th>Trial</Th>
             <Th color="orange.200">Starter</Th>
             <Th color="blue.200">Pro</Th>
           </Tr>
@@ -123,7 +123,7 @@ export const PlanComparisonTables = ({ onChatsTiersClick }: Props) => (
             </Td>
           </Tr>
           <Tr>
-            <Td>Starter templates</Td>
+            <Td>Modelos iniciais</Td>
             <Td>
               <CheckIcon />
             </Td>
@@ -171,7 +171,7 @@ export const PlanComparisonTables = ({ onChatsTiersClick }: Props) => (
             </Td>
           </Tr>
           <Tr>
-            <Td>Send emails</Td>
+            <Td>Envie emails</Td>
             <Td>
               <CheckIcon />
             </Td>
@@ -206,7 +206,7 @@ export const PlanComparisonTables = ({ onChatsTiersClick }: Props) => (
               <CheckIcon />
             </Td>
           </Tr>
-          <Tr>
+          {/* <Tr>
             <Td>Make.com</Td>
             <Td>
               <CheckIcon />
@@ -217,21 +217,9 @@ export const PlanComparisonTables = ({ onChatsTiersClick }: Props) => (
             <Td>
               <CheckIcon />
             </Td>
-          </Tr>
+          </Tr> */}
           <Tr>
-            <Td>Custom Javascript & CSS</Td>
-            <Td>
-              <CheckIcon />
-            </Td>
-            <Td>
-              <CheckIcon />
-            </Td>
-            <Td>
-              <CheckIcon />
-            </Td>
-          </Tr>
-          <Tr>
-            <Td>Export CSV</Td>
+            <Td>Javascript e CSS personalizados</Td>
             <Td>
               <CheckIcon />
             </Td>
@@ -243,7 +231,19 @@ export const PlanComparisonTables = ({ onChatsTiersClick }: Props) => (
             </Td>
           </Tr>
           <Tr>
-            <Td>File upload inputs</Td>
+            <Td>Exportar CSV</Td>
+            <Td>
+              <CheckIcon />
+            </Td>
+            <Td>
+              <CheckIcon />
+            </Td>
+            <Td>
+              <CheckIcon />
+            </Td>
+          </Tr>
+          <Tr>
+            <Td>Entradas de upload de arquivo</Td>
             <Td />
             <Td>
               <CheckIcon />
@@ -254,14 +254,14 @@ export const PlanComparisonTables = ({ onChatsTiersClick }: Props) => (
           </Tr>
           <Tr>
             <TdWithTooltip
-              text="Folders"
-              tooltip="Organize your typebots into folders"
+              text="Pastas"
+              tooltip="Organize seus bots em pastas"
             />
             <Td />
-            <Td>Unlimited</Td>
-            <Td>Unlimited</Td>
+            <Td>Ilimitado</Td>
+            <Td>Ilimitado</Td>
           </Tr>
-          <Tr>
+          {/* <Tr>
             <Td>Remove branding</Td>
             <Td />
             <Td>
@@ -270,9 +270,9 @@ export const PlanComparisonTables = ({ onChatsTiersClick }: Props) => (
             <Td>
               <CheckIcon />
             </Td>
-          </Tr>
+          </Tr> */}
           <Tr>
-            <Td>WhatsApp integration</Td>
+            <Td>Integração com WhatsApp </Td>
             <Td />
             <Td />
             <Td>
@@ -280,15 +280,15 @@ export const PlanComparisonTables = ({ onChatsTiersClick }: Props) => (
             </Td>
           </Tr>
           <Tr>
-            <Td>Custom domains</Td>
+            <Td>Dominios customizados</Td>
             <Td />
             <Td />
-            <Td>Unlimited</Td>
+            <Td>Ilimitado</Td>
           </Tr>
           <Tr>
             <TdWithTooltip
-              text="In-depth analytics"
-              tooltip="Analytics graph that shows your form drop-off rate, submission rate, and more."
+              text="Análise aprofundada"
+              tooltip="Gráfico analítico que mostra a taxa de desistência do formulário, taxa de envio e muito mais."
             />
             <Td />
             <Td />
@@ -320,14 +320,14 @@ export const PlanComparisonTables = ({ onChatsTiersClick }: Props) => (
               <CheckIcon />
             </Td>
           </Tr>
-          <Tr>
+          {/* <Tr>
             <Td>Feature request priority</Td>
             <Td />
             <Td />
             <Td>
               <CheckIcon />
             </Td>
-          </Tr>
+          </Tr> */}
         </Tbody>
       </Table>
     </TableContainer>

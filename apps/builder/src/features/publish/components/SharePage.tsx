@@ -61,7 +61,7 @@ export const SharePage = () => {
 
     if (!isCorrectlyFormatted) {
       showToast({
-        description: 'Can only contain lowercase letters, numbers and dashes.',
+        description: 'Só pode conter letras minúsculas, números e travessões.',
       })
       return false
     }
@@ -72,7 +72,7 @@ export const SharePage = () => {
     const isLongerThanAllowed = publicId.length >= 4
     if (!isLongerThanAllowed && isCloudProdInstance()) {
       showToast({
-        description: 'Should be longer than 4 characters',
+        description: 'Deve ter mais de 4 caracteres',
       })
       return false
     }
@@ -81,7 +81,7 @@ export const SharePage = () => {
 
     const { data } = await isPublicDomainAvailableQuery(publicId)
     if (!data?.isAvailable) {
-      showToast({ description: 'ID is already taken' })
+      showToast({ description: 'Esse ID ja existe' })
       return false
     }
 

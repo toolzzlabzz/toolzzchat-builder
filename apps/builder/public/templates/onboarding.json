@@ -67,7 +67,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "I'm super pumped that you've decided to try out Typebot 😍"
+                    "text": "Estou super entusiasmado por você ter decidido experimentar o Toolz Bots 😍"
                   }
                 ]
               }
@@ -98,7 +98,9 @@
               {
                 "type": "p",
                 "children": [
-                  { "text": "Let's get you set up for your Typebot journey." }
+                  {
+                    "text": "Vamos preparar você para sua jornada Toolzz Bots."
+                  }
                 ]
               }
             ]
@@ -155,7 +157,7 @@
                 "type": "p",
                 "children": [
                   {
-                    "text": "What type of bots are you planning to build with Typebot?"
+                    "text": "Que tipo de bots você planeja construir com o Toolzz Bots?"
                   }
                 ]
               }

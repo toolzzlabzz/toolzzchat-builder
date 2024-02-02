@@ -15,9 +15,9 @@ export const updateTypebotInSession = publicProcedure
     openapi: {
       method: 'POST',
       path: '/v1/sessions/{sessionId}/updateTypebot',
-      summary: 'Update typebot in session',
+      summary: 'Atualizar bot na sessão',
       description:
-        'Update chat session with latest typebot modifications. This is useful when you want to update the typebot in an ongoing session after making changes to it.',
+        'Atualize a sessão de bate-papo com as últimas modificações do bot. Isto é útil quando você deseja atualizar o bot em uma sessão em andamento após fazer alterações nele.',
       protect: true,
     },
   })
