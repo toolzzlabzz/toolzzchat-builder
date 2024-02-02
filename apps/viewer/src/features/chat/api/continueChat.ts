@@ -15,7 +15,7 @@ export const continueChat = publicProcedure
       path: '/v1/sessions/{sessionId}/continueChat',
       summary: 'Continue chat',
       description:
-        'To initiate a chat, do not provide a `sessionId` nor a `message`.\n\nContinue the conversation by providing the `sessionId` and the `message` that should answer the previous question.\n\nSet the `isPreview` option to `true` to chat with the non-published version of the typebot.',
+        'Para iniciar um bate-papo, não forneça um `sessionId` nem uma `message`.\n\nContinue a conversa fornecendo o `sessionId` e a `message` que devem responder à pergunta anterior.\n\nDefina o `isPreview` opção para `true` para conversar com a versão não publicada do bot.',
     },
   })
   .input(
@@ -31,7 +31,7 @@ export const continueChat = publicProcedure
     if (!session) {
       throw new TRPCError({
         code: 'NOT_FOUND',
-        message: 'Session not found.',
+        message: 'Sessão não encontrada.',
       })
     }
 
@@ -43,7 +43,7 @@ export const continueChat = publicProcedure
     if (isSessionExpired)
       throw new TRPCError({
         code: 'NOT_FOUND',
-        message: 'Session expired. You need to start a new session.',
+        message: 'Sessão expirada. Você precisa iniciar uma nova sessão.',
       })
 
     const {

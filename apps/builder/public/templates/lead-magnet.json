@@ -243,7 +243,7 @@
             "isCustomBody": true,
             "recipients": ["{{Email}}"],
             "subject": "Here is your community bundle ✨",
-            "body": "Hey {{Name}},\n\nHere is a link to download the community bundle:\n\nhttps://typebot.io\n\nI hope it will help you create the right community for your project 🚀\n\nBest,\nTypebot team."
+            "body": "Olá, {{Name}},\n\nAqui está um link para baixar o pacote da comunidade:\n\nhttps://toolzz.ai\n\nEspero que isso ajude você a criar a comunidade certa para o seu projeto 🚀\n nMelhor,\nEquipe Toolzz Bots."
           }
         }
       ]

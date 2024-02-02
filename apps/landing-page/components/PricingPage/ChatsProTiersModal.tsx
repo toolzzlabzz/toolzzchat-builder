@@ -30,7 +30,7 @@ export const ChatsProTiersModal = ({ isOpen, onClose }: Props) => {
       <ModalOverlay />
       <ModalContent>
         <ModalHeader>
-          <Heading size="lg">Chats pricing table</Heading>
+          <Heading size="lg">Tabela de preços de chats</Heading>
         </ModalHeader>
         <ModalCloseButton />
         <ModalBody as={Stack} spacing="6">
@@ -39,8 +39,8 @@ export const ChatsProTiersModal = ({ isOpen, onClose }: Props) => {
               <Thead>
                 <Tr>
                   <Th isNumeric>Max chats</Th>
-                  <Th isNumeric>Price per month</Th>
-                  <Th isNumeric>Price per 1k chats</Th>
+                  <Th isNumeric>Preço por mês</Th>
+                  <Th isNumeric>Preço por mil chats</Th>
                 </Tr>
               </Thead>
               <Tbody>

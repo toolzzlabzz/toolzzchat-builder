@@ -12,7 +12,7 @@ export const startChatPreview = publicProcedure
     openapi: {
       method: 'POST',
       path: '/v1/toolzz/{typebotId}/preview/startChat',
-      summary: 'Start preview chat',
+      summary: 'Iniciar visualização do chat ',
     },
   })
   .input(startPreviewChatInputSchema)

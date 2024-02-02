@@ -105,7 +105,7 @@ export const IconPicker = ({ onIconSelected }: Props) => {
     <Stack>
       <HStack>
         <TextInput
-          placeholder="Search..."
+          placeholder="Buscar..."
           onChange={searchIcon}
           withVariableButton={false}
           debounceTimeout={300}
@@ -117,7 +117,7 @@ export const IconPicker = ({ onIconSelected }: Props) => {
         {recentIconNames.length > 0 && (
           <Stack>
             <Text fontSize="xs" color="gray.400" fontWeight="semibold" pl="2">
-              RECENT
+              Recentes
             </Text>
             <SimpleGrid
               spacing={0}
@@ -145,7 +145,7 @@ export const IconPicker = ({ onIconSelected }: Props) => {
         <Stack>
           {recentIconNames.length > 0 && (
             <Text fontSize="xs" color="gray.400" fontWeight="semibold" pl="2">
-              ICONS
+              ICONES
             </Text>
           )}
           <SimpleGrid

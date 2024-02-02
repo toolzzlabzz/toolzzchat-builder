@@ -12,7 +12,7 @@ export const startChat = publicProcedure
     openapi: {
       method: 'POST',
       path: '/v1/toolzz/{publicId}/startChat',
-      summary: 'Start chat',
+      summary: 'Iniciar chat',
     },
   })
   .input(startChatInputSchema)

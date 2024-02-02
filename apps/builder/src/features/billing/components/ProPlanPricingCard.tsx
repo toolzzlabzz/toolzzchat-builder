@@ -131,9 +131,9 @@ export const ProPlanPricingCard = ({
                       fontSize="sm"
                       color={useColorModeValue('gray.500', 'gray.400')}
                     >
-                      Extra chats:{' '}
+                      Chats extras:{' '}
                       <Button size="xs" variant="outline" onClick={onOpen}>
-                        See tiers
+                        Ver planos
                       </Button>
                     </Text>
                   </Stack>,

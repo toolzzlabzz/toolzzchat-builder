@@ -42,9 +42,9 @@ export const Hero = () => {
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              Typebot gives you powerful blocks to create unique chat
-              experiences. Embed them anywhere on your web/mobile apps and start
-              collecting results like magic.
+              Toolz Bots oferece blocos poderosos para criar um bate-papo
+              exclusivo experiências. Incorpore-os em qualquer lugar em seus
+              aplicativos web/móveis e comece coletando resultados como mágica.
             </Text>
             <Stack
               direction={['column-reverse', 'row']}
@@ -53,7 +53,7 @@ export const Hero = () => {
             >
               <Button
                 as={Link}
-                href="https://app.typebot.io/register"
+                href="https://chatbuilder.toolzz.ai/register"
                 colorScheme="orange"
                 size="lg"
                 height="4rem"
@@ -107,7 +107,7 @@ export const Hero = () => {
       <Flex justify="center" bgGradient="linear(to-b, gray.900, gray.800)">
         <VStack spacing="12" pb="32" maxW="7xl" px={4}>
           <Heading fontSize="25px" fontWeight="semibold" data-aos="fade">
-            Loved by teams and creators from all around the world
+            Amado por equipes e criadores de todo o mundo
           </Heading>
           <SimpleGrid
             columns={{ base: 2, md: 4 }}

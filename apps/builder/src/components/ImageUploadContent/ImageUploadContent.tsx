@@ -181,7 +181,7 @@ const UploadFileContent = ({
       onFileUploaded={onNewUrl}
       colorScheme="blue"
     >
-      Choose an image
+      Selecione uma imagem
     </UploadButton>
   </Flex>
 )

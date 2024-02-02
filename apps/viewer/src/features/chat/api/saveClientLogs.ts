@@ -12,7 +12,7 @@ export const saveClientLogs = publicProcedure
     openapi: {
       method: 'POST',
       path: '/v1/sessions/{sessionId}/clientLogs',
-      summary: 'Save client logs',
+      summary: 'Salvar logs do client',
     },
   })
   .input(
@@ -28,7 +28,7 @@ export const saveClientLogs = publicProcedure
     if (!session) {
       throw new TRPCError({
         code: 'NOT_FOUND',
-        message: 'Session not found.',
+        message: 'Sessão não encontrada.',
       })
     }
 
@@ -37,7 +37,7 @@ export const saveClientLogs = publicProcedure
     if (!resultId) {
       throw new TRPCError({
         code: 'NOT_FOUND',
-        message: 'Result not found.',
+        message: 'Resultado não encontrado.',
       })
     }
 
@@ -50,14 +50,14 @@ export const saveClientLogs = publicProcedure
         }))
       )
       return {
-        message: 'Logs successfully saved.',
+        message: 'Logs salvos com sucesso.',
       }
     } catch (e) {
       console.error('Failed to save logs', e)
       Sentry.captureException(e)
       throw new TRPCError({
         code: 'INTERNAL_SERVER_ERROR',
-        message: 'Failed to save logs.',
+        message: 'Falha ao salvar logs.',
       })
     }
   })
